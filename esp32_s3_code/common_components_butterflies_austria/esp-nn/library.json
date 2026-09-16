@@ -1,0 +1,10 @@
+{
+  "name": "esp-nn",
+  "version": "0.0.0",
+  "build": {
+    "srcDir": "src",
+    "includeDir": "include",
+    "srcFilter": "+<*> -<**/*esp32p4*>",
+    "flags": "-Isrc/common"
+  }
+}
