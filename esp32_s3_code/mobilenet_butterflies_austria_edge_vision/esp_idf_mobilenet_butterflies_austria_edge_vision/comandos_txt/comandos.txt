@@ -1,0 +1,99 @@
+WiFi conectado! IP: 192.168.3.22 Porta: 80
+=== Inicializando Modelo Butterflies Austria MobileNetV2 ===
+[1] Carregando modelo do littlefs...
+Modelo carregado com sucesso (2813232 bytes)
+[2] Inicializando interpretador...
+Entrada: 224x224x3 type=int8 scale=0.017977742 zero_point=-15
+Arena usada: 4865808/5242880 bytes
+Interpretador inicializado com sucesso
+=== Modelo inicializado com sucesso ===
+
+=== Relatório de memória do modelo ===
+Modelo TFLite no littlefs: 2813232 bytes (2.68 MiB)
+Cópia do modelo em RAM/PSRAM: 2813232 bytes
+Partição da aplicação: 6291456 bytes
+Tamanho do modelo equivale a 44.72% da capacidade da partição da aplicação
+Flash física do ESP32: 16777216 bytes
+Tensor arena usada: 4865808 bytes
+Tensor arena alocada: 5242880 bytes | limite configurado: 5242880 bytes
+Memória interna consumida na inicialização: 356 bytes
+PSRAM consumida na inicialização: 8060936 bytes
+Buffer HTTP temporário por imagem: 150528 bytes
+=== Fim do relatório de memória ===
+=== Servidor HTTP iniciado ===
+I (3137) main_task: Returned from app_main()
+I (12847) wifi:<ba-add>idx:0 (ifx:0, 2c:07:86:8e:13:40), tid:0, ssn:0, winSize:64
+
+
+
+
+(.venv) vini_muchulski@vini-muchulski:~/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision$ python python/evaluate_inferencia_pc.py
+Avaliando builtin_without_default_delegates: 100%|██████████████████████████████████████████████████████████████████████████████████████| 648/648 [00:45<00:00, 14.16it/s]
+Resolver: builtin_without_default_delegates
+Modelo: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision/data/mobilenetv2_int8.tflite
+Dataset: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/Dataset-butterflies-austria/test
+Amostras: 648
+Acurácia: 0.9722
+                        precision    recall  f1-score   support
+
+        Aglais_Urticae     1.0000    0.9630    0.9811        27
+Anthocharis_Cardamines     0.9778    0.9778    0.9778        45
+          Apatura_Iris     0.9722    1.0000    0.9859        35
+       Argynnis_Paphia     1.0000    0.9750    0.9873        40
+      Colias_Myrmidone     1.0000    0.9286    0.9630        28
+     Gonepteryx_Rhamni     0.8462    0.9565    0.8980        23
+            Inachis_Io     0.9655    1.0000    0.9825        28
+ Iphiclides_Podalirius     1.0000    1.0000    1.0000        29
+    Lycaena_Virgaureae     1.0000    0.9412    0.9697        17
+            Lycaenidae     0.9535    1.0000    0.9762        41
+       Maniola_Jurtina     1.0000    0.9512    0.9750        41
+   Melanargia_Galathea     1.0000    1.0000    1.0000        41
+     Nymphalis_Antiopa     1.0000    0.9375    0.9677        16
+       Papilio_Machaon     1.0000    1.0000    1.0000        24
+     Parnassius_Apollo     1.0000    0.9355    0.9667        31
+          Pieris_Rapae     0.9250    1.0000    0.9610        37
+     Polygonia_C-album     0.9744    0.9500    0.9620        40
+      Vanessa_Atalanta     0.9773    0.9149    0.9451        47
+        Vanessa_Cardui     0.9167    1.0000    0.9565        33
+    Zerynthia_Polyxena     0.9615    1.0000    0.9804        25
+
+              accuracy                         0.9722       648
+             macro avg     0.9735    0.9716    0.9718       648
+          weighted avg     0.9738    0.9722    0.9723       648
+
+Resultados: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision/python/results_pc/evaluation/builtin_without_default_delegates
+Avaliando builtin_ref: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 648/648 [02:26<00:00,  4.42it/s]
+Resolver: builtin_ref
+Modelo: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision/data/mobilenetv2_int8.tflite
+Dataset: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/Dataset-butterflies-austria/test
+Amostras: 648
+Acurácia: 0.0417
+                        precision    recall  f1-score   support
+
+        Aglais_Urticae     0.0417    1.0000    0.0800        27
+Anthocharis_Cardamines     0.0000    0.0000    0.0000        45
+          Apatura_Iris     0.0000    0.0000    0.0000        35
+       Argynnis_Paphia     0.0000    0.0000    0.0000        40
+      Colias_Myrmidone     0.0000    0.0000    0.0000        28
+     Gonepteryx_Rhamni     0.0000    0.0000    0.0000        23
+            Inachis_Io     0.0000    0.0000    0.0000        28
+ Iphiclides_Podalirius     0.0000    0.0000    0.0000        29
+    Lycaena_Virgaureae     0.0000    0.0000    0.0000        17
+            Lycaenidae     0.0000    0.0000    0.0000        41
+       Maniola_Jurtina     0.0000    0.0000    0.0000        41
+   Melanargia_Galathea     0.0000    0.0000    0.0000        41
+     Nymphalis_Antiopa     0.0000    0.0000    0.0000        16
+       Papilio_Machaon     0.0000    0.0000    0.0000        24
+     Parnassius_Apollo     0.0000    0.0000    0.0000        31
+          Pieris_Rapae     0.0000    0.0000    0.0000        37
+     Polygonia_C-album     0.0000    0.0000    0.0000        40
+      Vanessa_Atalanta     0.0000    0.0000    0.0000        47
+        Vanessa_Cardui     0.0000    0.0000    0.0000        33
+    Zerynthia_Polyxena     0.0000    0.0000    0.0000        25
+
+              accuracy                         0.0417       648
+             macro avg     0.0021    0.0500    0.0040       648
+          weighted avg     0.0017    0.0417    0.0033       648
+
+Resultados: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision/python/results_pc/evaluation/builtin_ref
+(.venv) vini_muchulski@vini-muchulski:~/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision$ 

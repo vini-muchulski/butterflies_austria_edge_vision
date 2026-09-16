@@ -1,0 +1,702 @@
+[
+  {
+    "op": 0,
+    "name": "TRANSPOSE",
+    "tensor": 110,
+    "bytes": 150528,
+    "hash": "cba3f412",
+    "min": -128,
+    "max": 127,
+    "sum": -4302365
+  },
+  {
+    "op": 1,
+    "name": "PAD",
+    "tensor": 111,
+    "bytes": 153228,
+    "hash": "d0c446e8",
+    "min": -128,
+    "max": 127,
+    "sum": -4342865
+  },
+  {
+    "op": 2,
+    "name": "CONV_2D",
+    "tensor": 112,
+    "bytes": 401408,
+    "hash": "a7a8e58f",
+    "min": -128,
+    "max": 127,
+    "sum": -23418048
+  },
+  {
+    "op": 3,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 113,
+    "bytes": 401408,
+    "hash": "b5fec031",
+    "min": -128,
+    "max": 127,
+    "sum": -20232442
+  },
+  {
+    "op": 4,
+    "name": "CONV_2D",
+    "tensor": 114,
+    "bytes": 200704,
+    "hash": "d63f2680",
+    "min": -128,
+    "max": 116,
+    "sum": -153351
+  },
+  {
+    "op": 5,
+    "name": "CONV_2D",
+    "tensor": 115,
+    "bytes": 1204224,
+    "hash": "17c93e01",
+    "min": -128,
+    "max": 127,
+    "sum": -67932960
+  },
+  {
+    "op": 6,
+    "name": "PAD",
+    "tensor": 116,
+    "bytes": 1247616,
+    "hash": "7c1bf901",
+    "min": -128,
+    "max": 127,
+    "sum": -73487136
+  },
+  {
+    "op": 7,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 117,
+    "bytes": 301056,
+    "hash": "d4d0f578",
+    "min": -128,
+    "max": 127,
+    "sum": -27382603
+  },
+  {
+    "op": 8,
+    "name": "CONV_2D",
+    "tensor": 118,
+    "bytes": 75264,
+    "hash": "5a39944f",
+    "min": -124,
+    "max": 113,
+    "sum": -185234
+  },
+  {
+    "op": 9,
+    "name": "CONV_2D",
+    "tensor": 119,
+    "bytes": 451584,
+    "hash": "7d331076",
+    "min": -128,
+    "max": 127,
+    "sum": -33528889
+  },
+  {
+    "op": 10,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 120,
+    "bytes": 451584,
+    "hash": "568d5542",
+    "min": -128,
+    "max": 127,
+    "sum": -42176309
+  },
+  {
+    "op": 11,
+    "name": "CONV_2D",
+    "tensor": 121,
+    "bytes": 75264,
+    "hash": "eca58f75",
+    "min": -122,
+    "max": 122,
+    "sum": 1873234
+  },
+  {
+    "op": 12,
+    "name": "ADD",
+    "tensor": 122,
+    "bytes": 75264,
+    "hash": "c34e303b",
+    "min": -119,
+    "max": 119,
+    "sum": 1175604
+  },
+  {
+    "op": 13,
+    "name": "CONV_2D",
+    "tensor": 123,
+    "bytes": 451584,
+    "hash": "e92fffbe",
+    "min": -128,
+    "max": 127,
+    "sum": -34878975
+  },
+  {
+    "op": 14,
+    "name": "PAD",
+    "tensor": 124,
+    "bytes": 484416,
+    "hash": "413bea7e",
+    "min": -128,
+    "max": 127,
+    "sum": -39081471
+  },
+  {
+    "op": 15,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 125,
+    "bytes": 112896,
+    "hash": "d572cd21",
+    "min": -128,
+    "max": 127,
+    "sum": -9333054
+  },
+  {
+    "op": 16,
+    "name": "CONV_2D",
+    "tensor": 126,
+    "bytes": 25088,
+    "hash": "3d830200",
+    "min": -128,
+    "max": 111,
+    "sum": 113237
+  },
+  {
+    "op": 17,
+    "name": "CONV_2D",
+    "tensor": 127,
+    "bytes": 150528,
+    "hash": "1bb36093",
+    "min": -128,
+    "max": 127,
+    "sum": -10601908
+  },
+  {
+    "op": 18,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 128,
+    "bytes": 150528,
+    "hash": "7ed13b36",
+    "min": -128,
+    "max": 127,
+    "sum": -15723903
+  },
+  {
+    "op": 19,
+    "name": "CONV_2D",
+    "tensor": 129,
+    "bytes": 25088,
+    "hash": "185d8324",
+    "min": -104,
+    "max": 127,
+    "sum": 249697
+  },
+  {
+    "op": 20,
+    "name": "ADD",
+    "tensor": 130,
+    "bytes": 25088,
+    "hash": "cafa6de7",
+    "min": -113,
+    "max": 122,
+    "sum": 161650
+  },
+  {
+    "op": 21,
+    "name": "CONV_2D",
+    "tensor": 131,
+    "bytes": 150528,
+    "hash": "d3957a3e",
+    "min": -128,
+    "max": 127,
+    "sum": -12440049
+  },
+  {
+    "op": 22,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 132,
+    "bytes": 150528,
+    "hash": "1dd7ac63",
+    "min": -128,
+    "max": 127,
+    "sum": -16510324
+  },
+  {
+    "op": 23,
+    "name": "CONV_2D",
+    "tensor": 133,
+    "bytes": 25088,
+    "hash": "5fc3f44a",
+    "min": -123,
+    "max": 103,
+    "sum": 44083
+  },
+  {
+    "op": 24,
+    "name": "ADD",
+    "tensor": 134,
+    "bytes": 25088,
+    "hash": "6ec99a50",
+    "min": -106,
+    "max": 125,
+    "sum": 232989
+  },
+  {
+    "op": 25,
+    "name": "CONV_2D",
+    "tensor": 135,
+    "bytes": 150528,
+    "hash": "77f5a17a",
+    "min": -128,
+    "max": 127,
+    "sum": -13339903
+  },
+  {
+    "op": 26,
+    "name": "PAD",
+    "tensor": 136,
+    "bytes": 172800,
+    "hash": "c80dc47a",
+    "min": -128,
+    "max": 127,
+    "sum": -16190719
+  },
+  {
+    "op": 27,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 137,
+    "bytes": 37632,
+    "hash": "2327d2e7",
+    "min": -128,
+    "max": 127,
+    "sum": -3022890
+  },
+  {
+    "op": 28,
+    "name": "CONV_2D",
+    "tensor": 138,
+    "bytes": 12544,
+    "hash": "e4e4dd02",
+    "min": -123,
+    "max": 102,
+    "sum": -57819
+  },
+  {
+    "op": 29,
+    "name": "CONV_2D",
+    "tensor": 139,
+    "bytes": 75264,
+    "hash": "a7b8361e",
+    "min": -128,
+    "max": 127,
+    "sum": -6281437
+  },
+  {
+    "op": 30,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 140,
+    "bytes": 75264,
+    "hash": "d97a1921",
+    "min": -128,
+    "max": 127,
+    "sum": -8263798
+  },
+  {
+    "op": 31,
+    "name": "CONV_2D",
+    "tensor": 141,
+    "bytes": 12544,
+    "hash": "edca3efb",
+    "min": -110,
+    "max": 106,
+    "sum": 85498
+  },
+  {
+    "op": 32,
+    "name": "ADD",
+    "tensor": 142,
+    "bytes": 12544,
+    "hash": "c37d3b5c",
+    "min": -119,
+    "max": 107,
+    "sum": -71757
+  },
+  {
+    "op": 33,
+    "name": "CONV_2D",
+    "tensor": 143,
+    "bytes": 75264,
+    "hash": "5770df9d",
+    "min": -128,
+    "max": 127,
+    "sum": -6507990
+  },
+  {
+    "op": 34,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 144,
+    "bytes": 75264,
+    "hash": "62e18ffc",
+    "min": -128,
+    "max": 127,
+    "sum": -8484997
+  },
+  {
+    "op": 35,
+    "name": "CONV_2D",
+    "tensor": 145,
+    "bytes": 12544,
+    "hash": "08540865",
+    "min": -112,
+    "max": 127,
+    "sum": 43206
+  },
+  {
+    "op": 36,
+    "name": "ADD",
+    "tensor": 146,
+    "bytes": 12544,
+    "hash": "5a638d37",
+    "min": -118,
+    "max": 96,
+    "sum": -81254
+  },
+  {
+    "op": 37,
+    "name": "CONV_2D",
+    "tensor": 147,
+    "bytes": 75264,
+    "hash": "4b9b8504",
+    "min": -128,
+    "max": 127,
+    "sum": -7087867
+  },
+  {
+    "op": 38,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 148,
+    "bytes": 75264,
+    "hash": "2529bb20",
+    "min": -128,
+    "max": 127,
+    "sum": -8531979
+  },
+  {
+    "op": 39,
+    "name": "CONV_2D",
+    "tensor": 149,
+    "bytes": 12544,
+    "hash": "0264991a",
+    "min": -128,
+    "max": 127,
+    "sum": 64223
+  },
+  {
+    "op": 40,
+    "name": "ADD",
+    "tensor": 150,
+    "bytes": 12544,
+    "hash": "127b1a5d",
+    "min": -114,
+    "max": 106,
+    "sum": -42716
+  },
+  {
+    "op": 41,
+    "name": "CONV_2D",
+    "tensor": 151,
+    "bytes": 75264,
+    "hash": "2a09e1c3",
+    "min": -128,
+    "max": 127,
+    "sum": -6288192
+  },
+  {
+    "op": 42,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 152,
+    "bytes": 75264,
+    "hash": "6e1e4947",
+    "min": -128,
+    "max": 127,
+    "sum": -6589830
+  },
+  {
+    "op": 43,
+    "name": "CONV_2D",
+    "tensor": 153,
+    "bytes": 18816,
+    "hash": "60cc5adb",
+    "min": -104,
+    "max": 114,
+    "sum": -121696
+  },
+  {
+    "op": 44,
+    "name": "CONV_2D",
+    "tensor": 154,
+    "bytes": 112896,
+    "hash": "bf5e0a68",
+    "min": -128,
+    "max": 127,
+    "sum": -11657709
+  },
+  {
+    "op": 45,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 155,
+    "bytes": 112896,
+    "hash": "13abd8ef",
+    "min": -128,
+    "max": 127,
+    "sum": -12676356
+  },
+  {
+    "op": 46,
+    "name": "CONV_2D",
+    "tensor": 156,
+    "bytes": 18816,
+    "hash": "87e564b0",
+    "min": -109,
+    "max": 127,
+    "sum": 243891
+  },
+  {
+    "op": 47,
+    "name": "ADD",
+    "tensor": 157,
+    "bytes": 18816,
+    "hash": "851ce2c0",
+    "min": -97,
+    "max": 104,
+    "sum": -65097
+  },
+  {
+    "op": 48,
+    "name": "CONV_2D",
+    "tensor": 158,
+    "bytes": 112896,
+    "hash": "3f386298",
+    "min": -128,
+    "max": 127,
+    "sum": -12202363
+  },
+  {
+    "op": 49,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 159,
+    "bytes": 112896,
+    "hash": "87c56d82",
+    "min": -128,
+    "max": 127,
+    "sum": -12716935
+  },
+  {
+    "op": 50,
+    "name": "CONV_2D",
+    "tensor": 160,
+    "bytes": 18816,
+    "hash": "a78fc2d2",
+    "min": -123,
+    "max": 127,
+    "sum": 230583
+  },
+  {
+    "op": 51,
+    "name": "ADD",
+    "tensor": 161,
+    "bytes": 18816,
+    "hash": "730c5608",
+    "min": -99,
+    "max": 105,
+    "sum": 50685
+  },
+  {
+    "op": 52,
+    "name": "CONV_2D",
+    "tensor": 162,
+    "bytes": 112896,
+    "hash": "c0470f23",
+    "min": -128,
+    "max": 127,
+    "sum": -12591656
+  },
+  {
+    "op": 53,
+    "name": "PAD",
+    "tensor": 163,
+    "bytes": 147456,
+    "hash": "52ba5923",
+    "min": -128,
+    "max": 127,
+    "sum": -17015336
+  },
+  {
+    "op": 54,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 164,
+    "bytes": 28224,
+    "hash": "acfa7900",
+    "min": -128,
+    "max": 127,
+    "sum": -2548333
+  },
+  {
+    "op": 55,
+    "name": "CONV_2D",
+    "tensor": 165,
+    "bytes": 7840,
+    "hash": "87034be6",
+    "min": -97,
+    "max": 127,
+    "sum": -16983
+  },
+  {
+    "op": 56,
+    "name": "CONV_2D",
+    "tensor": 166,
+    "bytes": 47040,
+    "hash": "085881b0",
+    "min": -128,
+    "max": 127,
+    "sum": -4766359
+  },
+  {
+    "op": 57,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 167,
+    "bytes": 47040,
+    "hash": "a70532e7",
+    "min": -128,
+    "max": 127,
+    "sum": -5439526
+  },
+  {
+    "op": 58,
+    "name": "CONV_2D",
+    "tensor": 168,
+    "bytes": 7840,
+    "hash": "72d0dc79",
+    "min": -128,
+    "max": 127,
+    "sum": 16880
+  },
+  {
+    "op": 59,
+    "name": "ADD",
+    "tensor": 169,
+    "bytes": 7840,
+    "hash": "e08bba7d",
+    "min": -97,
+    "max": 120,
+    "sum": -24692
+  },
+  {
+    "op": 60,
+    "name": "CONV_2D",
+    "tensor": 170,
+    "bytes": 47040,
+    "hash": "2dc98989",
+    "min": -128,
+    "max": 127,
+    "sum": -5018904
+  },
+  {
+    "op": 61,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 171,
+    "bytes": 47040,
+    "hash": "ef3ba524",
+    "min": -128,
+    "max": 94,
+    "sum": -5446653
+  },
+  {
+    "op": 62,
+    "name": "CONV_2D",
+    "tensor": 172,
+    "bytes": 7840,
+    "hash": "b743a6b1",
+    "min": -98,
+    "max": 93,
+    "sum": -15684
+  },
+  {
+    "op": 63,
+    "name": "ADD",
+    "tensor": 173,
+    "bytes": 7840,
+    "hash": "c31403e1",
+    "min": -111,
+    "max": 106,
+    "sum": -56588
+  },
+  {
+    "op": 64,
+    "name": "CONV_2D",
+    "tensor": 174,
+    "bytes": 47040,
+    "hash": "63c35d2a",
+    "min": -128,
+    "max": 127,
+    "sum": -5309317
+  },
+  {
+    "op": 65,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 175,
+    "bytes": 47040,
+    "hash": "8dee944b",
+    "min": -128,
+    "max": 127,
+    "sum": -4986060
+  },
+  {
+    "op": 66,
+    "name": "CONV_2D",
+    "tensor": 176,
+    "bytes": 15680,
+    "hash": "c9570893",
+    "min": -106,
+    "max": 109,
+    "sum": -15416
+  },
+  {
+    "op": 67,
+    "name": "CONV_2D",
+    "tensor": 177,
+    "bytes": 62720,
+    "hash": "9d215fce",
+    "min": -128,
+    "max": 127,
+    "sum": -7901411
+  },
+  {
+    "op": 68,
+    "name": "SUM",
+    "tensor": 178,
+    "bytes": 1280,
+    "hash": "295053eb",
+    "min": -128,
+    "max": 62,
+    "sum": -153480
+  },
+  {
+    "op": 69,
+    "name": "FULLY_CONNECTED",
+    "tensor": 179,
+    "bytes": 20,
+    "hash": "f061234c",
+    "min": -100,
+    "max": 103,
+    "sum": -1347
+  }
+]

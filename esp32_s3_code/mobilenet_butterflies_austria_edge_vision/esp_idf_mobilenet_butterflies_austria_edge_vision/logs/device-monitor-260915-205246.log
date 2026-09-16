@@ -1,0 +1,235 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1710
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31d4
+entry 0x403c8944
+I (25) boot: ESP-IDF 5.5.0 2nd stage bootloader
+I (25) boot: compile time Sep 15 2026 20:48:38
+I (25) boot: Multicore bootloader
+I (25) boot: chip revision: v0.2
+I (28) boot: efuse block revision: v1.3
+I (31) qio_mode: Enabling default flash chip QIO
+I (36) boot.esp32s3: Boot SPI Speed : 80MHz
+I (40) boot.esp32s3: SPI Mode       : QIO
+I (43) boot.esp32s3: SPI Flash Size : 16MB
+I (47) boot: Enabling RNG early entropy source...
+I (52) boot: Partition Table:
+I (54) boot: ## Label            Usage          Type ST Offset   Length
+I (61) boot:  0 nvs              WiFi data        01 02 00009000 00005000
+I (67) boot:  1 otadata          OTA data         01 00 0000e000 00002000
+I (74) boot:  2 app              OTA app          00 10 00010000 00600000
+I (80) boot:  3 littlefs         Unknown data     01 83 00610000 009e0000
+I (87) boot:  4 coredump         Unknown data     01 03 00ff0000 00010000
+I (93) boot: End of partition table
+I (97) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=222e4h (140004) map
+I (125) esp_image: segment 1: paddr=0003230c vaddr=3fc9c000 size=050fch ( 20732) load
+I (129) esp_image: segment 2: paddr=00037410 vaddr=40374000 size=08c08h ( 35848) load
+I (136) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=a54c8h (677064) map
+I (237) esp_image: segment 4: paddr=000e54f0 vaddr=4037cc08 size=0f3e0h ( 62432) load
+I (249) esp_image: segment 5: paddr=000f48d8 vaddr=600fe000 size=00020h (    32) load
+I (258) boot: Loaded app from partition at offset 0x10000
+I (259) boot: Disabling RNG early entropy source...
+I (269) octal_psram: vendor id    : 0x0d (AP)
+I (269) octal_psram: dev id       : 0x02 (generation 3)
+I (269) octal_psram: density      : 0x03 (64 Mbit)
+I (271) octal_psram: good-die     : 0x01 (Pass)
+I (275) octal_psram: Latency      : 0x01 (Fixed)
+I (280) octal_psram: VCC          : 0x01 (3V)
+I (284) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (289) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (293) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (298) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (303) octal_psram: DriveStrength: 0x00 (1/1)
+I (308) MSPI Timing: PSRAM timing tuning index: 5
+I (312) esp_psram: Found 8MB PSRAM device
+I (316) esp_psram: Speed: 80MHz
+I (318) cpu_start: Multicore app
+I (754) esp_psram: SPI SRAM memory test OK
+I (763) cpu_start: Pro cpu start user code
+I (763) cpu_start: cpu freq: 240000000 Hz
+I (763) app_init: Application information:
+I (763) app_init: Project name:     butterflies_austria_mobilenetv2
+I (769) app_init: App version:      bc09608
+I (773) app_init: Compile time:     Sep 15 2026 20:45:05
+I (778) app_init: ELF file SHA256:  b7ab4fe26...
+I (782) app_init: ESP-IDF:          5.5.0
+I (786) efuse_init: Min chip rev:     v0.0
+I (790) efuse_init: Max chip rev:     v0.99 
+I (794) efuse_init: Chip rev:         v0.2
+I (797) heap_init: Initializing. RAM available for dynamic allocation:
+I (804) heap_init: At 3FCA5230 len 000444E0 (273 KiB): RAM
+I (809) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (814) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (819) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM
+I (825) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (832) spi_flash: detected chip: generic
+I (835) spi_flash: flash io: qio
+I (838) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (844) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (851) main_task: Started on CPU0
+I (881) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (881) main_task: Calling app_main()
+
+=== Butterflies Austria MobileNetV2 TensorFlow Lite WiFi API (ESP-IDF) ===
+Free heap inicial: 8704771 bytes
+PSRAM disponível: 8386156 bytes
+Free heap (geral): 8704771 bytes
+Free PSRAM: 8386156 bytes
+Free INTERNAL: 318615 bytes
+Largest INTERNAL block: 225280 bytes
+=== Montando LittleFS ===
+LittleFS montado: 10354688 bytes total, 2830336 bytes usados
+=== Conectando ao WiFi ===
+SSID: Starlink
+I (951) pp: pp rom version: e7ae62f
+I (951) net80211: net80211 rom version: e7ae62f
+I (961) wifi:wifi driver task: 3fceda50, prio:23, stack:6656, core=0
+I (961) wifi:wifi firmware version: f3dbad7
+I (961) wifi:wifi certification version: v7.0
+I (961) wifi:config NVS flash: enabled
+I (971) wifi:config nano formatting: disabled
+I (971) wifi:Init data frame dynamic rx buffer num: 32
+I (981) wifi:Init static rx mgmt buffer num: 5
+I (981) wifi:Init management short buffer num: 32
+I (991) wifi:Init dynamic tx buffer num: 32
+I (991) wifi:Init static tx FG buffer num: 2
+I (991) wifi:Init static rx buffer size: 1600
+I (1001) wifi:Init static rx buffer num: 10
+I (1001) wifi:Init dynamic rx buffer num: 32
+I (1011) wifi_init: rx ba win: 6
+I (1011) wifi_init: accept mbox: 6
+I (1011) wifi_init: tcpip mbox: 32
+I (1011) wifi_init: udp mbox: 6
+I (1021) wifi_init: tcp mbox: 6
+I (1021) wifi_init: tcp tx win: 5760
+I (1021) wifi_init: tcp rx win: 5760
+I (1031) wifi_init: tcp mss: 1440
+I (1031) wifi_init: WiFi IRAM OP enabled
+I (1031) wifi_init: WiFi RX IRAM OP enabled
+W (1041) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+I (1051) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10
+I (1081) wifi:mode : sta (94:a9:90:31:cf:68)
+I (1081) wifi:enable tsf
+I (1091) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0
+I (1091) wifi:state: init -> auth (0xb0)
+I (2091) wifi:state: auth -> init (0x200)
+I (2101) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0
+WiFi desconectado - tentando reconectar...
+WiFi desconectado - tentando reconectar...
+I (4511) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0
+I (4511) wifi:state: init -> auth (0xb0)
+I (4521) wifi:state: auth -> assoc (0x0)
+I (4531) wifi:state: assoc -> run (0x10)
+I (4541) wifi:connected with Starlink, aid = 4, channel 6, BW20, bssid = 2c:07:86:8e:13:40
+I (4541) wifi:security: WPA2-PSK, phy: bgn, rssi: -57
+I (4541) wifi:pm start, type: 1
+
+I (4541) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4551) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (4571) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (5611) esp_netif_handlers: sta ip: 192.168.3.22, mask: 255.255.255.0, gw: 192.168.3.1
+WiFi conectado! IP: 192.168.3.22 Porta: 80
+=== Inicializando Modelo Butterflies Austria MobileNetV2 ===
+[1] Carregando modelo do littlefs...
+Modelo carregado com sucesso (2813232 bytes)
+[2] Inicializando interpretador...
+Entrada: 224x224x3 type=int8 scale=0.017977742 zero_point=-15
+Arena usada: 4865600/5242880 bytes
+Interpretador inicializado com sucesso
+=== Modelo inicializado com sucesso ===
+
+=== Relatório de memória do modelo ===
+Modelo TFLite no littlefs: 2813232 bytes (2.68 MiB)
+Cópia do modelo em RAM/PSRAM: 2813232 bytes
+Partição da aplicação: 6291456 bytes
+Tamanho do modelo equivale a 44.72% da capacidade da partição da aplicação
+Flash física do ESP32: 16777216 bytes
+Tensor arena usada: 4865600 bytes
+Tensor arena alocada: 5242880 bytes | limite configurado: 5242880 bytes
+Memória interna consumida na inicialização: 396 bytes
+PSRAM consumida na inicialização: 8060936 bytes
+Buffer HTTP temporário por imagem: 150528 bytes
+=== Fim do relatório de memória ===
+=== Servidor HTTP iniciado ===
+I (6541) main_task: Returned from app_main()
+I (14841) wifi:<ba-add>idx:0 (ifx:0, 2c:07:86:8e:13:40), tid:0, ssn:1, winSize:64
+RX ok em 1552413 us
+Mem pré-inferência | heap: 423919 | psram: 173384 | internal: 250535
+OPTRACE op=0 name=TRANSPOSE tensor=110 bytes=150528 hash=0xcba3f412 min=-128 max=127 sum=-4302365
+OPTRACE op=1 name=PAD tensor=111 bytes=153228 hash=0xd0c446e8 min=-128 max=127 sum=-4342865
+OPTRACE op=2 name=CONV_2D tensor=112 bytes=401408 hash=0xa7a8e58f min=-128 max=127 sum=-23418048
+OPTRACE op=3 name=DEPTHWISE_CONV_2D tensor=113 bytes=401408 hash=0xb5fec031 min=-128 max=127 sum=-20232442
+OPTRACE op=4 name=CONV_2D tensor=114 bytes=200704 hash=0x95467bc5 min=-128 max=116 sum=-153632
+OPTRACE op=5 name=CONV_2D tensor=115 bytes=1204224 hash=0x627c7168 min=-128 max=127 sum=-68638963
+OPTRACE op=6 name=PAD tensor=116 bytes=1247616 hash=0x5990fbe8 min=-128 max=127 sum=-74193139
+OPTRACE op=7 name=DEPTHWISE_CONV_2D tensor=117 bytes=301056 hash=0x1ffe7c21 min=-128 max=127 sum=-22706744
+OPTRACE op=8 name=CONV_2D tensor=118 bytes=75264 hash=0x3d6982b6 min=-128 max=127 sum=-7267629
+OPTRACE op=9 name=CONV_2D tensor=119 bytes=451584 hash=0xc8014006 min=-128 max=127 sum=47621339
+OPTRACE op=10 name=DEPTHWISE_CONV_2D tensor=120 bytes=451584 hash=0xcaa8f75e min=-128 max=127 sum=-41563217
+OPTRACE op=11 name=CONV_2D tensor=121 bytes=75264 hash=0x784e59a6 min=-128 max=127 sum=-3069361
+OPTRACE op=12 name=ADD tensor=122 bytes=75264 hash=0x9bc750d min=-128 max=108 sum=-7086312
+OPTRACE op=13 name=CONV_2D tensor=123 bytes=451584 hash=0x87a9bc13 min=-128 max=127 sum=51752148
+OPTRACE op=14 name=PAD tensor=124 bytes=484416 hash=0x2603a193 min=-128 max=127 sum=47549652
+OPTRACE op=15 name=DEPTHWISE_CONV_2D tensor=125 bytes=112896 hash=0xe193d245 min=-128 max=127 sum=-10577926
+OPTRACE op=16 name=CONV_2D tensor=126 bytes=25088 hash=0xc29f292b min=-128 max=111 sum=-2450312
+OPTRACE op=17 name=CONV_2D tensor=127 bytes=150528 hash=0xe8449b34 min=-128 max=127 sum=17460001
+OPTRACE op=18 name=DEPTHWISE_CONV_2D tensor=128 bytes=150528 hash=0x6bdc5ff4 min=-128 max=127 sum=-15663871
+OPTRACE op=19 name=CONV_2D tensor=129 bytes=25088 hash=0xb9d73e75 min=-128 max=127 sum=133650
+OPTRACE op=20 name=ADD tensor=130 bytes=25088 hash=0x8747c224 min=-128 max=127 sum=-1922735
+OPTRACE op=21 name=CONV_2D tensor=131 bytes=150528 hash=0x45497072 min=-128 max=127 sum=15892257
+OPTRACE op=22 name=DEPTHWISE_CONV_2D tensor=132 bytes=150528 hash=0xd0253263 min=-128 max=127 sum=-14920946
+OPTRACE op=23 name=CONV_2D tensor=133 bytes=25088 hash=0xfa018326 min=-128 max=127 sum=-719217
+OPTRACE op=24 name=ADD tensor=134 bytes=25088 hash=0xff06ab11 min=-128 max=119 sum=-1887062
+OPTRACE op=25 name=CONV_2D tensor=135 bytes=150528 hash=0xa015c412 min=-128 max=127 sum=15894017
+OPTRACE op=26 name=PAD tensor=136 bytes=172800 hash=0xb7928912 min=-128 max=127 sum=13043201
+OPTRACE op=27 name=DEPTHWISE_CONV_2D tensor=137 bytes=37632 hash=0xd507a780 min=-128 max=127 sum=-3460603
+OPTRACE op=28 name=CONV_2D tensor=138 bytes=12544 hash=0xd7e554b6 min=-128 max=127 sum=-1238089
+OPTRACE op=29 name=CONV_2D tensor=139 bytes=75264 hash=0x4c77ad55 min=-128 max=127 sum=-6771604
+OPTRACE op=30 name=DEPTHWISE_CONV_2D tensor=140 bytes=75264 hash=0x5663bcc5 min=-128 max=127 sum=-7222208
+OPTRACE op=31 name=CONV_2D tensor=141 bytes=12544 hash=0xd589175d min=-128 max=-72 sum=-1545852
+OPTRACE op=32 name=ADD tensor=142 bytes=12544 hash=0x223f6e8 min=-128 max=33 sum=-1494453
+OPTRACE op=33 name=CONV_2D tensor=143 bytes=75264 hash=0xa435d9c5 min=-128 max=127 sum=-6485052
+OPTRACE op=34 name=DEPTHWISE_CONV_2D tensor=144 bytes=75264 hash=0x85ffbe25 min=-128 max=127 sum=-6734952
+OPTRACE op=35 name=CONV_2D tensor=145 bytes=12544 hash=0xf5c791c5 min=-128 max=-128 sum=-1605632
+OPTRACE op=36 name=ADD tensor=146 bytes=12544 hash=0x361d4755 min=-128 max=-31 sum=-1566376
+OPTRACE op=37 name=CONV_2D tensor=147 bytes=75264 hash=0x3178a58d min=-128 max=127 sum=-6751612
+OPTRACE op=38 name=DEPTHWISE_CONV_2D tensor=148 bytes=75264 hash=0xadf6060d min=-128 max=127 sum=-7122444
+OPTRACE op=39 name=CONV_2D tensor=149 bytes=12544 hash=0xf5c791c5 min=-128 max=-128 sum=-1605632
+OPTRACE op=40 name=ADD tensor=150 bytes=12544 hash=0x7dcb2bed min=-128 max=-75 sum=-1590890
+OPTRACE op=41 name=CONV_2D tensor=151 bytes=75264 hash=0xe38eb9c5 min=-128 max=127 sum=-6684972
+OPTRACE op=42 name=DEPTHWISE_CONV_2D tensor=152 bytes=75264 hash=0x126f57c5 min=-128 max=127 sum=-6784932
+OPTRACE op=43 name=CONV_2D tensor=153 bytes=18816 hash=0x4bdb0bc5 min=-128 max=-128 sum=-2408448
+OPTRACE op=44 name=CONV_2D tensor=154 bytes=112896 hash=0x44ebbcc5 min=-128 max=127 sum=-10217284
+OPTRACE op=45 name=DEPTHWISE_CONV_2D tensor=155 bytes=112896 hash=0x8de26bc5 min=-128 max=127 sum=-9882516
+OPTRACE op=46 name=CONV_2D tensor=156 bytes=18816 hash=0x354b6245 min=116 max=127 sum=2387476
+OPTRACE op=47 name=ADD tensor=157 bytes=18816 hash=0x9ad8745 min=-70 max=-65 sum=-1224020
+OPTRACE op=48 name=CONV_2D tensor=158 bytes=112896 hash=0xe01c1ded min=-128 max=127 sum=-10241196
+OPTRACE op=49 name=DEPTHWISE_CONV_2D tensor=159 bytes=112896 hash=0x47ca1505 min=-128 max=127 sum=-9995020
+OPTRACE op=50 name=CONV_2D tensor=160 bytes=18816 hash=0xcf9e1a45 min=-128 max=-102 sum=-2402176
+OPTRACE op=51 name=ADD tensor=161 bytes=18816 hash=0x2a09d1e5 min=-113 max=-98 sum=-2030756
+OPTRACE op=52 name=CONV_2D tensor=162 bytes=112896 hash=0x189f373d min=-128 max=127 sum=-10243940
+OPTRACE op=53 name=PAD tensor=163 bytes=147456 hash=0x7d7fc33d min=-128 max=127 sum=-14667620
+OPTRACE op=54 name=DEPTHWISE_CONV_2D tensor=164 bytes=28224 hash=0xfb3adc93 min=-128 max=127 sum=-2507036
+OPTRACE op=55 name=CONV_2D tensor=165 bytes=7840 hash=0xc2aa5a5 min=127 max=127 sum=995680
+OPTRACE op=56 name=CONV_2D tensor=166 bytes=47040 hash=0xfba4a7f7 min=-128 max=127 sum=-4102280
+OPTRACE op=57 name=DEPTHWISE_CONV_2D tensor=167 bytes=47040 hash=0x2d709e04 min=-128 max=127 sum=-4109091
+OPTRACE op=58 name=CONV_2D tensor=168 bytes=7840 hash=0x16620c46 min=-128 max=127 sum=-966035
+OPTRACE op=59 name=ADD tensor=169 bytes=7840 hash=0x729b1d7c min=58 max=127 sum=464863
+OPTRACE op=60 name=CONV_2D tensor=170 bytes=47040 hash=0x2f7f8762 min=-128 max=127 sum=-4163481
+OPTRACE op=61 name=DEPTHWISE_CONV_2D tensor=171 bytes=47040 hash=0x614268be min=-128 max=127 sum=-4246291
+OPTRACE op=62 name=CONV_2D tensor=172 bytes=7840 hash=0xc2aa5a5 min=127 max=127 sum=995680
+OPTRACE op=63 name=ADD tensor=173 bytes=7840 hash=0x7e717a4c min=106 max=127 sum=834127
+OPTRACE op=64 name=CONV_2D tensor=174 bytes=47040 hash=0x656255e8 min=-128 max=127 sum=-4155347
+OPTRACE op=65 name=DEPTHWISE_CONV_2D tensor=175 bytes=47040 hash=0xa68648d1 min=-128 max=127 sum=-4133836
+OPTRACE op=66 name=CONV_2D tensor=176 bytes=15680 hash=0x88b8a236 min=-128 max=127 sum=-1394785
+OPTRACE op=67 name=CONV_2D tensor=177 bytes=62720 hash=0xf170815f min=-128 max=127 sum=-5504170
+OPTRACE op=68 name=SUM tensor=178 bytes=1280 hash=0x6e41e07f min=-128 max=127 sum=-112330
+OPTRACE op=69 name=FULLY_CONNECTED tensor=179 bytes=20 hash=0xe5612d55 min=-128 max=-128 sum=-2560
+Processamento completo em 129385 ms
+Tempos | cópia: 16039us | inferência: 129.369700 s | pós: 13us | total: 129385759us
+Hashes FNV-1a | input_int8: 415056ee | logits: e5612d55
+Mem pós-inferência | heap: 423763 | psram: 173384 | internal: 250379

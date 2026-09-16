@@ -1,0 +1,42 @@
+# Teste otimizado: ESP-NN ativo + OPTRACE
+
+cd gatos_cachorro_unet_v5_fast_scnn_96px/esp32_s3_code
+source .venv/bin/activate
+
+# Limpeza completa e build
+pio run -t clean
+rm -rf .pio/build
+rm -rf .pio/build_cache
+pio run
+
+# Deve listar os kernels esp-nn presentes no firmware
+~/.platformio/packages/toolchain-xtensa-esp-elf/bin/xtensa-esp32s3-elf-nm \
+  .pio/build/esp32s3/firmware.elf | grep ' T esp_nn' | head
+
+# O modelo no LittleFS nao mudou; grave somente o firmware
+pio run -t upload
+
+# Terminal 1: capture o trace serial
+pio device monitor | tee python/results/golden_optrace_espnn.log
+
+# Terminal 2: gere a referencia PC e execute a mesma imagem no ESP32
+source .venv/bin/activate
+INPUT_IMAGE_PATH="$PWD/python/imgs/golden_recortado.jpg" \
+  python python/inferencia_pc.py
+INPUT_IMAGE_PATH="$PWD/python/imgs/golden_recortado.jpg" \
+  python python/teste_inferencia.py
+
+# Depois da inferencia, encerre o monitor com Ctrl+C e compare o trace
+INPUT_IMAGE_PATH="$PWD/python/imgs/golden_recortado.jpg" \
+  python python/trace_operadores_pc.py \
+  python/results/golden_optrace_espnn.log
+
+# Resultado esperado:
+# registros_pc=61 registros_esp32=61
+# primeira diferenca de hash: nenhuma
+# primeira diferenca estatistica: nenhuma
+# logits ESP32 vs PC: iguais=1.000000 max_abs_diff=0
+
+# LittleFS: necessario somente quando data/gatos_v5_fast_scnn.tflite mudar
+# pio run -t buildfs
+# pio run -t uploadfs
