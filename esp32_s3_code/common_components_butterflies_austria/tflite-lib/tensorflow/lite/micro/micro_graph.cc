@@ -27,6 +27,9 @@ limitations under the License.
 namespace tflite {
 namespace {
 
+constexpr size_t kTrackedNodeIndex = 178;
+void* g_tracked_builtin_data = nullptr;
+
 const char* OpNameFromRegistration(const TfLiteRegistration_V1* registration) {
   if (registration->builtin_code == BuiltinOperator_CUSTOM) {
     return registration->custom_name;
@@ -103,6 +106,23 @@ TfLiteStatus MicroGraph::PrepareSubgraphs() {
        subgraph_idx++) {
     current_subgraph_index_ = subgraph_idx;
     uint32_t operators_size = NumSubgraphOperators(model_, subgraph_idx);
+    TfLiteNode* tracked_node = nullptr;
+    if (subgraph_idx == 0 && operators_size > kTrackedNodeIndex) {
+      tracked_node = &(subgraph_allocations_[subgraph_idx]
+                            .node_and_registrations[kTrackedNodeIndex]
+                            .node);
+      g_tracked_builtin_data = tracked_node->builtin_data;
+      MicroPrintf("NODE_DIAG phase=prepare_start op=%d node=%x builtin=%x user=%x",
+                  static_cast<int>(kTrackedNodeIndex),
+                  static_cast<unsigned>(reinterpret_cast<uintptr_t>(tracked_node)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(tracked_node->builtin_data)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(tracked_node->user_data)));
+      if (g_tracked_builtin_data == nullptr) {
+        return kTfLiteError;
+      }
+    }
     for (size_t i = 0; i < operators_size; ++i) {
       TfLiteNode* node =
           &(subgraph_allocations_[subgraph_idx].node_and_registrations[i].node);
@@ -119,6 +139,17 @@ TfLiteStatus MicroGraph::PrepareSubgraphs() {
         }
       }
       allocator_->FinishPrepareNodeAllocations(/*node_id=*/i);
+      if (tracked_node != nullptr &&
+          tracked_node->builtin_data != g_tracked_builtin_data) {
+        MicroPrintf(
+            "NODE_DIAG corrupted_after_prepare_op=%d expected=%x actual=%x",
+            static_cast<int>(i),
+            static_cast<unsigned>(
+                reinterpret_cast<uintptr_t>(g_tracked_builtin_data)),
+            static_cast<unsigned>(
+                reinterpret_cast<uintptr_t>(tracked_node->builtin_data)));
+        return kTfLiteError;
+      }
     }
   }
   current_subgraph_index_ = previous_subgraph_idx;
@@ -162,6 +193,24 @@ TfLiteStatus MicroGraph::InvokeSubgraph(int subgraph_idx) {
     return kTfLiteError;
   }
   uint32_t operators_size = NumSubgraphOperators(model_, subgraph_idx);
+  TfLiteNode* tracked_node = nullptr;
+  if (subgraph_idx == 0 && operators_size > kTrackedNodeIndex) {
+    tracked_node = &(subgraph_allocations_[subgraph_idx]
+                          .node_and_registrations[kTrackedNodeIndex]
+                          .node);
+    MicroPrintf(
+        "NODE_DIAG phase=invoke_start op=%d expected=%x actual=%x user=%x",
+        static_cast<int>(kTrackedNodeIndex),
+        static_cast<unsigned>(
+            reinterpret_cast<uintptr_t>(g_tracked_builtin_data)),
+        static_cast<unsigned>(
+            reinterpret_cast<uintptr_t>(tracked_node->builtin_data)),
+        static_cast<unsigned>(
+            reinterpret_cast<uintptr_t>(tracked_node->user_data)));
+    if (tracked_node->builtin_data != g_tracked_builtin_data) {
+      return kTfLiteError;
+    }
+  }
   for (size_t i = 0; i < operators_size; ++i) {
     TfLiteNode* node =
         &(subgraph_allocations_[subgraph_idx].node_and_registrations[i].node);
@@ -169,6 +218,17 @@ TfLiteStatus MicroGraph::InvokeSubgraph(int subgraph_idx) {
         subgraph_allocations_[subgraph_idx]
             .node_and_registrations[i]
             .registration;
+
+    if (tracked_node != nullptr &&
+        tracked_node->builtin_data != g_tracked_builtin_data) {
+      MicroPrintf("NODE_DIAG corrupted_before_invoke_op=%d expected=%x actual=%x",
+                  static_cast<int>(i),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(g_tracked_builtin_data)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(tracked_node->builtin_data)));
+      return kTfLiteError;
+    }
 
 // This ifdef is needed (even though ScopedMicroProfiler itself is a no-op with
 // -DTF_LITE_STRIP_ERROR_STRINGS) because the function OpNameFromRegistration is
@@ -179,8 +239,31 @@ TfLiteStatus MicroGraph::InvokeSubgraph(int subgraph_idx) {
         reinterpret_cast<MicroProfilerInterface*>(context_->profiler));
 #endif
 
+    if (i == kTrackedNodeIndex) {
+      MicroPrintf("NODE_DIAG phase=call op=%d node=%x tracked=%x builtin=%x user=%x",
+                  static_cast<int>(i),
+                  static_cast<unsigned>(reinterpret_cast<uintptr_t>(node)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(tracked_node)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(node->builtin_data)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(node->user_data)));
+    }
+
     TFLITE_DCHECK(registration->invoke);
     TfLiteStatus invoke_status = registration->invoke(context_, node);
+
+    if (tracked_node != nullptr &&
+        tracked_node->builtin_data != g_tracked_builtin_data) {
+      MicroPrintf("NODE_DIAG corrupted_after_invoke_op=%d expected=%x actual=%x",
+                  static_cast<int>(i),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(g_tracked_builtin_data)),
+                  static_cast<unsigned>(
+                      reinterpret_cast<uintptr_t>(tracked_node->builtin_data)));
+      return kTfLiteError;
+    }
 
     if (invoke_status == kTfLiteOk && node->outputs != nullptr) {
       for (int output_idx = 0; output_idx < node->outputs->size; ++output_idx) {

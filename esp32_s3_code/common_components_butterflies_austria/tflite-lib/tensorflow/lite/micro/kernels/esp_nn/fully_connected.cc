@@ -32,6 +32,8 @@ limitations under the License.
 
 #include <esp_timer.h>
 
+#include <algorithm>
+
 long long fc_total_time = 0;
 
 namespace tflite {
@@ -43,6 +45,15 @@ struct NodeData {
   int* per_channel_output_shift;
   int output_depth;
 };
+
+uint32_t Fnv1a32(const void* data, size_t size) {
+  const auto* bytes = static_cast<const uint8_t*>(data);
+  uint32_t hash = 2166136261u;
+  for (size_t i = 0; i < size; ++i) {
+    hash = (hash ^ bytes[i]) * 16777619u;
+  }
+  return hash;
+}
 
 void* Init(TfLiteContext* context, const char* buffer, size_t length) {
   TFLITE_DCHECK(context->AllocatePersistentBuffer != nullptr);
@@ -129,9 +140,24 @@ TfLiteStatus Prepare(TfLiteContext* context, TfLiteNode* node) {
 }
 
 TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node) {
-  TFLITE_DCHECK(node->builtin_data != nullptr);
+  MicroPrintf("FC_DIAG node=%x builtin=%x user=%x inputs=%x outputs=%x",
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(node)),
+              static_cast<unsigned>(
+                  reinterpret_cast<uintptr_t>(node->builtin_data)),
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(node->user_data)),
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(node->inputs)),
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(node->outputs)));
+  if (node->builtin_data == nullptr) {
+    MicroPrintf("FC_DIAG builtin_data_null");
+    return kTfLiteError;
+  }
   const auto* params =
       static_cast<const TfLiteFullyConnectedParams*>(node->builtin_data);
+  const auto* node_data_ptr = static_cast<const NodeData*>(node->user_data);
+  if (node_data_ptr == nullptr) {
+    MicroPrintf("FC_DIAG user_data_null");
+    return kTfLiteError;
+  }
 
   const TfLiteEvalTensor* input =
       tflite::micro::GetEvalInput(context, node, kFullyConnectedInputTensor);
@@ -142,8 +168,23 @@ TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node) {
   TfLiteEvalTensor* output =
       tflite::micro::GetEvalOutput(context, node, kFullyConnectedOutputTensor);
 
-  TFLITE_DCHECK(node->user_data != nullptr);
-  const auto& node_data = *(static_cast<const NodeData*>(node->user_data));
+  MicroPrintf("FC_TENSOR_DIAG idx=%d,%d,%d,%d",
+              node->inputs->data[kFullyConnectedInputTensor],
+              node->inputs->data[kFullyConnectedWeightsTensor],
+              node->inputs->data[kFullyConnectedBiasTensor],
+              node->outputs->data[kFullyConnectedOutputTensor]);
+  MicroPrintf("FC_TENSOR_DIAG ptr=%x,%x,%x,%x",
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(input)),
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(filter)),
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(bias)),
+              static_cast<unsigned>(reinterpret_cast<uintptr_t>(output)));
+  MicroPrintf("FC_TENSOR_DIAG type=%d,%d,%d,%d",
+              input != nullptr ? input->type : -1,
+              filter != nullptr ? filter->type : -1,
+              bias != nullptr ? bias->type : -1,
+              output != nullptr ? output->type : -1);
+
+  const auto& node_data = *node_data_ptr;
   const auto& data = node_data.op_data;
 
   long long start_time = esp_timer_get_time();
@@ -168,8 +209,59 @@ TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node) {
           nullptr != bias ? tflite::micro::GetTensorData<int32_t>(bias)
                           : nullptr;
       if (node_data.per_channel_output_multiplier != nullptr) {
+        const FullyConnectedParams quantized_params =
+            FullyConnectedParamsQuantized(data);
+        static bool quant_diag_printed = false;
+        if (!quant_diag_printed) {
+          int32_t multiplier_min = node_data.per_channel_output_multiplier[0];
+          int32_t multiplier_max = multiplier_min;
+          int shift_min = node_data.per_channel_output_shift[0];
+          int shift_max = shift_min;
+          for (int i = 1; i < node_data.output_depth; ++i) {
+            multiplier_min = std::min(
+                multiplier_min, node_data.per_channel_output_multiplier[i]);
+            multiplier_max = std::max(
+                multiplier_max, node_data.per_channel_output_multiplier[i]);
+            shift_min =
+                std::min(shift_min, node_data.per_channel_output_shift[i]);
+            shift_max =
+                std::max(shift_max, node_data.per_channel_output_shift[i]);
+          }
+          MicroPrintf(
+              "FC_QUANT_DIAG depth=%d mult_hash=%x shift_hash=%x",
+              node_data.output_depth,
+              static_cast<unsigned>(Fnv1a32(
+                  node_data.per_channel_output_multiplier,
+                  node_data.output_depth * sizeof(int32_t))),
+              static_cast<unsigned>(Fnv1a32(
+                  node_data.per_channel_output_shift,
+                  node_data.output_depth * sizeof(int))));
+          MicroPrintf(
+              "FC_QUANT_DIAG mult=%d:%d first=%d last=%d shift=%d:%d first=%d last=%d",
+              multiplier_min, multiplier_max,
+              node_data.per_channel_output_multiplier[0],
+              node_data.per_channel_output_multiplier[node_data.output_depth - 1],
+              shift_min, shift_max, node_data.per_channel_output_shift[0],
+              node_data.per_channel_output_shift[node_data.output_depth - 1]);
+          MicroPrintf(
+              "FC_QUANT_DIAG input_offset=%d weights_offset=%d output_offset=%d activation=%d:%d",
+              quantized_params.input_offset, quantized_params.weights_offset,
+              quantized_params.output_offset,
+              quantized_params.quantized_activation_min,
+              quantized_params.quantized_activation_max);
+#if TFLITE_SINGLE_ROUNDING
+          MicroPrintf("FC_QUANT_DIAG single_rounding=1 int32_bytes=%d int_bytes=%d",
+                      static_cast<int>(sizeof(int32_t)),
+                      static_cast<int>(sizeof(int)));
+#else
+          MicroPrintf("FC_QUANT_DIAG single_rounding=0 int32_bytes=%d int_bytes=%d",
+                      static_cast<int>(sizeof(int32_t)),
+                      static_cast<int>(sizeof(int)));
+#endif
+          quant_diag_printed = true;
+        }
         tflite::reference_integer_ops::FullyConnectedPerChannel(
-            FullyConnectedParamsQuantized(data),
+            quantized_params,
             node_data.per_channel_output_multiplier,
             node_data.per_channel_output_shift,
             tflite::micro::GetTensorShape(input),
