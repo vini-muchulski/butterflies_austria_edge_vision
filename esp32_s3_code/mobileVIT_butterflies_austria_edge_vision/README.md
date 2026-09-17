@@ -4,7 +4,7 @@
 
 Este diretório contém o estudo de uma MobileViT XX-Small para classificar 20 espécies de borboletas do dataset Butterflies Austria e, posteriormente, executar o modelo quantizado em um ESP32-S3.
 
-O estado atual é experimental, mas a inferência embarcada completa já foi obtida. A exportação foi adaptada ao pipeline do ESP32-S3, `BATCH_MATMUL` foi incorporado ao TFLM e a `FULLY_CONNECTED` per-channel foi corrigida para saídas com rank maior que 2. O trace do PC em modo de referência coincide com o ESP32-S3 até o operador 177. A primeira divergência real ocorre na requantização da `FULLY_CONNECTED` per-channel do operador 178 e é numericamente pequena. Ainda falta avaliar todo o dataset e remover a instrumentação antes de medir o desempenho final.
+O estado atual é experimental, mas a inferência embarcada completa já foi obtida. A exportação foi adaptada ao pipeline do ESP32-S3, `BATCH_MATMUL` foi incorporado ao TFLM e a `FULLY_CONNECTED` per-channel foi corrigida para saídas com rank maior que 2. O trace do PC em modo de referência coincide com o ESP32-S3 até o operador 177. A primeira divergência comprovada aparece na saída da `FULLY_CONNECTED` per-channel do operador 178 e é numericamente pequena. Ainda falta avaliar todo o dataset e remover a instrumentação antes de medir o desempenho final.
 
 ## Estrutura atual
 
@@ -275,6 +275,14 @@ O motivo é que `inferencia_pc.py` redefine `IMAGE_INDEX = 299`, enquanto `trace
 
 A comparação entre `BUILTIN_WITHOUT_DEFAULT_DELEGATES` e `BUILTIN_REF` no PC apresentou a primeira diferença no operador 2 `CONV_2D`, com mesmos extremos e diferença de soma de 27 em 262.144 elementos. Essa diferença pequena é compatível com arredondamentos distintos entre kernels e deve ser separada da comparação entre `BUILTIN_REF` e ESP32-S3.
 
+#### Resolvers usados no PC
+
+`BUILTIN_REF` força os kernels de referência do LiteRT. Esse modo prioriza portabilidade e é a base mais adequada para comparar o comportamento numérico com os kernels de referência do TFLM.
+
+`BUILTIN_WITHOUT_DEFAULT_DELEGATES` desativa delegates automáticos, como XNNPACK, mas ainda usa implementações built-in otimizadas do LiteRT. Portanto, ele não equivale ao modo de referência.
+
+Nenhum dos dois modos usa ESP-NN. ESP-NN é utilizado somente no firmware do ESP32-S3.
+
 ### Critérios de compatibilidade
 
 Um novo modelo só pode ser considerado apto quando cumprir todos os itens:
@@ -358,7 +366,7 @@ A comparação foi repetida com a mesma imagem e o mesmo hash de entrada:
 - a diferença total é 14 em 65.536 elementos;
 - o hash do PC é `3eb38229` e o hash do ESP32-S3 é `7e93fe71`.
 
-Isso mostra que o ESP-NN não é a origem da primeira divergência PC de referência × ESP32-S3. A diferença começa na requantização per-channel da primeira `FULLY_CONNECTED` da atenção.
+Isso mostra que o ESP-NN não é a origem da primeira divergência PC de referência × ESP32-S3. O comprovado é que a primeira diferença aparece na saída da primeira `FULLY_CONNECTED` per-channel da atenção. A requantização é a hipótese principal, mas ainda é necessário comparar acumuladores, multiplicadores, shifts e resultados requantizados elemento a elemento.
 
 O diagnóstico da quantização do operador 178 produziu:
 

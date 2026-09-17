@@ -24,8 +24,12 @@
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/schema/schema_generated.h"
 
-const char *ssid = "Starlink";
-const char *password = "diversao";
+//const char *ssid = "Starlink";
+//const char *password = "diversao";
+
+const char *ssid = "Ejec";
+const char *password = "ejec1234";
+
 const int serverPort = 80;
 
 constexpr const char *kModelName = "Butterflies Austria MobileNetV2";
