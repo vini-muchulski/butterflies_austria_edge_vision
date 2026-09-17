@@ -1,0 +1,1063 @@
+NODE_DIAG phase=invoke_start op=178 expected=0x3c7aebcc actual=0x3c7aebcc user=0x3c7aa720
+OPTRACE op=0 name=TRANSPOSE tensor=308 bytes=196608 hash=0x3796c492 min=-127 max=127 sum=-2356351
+OPTRACE op=1 name=PAD tensor=309 bytes=199692 hash=0x446d0a5c min=-128 max=127 sum=-2751103
+OPTRACE op=2 name=CONV_2D tensor=310 bytes=262144 hash=0xfa546884 min=-128 max=109 sum=2792291
+OPTRACE op=3 name=LOGISTIC tensor=311 bytes=262144 hash=0x6776c2d1 min=-128 max=127 sum=3962748
+OPTRACE op=4 name=MUL tensor=312 bytes=262144 hash=0x8dfaf8d1 min=-128 max=89 sum=-30469704
+OPTRACE op=5 name=CONV_2D tensor=313 bytes=65536 hash=0xca203146 min=-101 max=127 sum=5500293
+OPTRACE op=6 name=LOGISTIC tensor=314 bytes=65536 hash=0xcfcab7f5 min=-122 max=9 sum=-2183096
+OPTRACE op=7 name=MUL tensor=315 bytes=65536 hash=0x8650c220 min=-128 max=127 sum=-1261747
+OPTRACE op=8 name=DEPTHWISE_CONV_2D tensor=316 bytes=65536 hash=0x10747a0b min=-128 max=127 sum=1172948
+OPTRACE op=9 name=LOGISTIC tensor=317 bytes=65536 hash=0x92c38b3c min=-123 max=125 sum=2451621
+OPTRACE op=10 name=MUL tensor=318 bytes=65536 hash=0xb36e4e5e min=-128 max=127 sum=-4619121
+OPTRACE op=11 name=CONV_2D tensor=319 bytes=262144 hash=0x715659de min=-120 max=127 sum=6016379
+OPTRACE op=12 name=CONV_2D tensor=320 bytes=65536 hash=0x9a19e279 min=-128 max=124 sum=3264818
+OPTRACE op=13 name=LOGISTIC tensor=321 bytes=65536 hash=0x6dbd3b0 min=-87 max=36 sum=-295185
+OPTRACE op=14 name=MUL tensor=322 bytes=65536 hash=0xeef6a7e min=-128 max=120 sum=-1694039
+OPTRACE op=15 name=DEPTHWISE_CONV_2D tensor=323 bytes=65536 hash=0x238ba83e min=-55 max=76 sum=1254175
+OPTRACE op=16 name=LOGISTIC tensor=324 bytes=65536 hash=0xbabefb97 min=-128 max=127 sum=4146168
+OPTRACE op=17 name=MUL tensor=325 bytes=65536 hash=0x32019213 min=-128 max=18 sum=-6962284
+OPTRACE op=18 name=CONV_2D tensor=326 bytes=262144 hash=0x6dba4c2c min=-122 max=97 sum=-5382443
+OPTRACE op=19 name=ADD tensor=327 bytes=262144 hash=0x3c0396b2 min=-116 max=95 sum=3819927
+OPTRACE op=20 name=CONV_2D tensor=328 bytes=65536 hash=0xfcc56c2 min=-128 max=127 sum=3764771
+OPTRACE op=21 name=LOGISTIC tensor=329 bytes=65536 hash=0xf8bf1cac min=-122 max=43 sum=-1900697
+OPTRACE op=22 name=MUL tensor=330 bytes=65536 hash=0xd3303e20 min=-128 max=123 sum=-4897367
+OPTRACE op=23 name=DEPTHWISE_CONV_2D tensor=331 bytes=65536 hash=0xfe3cbe0 min=-63 max=116 sum=4421259
+OPTRACE op=24 name=LOGISTIC tensor=332 bytes=65536 hash=0xc0d936e0 min=-128 max=127 sum=1174151
+OPTRACE op=25 name=MUL tensor=333 bytes=65536 hash=0xb9499cc2 min=-128 max=83 sum=-7069337
+OPTRACE op=26 name=CONV_2D tensor=334 bytes=262144 hash=0xabec7daf min=-103 max=97 sum=969728
+OPTRACE op=27 name=ADD tensor=335 bytes=262144 hash=0x638eabfb min=-124 max=92 sum=-510860
+OPTRACE op=28 name=CONV_2D tensor=336 bytes=65536 hash=0xf3ab254a min=-39 max=123 sum=5417775
+OPTRACE op=29 name=LOGISTIC tensor=337 bytes=65536 hash=0x60f339eb min=-123 max=90 sum=1357566
+OPTRACE op=30 name=MUL tensor=338 bytes=65536 hash=0x84ca76e4 min=-128 max=106 sum=-3888683
+OPTRACE op=31 name=DEPTHWISE_CONV_2D tensor=339 bytes=65536 hash=0x36f88684 min=-110 max=107 sum=850887
+OPTRACE op=32 name=LOGISTIC tensor=340 bytes=65536 hash=0x3f33c20f min=-128 max=127 sum=1363034
+OPTRACE op=33 name=MUL tensor=341 bytes=65536 hash=0xeb7a7c1f min=-128 max=86 sum=-7008380
+OPTRACE op=34 name=CONV_2D tensor=342 bytes=262144 hash=0xd341565e min=-97 max=118 sum=15075427
+OPTRACE op=35 name=ADD tensor=343 bytes=262144 hash=0xb6c44596 min=-99 max=96 sum=2391713
+OPTRACE op=36 name=CONV_2D tensor=344 bytes=65536 hash=0x18de13b8 min=-79 max=119 sum=6133585
+OPTRACE op=37 name=LOGISTIC tensor=345 bytes=65536 hash=0xfa0b5b20 min=-128 max=85 sum=285597
+OPTRACE op=38 name=MUL tensor=346 bytes=65536 hash=0x455e2ab min=-128 max=63 sum=-5528176
+OPTRACE op=39 name=DEPTHWISE_CONV_2D tensor=347 bytes=65536 hash=0xa486cfb4 min=-104 max=95 sum=-2680843
+OPTRACE op=40 name=LOGISTIC tensor=348 bytes=65536 hash=0xb13ec133 min=-110 max=127 sum=2546724
+OPTRACE op=41 name=MUL tensor=349 bytes=65536 hash=0x76252c5 min=-128 max=82 sum=-6855518
+OPTRACE op=42 name=CONV_2D tensor=350 bytes=262144 hash=0xdeea2abc min=-90 max=114 sum=8355057
+OPTRACE op=43 name=ADD tensor=351 bytes=262144 hash=0xa7437eee min=-114 max=101 sum=669987
+OPTRACE op=44 name=CONV_2D tensor=352 bytes=65536 hash=0xe4ec2943 min=-94 max=126 sum=6416804
+OPTRACE op=45 name=LOGISTIC tensor=353 bytes=65536 hash=0x6c125684 min=-128 max=127 sum=2881157
+OPTRACE op=46 name=MUL tensor=354 bytes=65536 hash=0x3da68b0 min=-128 max=122 sum=-5886971
+OPTRACE op=47 name=DEPTHWISE_CONV_2D tensor=355 bytes=65536 hash=0xe14af9b0 min=-121 max=112 sum=2135283
+OPTRACE op=48 name=LOGISTIC tensor=356 bytes=65536 hash=0xb93385a6 min=-128 max=125 sum=3195405
+OPTRACE op=49 name=MUL tensor=357 bytes=65536 hash=0x3e7007e9 min=-128 max=94 sum=-4834244
+OPTRACE op=50 name=CONV_2D tensor=358 bytes=262144 hash=0xa1c39d08 min=-89 max=125 sum=1899431
+OPTRACE op=51 name=ADD tensor=359 bytes=262144 hash=0xc7f0fdf3 min=-104 max=111 sum=2511502
+OPTRACE op=52 name=CONV_2D tensor=360 bytes=65536 hash=0x7d560c32 min=-76 max=122 sum=5280023
+OPTRACE op=53 name=LOGISTIC tensor=361 bytes=65536 hash=0x37983282 min=-128 max=127 sum=4971395
+OPTRACE op=54 name=MUL tensor=362 bytes=65536 hash=0xbd3b6df0 min=-128 max=104 sum=-5706485
+OPTRACE op=55 name=DEPTHWISE_CONV_2D tensor=363 bytes=65536 hash=0xde06859b min=-105 max=117 sum=-458134
+OPTRACE op=56 name=LOGISTIC tensor=364 bytes=65536 hash=0x4065ddc9 min=-123 max=127 sum=3331894
+OPTRACE op=57 name=MUL tensor=365 bytes=65536 hash=0xc65018f7 min=-128 max=110 sum=-5647274
+OPTRACE op=58 name=CONV_2D tensor=366 bytes=262144 hash=0xb402f435 min=-117 max=120 sum=10827152
+OPTRACE op=59 name=ADD tensor=367 bytes=262144 hash=0x91a9706f min=-122 max=97 sum=2081646
+OPTRACE op=60 name=CONV_2D tensor=368 bytes=65536 hash=0x4e45de1b min=-107 max=104 sum=2819844
+OPTRACE op=61 name=LOGISTIC tensor=369 bytes=65536 hash=0xc74b030c min=-128 max=127 sum=1875127
+OPTRACE op=62 name=MUL tensor=370 bytes=65536 hash=0x7726e7e1 min=-128 max=58 sum=-7842318
+OPTRACE op=63 name=DEPTHWISE_CONV_2D tensor=371 bytes=65536 hash=0x227f67be min=-82 max=84 sum=-1172717
+OPTRACE op=64 name=LOGISTIC tensor=372 bytes=65536 hash=0x3759d9cb min=-127 max=127 sum=3286100
+OPTRACE op=65 name=MUL tensor=373 bytes=65536 hash=0x65a4c49b min=-128 max=56 sum=-7069184
+OPTRACE op=66 name=CONV_2D tensor=374 bytes=262144 hash=0xbff550d1 min=-85 max=99 sum=5683368
+OPTRACE op=67 name=ADD tensor=375 bytes=262144 hash=0xb442df25 min=-119 max=100 sum=793772
+OPTRACE op=68 name=ADD tensor=376 bytes=262144 hash=0x9459bcc8 min=-114 max=96 sum=-4316809
+OPTRACE op=69 name=CONV_2D tensor=377 bytes=131072 hash=0x36e0b8e7 min=-23 max=121 sum=10906928
+OPTRACE op=70 name=LOGISTIC tensor=378 bytes=131072 hash=0x5f0ad12c min=-95 max=39 sum=-257109
+OPTRACE op=71 name=MUL tensor=379 bytes=131072 hash=0x149cd47a min=-128 max=100 sum=-5003447
+OPTRACE op=72 name=PAD tensor=380 bytes=135200 hash=0xc77eaafa min=-128 max=100 sum=-5152055
+OPTRACE op=73 name=DEPTHWISE_CONV_2D tensor=381 bytes=32768 hash=0x5568cffa min=-102 max=95 sum=445211
+OPTRACE op=74 name=LOGISTIC tensor=382 bytes=32768 hash=0x27390372 min=-127 max=126 sum=996371
+OPTRACE op=75 name=MUL tensor=383 bytes=32768 hash=0x4ed2c0d0 min=-128 max=63 sum=-3313151
+OPTRACE op=76 name=CONV_2D tensor=384 bytes=98304 hash=0x9888770a min=-110 max=64 sum=-1360147
+OPTRACE op=77 name=CONV_2D tensor=385 bytes=131072 hash=0xcdfc8e50 min=-86 max=104 sum=1692537
+OPTRACE op=78 name=LOGISTIC tensor=386 bytes=131072 hash=0x428c03bc min=-93 max=95 sum=962655
+OPTRACE op=79 name=MUL tensor=387 bytes=131072 hash=0x3065002c min=-128 max=75 sum=-11872621
+OPTRACE op=80 name=PAD tensor=388 bytes=135200 hash=0x4354d18c min=-128 max=75 sum=-12281293
+OPTRACE op=81 name=DEPTHWISE_CONV_2D tensor=389 bytes=32768 hash=0x52c5dc7a min=-71 max=103 sum=530625
+OPTRACE op=82 name=LOGISTIC tensor=390 bytes=32768 hash=0x572cc411 min=-127 max=127 sum=155316
+OPTRACE op=83 name=MUL tensor=391 bytes=32768 hash=0x3fb444c6 min=-128 max=73 sum=-3549645
+OPTRACE op=84 name=CONV_2D tensor=392 bytes=98304 hash=0x662bedd4 min=-128 max=118 sum=4640311
+OPTRACE op=85 name=ADD tensor=393 bytes=98304 hash=0x52954f23 min=-119 max=111 sum=1621698
+OPTRACE op=86 name=CONV_2D tensor=394 bytes=131072 hash=0xa454dee5 min=-127 max=124 sum=654534
+OPTRACE op=87 name=LOGISTIC tensor=395 bytes=131072 hash=0x19a53e1b min=-128 max=127 sum=5487630
+OPTRACE op=88 name=MUL tensor=396 bytes=131072 hash=0x4d533666 min=-128 max=121 sum=-15016535
+OPTRACE op=89 name=PAD tensor=397 bytes=135200 hash=0x8d7c4a96 min=-128 max=121 sum=-15532535
+OPTRACE op=90 name=DEPTHWISE_CONV_2D tensor=398 bytes=32768 hash=0xacb6dd6f min=-106 max=123 sum=1022820
+OPTRACE op=91 name=LOGISTIC tensor=399 bytes=32768 hash=0xe29f07a2 min=-128 max=127 sum=1312577
+OPTRACE op=92 name=MUL tensor=400 bytes=32768 hash=0x6b5a835b min=-128 max=116 sum=-3076106
+OPTRACE op=93 name=CONV_2D tensor=401 bytes=98304 hash=0x2e5478df min=-121 max=108 sum=418074
+OPTRACE op=94 name=ADD tensor=402 bytes=98304 hash=0x4a118651 min=-125 max=113 sum=-1106860
+OPTRACE op=95 name=CONV_2D tensor=403 bytes=131072 hash=0x1b1b20d3 min=-99 max=97 sum=-152736
+OPTRACE op=96 name=LOGISTIC tensor=404 bytes=131072 hash=0x1e1ed14e min=-128 max=127 sum=-544465
+OPTRACE op=97 name=MUL tensor=405 bytes=131072 hash=0xb968e9ee min=-128 max=67 sum=-15744743
+OPTRACE op=98 name=PAD tensor=406 bytes=135200 hash=0x9628eb1e min=-128 max=67 sum=-16268999
+OPTRACE op=99 name=DEPTHWISE_CONV_2D tensor=407 bytes=32768 hash=0xebcdfb8c min=-125 max=120 sum=-523093
+OPTRACE op=100 name=LOGISTIC tensor=408 bytes=32768 hash=0x9d947df3 min=-78 max=127 sum=2835056
+OPTRACE op=101 name=MUL tensor=409 bytes=32768 hash=0xf5daee3b min=-128 max=119 sum=-1577980
+OPTRACE op=102 name=CONV_2D tensor=410 bytes=98304 hash=0x3e668481 min=-106 max=119 sum=4664876
+OPTRACE op=103 name=ADD tensor=411 bytes=98304 hash=0x87b14d72 min=-95 max=118 sum=1709453
+OPTRACE op=104 name=CONV_2D tensor=412 bytes=196608 hash=0x441100cb min=-121 max=121 sum=-9589646
+OPTRACE op=105 name=LOGISTIC tensor=413 bytes=196608 hash=0xc7098165 min=-128 max=127 sum=-63304
+OPTRACE op=106 name=MUL tensor=414 bytes=196608 hash=0xa73bf22c min=-128 max=118 sum=-24219751
+OPTRACE op=107 name=DEPTHWISE_CONV_2D tensor=415 bytes=196608 hash=0x80acff72 min=-128 max=127 sum=1163469
+OPTRACE op=108 name=LOGISTIC tensor=416 bytes=196608 hash=0x9c0bdce8 min=-128 max=127 sum=3587725
+OPTRACE op=109 name=MUL tensor=417 bytes=196608 hash=0x5e1958d4 min=-128 max=127 sum=-21596947
+OPTRACE op=110 name=CONV_2D tensor=418 bytes=98304 hash=0x6fdc6347 min=-128 max=127 sum=-229726
+OPTRACE op=111 name=ADD tensor=419 bytes=98304 hash=0x86512892 min=-128 max=127 sum=77667
+OPTRACE op=112 name=CONV_2D tensor=420 bytes=196608 hash=0x2ad87681 min=-128 max=127 sum=-2116260
+OPTRACE op=113 name=LOGISTIC tensor=421 bytes=196608 hash=0x51c85731 min=-128 max=127 sum=-625300
+OPTRACE op=114 name=MUL tensor=422 bytes=196608 hash=0x2f5dc26f min=-128 max=125 sum=-23581010
+OPTRACE op=115 name=DEPTHWISE_CONV_2D tensor=423 bytes=196608 hash=0xb69cb894 min=-128 max=127 sum=1094765
+OPTRACE op=116 name=LOGISTIC tensor=424 bytes=196608 hash=0x822d1b0a min=-128 max=127 sum=604049
+OPTRACE op=117 name=MUL tensor=425 bytes=196608 hash=0xafcbb9be min=-128 max=126 sum=-21642723
+OPTRACE op=118 name=CONV_2D tensor=426 bytes=98304 hash=0x51f25a86 min=-128 max=123 sum=-354591
+OPTRACE op=119 name=ADD tensor=427 bytes=98304 hash=0x113ac642 min=-128 max=123 sum=345705
+OPTRACE op=120 name=CONV_2D tensor=428 bytes=49152 hash=0x4a35a5f0 min=-107 max=124 sum=923269
+OPTRACE op=121 name=LOGISTIC tensor=429 bytes=49152 hash=0xb13b577a min=-27 max=22 sum=-12919
+OPTRACE op=122 name=MUL tensor=430 bytes=49152 hash=0xa906c699 min=-117 max=122 sum=-471954
+OPTRACE op=123 name=PAD tensor=431 bytes=52272 hash=0x8a25e539 min=-117 max=122 sum=-500034
+OPTRACE op=124 name=DEPTHWISE_CONV_2D tensor=432 bytes=12288 hash=0xd95f82e4 min=-121 max=127 sum=51485
+OPTRACE op=125 name=LOGISTIC tensor=433 bytes=12288 hash=0xc923a8ba min=-97 max=118 sum=374583
+OPTRACE op=126 name=MUL tensor=434 bytes=12288 hash=0x92f81d77 min=-128 max=127 sum=-793148
+OPTRACE op=127 name=CONV_2D tensor=435 bytes=49152 hash=0x3a0c2b9f min=-128 max=127 sum=404704
+OPTRACE op=128 name=CONV_2D tensor=436 bytes=49152 hash=0x49b5b420 min=-128 max=121 sum=1957909
+OPTRACE op=129 name=LOGISTIC tensor=437 bytes=49152 hash=0xef3c16db min=-102 max=56 sum=-225716
+OPTRACE op=130 name=MUL tensor=438 bytes=49152 hash=0x334085bb min=-128 max=109 sum=-3009132
+OPTRACE op=131 name=PAD tensor=439 bytes=52272 hash=0x21c15223 min=-128 max=109 sum=-3193212
+OPTRACE op=132 name=DEPTHWISE_CONV_2D tensor=440 bytes=12288 hash=0x1ee9bc03 min=-123 max=125 sum=-18374
+OPTRACE op=133 name=LOGISTIC tensor=441 bytes=12288 hash=0xf9a1c9b7 min=-110 max=118 sum=122120
+OPTRACE op=134 name=MUL tensor=442 bytes=12288 hash=0x8439c7c7 min=-128 max=124 sum=-1030062
+OPTRACE op=135 name=CONV_2D tensor=443 bytes=49152 hash=0x42529726 min=-123 max=121 sum=-617831
+OPTRACE op=136 name=ADD tensor=444 bytes=49152 hash=0x3bfa532d min=-128 max=127 sum=310922
+OPTRACE op=137 name=CONV_2D tensor=445 bytes=49152 hash=0x9ee15292 min=-128 max=124 sum=801741
+OPTRACE op=138 name=LOGISTIC tensor=446 bytes=49152 hash=0xa602db91 min=-125 max=109 sum=-1215466
+OPTRACE op=139 name=MUL tensor=447 bytes=49152 hash=0xd4a8e0f6 min=-128 max=119 sum=-5258957
+OPTRACE op=140 name=PAD tensor=448 bytes=52272 hash=0x85d71f2e min=-128 max=119 sum=-5577197
+OPTRACE op=141 name=DEPTHWISE_CONV_2D tensor=449 bytes=12288 hash=0xdfeb3372 min=-124 max=120 sum=470807
+OPTRACE op=142 name=LOGISTIC tensor=450 bytes=12288 hash=0x625d8f07 min=-108 max=119 sum=795092
+OPTRACE op=143 name=MUL tensor=451 bytes=12288 hash=0x70469b30 min=-128 max=115 sum=-254241
+OPTRACE op=144 name=CONV_2D tensor=452 bytes=49152 hash=0x86d58fb1 min=-124 max=126 sum=-80320
+OPTRACE op=145 name=ADD tensor=453 bytes=49152 hash=0xd258a80d min=-128 max=121 sum=-807268
+OPTRACE op=146 name=CONV_2D tensor=454 bytes=49152 hash=0xccf33149 min=-127 max=127 sum=-516636
+OPTRACE op=147 name=LOGISTIC tensor=455 bytes=49152 hash=0xf9faf565 min=-128 max=127 sum=97288
+OPTRACE op=148 name=MUL tensor=456 bytes=49152 hash=0xfc9fe59b min=-128 max=126 sum=-5801330
+OPTRACE op=149 name=PAD tensor=457 bytes=52272 hash=0x79bbd753 min=-128 max=126 sum=-6191330
+OPTRACE op=150 name=DEPTHWISE_CONV_2D tensor=458 bytes=12288 hash=0x859672f8 min=-128 max=117 sum=338363
+OPTRACE op=151 name=LOGISTIC tensor=459 bytes=12288 hash=0xd22716e2 min=-115 max=123 sum=729365
+OPTRACE op=152 name=MUL tensor=460 bytes=12288 hash=0xbaa8165b min=-128 max=110 sum=-382692
+OPTRACE op=153 name=CONV_2D tensor=461 bytes=49152 hash=0xb0771205 min=-128 max=126 sum=830786
+OPTRACE op=154 name=ADD tensor=462 bytes=49152 hash=0xc8a933bd min=-128 max=119 sum=97606
+OPTRACE op=155 name=CONV_2D tensor=463 bytes=49152 hash=0xc37430e8 min=-107 max=127 sum=2083429
+OPTRACE op=156 name=LOGISTIC tensor=464 bytes=49152 hash=0x5fa3fa18 min=-121 max=112 sum=1362419
+OPTRACE op=157 name=MUL tensor=465 bytes=49152 hash=0xe6fb6697 min=-128 max=126 sum=-3461352
+OPTRACE op=158 name=CONV_2D tensor=466 bytes=65536 hash=0xc6d7f48f min=-112 max=124 sum=-971264
+OPTRACE op=159 name=TRANSPOSE tensor=467 bytes=65536 hash=0x90b07e29 min=-112 max=124 sum=-971264
+OPTRACE op=160 name=RESHAPE tensor=468 bytes=65536 hash=0x90b07e29 min=-112 max=124 sum=-971264
+OPTRACE op=161 name=TRANSPOSE tensor=469 bytes=65536 hash=0x918900d9 min=-112 max=124 sum=-971264
+OPTRACE op=162 name=RESHAPE tensor=470 bytes=65536 hash=0x918900d9 min=-112 max=124 sum=-971264
+OPTRACE op=163 name=TRANSPOSE tensor=471 bytes=65536 hash=0x8366ca2b min=-112 max=124 sum=-971264
+OPTRACE op=164 name=RESHAPE tensor=472 bytes=65536 hash=0x8366ca2b min=-112 max=124 sum=-971264
+OPTRACE op=165 name=RESHAPE tensor=473 bytes=65536 hash=0x8366ca2b min=-112 max=124 sum=-971264
+OPTRACE op=166 name=MEAN tensor=474 bytes=1024 hash=0x33ff66bb min=-128 max=96 sum=-21422
+OPTRACE op=167 name=RESHAPE tensor=475 bytes=1024 hash=0x33ff66bb min=-128 max=96 sum=-21422
+OPTRACE op=168 name=SQUARED_DIFFERENCE tensor=476 bytes=65536 hash=0x48e73530 min=-128 max=116 sum=-7901131
+OPTRACE op=169 name=MEAN tensor=477 bytes=1024 hash=0xb1f98574 min=-57 max=110 sum=-15863
+OPTRACE op=170 name=ADD tensor=478 bytes=1024 hash=0xb1f98574 min=-57 max=110 sum=-15863
+OPTRACE op=171 name=RSQRT tensor=479 bytes=1024 hash=0xe0150134 min=16 max=127 sum=85909
+OPTRACE op=172 name=MUL tensor=480 bytes=1024 hash=0xf6019746 min=-123 max=93 sum=-26915
+OPTRACE op=173 name=SUB tensor=481 bytes=1024 hash=0x9f0a693a min=-94 max=122 sum=25891
+OPTRACE op=174 name=RESHAPE tensor=482 bytes=1024 hash=0xe0150134 min=16 max=127 sum=85909
+OPTRACE op=175 name=MUL tensor=483 bytes=65536 hash=0x8076637a min=-116 max=127 sum=-1367767
+OPTRACE op=176 name=RESHAPE tensor=484 bytes=1024 hash=0x9f0a693a min=-94 max=122 sum=25891
+OPTRACE op=177 name=ADD tensor=485 bytes=65536 hash=0xecb3e808 min=-116 max=127 sum=-1371415
+NODE_DIAG phase=call op=178 node=0x3c7b09f4 tracked=0x3c7b09f4 builtin=0x3c7aebcc user=0x3c7aa720
+FC_DIAG node=0x3c7b09f4 builtin=0x3c7aebcc user=0x3c7aa720 inputs=0x3c1e7ae8 outputs=0x3c1e7ae0
+FC_TENSOR_DIAG idx=485,90,91,486
+FC_TENSOR_DIAG ptr=0x3c7b6cf0,0x3c7b5a6c,0x3c7b5a78,0x3c7b6cfc
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=178 name=FULLY_CONNECTED tensor=486 bytes=65536 hash=0x7e93fe71 min=-128 max=116 sum=900712
+OPTRACE op=179 name=RESHAPE tensor=487 bytes=65536 hash=0x7e93fe71 min=-128 max=116 sum=900712
+OPTRACE op=180 name=TRANSPOSE tensor=488 bytes=65536 hash=0xeccdd735 min=-128 max=116 sum=900712
+FC_DIAG node=0x3c7b0a54 builtin=0x3c7aeb9c user=0x3c7aa6f0 inputs=0x3c1e7a60 outputs=0x3c1e7a58
+FC_TENSOR_DIAG idx=485,88,89,489
+FC_TENSOR_DIAG ptr=0x3c7b6cf0,0x3c7b5a54,0x3c7b5a60,0x3c7b6d20
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=181 name=FULLY_CONNECTED tensor=489 bytes=65536 hash=0x8cf8c04a min=-126 max=127 sum=-299771
+OPTRACE op=182 name=RESHAPE tensor=490 bytes=65536 hash=0x8cf8c04a min=-126 max=127 sum=-299771
+FC_DIAG node=0x3c7b0a94 builtin=0x3c7aeb6c user=0x3c7aa6c0 inputs=0x3c1e7a04 outputs=0x3c1e79fc
+FC_TENSOR_DIAG idx=485,86,87,491
+FC_TENSOR_DIAG ptr=0x3c7b6cf0,0x3c7b5a3c,0x3c7b5a48,0x3c7b6d38
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=183 name=FULLY_CONNECTED tensor=491 bytes=65536 hash=0xfbb5e65c min=-119 max=127 sum=1180481
+OPTRACE op=184 name=RESHAPE tensor=492 bytes=65536 hash=0xfbb5e65c min=-119 max=127 sum=1180481
+OPTRACE op=185 name=TRANSPOSE tensor=493 bytes=65536 hash=0xf3b635f8 min=-119 max=127 sum=1180481
+OPTRACE op=186 name=TRANSPOSE tensor=494 bytes=65536 hash=0x84824eca min=-126 max=127 sum=-299771
+OPTRACE op=187 name=RESHAPE tensor=495 bytes=65536 hash=0xeccdd735 min=-128 max=116 sum=900712
+OPTRACE op=188 name=RESHAPE tensor=496 bytes=65536 hash=0x84824eca min=-126 max=127 sum=-299771
+OPTRACE op=189 name=BATCH_MATMUL tensor=497 bytes=1048576 hash=0x789454ab min=-112 max=127 sum=7845666
+OPTRACE op=190 name=MUL tensor=498 bytes=1048576 hash=0x789454ab min=-112 max=127 sum=7845666
+OPTRACE op=191 name=RESHAPE tensor=499 bytes=1048576 hash=0x789454ab min=-112 max=127 sum=7845666
+OPTRACE op=192 name=SOFTMAX tensor=500 bytes=1048576 hash=0xe5f5de29 min=-128 max=-32 sum=-133216774
+OPTRACE op=193 name=RESHAPE tensor=501 bytes=1048576 hash=0xe5f5de29 min=-128 max=-32 sum=-133216774
+OPTRACE op=194 name=RESHAPE tensor=502 bytes=65536 hash=0xf3b635f8 min=-119 max=127 sum=1180481
+OPTRACE op=195 name=BATCH_MATMUL tensor=503 bytes=65536 hash=0x5de23f5c min=-125 max=127 sum=-589481
+OPTRACE op=196 name=RESHAPE tensor=504 bytes=65536 hash=0x5de23f5c min=-125 max=127 sum=-589481
+OPTRACE op=197 name=TRANSPOSE tensor=505 bytes=65536 hash=0xaf48c59c min=-125 max=127 sum=-589481
+OPTRACE op=198 name=RESHAPE tensor=506 bytes=65536 hash=0xaf48c59c min=-125 max=127 sum=-589481
+FC_DIAG node=0x3c7b0c94 builtin=0x3c7aea30 user=0x3c7aa600 inputs=0x3c1e7784 outputs=0x3c1e777c
+FC_TENSOR_DIAG idx=506,110,85,507
+FC_TENSOR_DIAG ptr=0x3c7b6dec,0x3c7b5b5c,0x3c7b5a30,0x3c7b6df8
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=199 name=FULLY_CONNECTED tensor=507 bytes=65536 hash=0x8e6cc48f min=-111 max=127 sum=582884
+OPTRACE op=200 name=ADD tensor=508 bytes=65536 hash=0xfc3aed64 min=-112 max=120 sum=-1090493
+OPTRACE op=201 name=RESHAPE tensor=509 bytes=65536 hash=0xfc3aed64 min=-112 max=120 sum=-1090493
+OPTRACE op=202 name=MEAN tensor=510 bytes=1024 hash=0x7a5d0420 min=-128 max=92 sum=-21525
+OPTRACE op=203 name=RESHAPE tensor=511 bytes=1024 hash=0x7a5d0420 min=-128 max=92 sum=-21525
+OPTRACE op=204 name=SQUARED_DIFFERENCE tensor=512 bytes=65536 hash=0xf26454f9 min=-128 max=102 sum=-7951214
+OPTRACE op=205 name=MEAN tensor=513 bytes=1024 hash=0x4bd955b7 min=-61 max=108 sum=-19504
+OPTRACE op=206 name=ADD tensor=514 bytes=1024 hash=0x4bd955b7 min=-61 max=108 sum=-19504
+OPTRACE op=207 name=RSQRT tensor=515 bytes=1024 hash=0xe130d97f min=13 max=127 sum=84090
+OPTRACE op=208 name=MUL tensor=516 bytes=1024 hash=0x5ab2f052 min=-128 max=97 sum=-17747
+OPTRACE op=209 name=SUB tensor=517 bytes=1024 hash=0xb6ca012 min=-98 max=127 sum=16723
+OPTRACE op=210 name=RESHAPE tensor=518 bytes=1024 hash=0xe130d97f min=13 max=127 sum=84090
+OPTRACE op=211 name=MUL tensor=519 bytes=65536 hash=0xbf3a1c94 min=-110 max=127 sum=-1356291
+OPTRACE op=212 name=RESHAPE tensor=520 bytes=1024 hash=0xb6ca012 min=-98 max=127 sum=16723
+OPTRACE op=213 name=ADD tensor=521 bytes=65536 hash=0xdc41f5b4 min=-110 max=126 sum=-1376733
+FC_DIAG node=0x3c7b0e74 builtin=0x3c7ae964 user=0x3c7aa380 inputs=0x3c1e74f8 outputs=0x3c1e74f0
+FC_TENSOR_DIAG idx=521,83,84,522
+FC_TENSOR_DIAG ptr=0x3c7b6ea0,0x3c7b5a18,0x3c7b5a24,0x3c7b6eac
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=214 name=FULLY_CONNECTED tensor=522 bytes=131072 hash=0xeaf6f422 min=-115 max=127 sum=3500315
+OPTRACE op=215 name=RESHAPE tensor=523 bytes=131072 hash=0xeaf6f422 min=-115 max=127 sum=3500315
+OPTRACE op=216 name=LOGISTIC tensor=524 bytes=131072 hash=0x42d2af1f min=-127 max=111 sum=-5386134
+OPTRACE op=217 name=MUL tensor=525 bytes=131072 hash=0x750a494e min=-128 max=127 sum=-14938551
+FC_DIAG node=0x3c7b0ef4 builtin=0x3c7ae930 user=0x3c7aa310 inputs=0x3c1e744c outputs=0x3c1e7444
+FC_TENSOR_DIAG idx=525,109,82,526
+FC_TENSOR_DIAG ptr=0x3c7b6ed0,0x3c7b5b50,0x3c7b5a0c,0x3c7b6edc
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=218 name=FULLY_CONNECTED tensor=526 bytes=65536 hash=0x11375cac min=-128 max=127 sum=-82375
+OPTRACE op=219 name=ADD tensor=527 bytes=65536 hash=0x73a66ce1 min=-126 max=112 sum=-832206
+OPTRACE op=220 name=RESHAPE tensor=528 bytes=65536 hash=0x73a66ce1 min=-126 max=112 sum=-832206
+OPTRACE op=221 name=MEAN tensor=529 bytes=1024 hash=0x99ca4a37 min=-128 max=127 sum=-12594
+OPTRACE op=222 name=RESHAPE tensor=530 bytes=1024 hash=0x99ca4a37 min=-128 max=127 sum=-12594
+OPTRACE op=223 name=SQUARED_DIFFERENCE tensor=531 bytes=65536 hash=0x12a8620 min=-128 max=72 sum=-7950287
+OPTRACE op=224 name=MEAN tensor=532 bytes=1024 hash=0x581f4b97 min=-75 max=111 sum=-34274
+OPTRACE op=225 name=ADD tensor=533 bytes=1024 hash=0x581f4b97 min=-75 max=111 sum=-34274
+OPTRACE op=226 name=RSQRT tensor=534 bytes=1024 hash=0x4279c85 min=4 max=127 sum=88570
+OPTRACE op=227 name=MUL tensor=535 bytes=1024 hash=0xdf5362e7 min=-128 max=124 sum=-16268
+OPTRACE op=228 name=SUB tensor=536 bytes=1024 hash=0x6a8d6d87 min=-125 max=127 sum=15244
+OPTRACE op=229 name=RESHAPE tensor=537 bytes=1024 hash=0x4279c85 min=4 max=127 sum=88570
+OPTRACE op=230 name=MUL tensor=538 bytes=65536 hash=0x27b0d8cd min=-118 max=127 sum=-1101580
+OPTRACE op=231 name=RESHAPE tensor=539 bytes=1024 hash=0x6a8d6d87 min=-125 max=127 sum=15244
+OPTRACE op=232 name=ADD tensor=540 bytes=65536 hash=0x949a3ab8 min=-117 max=127 sum=-1045789
+FC_DIAG node=0x3c7b10d4 builtin=0x3c7ae864 user=0x3c7aa090 inputs=0x3c1e71c0 outputs=0x3c1e71b8
+FC_TENSOR_DIAG idx=540,80,81,541
+FC_TENSOR_DIAG ptr=0x3c7b6f84,0x3c7b59f4,0x3c7b5a00,0x3c7b6f90
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=233 name=FULLY_CONNECTED tensor=541 bytes=65536 hash=0x350c6fe min=-128 max=127 sum=37223
+OPTRACE op=234 name=RESHAPE tensor=542 bytes=65536 hash=0x350c6fe min=-128 max=127 sum=37223
+OPTRACE op=235 name=TRANSPOSE tensor=543 bytes=65536 hash=0x1bd8d9e min=-128 max=127 sum=37223
+FC_DIAG node=0x3c7b1134 builtin=0x3c7ae834 user=0x3c7aa060 inputs=0x3c1e7144 outputs=0x3c1e713c
+FC_TENSOR_DIAG idx=540,78,79,544
+FC_TENSOR_DIAG ptr=0x3c7b6f84,0x3c7b59dc,0x3c7b59e8,0x3c7b6fb4
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=236 name=FULLY_CONNECTED tensor=544 bytes=65536 hash=0xdc9088eb min=-128 max=121 sum=-320774
+OPTRACE op=237 name=RESHAPE tensor=545 bytes=65536 hash=0xdc9088eb min=-128 max=121 sum=-320774
+FC_DIAG node=0x3c7b1174 builtin=0x3c7ae804 user=0x3c7aa030 inputs=0x3c1e70e8 outputs=0x3c1e70e0
+FC_TENSOR_DIAG idx=540,76,77,546
+FC_TENSOR_DIAG ptr=0x3c7b6f84,0x3c7b59c4,0x3c7b59d0,0x3c7b6fcc
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=238 name=FULLY_CONNECTED tensor=546 bytes=65536 hash=0xce3aa886 min=-128 max=127 sum=-86749
+OPTRACE op=239 name=RESHAPE tensor=547 bytes=65536 hash=0xce3aa886 min=-128 max=127 sum=-86749
+OPTRACE op=240 name=TRANSPOSE tensor=548 bytes=65536 hash=0x5741db7a min=-128 max=127 sum=-86749
+OPTRACE op=241 name=TRANSPOSE tensor=549 bytes=65536 hash=0xb3893fcd min=-128 max=121 sum=-320774
+OPTRACE op=242 name=RESHAPE tensor=550 bytes=65536 hash=0x1bd8d9e min=-128 max=127 sum=37223
+OPTRACE op=243 name=RESHAPE tensor=551 bytes=65536 hash=0xb3893fcd min=-128 max=121 sum=-320774
+OPTRACE op=244 name=BATCH_MATMUL tensor=552 bytes=1048576 hash=0xe207991a min=-117 max=125 sum=-10129839
+OPTRACE op=245 name=MUL tensor=553 bytes=1048576 hash=0xe207991a min=-117 max=125 sum=-10129839
+OPTRACE op=246 name=RESHAPE tensor=554 bytes=1048576 hash=0xe207991a min=-117 max=125 sum=-10129839
+OPTRACE op=247 name=SOFTMAX tensor=555 bytes=1048576 hash=0x311c5fd6 min=-128 max=106 sum=-133227523
+OPTRACE op=248 name=RESHAPE tensor=556 bytes=1048576 hash=0x311c5fd6 min=-128 max=106 sum=-133227523
+OPTRACE op=249 name=RESHAPE tensor=557 bytes=65536 hash=0x5741db7a min=-128 max=127 sum=-86749
+OPTRACE op=250 name=BATCH_MATMUL tensor=558 bytes=65536 hash=0x25d6a1d9 min=-122 max=105 sum=-852842
+OPTRACE op=251 name=RESHAPE tensor=559 bytes=65536 hash=0x25d6a1d9 min=-122 max=105 sum=-852842
+OPTRACE op=252 name=TRANSPOSE tensor=560 bytes=65536 hash=0x69446bed min=-122 max=105 sum=-852842
+OPTRACE op=253 name=RESHAPE tensor=561 bytes=65536 hash=0x69446bed min=-122 max=105 sum=-852842
+FC_DIAG node=0x3c7b1374 builtin=0x3c7ae6c8 user=0x3c7a9f70 inputs=0x3c1e6e70 outputs=0x3c1e6e68
+FC_TENSOR_DIAG idx=561,108,75,562
+FC_TENSOR_DIAG ptr=0x3c7b7080,0x3c7b5b44,0x3c7b59b8,0x3c7b708c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=254 name=FULLY_CONNECTED tensor=562 bytes=65536 hash=0xf5f6d28e min=-128 max=107 sum=-225015
+OPTRACE op=255 name=ADD tensor=563 bytes=65536 hash=0xb21fc4b1 min=-128 max=109 sum=-710486
+OPTRACE op=256 name=RESHAPE tensor=564 bytes=65536 hash=0xb21fc4b1 min=-128 max=109 sum=-710486
+OPTRACE op=257 name=MEAN tensor=565 bytes=1024 hash=0x9ef06b57 min=-128 max=127 sum=-38642
+OPTRACE op=258 name=RESHAPE tensor=566 bytes=1024 hash=0x9ef06b57 min=-128 max=127 sum=-38642
+OPTRACE op=259 name=SQUARED_DIFFERENCE tensor=567 bytes=65536 hash=0x80dd2f2e min=-128 max=61 sum=-7945211
+OPTRACE op=260 name=MEAN tensor=568 bytes=1024 hash=0x77b30003 min=-70 max=127 sum=-22044
+OPTRACE op=261 name=ADD tensor=569 bytes=1024 hash=0x77b30003 min=-70 max=127 sum=-22044
+OPTRACE op=262 name=RSQRT tensor=570 bytes=1024 hash=0xa7a12eff min=11 max=127 sum=93046
+OPTRACE op=263 name=MUL tensor=571 bytes=1024 hash=0x1b1df9c1 min=-128 max=126 sum=-41896
+OPTRACE op=264 name=SUB tensor=572 bytes=1024 hash=0xf5c1a78d min=-127 max=127 sum=40872
+OPTRACE op=265 name=RESHAPE tensor=573 bytes=1024 hash=0xa7a12eff min=11 max=127 sum=93046
+OPTRACE op=266 name=MUL tensor=574 bytes=65536 hash=0x5149e581 min=-110 max=127 sum=-1111018
+OPTRACE op=267 name=RESHAPE tensor=575 bytes=1024 hash=0xf5c1a78d min=-127 max=127 sum=40872
+OPTRACE op=268 name=ADD tensor=576 bytes=65536 hash=0x1f230510 min=-110 max=127 sum=-1113909
+FC_DIAG node=0x3c7b1554 builtin=0x3c7ae5fc user=0x3c7a9cf0 inputs=0x3c1e6be4 outputs=0x3c1e6bdc
+FC_TENSOR_DIAG idx=576,73,74,577
+FC_TENSOR_DIAG ptr=0x3c7b7134,0x3c7b59a0,0x3c7b59ac,0x3c7b7140
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=269 name=FULLY_CONNECTED tensor=577 bytes=131072 hash=0x277b8fa1 min=-124 max=117 sum=1582008
+OPTRACE op=270 name=RESHAPE tensor=578 bytes=131072 hash=0x277b8fa1 min=-124 max=117 sum=1582008
+OPTRACE op=271 name=LOGISTIC tensor=579 bytes=131072 hash=0x61ac4c26 min=-127 max=111 sum=-7348587
+OPTRACE op=272 name=MUL tensor=580 bytes=131072 hash=0x9edc98ac min=-128 max=97 sum=-15468049
+FC_DIAG node=0x3c7b15d4 builtin=0x3c7ae5c8 user=0x3c7a9c80 inputs=0x3c1e6b38 outputs=0x3c1e6b30
+FC_TENSOR_DIAG idx=580,107,72,581
+FC_TENSOR_DIAG ptr=0x3c7b7164,0x3c7b5b38,0x3c7b5994,0x3c7b7170
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=273 name=FULLY_CONNECTED tensor=581 bytes=65536 hash=0xfacc5fa9 min=-104 max=127 sum=-2150322
+OPTRACE op=274 name=ADD tensor=582 bytes=65536 hash=0x2e48526f min=-128 max=108 sum=-1740182
+OPTRACE op=275 name=RESHAPE tensor=583 bytes=65536 hash=0x2e48526f min=-128 max=108 sum=-1740182
+OPTRACE op=276 name=MEAN tensor=584 bytes=1024 hash=0xf724806a min=-97 max=125 sum=171
+OPTRACE op=277 name=RESHAPE tensor=585 bytes=1024 hash=0xf724806a min=-97 max=125 sum=171
+OPTRACE op=278 name=SQUARED_DIFFERENCE tensor=586 bytes=65536 hash=0x2d2ed9f2 min=-128 max=67 sum=-8096315
+OPTRACE op=279 name=MEAN tensor=587 bytes=1024 hash=0x319446ef min=-99 max=71 sum=-64414
+OPTRACE op=280 name=ADD tensor=588 bytes=1024 hash=0x319446ef min=-99 max=71 sum=-64414
+OPTRACE op=281 name=RSQRT tensor=589 bytes=1024 hash=0xa54d2409 min=-20 max=127 sum=69460
+OPTRACE op=282 name=MUL tensor=590 bytes=1024 hash=0x429b38c6 min=-128 max=127 sum=16485
+OPTRACE op=283 name=SUB tensor=591 bytes=1024 hash=0xc7fd894a min=-128 max=127 sum=-17509
+OPTRACE op=284 name=RESHAPE tensor=592 bytes=1024 hash=0xa54d2409 min=-20 max=127 sum=69460
+OPTRACE op=285 name=MUL tensor=593 bytes=65536 hash=0x4496c5b3 min=-110 max=124 sum=-1274778
+OPTRACE op=286 name=RESHAPE tensor=594 bytes=1024 hash=0xc7fd894a min=-128 max=127 sum=-17509
+OPTRACE op=287 name=ADD tensor=595 bytes=65536 hash=0x5ed81349 min=-111 max=124 sum=-1311238
+OPTRACE op=288 name=MUL tensor=596 bytes=65536 hash=0xfe55f1d7 min=-123 max=127 sum=-44344
+OPTRACE op=289 name=ADD tensor=597 bytes=65536 hash=0xaccef396 min=-121 max=125 sum=246623
+OPTRACE op=290 name=RESHAPE tensor=598 bytes=65536 hash=0xaccef396 min=-121 max=125 sum=246623
+OPTRACE op=291 name=TRANSPOSE tensor=599 bytes=65536 hash=0xb79243b0 min=-121 max=125 sum=246623
+OPTRACE op=292 name=RESHAPE tensor=600 bytes=65536 hash=0xb79243b0 min=-121 max=125 sum=246623
+OPTRACE op=293 name=TRANSPOSE tensor=601 bytes=65536 hash=0x8beab1e8 min=-121 max=125 sum=246623
+OPTRACE op=294 name=RESHAPE tensor=602 bytes=65536 hash=0x8beab1e8 min=-121 max=125 sum=246623
+OPTRACE op=295 name=TRANSPOSE tensor=603 bytes=65536 hash=0xb14d9b0a min=-121 max=125 sum=246623
+OPTRACE op=296 name=CONV_2D tensor=604 bytes=49152 hash=0xbc14f7a min=-126 max=127 sum=405791
+OPTRACE op=297 name=LOGISTIC tensor=605 bytes=49152 hash=0xee7ce9bf min=-107 max=99 sum=-85906
+OPTRACE op=298 name=MUL tensor=606 bytes=49152 hash=0xb783e10c min=-59 max=127 sum=-1518003
+OPTRACE op=299 name=QUANTIZE tensor=1093 bytes=49152 hash=0x38730962 min=-128 max=49 sum=-1706951
+OPTRACE op=300 name=CONCATENATION tensor=607 bytes=98304 hash=0x4767667f min=-128 max=127 sum=-3224954
+OPTRACE op=301 name=CONV_2D tensor=608 bytes=49152 hash=0x5e7bae4 min=-112 max=119 sum=2227485
+OPTRACE op=302 name=LOGISTIC tensor=609 bytes=49152 hash=0x869f329 min=-115 max=78 sum=146430
+OPTRACE op=303 name=MUL tensor=610 bytes=49152 hash=0x7e24f6ac min=-128 max=101 sum=-3549293
+OPTRACE op=304 name=CONV_2D tensor=611 bytes=98304 hash=0x8c1ab397 min=-126 max=119 sum=-4207828
+OPTRACE op=305 name=LOGISTIC tensor=612 bytes=98304 hash=0xee54e876 min=-126 max=127 sum=-2272819
+OPTRACE op=306 name=MUL tensor=613 bytes=98304 hash=0xfe86ac01 min=-128 max=114 sum=-11997256
+OPTRACE op=307 name=PAD tensor=614 bytes=110976 hash=0x882b6601 min=-128 max=114 sum=-13517896
+OPTRACE op=308 name=DEPTHWISE_CONV_2D tensor=615 bytes=24576 hash=0x70ffa6b5 min=-110 max=116 sum=1021546
+OPTRACE op=309 name=LOGISTIC tensor=616 bytes=24576 hash=0xee0f7d2c min=-125 max=121 sum=1160197
+OPTRACE op=310 name=MUL tensor=617 bytes=24576 hash=0x73689d31 min=-128 max=101 sum=-1408428
+OPTRACE op=311 name=CONV_2D tensor=618 bytes=16384 hash=0x8386aa8e min=-124 max=124 sum=-45279
+OPTRACE op=312 name=CONV_2D tensor=619 bytes=16384 hash=0x82e5a012 min=-128 max=109 sum=588841
+OPTRACE op=313 name=LOGISTIC tensor=620 bytes=16384 hash=0x80d73134 min=-121 max=102 sum=411249
+OPTRACE op=314 name=MUL tensor=621 bytes=16384 hash=0xc6acd26d min=-128 max=82 sum=-1198222
+OPTRACE op=315 name=CONV_2D tensor=622 bytes=20480 hash=0x468fdb90 min=-113 max=97 sum=86015
+OPTRACE op=316 name=TRANSPOSE tensor=623 bytes=20480 hash=0x7eb7201e min=-113 max=97 sum=86015
+OPTRACE op=317 name=RESHAPE tensor=624 bytes=20480 hash=0x7eb7201e min=-113 max=97 sum=86015
+OPTRACE op=318 name=TRANSPOSE tensor=625 bytes=20480 hash=0x5f7d2b6 min=-113 max=97 sum=86015
+OPTRACE op=319 name=RESHAPE tensor=626 bytes=20480 hash=0x5f7d2b6 min=-113 max=97 sum=86015
+OPTRACE op=320 name=TRANSPOSE tensor=627 bytes=20480 hash=0xf380a44c min=-113 max=97 sum=86015
+OPTRACE op=321 name=RESHAPE tensor=628 bytes=20480 hash=0xf380a44c min=-113 max=97 sum=86015
+OPTRACE op=322 name=RESHAPE tensor=629 bytes=20480 hash=0xf380a44c min=-113 max=97 sum=86015
+OPTRACE op=323 name=MEAN tensor=630 bytes=256 hash=0xbf02ef3b min=-114 max=110 sum=-514
+OPTRACE op=324 name=RESHAPE tensor=631 bytes=256 hash=0xbf02ef3b min=-114 max=110 sum=-514
+OPTRACE op=325 name=SQUARED_DIFFERENCE tensor=632 bytes=20480 hash=0x3cf29d6c min=-128 max=64 sum=-2489747
+OPTRACE op=326 name=MEAN tensor=633 bytes=256 hash=0xf9beedf min=-89 max=85 sum=-13332
+OPTRACE op=327 name=ADD tensor=634 bytes=256 hash=0xf9beedf min=-89 max=85 sum=-13332
+OPTRACE op=328 name=RSQRT tensor=635 bytes=256 hash=0x161e0926 min=-14 max=127 sum=17813
+OPTRACE op=329 name=MUL tensor=636 bytes=256 hash=0x11e295be min=-128 max=126 sum=-211
+OPTRACE op=330 name=SUB tensor=637 bytes=256 hash=0x4de06e8e min=-127 max=127 sum=-45
+OPTRACE op=331 name=RESHAPE tensor=638 bytes=256 hash=0x161e0926 min=-14 max=127 sum=17813
+OPTRACE op=332 name=MUL tensor=639 bytes=20480 hash=0x1487d04c min=-128 max=121 sum=108339
+OPTRACE op=333 name=RESHAPE tensor=640 bytes=256 hash=0x4de06e8e min=-127 max=127 sum=-45
+OPTRACE op=334 name=ADD tensor=641 bytes=20480 hash=0xc8f8e6be min=-128 max=122 sum=102977
+FC_DIAG node=0x3c7b1d94 builtin=0x3c7ae298 user=0x3c7a9400 inputs=0x3c1e60c0 outputs=0x3c1e60b8
+FC_TENSOR_DIAG idx=641,70,71,642
+FC_TENSOR_DIAG ptr=0x3c7b7440,0x3c7b597c,0x3c7b5988,0x3c7b744c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=335 name=FULLY_CONNECTED tensor=642 bytes=20480 hash=0x105df66a min=-98 max=112 sum=134251
+OPTRACE op=336 name=RESHAPE tensor=643 bytes=20480 hash=0x105df66a min=-98 max=112 sum=134251
+OPTRACE op=337 name=TRANSPOSE tensor=644 bytes=20480 hash=0x2556205e min=-98 max=112 sum=134251
+FC_DIAG node=0x3c7b1df4 builtin=0x3c7ae268 user=0x3c7a93d0 inputs=0x3c1e6044 outputs=0x3c1e603c
+FC_TENSOR_DIAG idx=641,68,69,645
+FC_TENSOR_DIAG ptr=0x3c7b7440,0x3c7b5964,0x3c7b5970,0x3c7b7470
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=338 name=FULLY_CONNECTED tensor=645 bytes=20480 hash=0xa734098f min=-128 max=127 sum=-23764
+OPTRACE op=339 name=RESHAPE tensor=646 bytes=20480 hash=0xa734098f min=-128 max=127 sum=-23764
+FC_DIAG node=0x3c7b1e34 builtin=0x3c7ae238 user=0x3c7a93a0 inputs=0x3c1e5fe8 outputs=0x3c1e5fe0
+FC_TENSOR_DIAG idx=641,66,67,647
+FC_TENSOR_DIAG ptr=0x3c7b7440,0x3c7b594c,0x3c7b5958,0x3c7b7488
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=340 name=FULLY_CONNECTED tensor=647 bytes=20480 hash=0x1beb842d min=-114 max=127 sum=56046
+OPTRACE op=341 name=RESHAPE tensor=648 bytes=20480 hash=0x1beb842d min=-114 max=127 sum=56046
+OPTRACE op=342 name=TRANSPOSE tensor=649 bytes=20480 hash=0x66d266b9 min=-114 max=127 sum=56046
+OPTRACE op=343 name=TRANSPOSE tensor=650 bytes=20480 hash=0xdff9ff2f min=-128 max=127 sum=-23764
+OPTRACE op=344 name=RESHAPE tensor=651 bytes=20480 hash=0x2556205e min=-98 max=112 sum=134251
+OPTRACE op=345 name=RESHAPE tensor=652 bytes=20480 hash=0xdff9ff2f min=-128 max=127 sum=-23764
+OPTRACE op=346 name=BATCH_MATMUL tensor=653 bytes=65536 hash=0x47433d1a min=-128 max=115 sum=-955039
+OPTRACE op=347 name=MUL tensor=654 bytes=65536 hash=0x47433d1a min=-128 max=115 sum=-955039
+OPTRACE op=348 name=RESHAPE tensor=655 bytes=65536 hash=0x47433d1a min=-128 max=115 sum=-955039
+OPTRACE op=349 name=SOFTMAX tensor=656 bytes=65536 hash=0xdbc94e10 min=-128 max=-51 sum=-8127301
+OPTRACE op=350 name=RESHAPE tensor=657 bytes=65536 hash=0xdbc94e10 min=-128 max=-51 sum=-8127301
+OPTRACE op=351 name=RESHAPE tensor=658 bytes=20480 hash=0x66d266b9 min=-114 max=127 sum=56046
+OPTRACE op=352 name=BATCH_MATMUL tensor=659 bytes=20480 hash=0xd814545c min=-119 max=97 sum=-5863
+OPTRACE op=353 name=RESHAPE tensor=660 bytes=20480 hash=0xd814545c min=-119 max=97 sum=-5863
+OPTRACE op=354 name=TRANSPOSE tensor=661 bytes=20480 hash=0x86cad214 min=-119 max=97 sum=-5863
+OPTRACE op=355 name=RESHAPE tensor=662 bytes=20480 hash=0x86cad214 min=-119 max=97 sum=-5863
+FC_DIAG node=0x3c7b2034 builtin=0x3c7ae0fc user=0x3c7a92e0 inputs=0x3c1e5d70 outputs=0x3c1e5d68
+FC_TENSOR_DIAG idx=662,106,65,663
+FC_TENSOR_DIAG ptr=0x3c7b753c,0x3c7b5b2c,0x3c7b5940,0x3c7b7548
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=356 name=FULLY_CONNECTED tensor=663 bytes=20480 hash=0xdd571387 min=-99 max=127 sum=416270
+OPTRACE op=357 name=ADD tensor=664 bytes=20480 hash=0x7f1ab9c5 min=-112 max=98 sum=87442
+OPTRACE op=358 name=RESHAPE tensor=665 bytes=20480 hash=0x7f1ab9c5 min=-112 max=98 sum=87442
+OPTRACE op=359 name=MEAN tensor=666 bytes=256 hash=0xc48b6ad8 min=-99 max=127 sum=4131
+OPTRACE op=360 name=RESHAPE tensor=667 bytes=256 hash=0xc48b6ad8 min=-99 max=127 sum=4131
+OPTRACE op=361 name=SQUARED_DIFFERENCE tensor=668 bytes=20480 hash=0x4d384725 min=-128 max=58 sum=-2498226
+OPTRACE op=362 name=MEAN tensor=669 bytes=256 hash=0x95c9ec55 min=-84 max=83 sum=-11708
+OPTRACE op=363 name=ADD tensor=670 bytes=256 hash=0x95c9ec55 min=-84 max=83 sum=-11708
+OPTRACE op=364 name=RSQRT tensor=671 bytes=256 hash=0x929f48ac min=-6 max=127 sum=18885
+OPTRACE op=365 name=MUL tensor=672 bytes=256 hash=0xb297eff min=-126 max=127 sum=5550
+OPTRACE op=366 name=SUB tensor=673 bytes=256 hash=0xcf626acf min=-128 max=125 sum=-5806
+OPTRACE op=367 name=RESHAPE tensor=674 bytes=256 hash=0x929f48ac min=-6 max=127 sum=18885
+OPTRACE op=368 name=MUL tensor=675 bytes=20480 hash=0x99d8eca5 min=-128 max=121 sum=212550
+OPTRACE op=369 name=RESHAPE tensor=676 bytes=256 hash=0xcf626acf min=-128 max=125 sum=-5806
+OPTRACE op=370 name=ADD tensor=677 bytes=20480 hash=0x6d38b8c9 min=-128 max=122 sum=205084
+FC_DIAG node=0x3c7b2214 builtin=0x3c7ae030 user=0x3c7a9060 inputs=0x3c1e5ae4 outputs=0x3c1e5adc
+FC_TENSOR_DIAG idx=677,63,64,678
+FC_TENSOR_DIAG ptr=0x3c7b75f0,0x3c7b5928,0x3c7b5934,0x3c7b75fc
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=371 name=FULLY_CONNECTED tensor=678 bytes=40960 hash=0x20abdaf4 min=-125 max=115 sum=1488617
+OPTRACE op=372 name=RESHAPE tensor=679 bytes=40960 hash=0x20abdaf4 min=-125 max=115 sum=1488617
+OPTRACE op=373 name=LOGISTIC tensor=680 bytes=40960 hash=0xb0091be2 min=-128 max=108 sum=-1232777
+OPTRACE op=374 name=MUL tensor=681 bytes=40960 hash=0x70d9c790 min=-128 max=84 sum=-4570715
+FC_DIAG node=0x3c7b2294 builtin=0x3c7adffc user=0x3c7a8ff0 inputs=0x3c1e5a38 outputs=0x3c1e5a30
+FC_TENSOR_DIAG idx=681,105,62,682
+FC_TENSOR_DIAG ptr=0x3c7b7620,0x3c7b5b20,0x3c7b591c,0x3c7b762c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=375 name=FULLY_CONNECTED tensor=682 bytes=20480 hash=0x592cd8aa min=-92 max=122 sum=83671
+OPTRACE op=376 name=ADD tensor=683 bytes=20480 hash=0xd0870603 min=-105 max=112 sum=189856
+OPTRACE op=377 name=RESHAPE tensor=684 bytes=20480 hash=0xd0870603 min=-105 max=112 sum=189856
+OPTRACE op=378 name=MEAN tensor=685 bytes=256 hash=0xc8db4447 min=-80 max=127 sum=6426
+OPTRACE op=379 name=RESHAPE tensor=686 bytes=256 hash=0xc8db4447 min=-80 max=127 sum=6426
+OPTRACE op=380 name=SQUARED_DIFFERENCE tensor=687 bytes=20480 hash=0x2719d898 min=-128 max=44 sum=-2501827
+OPTRACE op=381 name=MEAN tensor=688 bytes=256 hash=0x20cf83b5 min=-71 max=57 sum=-8430
+OPTRACE op=382 name=ADD tensor=689 bytes=256 hash=0x20cf83b5 min=-71 max=57 sum=-8430
+OPTRACE op=383 name=RSQRT tensor=690 bytes=256 hash=0x9a93ff74 min=16 max=127 sum=19563
+OPTRACE op=384 name=MUL tensor=691 bytes=256 hash=0xe3090a11 min=-107 max=127 sum=7136
+OPTRACE op=385 name=SUB tensor=692 bytes=256 hash=0x98827e1d min=-128 max=106 sum=-7392
+OPTRACE op=386 name=RESHAPE tensor=693 bytes=256 hash=0x9a93ff74 min=16 max=127 sum=19563
+OPTRACE op=387 name=MUL tensor=694 bytes=20480 hash=0x19758bdb min=-128 max=114 sum=314602
+OPTRACE op=388 name=RESHAPE tensor=695 bytes=256 hash=0x98827e1d min=-128 max=106 sum=-7392
+OPTRACE op=389 name=ADD tensor=696 bytes=20480 hash=0x295f35f7 min=-128 max=114 sum=307962
+FC_DIAG node=0x3c7b2474 builtin=0x3c7adf30 user=0x3c7a8d70 inputs=0x3c1e57ac outputs=0x3c1e57a4
+FC_TENSOR_DIAG idx=696,60,61,697
+FC_TENSOR_DIAG ptr=0x3c7b76d4,0x3c7b5904,0x3c7b5910,0x3c7b76e0
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=390 name=FULLY_CONNECTED tensor=697 bytes=20480 hash=0x388e28dc min=-107 max=94 sum=-105049
+OPTRACE op=391 name=RESHAPE tensor=698 bytes=20480 hash=0x388e28dc min=-107 max=94 sum=-105049
+OPTRACE op=392 name=TRANSPOSE tensor=699 bytes=20480 hash=0x673eb1c0 min=-107 max=94 sum=-105049
+FC_DIAG node=0x3c7b24d4 builtin=0x3c7adf00 user=0x3c7a8d40 inputs=0x3c1e5730 outputs=0x3c1e5728
+FC_TENSOR_DIAG idx=696,58,59,700
+FC_TENSOR_DIAG ptr=0x3c7b76d4,0x3c7b58ec,0x3c7b58f8,0x3c7b7704
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=393 name=FULLY_CONNECTED tensor=700 bytes=20480 hash=0x26a38bdb min=-128 max=127 sum=-60280
+OPTRACE op=394 name=RESHAPE tensor=701 bytes=20480 hash=0x26a38bdb min=-128 max=127 sum=-60280
+FC_DIAG node=0x3c7b2514 builtin=0x3c7aded0 user=0x3c7a8d10 inputs=0x3c1e56d4 outputs=0x3c1e56cc
+FC_TENSOR_DIAG idx=696,56,57,702
+FC_TENSOR_DIAG ptr=0x3c7b76d4,0x3c7b58d4,0x3c7b58e0,0x3c7b771c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=395 name=FULLY_CONNECTED tensor=702 bytes=20480 hash=0xcd6e086a min=-115 max=127 sum=55481
+OPTRACE op=396 name=RESHAPE tensor=703 bytes=20480 hash=0xcd6e086a min=-115 max=127 sum=55481
+OPTRACE op=397 name=TRANSPOSE tensor=704 bytes=20480 hash=0x8ac67c9e min=-115 max=127 sum=55481
+OPTRACE op=398 name=TRANSPOSE tensor=705 bytes=20480 hash=0x8a11ac5d min=-128 max=127 sum=-60280
+OPTRACE op=399 name=RESHAPE tensor=706 bytes=20480 hash=0x673eb1c0 min=-107 max=94 sum=-105049
+OPTRACE op=400 name=RESHAPE tensor=707 bytes=20480 hash=0x8a11ac5d min=-128 max=127 sum=-60280
+OPTRACE op=401 name=BATCH_MATMUL tensor=708 bytes=65536 hash=0x4eb8c041 min=-109 max=99 sum=-419060
+OPTRACE op=402 name=MUL tensor=709 bytes=65536 hash=0x4eb8c041 min=-109 max=99 sum=-419060
+OPTRACE op=403 name=RESHAPE tensor=710 bytes=65536 hash=0x4eb8c041 min=-109 max=99 sum=-419060
+OPTRACE op=404 name=SOFTMAX tensor=711 bytes=65536 hash=0x6684231f min=-128 max=64 sum=-8128070
+OPTRACE op=405 name=RESHAPE tensor=712 bytes=65536 hash=0x6684231f min=-128 max=64 sum=-8128070
+OPTRACE op=406 name=RESHAPE tensor=713 bytes=20480 hash=0x8ac67c9e min=-115 max=127 sum=55481
+OPTRACE op=407 name=BATCH_MATMUL tensor=714 bytes=20480 hash=0x6a43ac4d min=-128 max=127 sum=140346
+OPTRACE op=408 name=RESHAPE tensor=715 bytes=20480 hash=0x6a43ac4d min=-128 max=127 sum=140346
+OPTRACE op=409 name=TRANSPOSE tensor=716 bytes=20480 hash=0x3060f1d5 min=-128 max=127 sum=140346
+OPTRACE op=410 name=RESHAPE tensor=717 bytes=20480 hash=0x3060f1d5 min=-128 max=127 sum=140346
+FC_DIAG node=0x3c7b2714 builtin=0x3c7add94 user=0x3c7a8c50 inputs=0x3c1e545c outputs=0x3c1e5454
+FC_TENSOR_DIAG idx=717,104,55,718
+FC_TENSOR_DIAG ptr=0x3c7b77d0,0x3c7b5b14,0x3c7b58c8,0x3c7b77dc
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=411 name=FULLY_CONNECTED tensor=718 bytes=20480 hash=0xd55b955f min=-128 max=127 sum=411462
+OPTRACE op=412 name=ADD tensor=719 bytes=20480 hash=0x3d66cddc min=-128 max=113 sum=46607
+OPTRACE op=413 name=RESHAPE tensor=720 bytes=20480 hash=0x3d66cddc min=-128 max=113 sum=46607
+OPTRACE op=414 name=MEAN tensor=721 bytes=256 hash=0xc6bb95e2 min=-94 max=127 sum=7153
+OPTRACE op=415 name=RESHAPE tensor=722 bytes=256 hash=0xc6bb95e2 min=-94 max=127 sum=7153
+OPTRACE op=416 name=SQUARED_DIFFERENCE tensor=723 bytes=20480 hash=0x2e5d3250 min=-128 max=108 sum=-2475617
+OPTRACE op=417 name=MEAN tensor=724 bytes=256 hash=0xa6d9f58f min=-52 max=97 sum=-3116
+OPTRACE op=418 name=ADD tensor=725 bytes=256 hash=0xa6d9f58f min=-52 max=97 sum=-3116
+OPTRACE op=419 name=RSQRT tensor=726 bytes=256 hash=0x5a3991ee min=19 max=126 sum=20635
+OPTRACE op=420 name=MUL tensor=727 bytes=256 hash=0x2833768b min=-112 max=127 sum=9132
+OPTRACE op=421 name=SUB tensor=728 bytes=256 hash=0xc585eb63 min=-128 max=111 sum=-9388
+OPTRACE op=422 name=RESHAPE tensor=729 bytes=256 hash=0x5a3991ee min=19 max=126 sum=20635
+OPTRACE op=423 name=MUL tensor=730 bytes=20480 hash=0xe4bb4111 min=-128 max=112 sum=293442
+OPTRACE op=424 name=RESHAPE tensor=731 bytes=256 hash=0xc585eb63 min=-128 max=111 sum=-9388
+OPTRACE op=425 name=ADD tensor=732 bytes=20480 hash=0x427f7dcd min=-128 max=112 sum=287704
+FC_DIAG node=0x3c7b28f4 builtin=0x3c7adcc8 user=0x3c7a89d0 inputs=0x3c1e51d0 outputs=0x3c1e51c8
+FC_TENSOR_DIAG idx=732,53,54,733
+FC_TENSOR_DIAG ptr=0x3c7b7884,0x3c7b58b0,0x3c7b58bc,0x3c7b7890
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=426 name=FULLY_CONNECTED tensor=733 bytes=40960 hash=0xf866acde min=-105 max=125 sum=1426793
+OPTRACE op=427 name=RESHAPE tensor=734 bytes=40960 hash=0xf866acde min=-105 max=125 sum=1426793
+OPTRACE op=428 name=LOGISTIC tensor=735 bytes=40960 hash=0xd10815b6 min=-126 max=108 sum=-848367
+OPTRACE op=429 name=MUL tensor=736 bytes=40960 hash=0x40f50a5d min=-128 max=119 sum=-4327326
+FC_DIAG node=0x3c7b2974 builtin=0x3c7adc94 user=0x3c7a8960 inputs=0x3c1e5124 outputs=0x3c1e511c
+FC_TENSOR_DIAG idx=736,103,52,737
+FC_TENSOR_DIAG ptr=0x3c7b78b4,0x3c7b5b08,0x3c7b58a4,0x3c7b78c0
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=430 name=FULLY_CONNECTED tensor=737 bytes=20480 hash=0xc474cad0 min=-111 max=87 sum=-136987
+OPTRACE op=431 name=ADD tensor=738 bytes=20480 hash=0x4042d495 min=-128 max=119 sum=211986
+OPTRACE op=432 name=RESHAPE tensor=739 bytes=20480 hash=0x4042d495 min=-128 max=119 sum=211986
+OPTRACE op=433 name=MEAN tensor=740 bytes=256 hash=0x336935a7 min=-112 max=127 sum=7684
+OPTRACE op=434 name=RESHAPE tensor=741 bytes=256 hash=0x336935a7 min=-112 max=127 sum=7684
+OPTRACE op=435 name=SQUARED_DIFFERENCE tensor=742 bytes=20480 hash=0x506ef83a min=-128 max=125 sum=-2477815
+OPTRACE op=436 name=MEAN tensor=743 bytes=256 hash=0x563a60d8 min=-57 max=92 sum=-1477
+OPTRACE op=437 name=ADD tensor=744 bytes=256 hash=0x563a60d8 min=-57 max=92 sum=-1477
+OPTRACE op=438 name=RSQRT tensor=745 bytes=256 hash=0xa1730d6a min=26 max=127 sum=20869
+OPTRACE op=439 name=MUL tensor=746 bytes=256 hash=0x18991096 min=-128 max=127 sum=10155
+OPTRACE op=440 name=SUB tensor=747 bytes=256 hash=0x329d9326 min=-128 max=127 sum=-10411
+OPTRACE op=441 name=RESHAPE tensor=748 bytes=256 hash=0xa1730d6a min=26 max=127 sum=20869
+OPTRACE op=442 name=MUL tensor=749 bytes=20480 hash=0x8cbd5ef3 min=-128 max=115 sum=377054
+OPTRACE op=443 name=RESHAPE tensor=750 bytes=256 hash=0x329d9326 min=-128 max=127 sum=-10411
+OPTRACE op=444 name=ADD tensor=751 bytes=20480 hash=0xe2616051 min=-128 max=115 sum=369938
+FC_DIAG node=0x3c7b2b54 builtin=0x3c7adbc8 user=0x3c7a86e0 inputs=0x3c1e4e98 outputs=0x3c1e4e90
+FC_TENSOR_DIAG idx=751,50,51,752
+FC_TENSOR_DIAG ptr=0x3c7b7968,0x3c7b588c,0x3c7b5898,0x3c7b7974
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=445 name=FULLY_CONNECTED tensor=752 bytes=20480 hash=0x50ce5d58 min=-116 max=113 sum=-38743
+OPTRACE op=446 name=RESHAPE tensor=753 bytes=20480 hash=0x50ce5d58 min=-116 max=113 sum=-38743
+OPTRACE op=447 name=TRANSPOSE tensor=754 bytes=20480 hash=0xcd387690 min=-116 max=113 sum=-38743
+FC_DIAG node=0x3c7b2bb4 builtin=0x3c7adb98 user=0x3c7a86b0 inputs=0x3c1e4e1c outputs=0x3c1e4e14
+FC_TENSOR_DIAG idx=751,48,49,755
+FC_TENSOR_DIAG ptr=0x3c7b7968,0x3c7b5874,0x3c7b5880,0x3c7b7998
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=448 name=FULLY_CONNECTED tensor=755 bytes=20480 hash=0xdf951fab min=-127 max=115 sum=211900
+OPTRACE op=449 name=RESHAPE tensor=756 bytes=20480 hash=0xdf951fab min=-127 max=115 sum=211900
+FC_DIAG node=0x3c7b2bf4 builtin=0x3c7adb68 user=0x3c7a8680 inputs=0x3c1e4dc0 outputs=0x3c1e4db8
+FC_TENSOR_DIAG idx=751,46,47,757
+FC_TENSOR_DIAG ptr=0x3c7b7968,0x3c7b585c,0x3c7b5868,0x3c7b79b0
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=450 name=FULLY_CONNECTED tensor=757 bytes=20480 hash=0x77140d0f min=-123 max=127 sum=-237864
+OPTRACE op=451 name=RESHAPE tensor=758 bytes=20480 hash=0x77140d0f min=-123 max=127 sum=-237864
+OPTRACE op=452 name=TRANSPOSE tensor=759 bytes=20480 hash=0x611484ab min=-123 max=127 sum=-237864
+OPTRACE op=453 name=TRANSPOSE tensor=760 bytes=20480 hash=0xe34f7d99 min=-127 max=115 sum=211900
+OPTRACE op=454 name=RESHAPE tensor=761 bytes=20480 hash=0xcd387690 min=-116 max=113 sum=-38743
+OPTRACE op=455 name=RESHAPE tensor=762 bytes=20480 hash=0xe34f7d99 min=-127 max=115 sum=211900
+OPTRACE op=456 name=BATCH_MATMUL tensor=763 bytes=65536 hash=0xc01bc7d4 min=-128 max=111 sum=-1236521
+OPTRACE op=457 name=MUL tensor=764 bytes=65536 hash=0xc01bc7d4 min=-128 max=111 sum=-1236521
+OPTRACE op=458 name=RESHAPE tensor=765 bytes=65536 hash=0xc01bc7d4 min=-128 max=111 sum=-1236521
+OPTRACE op=459 name=SOFTMAX tensor=766 bytes=65536 hash=0xefb43ae1 min=-128 max=5 sum=-8127676
+OPTRACE op=460 name=RESHAPE tensor=767 bytes=65536 hash=0xefb43ae1 min=-128 max=5 sum=-8127676
+OPTRACE op=461 name=RESHAPE tensor=768 bytes=20480 hash=0x611484ab min=-123 max=127 sum=-237864
+OPTRACE op=462 name=BATCH_MATMUL tensor=769 bytes=20480 hash=0xff5afeb1 min=-128 max=127 sum=-694060
+OPTRACE op=463 name=RESHAPE tensor=770 bytes=20480 hash=0xff5afeb1 min=-128 max=127 sum=-694060
+OPTRACE op=464 name=TRANSPOSE tensor=771 bytes=20480 hash=0x2d936391 min=-128 max=127 sum=-694060
+OPTRACE op=465 name=RESHAPE tensor=772 bytes=20480 hash=0x2d936391 min=-128 max=127 sum=-694060
+FC_DIAG node=0x3c7b2df4 builtin=0x3c7ada2c user=0x3c7a85c0 inputs=0x3c1e4b48 outputs=0x3c1e4b40
+FC_TENSOR_DIAG idx=772,102,45,773
+FC_TENSOR_DIAG ptr=0x3c7b7a64,0x3c7b5afc,0x3c7b5850,0x3c7b7a70
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=466 name=FULLY_CONNECTED tensor=773 bytes=20480 hash=0x35e70f18 min=-114 max=127 sum=86597
+OPTRACE op=467 name=ADD tensor=774 bytes=20480 hash=0x1b0fc5f7 min=-128 max=126 sum=342144
+OPTRACE op=468 name=RESHAPE tensor=775 bytes=20480 hash=0x1b0fc5f7 min=-128 max=126 sum=342144
+OPTRACE op=469 name=MEAN tensor=776 bytes=256 hash=0x34468ea3 min=-76 max=127 sum=16966
+OPTRACE op=470 name=RESHAPE tensor=777 bytes=256 hash=0x34468ea3 min=-76 max=127 sum=16966
+OPTRACE op=471 name=SQUARED_DIFFERENCE tensor=778 bytes=20480 hash=0xecfa9c02 min=-128 max=127 sum=-2484109
+OPTRACE op=472 name=MEAN tensor=779 bytes=256 hash=0x30eb8004 min=-44 max=108 sum=2093
+OPTRACE op=473 name=ADD tensor=780 bytes=256 hash=0x30eb8004 min=-44 max=108 sum=2093
+OPTRACE op=474 name=RSQRT tensor=781 bytes=256 hash=0xdf83bda3 min=35 max=127 sum=22682
+OPTRACE op=475 name=MUL tensor=782 bytes=256 hash=0x4fba51ad min=-83 max=127 sum=18266
+OPTRACE op=476 name=SUB tensor=783 bytes=256 hash=0x202d058d min=-128 max=82 sum=-18522
+OPTRACE op=477 name=RESHAPE tensor=784 bytes=256 hash=0xdf83bda3 min=35 max=127 sum=22682
+OPTRACE op=478 name=MUL tensor=785 bytes=20480 hash=0x16a41f36 min=-128 max=118 sum=426261
+OPTRACE op=479 name=RESHAPE tensor=786 bytes=256 hash=0x202d058d min=-128 max=82 sum=-18522
+OPTRACE op=480 name=ADD tensor=787 bytes=20480 hash=0x145cdc44 min=-128 max=118 sum=429869
+FC_DIAG node=0x3c7b2fd4 builtin=0x3c7ad960 user=0x3c7a8340 inputs=0x3c1e48bc outputs=0x3c1e48b4
+FC_TENSOR_DIAG idx=787,43,44,788
+FC_TENSOR_DIAG ptr=0x3c7b7b18,0x3c7b5838,0x3c7b5844,0x3c7b7b24
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=481 name=FULLY_CONNECTED tensor=788 bytes=40960 hash=0x8d14f83f min=-118 max=108 sum=1025344
+OPTRACE op=482 name=RESHAPE tensor=789 bytes=40960 hash=0x8d14f83f min=-118 max=108 sum=1025344
+OPTRACE op=483 name=LOGISTIC tensor=790 bytes=40960 hash=0x1b689bb min=-128 max=112 sum=-1230780
+OPTRACE op=484 name=MUL tensor=791 bytes=40960 hash=0xada6b305 min=-128 max=69 sum=-4606328
+FC_DIAG node=0x3c7b3054 builtin=0x3c7ad92c user=0x3c7a82d0 inputs=0x3c1e4810 outputs=0x3c1e4808
+FC_TENSOR_DIAG idx=791,101,42,792
+FC_TENSOR_DIAG ptr=0x3c7b7b48,0x3c7b5af0,0x3c7b582c,0x3c7b7b54
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=485 name=FULLY_CONNECTED tensor=792 bytes=20480 hash=0xd4c55231 min=-128 max=116 sum=-753676
+OPTRACE op=486 name=ADD tensor=793 bytes=20480 hash=0x1f45d402 min=-128 max=123 sum=53805
+OPTRACE op=487 name=RESHAPE tensor=794 bytes=20480 hash=0x1f45d402 min=-128 max=123 sum=53805
+OPTRACE op=488 name=MEAN tensor=795 bytes=256 hash=0x9710d063 min=-128 max=127 sum=10578
+OPTRACE op=489 name=RESHAPE tensor=796 bytes=256 hash=0x9710d063 min=-128 max=127 sum=10578
+OPTRACE op=490 name=SQUARED_DIFFERENCE tensor=797 bytes=20480 hash=0x670fcb6e min=-128 max=116 sum=-2485555
+OPTRACE op=491 name=MEAN tensor=798 bytes=256 hash=0x435a3cb0 min=-74 max=58 sum=-2805
+OPTRACE op=492 name=ADD tensor=799 bytes=256 hash=0x435a3cb0 min=-74 max=58 sum=-2805
+OPTRACE op=493 name=RSQRT tensor=800 bytes=256 hash=0x88b76e88 min=32 max=127 sum=19527
+OPTRACE op=494 name=MUL tensor=801 bytes=256 hash=0x5792f907 min=-128 max=127 sum=14276
+OPTRACE op=495 name=SUB tensor=802 bytes=256 hash=0x7488836f min=-128 max=127 sum=-14532
+OPTRACE op=496 name=RESHAPE tensor=803 bytes=256 hash=0x88b76e88 min=32 max=127 sum=19527
+OPTRACE op=497 name=MUL tensor=804 bytes=20480 hash=0xb636fb4c min=-128 max=127 sum=96993
+OPTRACE op=498 name=RESHAPE tensor=805 bytes=256 hash=0x7488836f min=-128 max=127 sum=-14532
+OPTRACE op=499 name=ADD tensor=806 bytes=20480 hash=0x3f02359e min=-128 max=127 sum=102189
+FC_DIAG node=0x3c7b3234 builtin=0x3c7ad860 user=0x3c7a8050 inputs=0x3c1e4584 outputs=0x3c1e457c
+FC_TENSOR_DIAG idx=806,40,41,807
+FC_TENSOR_DIAG ptr=0x3c7b7bfc,0x3c7b5814,0x3c7b5820,0x3c7b7c08
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=500 name=FULLY_CONNECTED tensor=807 bytes=20480 hash=0x29a9f898 min=-128 max=113 sum=-50601
+OPTRACE op=501 name=RESHAPE tensor=808 bytes=20480 hash=0x29a9f898 min=-128 max=113 sum=-50601
+OPTRACE op=502 name=TRANSPOSE tensor=809 bytes=20480 hash=0x2cdf67cc min=-128 max=113 sum=-50601
+FC_DIAG node=0x3c7b3294 builtin=0x3c7ad830 user=0x3c7a8020 inputs=0x3c1e4508 outputs=0x3c1e4500
+FC_TENSOR_DIAG idx=806,38,39,810
+FC_TENSOR_DIAG ptr=0x3c7b7bfc,0x3c7b57fc,0x3c7b5808,0x3c7b7c2c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=503 name=FULLY_CONNECTED tensor=810 bytes=20480 hash=0x4a48ac42 min=-120 max=127 sum=178761
+OPTRACE op=504 name=RESHAPE tensor=811 bytes=20480 hash=0x4a48ac42 min=-120 max=127 sum=178761
+FC_DIAG node=0x3c7b32d4 builtin=0x3c7ad800 user=0x3c7a7ff0 inputs=0x3c1e44ac outputs=0x3c1e44a4
+FC_TENSOR_DIAG idx=806,36,37,812
+FC_TENSOR_DIAG ptr=0x3c7b7bfc,0x3c7b57e4,0x3c7b57f0,0x3c7b7c44
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=505 name=FULLY_CONNECTED tensor=812 bytes=20480 hash=0x131b1e86 min=-119 max=125 sum=90611
+OPTRACE op=506 name=RESHAPE tensor=813 bytes=20480 hash=0x131b1e86 min=-119 max=125 sum=90611
+OPTRACE op=507 name=TRANSPOSE tensor=814 bytes=20480 hash=0x9289825a min=-119 max=125 sum=90611
+OPTRACE op=508 name=TRANSPOSE tensor=815 bytes=20480 hash=0x9c9f7246 min=-120 max=127 sum=178761
+OPTRACE op=509 name=RESHAPE tensor=816 bytes=20480 hash=0x2cdf67cc min=-128 max=113 sum=-50601
+OPTRACE op=510 name=RESHAPE tensor=817 bytes=20480 hash=0x9c9f7246 min=-120 max=127 sum=178761
+OPTRACE op=511 name=BATCH_MATMUL tensor=818 bytes=65536 hash=0x71faaa39 min=-128 max=120 sum=-1798098
+OPTRACE op=512 name=MUL tensor=819 bytes=65536 hash=0x71faaa39 min=-128 max=120 sum=-1798098
+OPTRACE op=513 name=RESHAPE tensor=820 bytes=65536 hash=0x71faaa39 min=-128 max=120 sum=-1798098
+OPTRACE op=514 name=SOFTMAX tensor=821 bytes=65536 hash=0x5940eaea min=-128 max=-41 sum=-8126833
+OPTRACE op=515 name=RESHAPE tensor=822 bytes=65536 hash=0x5940eaea min=-128 max=-41 sum=-8126833
+OPTRACE op=516 name=RESHAPE tensor=823 bytes=20480 hash=0x9289825a min=-119 max=125 sum=90611
+OPTRACE op=517 name=BATCH_MATMUL tensor=824 bytes=20480 hash=0x9873a188 min=-116 max=120 sum=47709
+OPTRACE op=518 name=RESHAPE tensor=825 bytes=20480 hash=0x9873a188 min=-116 max=120 sum=47709
+OPTRACE op=519 name=TRANSPOSE tensor=826 bytes=20480 hash=0x67ad97c8 min=-116 max=120 sum=47709
+OPTRACE op=520 name=RESHAPE tensor=827 bytes=20480 hash=0x67ad97c8 min=-116 max=120 sum=47709
+FC_DIAG node=0x3c7b34d4 builtin=0x3c7ad6c4 user=0x3c7a7f30 inputs=0x3c1e4234 outputs=0x3c1e422c
+FC_TENSOR_DIAG idx=827,100,35,828
+FC_TENSOR_DIAG ptr=0x3c7b7cf8,0x3c7b5ae4,0x3c7b57d8,0x3c7b7d04
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=521 name=FULLY_CONNECTED tensor=828 bytes=20480 hash=0x187fd0e8 min=-122 max=98 sum=296027
+OPTRACE op=522 name=ADD tensor=829 bytes=20480 hash=0x6ae322c min=-128 max=119 sum=8667
+OPTRACE op=523 name=RESHAPE tensor=830 bytes=20480 hash=0x6ae322c min=-128 max=119 sum=8667
+OPTRACE op=524 name=MEAN tensor=831 bytes=256 hash=0x4fa941f4 min=-128 max=127 sum=7601
+OPTRACE op=525 name=RESHAPE tensor=832 bytes=256 hash=0x4fa941f4 min=-128 max=127 sum=7601
+OPTRACE op=526 name=SQUARED_DIFFERENCE tensor=833 bytes=20480 hash=0x16e81852 min=-128 max=109 sum=-2474425
+OPTRACE op=527 name=MEAN tensor=834 bytes=256 hash=0x407d3dbe min=-55 max=67 sum=1191
+OPTRACE op=528 name=ADD tensor=835 bytes=256 hash=0x407d3dbe min=-55 max=67 sum=1191
+OPTRACE op=529 name=RSQRT tensor=836 bytes=256 hash=0x60f423d min=49 max=127 sum=22512
+OPTRACE op=530 name=MUL tensor=837 bytes=256 hash=0x655eed4c min=-126 max=127 sum=10555
+OPTRACE op=531 name=SUB tensor=838 bytes=256 hash=0xfeeef3e0 min=-128 max=125 sum=-10811
+OPTRACE op=532 name=RESHAPE tensor=839 bytes=256 hash=0x60f423d min=49 max=127 sum=22512
+OPTRACE op=533 name=MUL tensor=840 bytes=20480 hash=0xeeb0d33d min=-128 max=127 sum=132488
+OPTRACE op=534 name=RESHAPE tensor=841 bytes=256 hash=0xfeeef3e0 min=-128 max=125 sum=-10811
+OPTRACE op=535 name=ADD tensor=842 bytes=20480 hash=0x559d958d min=-128 max=127 sum=142892
+FC_DIAG node=0x3c7b36b4 builtin=0x3c7ad5f8 user=0x3c7a7cb0 inputs=0x3c1e3fa8 outputs=0x3c1e3fa0
+FC_TENSOR_DIAG idx=842,33,34,843
+FC_TENSOR_DIAG ptr=0x3c7b7dac,0x3c7b57c0,0x3c7b57cc,0x3c7b7db8
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=536 name=FULLY_CONNECTED tensor=843 bytes=40960 hash=0x7e573284 min=-88 max=126 sum=11969
+OPTRACE op=537 name=RESHAPE tensor=844 bytes=40960 hash=0x7e573284 min=-88 max=126 sum=11969
+OPTRACE op=538 name=LOGISTIC tensor=845 bytes=40960 hash=0x2f480664 min=-126 max=124 sum=-2417221
+OPTRACE op=539 name=MUL tensor=846 bytes=40960 hash=0xe777e961 min=-128 max=124 sum=-4881108
+FC_DIAG node=0x3c7b3734 builtin=0x3c7ad5c4 user=0x3c7a7c40 inputs=0x3c1e3efc outputs=0x3c1e3ef4
+FC_TENSOR_DIAG idx=846,99,32,847
+FC_TENSOR_DIAG ptr=0x3c7b7ddc,0x3c7b5ad8,0x3c7b57b4,0x3c7b7de8
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=540 name=FULLY_CONNECTED tensor=847 bytes=20480 hash=0x16dfe3d2 min=-128 max=127 sum=-1094897
+OPTRACE op=541 name=ADD tensor=848 bytes=20480 hash=0xad431e67 min=-128 max=127 sum=-601920
+OPTRACE op=542 name=RESHAPE tensor=849 bytes=20480 hash=0xad431e67 min=-128 max=127 sum=-601920
+OPTRACE op=543 name=MEAN tensor=850 bytes=256 hash=0x68056a40 min=-94 max=127 sum=8875
+OPTRACE op=544 name=RESHAPE tensor=851 bytes=256 hash=0x68056a40 min=-94 max=127 sum=8875
+OPTRACE op=545 name=SQUARED_DIFFERENCE tensor=852 bytes=20480 hash=0x7ca88001 min=-128 max=125 sum=-2524888
+OPTRACE op=546 name=MEAN tensor=853 bytes=256 hash=0x649cbbe1 min=-85 max=127 sum=-1982
+OPTRACE op=547 name=ADD tensor=854 bytes=256 hash=0x649cbbe1 min=-85 max=127 sum=-1982
+OPTRACE op=548 name=RSQRT tensor=855 bytes=256 hash=0xf89a2ba3 min=-12 max=127 sum=13274
+OPTRACE op=549 name=MUL tensor=856 bytes=256 hash=0x9ec1b26f min=-86 max=127 sum=11328
+OPTRACE op=550 name=SUB tensor=857 bytes=256 hash=0xa73b7b13 min=-128 max=85 sum=-11584
+OPTRACE op=551 name=RESHAPE tensor=858 bytes=256 hash=0xf89a2ba3 min=-12 max=127 sum=13274
+OPTRACE op=552 name=MUL tensor=859 bytes=20480 hash=0x67dd5c08 min=-128 max=127 sum=-253777
+OPTRACE op=553 name=RESHAPE tensor=860 bytes=256 hash=0xa73b7b13 min=-128 max=85 sum=-11584
+OPTRACE op=554 name=ADD tensor=861 bytes=20480 hash=0x46b8c249 min=-128 max=126 sum=-268934
+OPTRACE op=555 name=MUL tensor=862 bytes=20480 hash=0x9b983919 min=-128 max=106 sum=-113330
+OPTRACE op=556 name=ADD tensor=863 bytes=20480 hash=0x43fa8dfa min=-128 max=119 sum=117361
+OPTRACE op=557 name=RESHAPE tensor=864 bytes=20480 hash=0x43fa8dfa min=-128 max=119 sum=117361
+OPTRACE op=558 name=TRANSPOSE tensor=865 bytes=20480 hash=0x61428fea min=-128 max=119 sum=117361
+OPTRACE op=559 name=RESHAPE tensor=866 bytes=20480 hash=0x61428fea min=-128 max=119 sum=117361
+OPTRACE op=560 name=TRANSPOSE tensor=867 bytes=20480 hash=0xe788f002 min=-128 max=119 sum=117361
+OPTRACE op=561 name=RESHAPE tensor=868 bytes=20480 hash=0xe788f002 min=-128 max=119 sum=117361
+OPTRACE op=562 name=TRANSPOSE tensor=869 bytes=20480 hash=0x140dd6ee min=-128 max=119 sum=117361
+OPTRACE op=563 name=CONV_2D tensor=870 bytes=16384 hash=0x7f9840a min=-119 max=124 sum=216495
+OPTRACE op=564 name=LOGISTIC tensor=871 bytes=16384 hash=0x76ed918e min=-103 max=86 sum=-141071
+OPTRACE op=565 name=MUL tensor=872 bytes=16384 hash=0x1cc60a55 min=-44 max=121 sum=-307934
+OPTRACE op=566 name=QUANTIZE tensor=1094 bytes=16384 hash=0x4aa7c036 min=-125 max=93 sum=-301873
+OPTRACE op=567 name=CONCATENATION tensor=873 bytes=32768 hash=0xf6d577f2 min=-125 max=121 sum=-609807
+OPTRACE op=568 name=CONV_2D tensor=874 bytes=16384 hash=0x43f018c5 min=-86 max=124 sum=231740
+OPTRACE op=569 name=LOGISTIC tensor=875 bytes=16384 hash=0x84c8a52e min=-83 max=78 sum=-142543
+OPTRACE op=570 name=MUL tensor=876 bytes=16384 hash=0x9a475696 min=-128 max=118 sum=-1421753
+OPTRACE op=571 name=CONV_2D tensor=877 bytes=32768 hash=0x9cf03024 min=-81 max=77 sum=-746879
+OPTRACE op=572 name=LOGISTIC tensor=878 bytes=32768 hash=0xefa5cb6 min=-118 max=122 sum=-1199675
+OPTRACE op=573 name=MUL tensor=879 bytes=32768 hash=0x2d4ab665 min=-128 max=34 sum=-3994982
+OPTRACE op=574 name=PAD tensor=880 bytes=41472 hash=0x3f3d3265 min=-128 max=34 sum=-5004646
+OPTRACE op=575 name=DEPTHWISE_CONV_2D tensor=881 bytes=8192 hash=0x5a9dee64 min=-128 max=127 sum=104963
+OPTRACE op=576 name=LOGISTIC tensor=882 bytes=8192 hash=0x4526237a min=-109 max=122 sum=375695
+OPTRACE op=577 name=MUL tensor=883 bytes=8192 hash=0xf5a95976 min=-128 max=127 sum=-480861
+OPTRACE op=578 name=CONV_2D tensor=884 bytes=5120 hash=0xe01913f7 min=-128 max=127 sum=93388
+OPTRACE op=579 name=CONV_2D tensor=885 bytes=5120 hash=0x3a076233 min=-114 max=127 sum=40014
+OPTRACE op=580 name=LOGISTIC tensor=886 bytes=5120 hash=0x1425d486 min=-99 max=103 sum=32277
+OPTRACE op=581 name=MUL tensor=887 bytes=5120 hash=0x8184f201 min=-128 max=126 sum=-440684
+OPTRACE op=582 name=CONV_2D tensor=888 bytes=6144 hash=0x825d3b03 min=-128 max=127 sum=60600
+OPTRACE op=583 name=TRANSPOSE tensor=889 bytes=6144 hash=0xef837e65 min=-128 max=127 sum=60600
+OPTRACE op=584 name=RESHAPE tensor=890 bytes=6144 hash=0xef837e65 min=-128 max=127 sum=60600
+OPTRACE op=585 name=TRANSPOSE tensor=891 bytes=6144 hash=0x57f82efd min=-128 max=127 sum=60600
+OPTRACE op=586 name=RESHAPE tensor=892 bytes=6144 hash=0x57f82efd min=-128 max=127 sum=60600
+OPTRACE op=587 name=TRANSPOSE tensor=893 bytes=6144 hash=0x53a1cdf3 min=-128 max=127 sum=60600
+OPTRACE op=588 name=RESHAPE tensor=894 bytes=6144 hash=0x53a1cdf3 min=-128 max=127 sum=60600
+OPTRACE op=589 name=RESHAPE tensor=895 bytes=6144 hash=0x53a1cdf3 min=-128 max=127 sum=60600
+OPTRACE op=590 name=MEAN tensor=896 bytes=64 hash=0x79f44cb2 min=-128 max=108 sum=-3797
+OPTRACE op=591 name=RESHAPE tensor=897 bytes=64 hash=0x79f44cb2 min=-128 max=108 sum=-3797
+OPTRACE op=592 name=SQUARED_DIFFERENCE tensor=898 bytes=6144 hash=0x9f2d1844 min=-128 max=113 sum=-748627
+OPTRACE op=593 name=MEAN tensor=899 bytes=64 hash=0xa5f9f48b min=-100 max=127 sum=-4110
+OPTRACE op=594 name=ADD tensor=900 bytes=64 hash=0xa5f9f48b min=-100 max=127 sum=-4110
+OPTRACE op=595 name=RSQRT tensor=901 bytes=64 hash=0x9b46a35f min=-46 max=119 sum=3532
+OPTRACE op=596 name=MUL tensor=902 bytes=64 hash=0xd93f56ac min=-128 max=61 sum=-3951
+OPTRACE op=597 name=SUB tensor=903 bytes=64 hash=0xbbec32d0 min=-62 max=127 sum=3887
+OPTRACE op=598 name=RESHAPE tensor=904 bytes=64 hash=0x9b46a35f min=-46 max=119 sum=3532
+OPTRACE op=599 name=MUL tensor=905 bytes=6144 hash=0x52632fce min=-127 max=111 sum=-130155
+OPTRACE op=600 name=RESHAPE tensor=906 bytes=64 hash=0xbbec32d0 min=-62 max=127 sum=3887
+OPTRACE op=601 name=ADD tensor=907 bytes=6144 hash=0xbf55b09b min=-127 max=111 sum=-130142
+FC_DIAG node=0x3c7b3ef4 builtin=0x3c7ad294 user=0x3c7a73c0 inputs=0x3c1e3484 outputs=0x3c1e347c
+FC_TENSOR_DIAG idx=907,30,31,908
+FC_TENSOR_DIAG ptr=0x3c7b80b8,0x3c7b579c,0x3c7b57a8,0x3c7b80c4
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=602 name=FULLY_CONNECTED tensor=908 bytes=6144 hash=0xd170a29b min=-116 max=97 sum=-1740
+OPTRACE op=603 name=RESHAPE tensor=909 bytes=6144 hash=0xd170a29b min=-116 max=97 sum=-1740
+OPTRACE op=604 name=TRANSPOSE tensor=910 bytes=6144 hash=0xffc2e667 min=-116 max=97 sum=-1740
+FC_DIAG node=0x3c7b3f54 builtin=0x3c7ad264 user=0x3c7a7390 inputs=0x3c1e3408 outputs=0x3c1e3400
+FC_TENSOR_DIAG idx=907,28,29,911
+FC_TENSOR_DIAG ptr=0x3c7b80b8,0x3c7b5784,0x3c7b5790,0x3c7b80e8
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=605 name=FULLY_CONNECTED tensor=911 bytes=6144 hash=0xb249bcd2 min=-127 max=127 sum=-17887
+OPTRACE op=606 name=RESHAPE tensor=912 bytes=6144 hash=0xb249bcd2 min=-127 max=127 sum=-17887
+FC_DIAG node=0x3c7b3f94 builtin=0x3c7ad234 user=0x3c7a7360 inputs=0x3c1e33ac outputs=0x3c1e33a4
+FC_TENSOR_DIAG idx=907,26,27,913
+FC_TENSOR_DIAG ptr=0x3c7b80b8,0x3c7b576c,0x3c7b5778,0x3c7b8100
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=607 name=FULLY_CONNECTED tensor=913 bytes=6144 hash=0x55616166 min=-119 max=127 sum=10905
+OPTRACE op=608 name=RESHAPE tensor=914 bytes=6144 hash=0x55616166 min=-119 max=127 sum=10905
+OPTRACE op=609 name=TRANSPOSE tensor=915 bytes=6144 hash=0xd90ea16 min=-119 max=127 sum=10905
+OPTRACE op=610 name=TRANSPOSE tensor=916 bytes=6144 hash=0x79f02fe2 min=-127 max=127 sum=-17887
+OPTRACE op=611 name=RESHAPE tensor=917 bytes=6144 hash=0xffc2e667 min=-116 max=97 sum=-1740
+OPTRACE op=612 name=RESHAPE tensor=918 bytes=6144 hash=0x79f02fe2 min=-127 max=127 sum=-17887
+OPTRACE op=613 name=BATCH_MATMUL tensor=919 bytes=4096 hash=0x352a6e3a min=-128 max=127 sum=-135135
+OPTRACE op=614 name=MUL tensor=920 bytes=4096 hash=0x352a6e3a min=-128 max=127 sum=-135135
+OPTRACE op=615 name=RESHAPE tensor=921 bytes=4096 hash=0x352a6e3a min=-128 max=127 sum=-135135
+OPTRACE op=616 name=SOFTMAX tensor=922 bytes=4096 hash=0x6cf8e63e min=-128 max=96 sum=-458755
+OPTRACE op=617 name=RESHAPE tensor=923 bytes=4096 hash=0x6cf8e63e min=-128 max=96 sum=-458755
+OPTRACE op=618 name=RESHAPE tensor=924 bytes=6144 hash=0xd90ea16 min=-119 max=127 sum=10905
+OPTRACE op=619 name=BATCH_MATMUL tensor=925 bytes=6144 hash=0x6988cb4c min=-106 max=127 sum=-35717
+OPTRACE op=620 name=RESHAPE tensor=926 bytes=6144 hash=0x6988cb4c min=-106 max=127 sum=-35717
+OPTRACE op=621 name=TRANSPOSE tensor=927 bytes=6144 hash=0x9517b06c min=-106 max=127 sum=-35717
+OPTRACE op=622 name=RESHAPE tensor=928 bytes=6144 hash=0x9517b06c min=-106 max=127 sum=-35717
+FC_DIAG node=0x3c7b4194 builtin=0x3c7ad0f8 user=0x3c7a72a0 inputs=0x3c1e3134 outputs=0x3c1e312c
+FC_TENSOR_DIAG idx=928,98,25,929
+FC_TENSOR_DIAG ptr=0x3c7b81b4,0x3c7b5acc,0x3c7b5760,0x3c7b81c0
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=623 name=FULLY_CONNECTED tensor=929 bytes=6144 hash=0xd2f1d8ae min=-120 max=127 sum=179783
+OPTRACE op=624 name=ADD tensor=930 bytes=6144 hash=0xbaaeeabd min=-104 max=127 sum=76966
+OPTRACE op=625 name=RESHAPE tensor=931 bytes=6144 hash=0xbaaeeabd min=-104 max=127 sum=76966
+OPTRACE op=626 name=MEAN tensor=932 bytes=64 hash=0xcefced2e min=-128 max=54 sum=-4435
+OPTRACE op=627 name=RESHAPE tensor=933 bytes=64 hash=0xcefced2e min=-128 max=54 sum=-4435
+OPTRACE op=628 name=SQUARED_DIFFERENCE tensor=934 bytes=6144 hash=0x8668453e min=-128 max=40 sum=-741971
+OPTRACE op=629 name=MEAN tensor=935 bytes=64 hash=0x92bcd33d min=-96 max=127 sum=-3050
+OPTRACE op=630 name=ADD tensor=936 bytes=64 hash=0x92bcd33d min=-96 max=127 sum=-3050
+OPTRACE op=631 name=RSQRT tensor=937 bytes=64 hash=0xcb1e922f min=-33 max=127 sum=3404
+OPTRACE op=632 name=MUL tensor=938 bytes=64 hash=0x16a4aa2b min=-128 max=53 sum=-5248
+OPTRACE op=633 name=SUB tensor=939 bytes=64 hash=0x8d8d3fe7 min=-54 max=127 sum=5184
+OPTRACE op=634 name=RESHAPE tensor=940 bytes=64 hash=0xcb1e922f min=-33 max=127 sum=3404
+OPTRACE op=635 name=MUL tensor=941 bytes=6144 hash=0xd4ceb79b min=-128 max=127 sum=-28764
+OPTRACE op=636 name=RESHAPE tensor=942 bytes=64 hash=0x8d8d3fe7 min=-54 max=127 sum=5184
+OPTRACE op=637 name=ADD tensor=943 bytes=6144 hash=0x3db36552 min=-127 max=127 sum=-24067
+FC_DIAG node=0x3c7b4374 builtin=0x3c7ad02c user=0x3c7a7020 inputs=0x3c1e2ea8 outputs=0x3c1e2ea0
+FC_TENSOR_DIAG idx=943,23,24,944
+FC_TENSOR_DIAG ptr=0x3c7b8268,0x3c7b5748,0x3c7b5754,0x3c7b8274
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=638 name=FULLY_CONNECTED tensor=944 bytes=12288 hash=0xa110ec11 min=-128 max=120 sum=89926
+OPTRACE op=639 name=RESHAPE tensor=945 bytes=12288 hash=0xa110ec11 min=-128 max=120 sum=89926
+OPTRACE op=640 name=LOGISTIC tensor=946 bytes=12288 hash=0x95f4f3cc min=-128 max=102 sum=-977653
+OPTRACE op=641 name=MUL tensor=947 bytes=12288 hash=0x38415223 min=-128 max=98 sum=-1443694
+FC_DIAG node=0x3c7b43f4 builtin=0x3c7acff8 user=0x3c7a6fb0 inputs=0x3c1e2dfc outputs=0x3c1e2df4
+FC_TENSOR_DIAG idx=947,97,22,948
+FC_TENSOR_DIAG ptr=0x3c7b8298,0x3c7b5ac0,0x3c7b573c,0x3c7b82a4
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=642 name=FULLY_CONNECTED tensor=948 bytes=6144 hash=0xe3a99505 min=-119 max=68 sum=-413954
+OPTRACE op=643 name=ADD tensor=949 bytes=6144 hash=0xa8cff086 min=-120 max=81 sum=-226375
+OPTRACE op=644 name=RESHAPE tensor=950 bytes=6144 hash=0xa8cff086 min=-120 max=81 sum=-226375
+OPTRACE op=645 name=MEAN tensor=951 bytes=64 hash=0x51d69275 min=-128 max=61 sum=-1680
+OPTRACE op=646 name=RESHAPE tensor=952 bytes=64 hash=0x51d69275 min=-128 max=61 sum=-1680
+OPTRACE op=647 name=SQUARED_DIFFERENCE tensor=953 bytes=6144 hash=0x2d387cbf min=-128 max=2 sum=-762256
+OPTRACE op=648 name=MEAN tensor=954 bytes=64 hash=0x8e6872a2 min=-86 max=127 sum=-2199
+OPTRACE op=649 name=ADD tensor=955 bytes=64 hash=0x8e6872a2 min=-86 max=127 sum=-2199
+OPTRACE op=650 name=RSQRT tensor=956 bytes=64 hash=0x628d4afb min=-20 max=127 sum=3650
+OPTRACE op=651 name=MUL tensor=957 bytes=64 hash=0x3e990a13 min=-128 max=83 sum=-1014
+OPTRACE op=652 name=SUB tensor=958 bytes=64 hash=0x10da2d9f min=-84 max=127 sum=950
+OPTRACE op=653 name=RESHAPE tensor=959 bytes=64 hash=0x628d4afb min=-20 max=127 sum=3650
+OPTRACE op=654 name=MUL tensor=960 bytes=6144 hash=0x54cfefdf min=-128 max=101 sum=-262828
+OPTRACE op=655 name=RESHAPE tensor=961 bytes=64 hash=0x10da2d9f min=-84 max=127 sum=950
+OPTRACE op=656 name=ADD tensor=962 bytes=6144 hash=0xa9f4b0f4 min=-128 max=102 sum=-258167
+FC_DIAG node=0x3c7b45d4 builtin=0x3c7acf2c user=0x3c7a6d30 inputs=0x3c1e2b70 outputs=0x3c1e2b68
+FC_TENSOR_DIAG idx=962,20,21,963
+FC_TENSOR_DIAG ptr=0x3c7b834c,0x3c7b5724,0x3c7b5730,0x3c7b8358
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=657 name=FULLY_CONNECTED tensor=963 bytes=6144 hash=0xb4d3d33b min=-126 max=127 sum=10894
+OPTRACE op=658 name=RESHAPE tensor=964 bytes=6144 hash=0xb4d3d33b min=-126 max=127 sum=10894
+OPTRACE op=659 name=TRANSPOSE tensor=965 bytes=6144 hash=0x22958957 min=-126 max=127 sum=10894
+FC_DIAG node=0x3c7b4634 builtin=0x3c7acefc user=0x3c7a6d00 inputs=0x3c1e2af4 outputs=0x3c1e2aec
+FC_TENSOR_DIAG idx=962,18,19,966
+FC_TENSOR_DIAG ptr=0x3c7b834c,0x3c7b570c,0x3c7b5718,0x3c7b837c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=660 name=FULLY_CONNECTED tensor=966 bytes=6144 hash=0x89d2406a min=-128 max=117 sum=-39493
+OPTRACE op=661 name=RESHAPE tensor=967 bytes=6144 hash=0x89d2406a min=-128 max=117 sum=-39493
+FC_DIAG node=0x3c7b4674 builtin=0x3c7acecc user=0x3c7a6cd0 inputs=0x3c1e2a98 outputs=0x3c1e2a90
+FC_TENSOR_DIAG idx=962,16,17,968
+FC_TENSOR_DIAG ptr=0x3c7b834c,0x3c7b56f4,0x3c7b5700,0x3c7b8394
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=662 name=FULLY_CONNECTED tensor=968 bytes=6144 hash=0xada30f0a min=-124 max=127 sum=-11893
+OPTRACE op=663 name=RESHAPE tensor=969 bytes=6144 hash=0xada30f0a min=-124 max=127 sum=-11893
+OPTRACE op=664 name=TRANSPOSE tensor=970 bytes=6144 hash=0x53e5efa2 min=-124 max=127 sum=-11893
+OPTRACE op=665 name=TRANSPOSE tensor=971 bytes=6144 hash=0x168d7788 min=-128 max=117 sum=-39493
+OPTRACE op=666 name=RESHAPE tensor=972 bytes=6144 hash=0x22958957 min=-126 max=127 sum=10894
+OPTRACE op=667 name=RESHAPE tensor=973 bytes=6144 hash=0x168d7788 min=-128 max=117 sum=-39493
+OPTRACE op=668 name=BATCH_MATMUL tensor=974 bytes=4096 hash=0x5eed74ed min=-128 max=127 sum=-163314
+OPTRACE op=669 name=MUL tensor=975 bytes=4096 hash=0x5eed74ed min=-128 max=127 sum=-163314
+OPTRACE op=670 name=RESHAPE tensor=976 bytes=4096 hash=0x5eed74ed min=-128 max=127 sum=-163314
+OPTRACE op=671 name=SOFTMAX tensor=977 bytes=4096 hash=0x89eb167 min=-128 max=93 sum=-458780
+OPTRACE op=672 name=RESHAPE tensor=978 bytes=4096 hash=0x89eb167 min=-128 max=93 sum=-458780
+OPTRACE op=673 name=RESHAPE tensor=979 bytes=6144 hash=0x53e5efa2 min=-124 max=127 sum=-11893
+OPTRACE op=674 name=BATCH_MATMUL tensor=980 bytes=6144 hash=0x701dfbb4 min=-118 max=127 sum=15117
+OPTRACE op=675 name=RESHAPE tensor=981 bytes=6144 hash=0x701dfbb4 min=-118 max=127 sum=15117
+OPTRACE op=676 name=TRANSPOSE tensor=982 bytes=6144 hash=0x7525557c min=-118 max=127 sum=15117
+OPTRACE op=677 name=RESHAPE tensor=983 bytes=6144 hash=0x7525557c min=-118 max=127 sum=15117
+FC_DIAG node=0x3c7b4874 builtin=0x3c7acd90 user=0x3c7a6c10 inputs=0x3c1e2820 outputs=0x3c1e2818
+FC_TENSOR_DIAG idx=983,96,15,984
+FC_TENSOR_DIAG ptr=0x3c7b8448,0x3c7b5ab4,0x3c7b56e8,0x3c7b8454
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=678 name=FULLY_CONNECTED tensor=984 bytes=6144 hash=0xb09b2ffe min=-128 max=127 sum=51551
+OPTRACE op=679 name=ADD tensor=985 bytes=6144 hash=0x5d4a7075 min=-124 max=107 sum=-111012
+OPTRACE op=680 name=RESHAPE tensor=986 bytes=6144 hash=0x5d4a7075 min=-124 max=107 sum=-111012
+OPTRACE op=681 name=MEAN tensor=987 bytes=64 hash=0x75459985 min=-128 max=44 sum=-3514
+OPTRACE op=682 name=RESHAPE tensor=988 bytes=64 hash=0x75459985 min=-128 max=44 sum=-3514
+OPTRACE op=683 name=SQUARED_DIFFERENCE tensor=989 bytes=6144 hash=0xb80f6f09 min=-128 max=54 sum=-734984
+OPTRACE op=684 name=MEAN tensor=990 bytes=64 hash=0x502e7ed7 min=-48 max=127 sum=-178
+OPTRACE op=685 name=ADD tensor=991 bytes=64 hash=0x502e7ed7 min=-48 max=127 sum=-178
+OPTRACE op=686 name=RSQRT tensor=992 bytes=64 hash=0xbc7df1ac min=8 max=114 sum=4409
+OPTRACE op=687 name=MUL tensor=993 bytes=64 hash=0xc0181126 min=-128 max=51 sum=-3587
+OPTRACE op=688 name=SUB tensor=994 bytes=64 hash=0xae26c9be min=-52 max=127 sum=3523
+OPTRACE op=689 name=RESHAPE tensor=995 bytes=64 hash=0xbc7df1ac min=8 max=114 sum=4409
+OPTRACE op=690 name=MUL tensor=996 bytes=6144 hash=0x7fdb23f3 min=-126 max=127 sum=-141684
+OPTRACE op=691 name=RESHAPE tensor=997 bytes=64 hash=0xae26c9be min=-52 max=127 sum=3523
+OPTRACE op=692 name=ADD tensor=998 bytes=6144 hash=0xa499346a min=-126 max=127 sum=-141675
+FC_DIAG node=0x3c7b4a54 builtin=0x3c7accc4 user=0x3c7a6990 inputs=0x3c1e2594 outputs=0x3c1e258c
+FC_TENSOR_DIAG idx=998,13,14,999
+FC_TENSOR_DIAG ptr=0x3c7b84fc,0x3c7b56d0,0x3c7b56dc,0x3c7b8508
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=693 name=FULLY_CONNECTED tensor=999 bytes=12288 hash=0xbae5e701 min=-128 max=105 sum=-19528
+OPTRACE op=694 name=RESHAPE tensor=1000 bytes=12288 hash=0xbae5e701 min=-128 max=105 sum=-19528
+OPTRACE op=695 name=LOGISTIC tensor=1001 bytes=12288 hash=0x1cd7bd68 min=-128 max=115 sum=-972479
+OPTRACE op=696 name=MUL tensor=1002 bytes=12288 hash=0xdb9fe650 min=-128 max=61 sum=-1475411
+FC_DIAG node=0x3c7b4ad4 builtin=0x3c7acc90 user=0x3c7a6920 inputs=0x3c1e24e8 outputs=0x3c1e24e0
+FC_TENSOR_DIAG idx=1002,95,12,1003
+FC_TENSOR_DIAG ptr=0x3c7b852c,0x3c7b5aa8,0x3c7b56c4,0x3c7b8538
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=697 name=FULLY_CONNECTED tensor=1003 bytes=6144 hash=0x2eaf11e min=-65 max=107 sum=-32183
+OPTRACE op=698 name=ADD tensor=1004 bytes=6144 hash=0x410af022 min=-98 max=103 sum=-157487
+OPTRACE op=699 name=RESHAPE tensor=1005 bytes=6144 hash=0x410af022 min=-98 max=103 sum=-157487
+OPTRACE op=700 name=MEAN tensor=1006 bytes=64 hash=0x5194e9e1 min=-128 max=74 sum=-2670
+OPTRACE op=701 name=RESHAPE tensor=1007 bytes=64 hash=0x5194e9e1 min=-128 max=74 sum=-2670
+OPTRACE op=702 name=SQUARED_DIFFERENCE tensor=1008 bytes=6144 hash=0xc0a4a8d0 min=-128 max=51 sum=-757427
+OPTRACE op=703 name=MEAN tensor=1009 bytes=64 hash=0x6c8c7776 min=-71 max=1 sum=-2773
+OPTRACE op=704 name=ADD tensor=1010 bytes=64 hash=0x6c8c7776 min=-71 max=1 sum=-2773
+OPTRACE op=705 name=RSQRT tensor=1011 bytes=64 hash=0x8df896c7 min=31 max=111 sum=4522
+OPTRACE op=706 name=MUL tensor=1012 bytes=64 hash=0x2b68f5d4 min=-128 max=81 sum=-1779
+OPTRACE op=707 name=SUB tensor=1013 bytes=64 hash=0x136fff10 min=-82 max=127 sum=1715
+OPTRACE op=708 name=RESHAPE tensor=1014 bytes=64 hash=0x8df896c7 min=31 max=111 sum=4522
+OPTRACE op=709 name=MUL tensor=1015 bytes=6144 hash=0x5d9228f6 min=-128 max=123 sum=-242783
+OPTRACE op=710 name=RESHAPE tensor=1016 bytes=64 hash=0x136fff10 min=-82 max=127 sum=1715
+OPTRACE op=711 name=ADD tensor=1017 bytes=6144 hash=0x258b713 min=-128 max=122 sum=-246276
+FC_DIAG node=0x3c7b4cb4 builtin=0x3c7acbc4 user=0x3c7a66a0 inputs=0x3c1e225c outputs=0x3c1e2254
+FC_TENSOR_DIAG idx=1017,10,11,1018
+FC_TENSOR_DIAG ptr=0x3c7b85e0,0x3c7b56ac,0x3c7b56b8,0x3c7b85ec
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=712 name=FULLY_CONNECTED tensor=1018 bytes=6144 hash=0x3cb097b5 min=-116 max=121 sum=-4266
+OPTRACE op=713 name=RESHAPE tensor=1019 bytes=6144 hash=0x3cb097b5 min=-116 max=121 sum=-4266
+OPTRACE op=714 name=TRANSPOSE tensor=1020 bytes=6144 hash=0x80c2ac79 min=-116 max=121 sum=-4266
+FC_DIAG node=0x3c7b4d14 builtin=0x3c7acb94 user=0x3c7a6670 inputs=0x3c1e21e0 outputs=0x3c1e21d8
+FC_TENSOR_DIAG idx=1017,8,9,1021
+FC_TENSOR_DIAG ptr=0x3c7b85e0,0x3c7b5694,0x3c7b56a0,0x3c7b8610
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=715 name=FULLY_CONNECTED tensor=1021 bytes=6144 hash=0x9a1cedc4 min=-116 max=127 sum=10805
+OPTRACE op=716 name=RESHAPE tensor=1022 bytes=6144 hash=0x9a1cedc4 min=-116 max=127 sum=10805
+FC_DIAG node=0x3c7b4d54 builtin=0x3c7acb64 user=0x3c7a6640 inputs=0x3c1e2184 outputs=0x3c1e217c
+FC_TENSOR_DIAG idx=1017,6,7,1023
+FC_TENSOR_DIAG ptr=0x3c7b85e0,0x3c7b567c,0x3c7b5688,0x3c7b8628
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=717 name=FULLY_CONNECTED tensor=1023 bytes=6144 hash=0x32dab32b min=-98 max=123 sum=86718
+OPTRACE op=718 name=RESHAPE tensor=1024 bytes=6144 hash=0x32dab32b min=-98 max=123 sum=86718
+OPTRACE op=719 name=TRANSPOSE tensor=1025 bytes=6144 hash=0x6b9ce677 min=-98 max=123 sum=86718
+OPTRACE op=720 name=TRANSPOSE tensor=1026 bytes=6144 hash=0x5b17ec20 min=-116 max=127 sum=10805
+OPTRACE op=721 name=RESHAPE tensor=1027 bytes=6144 hash=0x80c2ac79 min=-116 max=121 sum=-4266
+OPTRACE op=722 name=RESHAPE tensor=1028 bytes=6144 hash=0x5b17ec20 min=-116 max=127 sum=10805
+OPTRACE op=723 name=BATCH_MATMUL tensor=1029 bytes=4096 hash=0x8382a6ac min=-128 max=75 sum=-160921
+OPTRACE op=724 name=MUL tensor=1030 bytes=4096 hash=0x8382a6ac min=-128 max=75 sum=-160921
+OPTRACE op=725 name=RESHAPE tensor=1031 bytes=4096 hash=0x8382a6ac min=-128 max=75 sum=-160921
+OPTRACE op=726 name=SOFTMAX tensor=1032 bytes=4096 hash=0x7b370531 min=-128 max=79 sum=-458772
+OPTRACE op=727 name=RESHAPE tensor=1033 bytes=4096 hash=0x7b370531 min=-128 max=79 sum=-458772
+OPTRACE op=728 name=RESHAPE tensor=1034 bytes=6144 hash=0x6b9ce677 min=-98 max=123 sum=86718
+OPTRACE op=729 name=BATCH_MATMUL tensor=1035 bytes=6144 hash=0xa75a6586 min=-91 max=122 sum=67909
+OPTRACE op=730 name=RESHAPE tensor=1036 bytes=6144 hash=0xa75a6586 min=-91 max=122 sum=67909
+OPTRACE op=731 name=TRANSPOSE tensor=1037 bytes=6144 hash=0x7fe4964a min=-91 max=122 sum=67909
+OPTRACE op=732 name=RESHAPE tensor=1038 bytes=6144 hash=0x7fe4964a min=-91 max=122 sum=67909
+FC_DIAG node=0x3c7b4f54 builtin=0x3c7aca28 user=0x3c7a6580 inputs=0x3c1e1f0c outputs=0x3c1e1f04
+FC_TENSOR_DIAG idx=1038,94,5,1039
+FC_TENSOR_DIAG ptr=0x3c7b86dc,0x3c7b5a9c,0x3c7b5670,0x3c7b86e8
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=733 name=FULLY_CONNECTED tensor=1039 bytes=6144 hash=0x9d214d61 min=-124 max=88 sum=-94228
+OPTRACE op=734 name=ADD tensor=1040 bytes=6144 hash=0xf85daeb1 min=-102 max=92 sum=-177186
+OPTRACE op=735 name=RESHAPE tensor=1041 bytes=6144 hash=0xf85daeb1 min=-102 max=92 sum=-177186
+OPTRACE op=736 name=MEAN tensor=1042 bytes=64 hash=0x283ad155 min=-128 max=13 sum=-5038
+OPTRACE op=737 name=RESHAPE tensor=1043 bytes=64 hash=0x283ad155 min=-128 max=13 sum=-5038
+OPTRACE op=738 name=SQUARED_DIFFERENCE tensor=1044 bytes=6144 hash=0x8e15e7af min=-128 max=23 sum=-756930
+OPTRACE op=739 name=MEAN tensor=1045 bytes=64 hash=0x31795b67 min=-39 max=24 sum=-1212
+OPTRACE op=740 name=ADD tensor=1046 bytes=64 hash=0x31795b67 min=-39 max=24 sum=-1212
+OPTRACE op=741 name=RSQRT tensor=1047 bytes=64 hash=0x65f6e153 min=84 max=127 sum=7598
+OPTRACE op=742 name=MUL tensor=1048 bytes=64 hash=0xbc77bb5 min=-128 max=40 sum=-4362
+OPTRACE op=743 name=SUB tensor=1049 bytes=64 hash=0xb88b52d5 min=-41 max=127 sum=4298
+OPTRACE op=744 name=RESHAPE tensor=1050 bytes=64 hash=0x65f6e153 min=84 max=127 sum=7598
+OPTRACE op=745 name=MUL tensor=1051 bytes=6144 hash=0x7086b4ef min=-126 max=117 sum=-238254
+OPTRACE op=746 name=RESHAPE tensor=1052 bytes=64 hash=0xb88b52d5 min=-41 max=127 sum=4298
+OPTRACE op=747 name=ADD tensor=1053 bytes=6144 hash=0x92882e0b min=-125 max=118 sum=-233438
+FC_DIAG node=0x3c7b5134 builtin=0x3c7ac95c user=0x3c7a6300 inputs=0x3c1e1c80 outputs=0x3c1e1c78
+FC_TENSOR_DIAG idx=1053,3,4,1054
+FC_TENSOR_DIAG ptr=0x3c7b8790,0x3c7b5658,0x3c7b5664,0x3c7b879c
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=748 name=FULLY_CONNECTED tensor=1054 bytes=12288 hash=0x5951cab2 min=-128 max=127 sum=16757
+OPTRACE op=749 name=RESHAPE tensor=1055 bytes=12288 hash=0x5951cab2 min=-128 max=127 sum=16757
+OPTRACE op=750 name=LOGISTIC tensor=1056 bytes=12288 hash=0xf9be0aeb min=-128 max=122 sum=-1031420
+OPTRACE op=751 name=MUL tensor=1057 bytes=12288 hash=0x38010434 min=-128 max=127 sum=-1449287
+FC_DIAG node=0x3c7b51b4 builtin=0x3c7ac928 user=0x3c7a6290 inputs=0x3c1e1bd4 outputs=0x3c1e1bcc
+FC_TENSOR_DIAG idx=1057,93,2,1058
+FC_TENSOR_DIAG ptr=0x3c7b87c0,0x3c7b5a90,0x3c7b564c,0x3c7b87cc
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=752 name=FULLY_CONNECTED tensor=1058 bytes=6144 hash=0xb218c1cc min=-128 max=43 sum=-342367
+OPTRACE op=753 name=ADD tensor=1059 bytes=6144 hash=0x326ffc61 min=-102 max=60 sum=-330312
+OPTRACE op=754 name=RESHAPE tensor=1060 bytes=6144 hash=0x326ffc61 min=-102 max=60 sum=-330312
+OPTRACE op=755 name=MEAN tensor=1061 bytes=64 hash=0xf8b6d7d4 min=-128 max=-3 sum=-4777
+OPTRACE op=756 name=RESHAPE tensor=1062 bytes=64 hash=0xf8b6d7d4 min=-128 max=-3 sum=-4777
+OPTRACE op=757 name=SQUARED_DIFFERENCE tensor=1063 bytes=6144 hash=0x55deb4dc min=-128 max=-26 sum=-772517
+OPTRACE op=758 name=MEAN tensor=1064 bytes=64 hash=0xc07e5cff min=-36 max=17 sum=-910
+OPTRACE op=759 name=ADD tensor=1065 bytes=64 hash=0xc07e5cff min=-36 max=17 sum=-910
+OPTRACE op=760 name=RSQRT tensor=1066 bytes=64 hash=0x11dc58d7 min=90 max=127 sum=7472
+OPTRACE op=761 name=MUL tensor=1067 bytes=64 hash=0xea2bf77e min=-128 max=46 sum=-3383
+OPTRACE op=762 name=SUB tensor=1068 bytes=64 hash=0x5c4f616 min=-47 max=127 sum=3319
+OPTRACE op=763 name=RESHAPE tensor=1069 bytes=64 hash=0x11dc58d7 min=90 max=127 sum=7472
+OPTRACE op=764 name=MUL tensor=1070 bytes=6144 hash=0x1c85d6b min=-118 max=105 sum=-305128
+OPTRACE op=765 name=RESHAPE tensor=1071 bytes=64 hash=0x5c4f616 min=-47 max=127 sum=3319
+OPTRACE op=766 name=ADD tensor=1072 bytes=6144 hash=0x96e4058b min=-118 max=105 sum=-307608
+OPTRACE op=767 name=MUL tensor=1073 bytes=6144 hash=0x20c1234e min=-128 max=106 sum=-236245
+OPTRACE op=768 name=ADD tensor=1074 bytes=6144 hash=0x86258456 min=-128 max=110 sum=-253595
+OPTRACE op=769 name=RESHAPE tensor=1075 bytes=6144 hash=0x86258456 min=-128 max=110 sum=-253595
+OPTRACE op=770 name=TRANSPOSE tensor=1076 bytes=6144 hash=0x742c0b2 min=-128 max=110 sum=-253595
+OPTRACE op=771 name=RESHAPE tensor=1077 bytes=6144 hash=0x742c0b2 min=-128 max=110 sum=-253595
+OPTRACE op=772 name=TRANSPOSE tensor=1078 bytes=6144 hash=0x5ec7e2d6 min=-128 max=110 sum=-253595
+OPTRACE op=773 name=RESHAPE tensor=1079 bytes=6144 hash=0x5ec7e2d6 min=-128 max=110 sum=-253595
+OPTRACE op=774 name=TRANSPOSE tensor=1080 bytes=6144 hash=0x91329fc6 min=-128 max=110 sum=-253595
+OPTRACE op=775 name=CONV_2D tensor=1081 bytes=5120 hash=0xd7e7a6c0 min=-128 max=102 sum=-83681
+OPTRACE op=776 name=LOGISTIC tensor=1082 bytes=5120 hash=0x1108e381 min=-81 max=70 sum=-57456
+OPTRACE op=777 name=MUL tensor=1083 bytes=5120 hash=0xe7374d3a min=-34 max=93 sum=-48807
+OPTRACE op=778 name=QUANTIZE tensor=1095 bytes=5120 hash=0x9eef09f5 min=-128 max=87 sum=-24598
+OPTRACE op=779 name=CONCATENATION tensor=1084 bytes=10240 hash=0x7f3ab706 min=-128 max=93 sum=-73405
+OPTRACE op=780 name=CONV_2D tensor=1085 bytes=5120 hash=0x5fa7ccc1 min=-128 max=125 sum=-12312
+OPTRACE op=781 name=LOGISTIC tensor=1086 bytes=5120 hash=0xef5abca5 min=-79 max=76 sum=-12000
+OPTRACE op=782 name=MUL tensor=1087 bytes=5120 hash=0x99674210 min=-128 max=120 sum=-396547
+OPTRACE op=783 name=CONV_2D tensor=1088 bytes=20480 hash=0xeb41496a min=-128 max=127 sum=-25063
+OPTRACE op=784 name=LOGISTIC tensor=1089 bytes=20480 hash=0x3838fb83 min=-128 max=127 sum=-1096492
+OPTRACE op=785 name=MUL tensor=1090 bytes=20480 hash=0x11fa1c28 min=-128 max=127 sum=-2436041
+OPTRACE op=786 name=AVERAGE_POOL_2D tensor=1091 bytes=320 hash=0x249144f2 min=-128 max=-41 sum=-38057
+FC_DIAG node=0x3c7b5614 builtin=0x3c7ac760 user=0x3c7a5dc0 inputs=0x3c1e15cc outputs=0x3c1e15c4
+FC_TENSOR_DIAG idx=1091,92,1,1092
+FC_TENSOR_DIAG ptr=0x3c7b8958,0x3c7b5a84,0x3c7b5640,0x3c7b8964
+FC_TENSOR_DIAG type=9,9,2,9
+OPTRACE op=787 name=FULLY_CONNECTED tensor=1092 bytes=20 hash=0xaf492174 min=-123 max=127 sum=-1625
+Processamento completo em 45799 ms
+Tempos | cópia: 21000us | inferência: 45.666882 s | pós: 12us | total: 45799919us
+Hashes FNV-1a | input_int8: 1b15e6e0 | logits: af492174
+Mem pós-inferência | heap: 1328547 | psram: 1078600 | internal: 249947
+
+
+vini_muchulski@vini-muchulski:~/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobileVIT_butterflies_austria_edge_vision/esp_idf_mobileVIT_butterflies_austria_edge_vision$ python python/teste_inferencia.py 
+{
+  "success": true,
+  "predicted_class": 9,
+  "confidence": 6.439816,
+  "scores": [
+    -0.565447,
+    -0.942412,
+    -0.345551,
+    -0.314137,
+    -0.879585,
+    -0.314137,
+    -0.314137,
+    0.219896,
+    1.382204,
+    6.439816,
+    -0.50262,
+    -1.413618,
+    0.188482,
+    -0.785343,
+    -0.722516,
+    -0.062827,
+    -0.408379,
+    -0.973826,
+    -0.848171,
+    -0.879585
+  ],
+  "input_fnv1a": "1b15e6e0",
+  "output_fnv1a": "af492174",
+  "receive_us": 666949,
+  "input_copy_us": 21000,
+  "inference_us": 45666882,
+  "postprocess_us": 12,
+  "total_processing_us": 45799919,
+  "arena_used": 2881824,
+  "arena_capacity": 5242880,
+  "model_bytes": 1843720,
+  "internal_free": 250203,
+  "psram_free": 1078600,
+  "predicted_name": "Lycaenidae",
+  "image_index": 299,
+  "input_image": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/Dataset-butterflies-austria/test/Lycaenidae/bl-377.jpg",
+  "true_class": 9,
+  "true_name": "Lycaenidae",
+  "correct": true
+}
+Inferência: 45.666882 s

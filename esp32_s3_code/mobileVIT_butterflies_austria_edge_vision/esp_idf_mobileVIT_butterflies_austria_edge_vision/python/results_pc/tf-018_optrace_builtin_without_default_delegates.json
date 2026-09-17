@@ -1,0 +1,7882 @@
+[
+  {
+    "op": 0,
+    "name": "TRANSPOSE",
+    "tensor": 308,
+    "bytes": 196608,
+    "hash": "65753759",
+    "min": -128,
+    "max": 127,
+    "sum": -5569516
+  },
+  {
+    "op": 1,
+    "name": "PAD",
+    "tensor": 309,
+    "bytes": 199692,
+    "hash": "b61507b5",
+    "min": -128,
+    "max": 127,
+    "sum": -5964268
+  },
+  {
+    "op": 2,
+    "name": "CONV_2D",
+    "tensor": 310,
+    "bytes": 262144,
+    "hash": "f71805c7",
+    "min": -113,
+    "max": 127,
+    "sum": 2902682
+  },
+  {
+    "op": 3,
+    "name": "LOGISTIC",
+    "tensor": 311,
+    "bytes": 262144,
+    "hash": "0e7ea595",
+    "min": -128,
+    "max": 127,
+    "sum": 4457110
+  },
+  {
+    "op": 4,
+    "name": "MUL",
+    "tensor": 312,
+    "bytes": 262144,
+    "hash": "0c072b18",
+    "min": -128,
+    "max": 127,
+    "sum": -30302925
+  },
+  {
+    "op": 5,
+    "name": "CONV_2D",
+    "tensor": 313,
+    "bytes": 65536,
+    "hash": "236c99ff",
+    "min": -128,
+    "max": 127,
+    "sum": 5645564
+  },
+  {
+    "op": 6,
+    "name": "LOGISTIC",
+    "tensor": 314,
+    "bytes": 65536,
+    "hash": "2227c2f2",
+    "min": -124,
+    "max": 9,
+    "sum": -2076853
+  },
+  {
+    "op": 7,
+    "name": "MUL",
+    "tensor": 315,
+    "bytes": 65536,
+    "hash": "8c395d8e",
+    "min": -128,
+    "max": 127,
+    "sum": -1519943
+  },
+  {
+    "op": 8,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 316,
+    "bytes": 65536,
+    "hash": "f0bf671d",
+    "min": -128,
+    "max": 127,
+    "sum": 908418
+  },
+  {
+    "op": 9,
+    "name": "LOGISTIC",
+    "tensor": 317,
+    "bytes": 65536,
+    "hash": "62881db7",
+    "min": -123,
+    "max": 125,
+    "sum": 1977236
+  },
+  {
+    "op": 10,
+    "name": "MUL",
+    "tensor": 318,
+    "bytes": 65536,
+    "hash": "0413760f",
+    "min": -128,
+    "max": 127,
+    "sum": -4985496
+  },
+  {
+    "op": 11,
+    "name": "CONV_2D",
+    "tensor": 319,
+    "bytes": 262144,
+    "hash": "dc93a848",
+    "min": -128,
+    "max": 127,
+    "sum": 5841057
+  },
+  {
+    "op": 12,
+    "name": "CONV_2D",
+    "tensor": 320,
+    "bytes": 65536,
+    "hash": "e693df3f",
+    "min": -128,
+    "max": 127,
+    "sum": 3767926
+  },
+  {
+    "op": 13,
+    "name": "LOGISTIC",
+    "tensor": 321,
+    "bytes": 65536,
+    "hash": "cfc01fcb",
+    "min": -87,
+    "max": 38,
+    "sum": -16496
+  },
+  {
+    "op": 14,
+    "name": "MUL",
+    "tensor": 322,
+    "bytes": 65536,
+    "hash": "b4a6bd4a",
+    "min": -128,
+    "max": 127,
+    "sum": -661391
+  },
+  {
+    "op": 15,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 323,
+    "bytes": 65536,
+    "hash": "df20dc6f",
+    "min": -128,
+    "max": 127,
+    "sum": 1256842
+  },
+  {
+    "op": 16,
+    "name": "LOGISTIC",
+    "tensor": 324,
+    "bytes": 65536,
+    "hash": "4c37d492",
+    "min": -128,
+    "max": 127,
+    "sum": 3854107
+  },
+  {
+    "op": 17,
+    "name": "MUL",
+    "tensor": 325,
+    "bytes": 65536,
+    "hash": "3837a6b5",
+    "min": -128,
+    "max": 126,
+    "sum": -6531390
+  },
+  {
+    "op": 18,
+    "name": "CONV_2D",
+    "tensor": 326,
+    "bytes": 262144,
+    "hash": "b4eb3373",
+    "min": -128,
+    "max": 127,
+    "sum": -4787562
+  },
+  {
+    "op": 19,
+    "name": "ADD",
+    "tensor": 327,
+    "bytes": 262144,
+    "hash": "8e13befd",
+    "min": -128,
+    "max": 125,
+    "sum": 4221376
+  },
+  {
+    "op": 20,
+    "name": "CONV_2D",
+    "tensor": 328,
+    "bytes": 65536,
+    "hash": "83dab004",
+    "min": -128,
+    "max": 127,
+    "sum": 4354121
+  },
+  {
+    "op": 21,
+    "name": "LOGISTIC",
+    "tensor": 329,
+    "bytes": 65536,
+    "hash": "6d28bc0b",
+    "min": -122,
+    "max": 43,
+    "sum": -1313658
+  },
+  {
+    "op": 22,
+    "name": "MUL",
+    "tensor": 330,
+    "bytes": 65536,
+    "hash": "2ade4257",
+    "min": -128,
+    "max": 123,
+    "sum": -3862132
+  },
+  {
+    "op": 23,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 331,
+    "bytes": 65536,
+    "hash": "f0332608",
+    "min": -92,
+    "max": 124,
+    "sum": 4408305
+  },
+  {
+    "op": 24,
+    "name": "LOGISTIC",
+    "tensor": 332,
+    "bytes": 65536,
+    "hash": "eb89c79e",
+    "min": -128,
+    "max": 127,
+    "sum": 1066649
+  },
+  {
+    "op": 25,
+    "name": "MUL",
+    "tensor": 333,
+    "bytes": 65536,
+    "hash": "fb6be84f",
+    "min": -128,
+    "max": 115,
+    "sum": -6951170
+  },
+  {
+    "op": 26,
+    "name": "CONV_2D",
+    "tensor": 334,
+    "bytes": 262144,
+    "hash": "92a2fc0a",
+    "min": -116,
+    "max": 127,
+    "sum": 988689
+  },
+  {
+    "op": 27,
+    "name": "ADD",
+    "tensor": 335,
+    "bytes": 262144,
+    "hash": "ad4c6f69",
+    "min": -123,
+    "max": 127,
+    "sum": -148100
+  },
+  {
+    "op": 28,
+    "name": "CONV_2D",
+    "tensor": 336,
+    "bytes": 65536,
+    "hash": "32834499",
+    "min": -128,
+    "max": 126,
+    "sum": 4123684
+  },
+  {
+    "op": 29,
+    "name": "LOGISTIC",
+    "tensor": 337,
+    "bytes": 65536,
+    "hash": "7c4e5fce",
+    "min": -128,
+    "max": 94,
+    "sum": 221641
+  },
+  {
+    "op": 30,
+    "name": "MUL",
+    "tensor": 338,
+    "bytes": 65536,
+    "hash": "01c7edb3",
+    "min": -128,
+    "max": 122,
+    "sum": -3861890
+  },
+  {
+    "op": 31,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 339,
+    "bytes": 65536,
+    "hash": "7ac6159e",
+    "min": -125,
+    "max": 127,
+    "sum": 825721
+  },
+  {
+    "op": 32,
+    "name": "LOGISTIC",
+    "tensor": 340,
+    "bytes": 65536,
+    "hash": "2eaa9359",
+    "min": -128,
+    "max": 127,
+    "sum": 1077600
+  },
+  {
+    "op": 33,
+    "name": "MUL",
+    "tensor": 341,
+    "bytes": 65536,
+    "hash": "cb085ff5",
+    "min": -128,
+    "max": 127,
+    "sum": -6853850
+  },
+  {
+    "op": 34,
+    "name": "CONV_2D",
+    "tensor": 342,
+    "bytes": 262144,
+    "hash": "a9cfafdd",
+    "min": -128,
+    "max": 123,
+    "sum": 14945432
+  },
+  {
+    "op": 35,
+    "name": "ADD",
+    "tensor": 343,
+    "bytes": 262144,
+    "hash": "7621c178",
+    "min": -128,
+    "max": 127,
+    "sum": 2634923
+  },
+  {
+    "op": 36,
+    "name": "CONV_2D",
+    "tensor": 344,
+    "bytes": 65536,
+    "hash": "689b979b",
+    "min": -128,
+    "max": 127,
+    "sum": 6314070
+  },
+  {
+    "op": 37,
+    "name": "LOGISTIC",
+    "tensor": 345,
+    "bytes": 65536,
+    "hash": "e0627d55",
+    "min": -128,
+    "max": 100,
+    "sum": 964772
+  },
+  {
+    "op": 38,
+    "name": "MUL",
+    "tensor": 346,
+    "bytes": 65536,
+    "hash": "99a6c468",
+    "min": -128,
+    "max": 127,
+    "sum": -4301653
+  },
+  {
+    "op": 39,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 347,
+    "bytes": 65536,
+    "hash": "85e66313",
+    "min": -118,
+    "max": 124,
+    "sum": -2477398
+  },
+  {
+    "op": 40,
+    "name": "LOGISTIC",
+    "tensor": 348,
+    "bytes": 65536,
+    "hash": "361444c1",
+    "min": -119,
+    "max": 127,
+    "sum": 3015662
+  },
+  {
+    "op": 41,
+    "name": "MUL",
+    "tensor": 349,
+    "bytes": 65536,
+    "hash": "9b17efac",
+    "min": -128,
+    "max": 122,
+    "sum": -6591501
+  },
+  {
+    "op": 42,
+    "name": "CONV_2D",
+    "tensor": 350,
+    "bytes": 262144,
+    "hash": "e0a08267",
+    "min": -128,
+    "max": 127,
+    "sum": 8381096
+  },
+  {
+    "op": 43,
+    "name": "ADD",
+    "tensor": 351,
+    "bytes": 262144,
+    "hash": "045c4a6b",
+    "min": -128,
+    "max": 127,
+    "sum": 916200
+  },
+  {
+    "op": 44,
+    "name": "CONV_2D",
+    "tensor": 352,
+    "bytes": 65536,
+    "hash": "5f11d903",
+    "min": -127,
+    "max": 127,
+    "sum": 6338478
+  },
+  {
+    "op": 45,
+    "name": "LOGISTIC",
+    "tensor": 353,
+    "bytes": 65536,
+    "hash": "5af940fb",
+    "min": -128,
+    "max": 127,
+    "sum": 2336654
+  },
+  {
+    "op": 46,
+    "name": "MUL",
+    "tensor": 354,
+    "bytes": 65536,
+    "hash": "5c929f0c",
+    "min": -128,
+    "max": 127,
+    "sum": -5825175
+  },
+  {
+    "op": 47,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 355,
+    "bytes": 65536,
+    "hash": "e14d012f",
+    "min": -121,
+    "max": 119,
+    "sum": 2072990
+  },
+  {
+    "op": 48,
+    "name": "LOGISTIC",
+    "tensor": 356,
+    "bytes": 65536,
+    "hash": "aa6520e8",
+    "min": -128,
+    "max": 126,
+    "sum": 3065541
+  },
+  {
+    "op": 49,
+    "name": "MUL",
+    "tensor": 357,
+    "bytes": 65536,
+    "hash": "68b1b8cc",
+    "min": -128,
+    "max": 110,
+    "sum": -4781459
+  },
+  {
+    "op": 50,
+    "name": "CONV_2D",
+    "tensor": 358,
+    "bytes": 262144,
+    "hash": "c171143c",
+    "min": -128,
+    "max": 126,
+    "sum": 1927505
+  },
+  {
+    "op": 51,
+    "name": "ADD",
+    "tensor": 359,
+    "bytes": 262144,
+    "hash": "2b032b9e",
+    "min": -128,
+    "max": 127,
+    "sum": 2762401
+  },
+  {
+    "op": 52,
+    "name": "CONV_2D",
+    "tensor": 360,
+    "bytes": 65536,
+    "hash": "94c5521a",
+    "min": -128,
+    "max": 127,
+    "sum": 5183875
+  },
+  {
+    "op": 53,
+    "name": "LOGISTIC",
+    "tensor": 361,
+    "bytes": 65536,
+    "hash": "9805e889",
+    "min": -128,
+    "max": 127,
+    "sum": 4057678
+  },
+  {
+    "op": 54,
+    "name": "MUL",
+    "tensor": 362,
+    "bytes": 65536,
+    "hash": "17ea4409",
+    "min": -128,
+    "max": 127,
+    "sum": -5863484
+  },
+  {
+    "op": 55,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 363,
+    "bytes": 65536,
+    "hash": "1451c6fb",
+    "min": -128,
+    "max": 127,
+    "sum": -406366
+  },
+  {
+    "op": 56,
+    "name": "LOGISTIC",
+    "tensor": 364,
+    "bytes": 65536,
+    "hash": "a77adc19",
+    "min": -126,
+    "max": 127,
+    "sum": 3452314
+  },
+  {
+    "op": 57,
+    "name": "MUL",
+    "tensor": 365,
+    "bytes": 65536,
+    "hash": "178b5d11",
+    "min": -128,
+    "max": 126,
+    "sum": -5591016
+  },
+  {
+    "op": 58,
+    "name": "CONV_2D",
+    "tensor": 366,
+    "bytes": 262144,
+    "hash": "848f7257",
+    "min": -128,
+    "max": 127,
+    "sum": 10851102
+  },
+  {
+    "op": 59,
+    "name": "ADD",
+    "tensor": 367,
+    "bytes": 262144,
+    "hash": "7f40cecd",
+    "min": -128,
+    "max": 124,
+    "sum": 2343878
+  },
+  {
+    "op": 60,
+    "name": "CONV_2D",
+    "tensor": 368,
+    "bytes": 65536,
+    "hash": "4313df30",
+    "min": -128,
+    "max": 127,
+    "sum": 2784803
+  },
+  {
+    "op": 61,
+    "name": "LOGISTIC",
+    "tensor": 369,
+    "bytes": 65536,
+    "hash": "2aa41bb5",
+    "min": -128,
+    "max": 127,
+    "sum": 1398772
+  },
+  {
+    "op": 62,
+    "name": "MUL",
+    "tensor": 370,
+    "bytes": 65536,
+    "hash": "d39f628f",
+    "min": -128,
+    "max": 126,
+    "sum": -7733082
+  },
+  {
+    "op": 63,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 371,
+    "bytes": 65536,
+    "hash": "ca715dfe",
+    "min": -102,
+    "max": 82,
+    "sum": -1251881
+  },
+  {
+    "op": 64,
+    "name": "LOGISTIC",
+    "tensor": 372,
+    "bytes": 65536,
+    "hash": "63a2889f",
+    "min": -128,
+    "max": 127,
+    "sum": 2754264
+  },
+  {
+    "op": 65,
+    "name": "MUL",
+    "tensor": 373,
+    "bytes": 65536,
+    "hash": "0dc90eec",
+    "min": -128,
+    "max": 53,
+    "sum": -7083849
+  },
+  {
+    "op": 66,
+    "name": "CONV_2D",
+    "tensor": 374,
+    "bytes": 262144,
+    "hash": "51fc1994",
+    "min": -82,
+    "max": 102,
+    "sum": 5770435
+  },
+  {
+    "op": 67,
+    "name": "ADD",
+    "tensor": 375,
+    "bytes": 262144,
+    "hash": "e1fc0174",
+    "min": -128,
+    "max": 122,
+    "sum": 1113437
+  },
+  {
+    "op": 68,
+    "name": "ADD",
+    "tensor": 376,
+    "bytes": 262144,
+    "hash": "bff622bc",
+    "min": -128,
+    "max": 127,
+    "sum": -3879041
+  },
+  {
+    "op": 69,
+    "name": "CONV_2D",
+    "tensor": 377,
+    "bytes": 131072,
+    "hash": "26196817",
+    "min": -128,
+    "max": 125,
+    "sum": 10541800
+  },
+  {
+    "op": 70,
+    "name": "LOGISTIC",
+    "tensor": 378,
+    "bytes": 131072,
+    "hash": "2817c261",
+    "min": -122,
+    "max": 43,
+    "sum": -532808
+  },
+  {
+    "op": 71,
+    "name": "MUL",
+    "tensor": 379,
+    "bytes": 131072,
+    "hash": "096d7c97",
+    "min": -128,
+    "max": 119,
+    "sum": -5141718
+  },
+  {
+    "op": 72,
+    "name": "PAD",
+    "tensor": 380,
+    "bytes": 135200,
+    "hash": "a73095d7",
+    "min": -128,
+    "max": 119,
+    "sum": -5290326
+  },
+  {
+    "op": 73,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 381,
+    "bytes": 32768,
+    "hash": "1b2f0fe9",
+    "min": -110,
+    "max": 99,
+    "sum": 523892
+  },
+  {
+    "op": 74,
+    "name": "LOGISTIC",
+    "tensor": 382,
+    "bytes": 32768,
+    "hash": "73ec1e27",
+    "min": -128,
+    "max": 127,
+    "sum": 1151744
+  },
+  {
+    "op": 75,
+    "name": "MUL",
+    "tensor": 383,
+    "bytes": 32768,
+    "hash": "bd563736",
+    "min": -128,
+    "max": 71,
+    "sum": -3114507
+  },
+  {
+    "op": 76,
+    "name": "CONV_2D",
+    "tensor": 384,
+    "bytes": 98304,
+    "hash": "5fcd7b76",
+    "min": -127,
+    "max": 127,
+    "sum": -1198131
+  },
+  {
+    "op": 77,
+    "name": "CONV_2D",
+    "tensor": 385,
+    "bytes": 131072,
+    "hash": "6b84d6f4",
+    "min": -124,
+    "max": 94,
+    "sum": 1565357
+  },
+  {
+    "op": 78,
+    "name": "LOGISTIC",
+    "tensor": 386,
+    "bytes": 131072,
+    "hash": "72b36771",
+    "min": -110,
+    "max": 89,
+    "sum": 804890
+  },
+  {
+    "op": 79,
+    "name": "MUL",
+    "tensor": 387,
+    "bytes": 131072,
+    "hash": "d0a86f7f",
+    "min": -128,
+    "max": 53,
+    "sum": -11985106
+  },
+  {
+    "op": 80,
+    "name": "PAD",
+    "tensor": 388,
+    "bytes": 135200,
+    "hash": "359f7baf",
+    "min": -128,
+    "max": 53,
+    "sum": -12393778
+  },
+  {
+    "op": 81,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 389,
+    "bytes": 32768,
+    "hash": "4f39e744",
+    "min": -120,
+    "max": 127,
+    "sum": 536173
+  },
+  {
+    "op": 82,
+    "name": "LOGISTIC",
+    "tensor": 390,
+    "bytes": 32768,
+    "hash": "6c40a053",
+    "min": -128,
+    "max": 127,
+    "sum": 177616
+  },
+  {
+    "op": 83,
+    "name": "MUL",
+    "tensor": 391,
+    "bytes": 32768,
+    "hash": "7992222a",
+    "min": -128,
+    "max": 125,
+    "sum": -3496207
+  },
+  {
+    "op": 84,
+    "name": "CONV_2D",
+    "tensor": 392,
+    "bytes": 98304,
+    "hash": "92781865",
+    "min": -128,
+    "max": 127,
+    "sum": 4607536
+  },
+  {
+    "op": 85,
+    "name": "ADD",
+    "tensor": 393,
+    "bytes": 98304,
+    "hash": "04a116ce",
+    "min": -125,
+    "max": 114,
+    "sum": 1717007
+  },
+  {
+    "op": 86,
+    "name": "CONV_2D",
+    "tensor": 394,
+    "bytes": 131072,
+    "hash": "55fc4218",
+    "min": -128,
+    "max": 118,
+    "sum": 608199
+  },
+  {
+    "op": 87,
+    "name": "LOGISTIC",
+    "tensor": 395,
+    "bytes": 131072,
+    "hash": "ca6f0c93",
+    "min": -128,
+    "max": 127,
+    "sum": 4772272
+  },
+  {
+    "op": 88,
+    "name": "MUL",
+    "tensor": 396,
+    "bytes": 131072,
+    "hash": "1391f592",
+    "min": -128,
+    "max": 109,
+    "sum": -14832637
+  },
+  {
+    "op": 89,
+    "name": "PAD",
+    "tensor": 397,
+    "bytes": 135200,
+    "hash": "7d7ba152",
+    "min": -128,
+    "max": 109,
+    "sum": -15348637
+  },
+  {
+    "op": 90,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 398,
+    "bytes": 32768,
+    "hash": "359d7413",
+    "min": -110,
+    "max": 124,
+    "sum": 1013114
+  },
+  {
+    "op": 91,
+    "name": "LOGISTIC",
+    "tensor": 399,
+    "bytes": 32768,
+    "hash": "cd76993f",
+    "min": -128,
+    "max": 127,
+    "sum": 1210918
+  },
+  {
+    "op": 92,
+    "name": "MUL",
+    "tensor": 400,
+    "bytes": 32768,
+    "hash": "fd74f616",
+    "min": -128,
+    "max": 118,
+    "sum": -3056295
+  },
+  {
+    "op": 93,
+    "name": "CONV_2D",
+    "tensor": 401,
+    "bytes": 98304,
+    "hash": "9a8dc461",
+    "min": -128,
+    "max": 127,
+    "sum": 379330
+  },
+  {
+    "op": 94,
+    "name": "ADD",
+    "tensor": 402,
+    "bytes": 98304,
+    "hash": "f0b8956e",
+    "min": -128,
+    "max": 126,
+    "sum": -1061681
+  },
+  {
+    "op": 95,
+    "name": "CONV_2D",
+    "tensor": 403,
+    "bytes": 131072,
+    "hash": "24612b9e",
+    "min": -122,
+    "max": 127,
+    "sum": -69331
+  },
+  {
+    "op": 96,
+    "name": "LOGISTIC",
+    "tensor": 404,
+    "bytes": 131072,
+    "hash": "b96c4220",
+    "min": -128,
+    "max": 127,
+    "sum": -929871
+  },
+  {
+    "op": 97,
+    "name": "MUL",
+    "tensor": 405,
+    "bytes": 131072,
+    "hash": "3bf2436b",
+    "min": -128,
+    "max": 127,
+    "sum": -15231110
+  },
+  {
+    "op": 98,
+    "name": "PAD",
+    "tensor": 406,
+    "bytes": 135200,
+    "hash": "64cebc6b",
+    "min": -128,
+    "max": 127,
+    "sum": -15755366
+  },
+  {
+    "op": 99,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 407,
+    "bytes": 32768,
+    "hash": "cb9bf40b",
+    "min": -126,
+    "max": 127,
+    "sum": -439508
+  },
+  {
+    "op": 100,
+    "name": "LOGISTIC",
+    "tensor": 408,
+    "bytes": 32768,
+    "hash": "aecfe30a",
+    "min": -79,
+    "max": 127,
+    "sum": 2821111
+  },
+  {
+    "op": 101,
+    "name": "MUL",
+    "tensor": 409,
+    "bytes": 32768,
+    "hash": "8eb2c1e1",
+    "min": -128,
+    "max": 127,
+    "sum": -1459406
+  },
+  {
+    "op": 102,
+    "name": "CONV_2D",
+    "tensor": 410,
+    "bytes": 98304,
+    "hash": "22d72377",
+    "min": -128,
+    "max": 127,
+    "sum": 4666482
+  },
+  {
+    "op": 103,
+    "name": "ADD",
+    "tensor": 411,
+    "bytes": 98304,
+    "hash": "7aacb091",
+    "min": -128,
+    "max": 124,
+    "sum": 1757126
+  },
+  {
+    "op": 104,
+    "name": "CONV_2D",
+    "tensor": 412,
+    "bytes": 196608,
+    "hash": "2de24f89",
+    "min": -128,
+    "max": 115,
+    "sum": -9646446
+  },
+  {
+    "op": 105,
+    "name": "LOGISTIC",
+    "tensor": 413,
+    "bytes": 196608,
+    "hash": "8a097371",
+    "min": -128,
+    "max": 127,
+    "sum": -703250
+  },
+  {
+    "op": 106,
+    "name": "MUL",
+    "tensor": 414,
+    "bytes": 196608,
+    "hash": "62eb2f5e",
+    "min": -128,
+    "max": 110,
+    "sum": -24175915
+  },
+  {
+    "op": 107,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 415,
+    "bytes": 196608,
+    "hash": "8286b34e",
+    "min": -128,
+    "max": 127,
+    "sum": 1048951
+  },
+  {
+    "op": 108,
+    "name": "LOGISTIC",
+    "tensor": 416,
+    "bytes": 196608,
+    "hash": "1f3316a1",
+    "min": -128,
+    "max": 127,
+    "sum": 3030156
+  },
+  {
+    "op": 109,
+    "name": "MUL",
+    "tensor": 417,
+    "bytes": 196608,
+    "hash": "69fbf01b",
+    "min": -128,
+    "max": 127,
+    "sum": -21228550
+  },
+  {
+    "op": 110,
+    "name": "CONV_2D",
+    "tensor": 418,
+    "bytes": 98304,
+    "hash": "48ecca28",
+    "min": -128,
+    "max": 127,
+    "sum": -517619
+  },
+  {
+    "op": 111,
+    "name": "ADD",
+    "tensor": 419,
+    "bytes": 98304,
+    "hash": "381b8a47",
+    "min": -128,
+    "max": 127,
+    "sum": -72676
+  },
+  {
+    "op": 112,
+    "name": "CONV_2D",
+    "tensor": 420,
+    "bytes": 196608,
+    "hash": "f13e3697",
+    "min": -128,
+    "max": 127,
+    "sum": -2287302
+  },
+  {
+    "op": 113,
+    "name": "LOGISTIC",
+    "tensor": 421,
+    "bytes": 196608,
+    "hash": "893d6adc",
+    "min": -128,
+    "max": 127,
+    "sum": -1400073
+  },
+  {
+    "op": 114,
+    "name": "MUL",
+    "tensor": 422,
+    "bytes": 196608,
+    "hash": "ccb2cf34",
+    "min": -128,
+    "max": 125,
+    "sum": -23363831
+  },
+  {
+    "op": 115,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 423,
+    "bytes": 196608,
+    "hash": "873b9018",
+    "min": -128,
+    "max": 127,
+    "sum": 915981
+  },
+  {
+    "op": 116,
+    "name": "LOGISTIC",
+    "tensor": 424,
+    "bytes": 196608,
+    "hash": "6a1d5977",
+    "min": -128,
+    "max": 127,
+    "sum": 113310
+  },
+  {
+    "op": 117,
+    "name": "MUL",
+    "tensor": 425,
+    "bytes": 196608,
+    "hash": "2921a61d",
+    "min": -128,
+    "max": 126,
+    "sum": -21460262
+  },
+  {
+    "op": 118,
+    "name": "CONV_2D",
+    "tensor": 426,
+    "bytes": 98304,
+    "hash": "8fb09ffa",
+    "min": -126,
+    "max": 127,
+    "sum": -221511
+  },
+  {
+    "op": 119,
+    "name": "ADD",
+    "tensor": 427,
+    "bytes": 98304,
+    "hash": "e29acb1d",
+    "min": -128,
+    "max": 127,
+    "sum": 326594
+  },
+  {
+    "op": 120,
+    "name": "CONV_2D",
+    "tensor": 428,
+    "bytes": 49152,
+    "hash": "9206c186",
+    "min": -128,
+    "max": 127,
+    "sum": 1066365
+  },
+  {
+    "op": 121,
+    "name": "LOGISTIC",
+    "tensor": 429,
+    "bytes": 49152,
+    "hash": "275d20e9",
+    "min": -32,
+    "max": 23,
+    "sum": 18276
+  },
+  {
+    "op": 122,
+    "name": "MUL",
+    "tensor": 430,
+    "bytes": 49152,
+    "hash": "df014398",
+    "min": -128,
+    "max": 127,
+    "sum": -296933
+  },
+  {
+    "op": 123,
+    "name": "PAD",
+    "tensor": 431,
+    "bytes": 52272,
+    "hash": "e0029440",
+    "min": -128,
+    "max": 127,
+    "sum": -325013
+  },
+  {
+    "op": 124,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 432,
+    "bytes": 12288,
+    "hash": "1b92d23d",
+    "min": -128,
+    "max": 127,
+    "sum": 13622
+  },
+  {
+    "op": 125,
+    "name": "LOGISTIC",
+    "tensor": 433,
+    "bytes": 12288,
+    "hash": "ab60c715",
+    "min": -100,
+    "max": 118,
+    "sum": 315780
+  },
+  {
+    "op": 126,
+    "name": "MUL",
+    "tensor": 434,
+    "bytes": 12288,
+    "hash": "d9ec21e2",
+    "min": -128,
+    "max": 127,
+    "sum": -811991
+  },
+  {
+    "op": 127,
+    "name": "CONV_2D",
+    "tensor": 435,
+    "bytes": 49152,
+    "hash": "283379ad",
+    "min": -128,
+    "max": 127,
+    "sum": 373890
+  },
+  {
+    "op": 128,
+    "name": "CONV_2D",
+    "tensor": 436,
+    "bytes": 49152,
+    "hash": "c7f2abef",
+    "min": -128,
+    "max": 127,
+    "sum": 1845132
+  },
+  {
+    "op": 129,
+    "name": "LOGISTIC",
+    "tensor": 437,
+    "bytes": 49152,
+    "hash": "2584c718",
+    "min": -102,
+    "max": 60,
+    "sum": -308115
+  },
+  {
+    "op": 130,
+    "name": "MUL",
+    "tensor": 438,
+    "bytes": 49152,
+    "hash": "3bb036c8",
+    "min": -128,
+    "max": 126,
+    "sum": -3127305
+  },
+  {
+    "op": 131,
+    "name": "PAD",
+    "tensor": 439,
+    "bytes": 52272,
+    "hash": "642ad0d0",
+    "min": -128,
+    "max": 126,
+    "sum": -3311385
+  },
+  {
+    "op": 132,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 440,
+    "bytes": 12288,
+    "hash": "995ed64a",
+    "min": -128,
+    "max": 127,
+    "sum": -15471
+  },
+  {
+    "op": 133,
+    "name": "LOGISTIC",
+    "tensor": 441,
+    "bytes": 12288,
+    "hash": "00001db3",
+    "min": -112,
+    "max": 118,
+    "sum": 123186
+  },
+  {
+    "op": 134,
+    "name": "MUL",
+    "tensor": 442,
+    "bytes": 12288,
+    "hash": "5a2e0d85",
+    "min": -128,
+    "max": 127,
+    "sum": -1013468
+  },
+  {
+    "op": 135,
+    "name": "CONV_2D",
+    "tensor": 443,
+    "bytes": 49152,
+    "hash": "9a44b4b6",
+    "min": -127,
+    "max": 127,
+    "sum": -583099
+  },
+  {
+    "op": 136,
+    "name": "ADD",
+    "tensor": 444,
+    "bytes": 49152,
+    "hash": "602d0c12",
+    "min": -128,
+    "max": 127,
+    "sum": 308823
+  },
+  {
+    "op": 137,
+    "name": "CONV_2D",
+    "tensor": 445,
+    "bytes": 49152,
+    "hash": "7f1366c6",
+    "min": -128,
+    "max": 127,
+    "sum": 769637
+  },
+  {
+    "op": 138,
+    "name": "LOGISTIC",
+    "tensor": 446,
+    "bytes": 49152,
+    "hash": "2da4d94d",
+    "min": -125,
+    "max": 111,
+    "sum": -1225794
+  },
+  {
+    "op": 139,
+    "name": "MUL",
+    "tensor": 447,
+    "bytes": 49152,
+    "hash": "3fc41709",
+    "min": -128,
+    "max": 127,
+    "sum": -5146246
+  },
+  {
+    "op": 140,
+    "name": "PAD",
+    "tensor": 448,
+    "bytes": 52272,
+    "hash": "90b6bf29",
+    "min": -128,
+    "max": 127,
+    "sum": -5464486
+  },
+  {
+    "op": 141,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 449,
+    "bytes": 12288,
+    "hash": "6ed1a521",
+    "min": -119,
+    "max": 125,
+    "sum": 477538
+  },
+  {
+    "op": 142,
+    "name": "LOGISTIC",
+    "tensor": 450,
+    "bytes": 12288,
+    "hash": "ccf6abf6",
+    "min": -105,
+    "max": 120,
+    "sum": 788291
+  },
+  {
+    "op": 143,
+    "name": "MUL",
+    "tensor": 451,
+    "bytes": 12288,
+    "hash": "240b43ea",
+    "min": -128,
+    "max": 124,
+    "sum": -232563
+  },
+  {
+    "op": 144,
+    "name": "CONV_2D",
+    "tensor": 452,
+    "bytes": 49152,
+    "hash": "4c01821f",
+    "min": -128,
+    "max": 127,
+    "sum": -76916
+  },
+  {
+    "op": 145,
+    "name": "ADD",
+    "tensor": 453,
+    "bytes": 49152,
+    "hash": "818b6ce5",
+    "min": -128,
+    "max": 127,
+    "sum": -806428
+  },
+  {
+    "op": 146,
+    "name": "CONV_2D",
+    "tensor": 454,
+    "bytes": 49152,
+    "hash": "28953709",
+    "min": -128,
+    "max": 127,
+    "sum": -569512
+  },
+  {
+    "op": 147,
+    "name": "LOGISTIC",
+    "tensor": 455,
+    "bytes": 49152,
+    "hash": "f17f603f",
+    "min": -128,
+    "max": 127,
+    "sum": -286912
+  },
+  {
+    "op": 148,
+    "name": "MUL",
+    "tensor": 456,
+    "bytes": 49152,
+    "hash": "d2eb5a4a",
+    "min": -128,
+    "max": 126,
+    "sum": -5763573
+  },
+  {
+    "op": 149,
+    "name": "PAD",
+    "tensor": 457,
+    "bytes": 52272,
+    "hash": "1eea11ea",
+    "min": -128,
+    "max": 126,
+    "sum": -6153573
+  },
+  {
+    "op": 150,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 458,
+    "bytes": 12288,
+    "hash": "bfd562cf",
+    "min": -128,
+    "max": 127,
+    "sum": 322490
+  },
+  {
+    "op": 151,
+    "name": "LOGISTIC",
+    "tensor": 459,
+    "bytes": 12288,
+    "hash": "58494ffc",
+    "min": -115,
+    "max": 124,
+    "sum": 712817
+  },
+  {
+    "op": 152,
+    "name": "MUL",
+    "tensor": 460,
+    "bytes": 12288,
+    "hash": "21f4ac01",
+    "min": -128,
+    "max": 127,
+    "sum": -384946
+  },
+  {
+    "op": 153,
+    "name": "CONV_2D",
+    "tensor": 461,
+    "bytes": 49152,
+    "hash": "965f9acc",
+    "min": -128,
+    "max": 127,
+    "sum": 827233
+  },
+  {
+    "op": 154,
+    "name": "ADD",
+    "tensor": 462,
+    "bytes": 49152,
+    "hash": "208a987d",
+    "min": -128,
+    "max": 127,
+    "sum": 92508
+  },
+  {
+    "op": 155,
+    "name": "CONV_2D",
+    "tensor": 463,
+    "bytes": 49152,
+    "hash": "b77ab35b",
+    "min": -128,
+    "max": 127,
+    "sum": 1988638
+  },
+  {
+    "op": 156,
+    "name": "LOGISTIC",
+    "tensor": 464,
+    "bytes": 49152,
+    "hash": "dd763eaf",
+    "min": -124,
+    "max": 112,
+    "sum": 1198582
+  },
+  {
+    "op": 157,
+    "name": "MUL",
+    "tensor": 465,
+    "bytes": 49152,
+    "hash": "c66e473d",
+    "min": -128,
+    "max": 126,
+    "sum": -3489672
+  },
+  {
+    "op": 158,
+    "name": "CONV_2D",
+    "tensor": 466,
+    "bytes": 65536,
+    "hash": "27888c20",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 159,
+    "name": "TRANSPOSE",
+    "tensor": 467,
+    "bytes": 65536,
+    "hash": "73179c78",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 160,
+    "name": "RESHAPE",
+    "tensor": 468,
+    "bytes": 65536,
+    "hash": "73179c78",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 161,
+    "name": "TRANSPOSE",
+    "tensor": 469,
+    "bytes": 65536,
+    "hash": "f90b76e4",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 162,
+    "name": "RESHAPE",
+    "tensor": 470,
+    "bytes": 65536,
+    "hash": "f90b76e4",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 163,
+    "name": "TRANSPOSE",
+    "tensor": 471,
+    "bytes": 65536,
+    "hash": "fcc54514",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 164,
+    "name": "RESHAPE",
+    "tensor": 472,
+    "bytes": 65536,
+    "hash": "fcc54514",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 165,
+    "name": "RESHAPE",
+    "tensor": 473,
+    "bytes": 65536,
+    "hash": "fcc54514",
+    "min": -128,
+    "max": 126,
+    "sum": -964729
+  },
+  {
+    "op": 166,
+    "name": "MEAN",
+    "tensor": 474,
+    "bytes": 1024,
+    "hash": "4ab4bed6",
+    "min": -128,
+    "max": 127,
+    "sum": -3049
+  },
+  {
+    "op": 167,
+    "name": "RESHAPE",
+    "tensor": 475,
+    "bytes": 1024,
+    "hash": "4ab4bed6",
+    "min": -128,
+    "max": 127,
+    "sum": -3049
+  },
+  {
+    "op": 168,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 476,
+    "bytes": 65536,
+    "hash": "b3b3ff05",
+    "min": -128,
+    "max": 123,
+    "sum": -7794822
+  },
+  {
+    "op": 169,
+    "name": "MEAN",
+    "tensor": 477,
+    "bytes": 1024,
+    "hash": "a24443e5",
+    "min": -51,
+    "max": 127,
+    "sum": 9158
+  },
+  {
+    "op": 170,
+    "name": "ADD",
+    "tensor": 478,
+    "bytes": 1024,
+    "hash": "a24443e5",
+    "min": -51,
+    "max": 127,
+    "sum": 9158
+  },
+  {
+    "op": 171,
+    "name": "RSQRT",
+    "tensor": 479,
+    "bytes": 1024,
+    "hash": "b9c12944",
+    "min": 11,
+    "max": 125,
+    "sum": 65955
+  },
+  {
+    "op": 172,
+    "name": "MUL",
+    "tensor": 480,
+    "bytes": 1024,
+    "hash": "7611520a",
+    "min": -116,
+    "max": 127,
+    "sum": 4247
+  },
+  {
+    "op": 173,
+    "name": "SUB",
+    "tensor": 481,
+    "bytes": 1024,
+    "hash": "01d7ce12",
+    "min": -128,
+    "max": 115,
+    "sum": -5271
+  },
+  {
+    "op": 174,
+    "name": "RESHAPE",
+    "tensor": 482,
+    "bytes": 1024,
+    "hash": "b9c12944",
+    "min": 11,
+    "max": 125,
+    "sum": 65955
+  },
+  {
+    "op": 175,
+    "name": "MUL",
+    "tensor": 483,
+    "bytes": 65536,
+    "hash": "822d42d5",
+    "min": -116,
+    "max": 121,
+    "sum": -1356238
+  },
+  {
+    "op": 176,
+    "name": "RESHAPE",
+    "tensor": 484,
+    "bytes": 1024,
+    "hash": "01d7ce12",
+    "min": -128,
+    "max": 115,
+    "sum": -5271
+  },
+  {
+    "op": 177,
+    "name": "ADD",
+    "tensor": 485,
+    "bytes": 65536,
+    "hash": "76d9edfd",
+    "min": -116,
+    "max": 121,
+    "sum": -1369268
+  },
+  {
+    "op": 178,
+    "name": "FULLY_CONNECTED",
+    "tensor": 486,
+    "bytes": 65536,
+    "hash": "b4f7d082",
+    "min": -124,
+    "max": 127,
+    "sum": 1062247
+  },
+  {
+    "op": 179,
+    "name": "RESHAPE",
+    "tensor": 487,
+    "bytes": 65536,
+    "hash": "b4f7d082",
+    "min": -124,
+    "max": 127,
+    "sum": 1062247
+  },
+  {
+    "op": 180,
+    "name": "TRANSPOSE",
+    "tensor": 488,
+    "bytes": 65536,
+    "hash": "0504ca0a",
+    "min": -124,
+    "max": 127,
+    "sum": 1062247
+  },
+  {
+    "op": 181,
+    "name": "FULLY_CONNECTED",
+    "tensor": 489,
+    "bytes": 65536,
+    "hash": "ad02a302",
+    "min": -128,
+    "max": 127,
+    "sum": -70315
+  },
+  {
+    "op": 182,
+    "name": "RESHAPE",
+    "tensor": 490,
+    "bytes": 65536,
+    "hash": "ad02a302",
+    "min": -128,
+    "max": 127,
+    "sum": -70315
+  },
+  {
+    "op": 183,
+    "name": "FULLY_CONNECTED",
+    "tensor": 491,
+    "bytes": 65536,
+    "hash": "0affaa13",
+    "min": -117,
+    "max": 127,
+    "sum": 1056242
+  },
+  {
+    "op": 184,
+    "name": "RESHAPE",
+    "tensor": 492,
+    "bytes": 65536,
+    "hash": "0affaa13",
+    "min": -117,
+    "max": 127,
+    "sum": 1056242
+  },
+  {
+    "op": 185,
+    "name": "TRANSPOSE",
+    "tensor": 493,
+    "bytes": 65536,
+    "hash": "03fd102f",
+    "min": -117,
+    "max": 127,
+    "sum": 1056242
+  },
+  {
+    "op": 186,
+    "name": "TRANSPOSE",
+    "tensor": 494,
+    "bytes": 65536,
+    "hash": "5b536762",
+    "min": -128,
+    "max": 127,
+    "sum": -70315
+  },
+  {
+    "op": 187,
+    "name": "RESHAPE",
+    "tensor": 495,
+    "bytes": 65536,
+    "hash": "0504ca0a",
+    "min": -124,
+    "max": 127,
+    "sum": 1062247
+  },
+  {
+    "op": 188,
+    "name": "RESHAPE",
+    "tensor": 496,
+    "bytes": 65536,
+    "hash": "5b536762",
+    "min": -128,
+    "max": 127,
+    "sum": -70315
+  },
+  {
+    "op": 189,
+    "name": "BATCH_MATMUL",
+    "tensor": 497,
+    "bytes": 1048576,
+    "hash": "2a2d3ee5",
+    "min": -125,
+    "max": 127,
+    "sum": 12963936
+  },
+  {
+    "op": 190,
+    "name": "MUL",
+    "tensor": 498,
+    "bytes": 1048576,
+    "hash": "2a2d3ee5",
+    "min": -125,
+    "max": 127,
+    "sum": 12963936
+  },
+  {
+    "op": 191,
+    "name": "RESHAPE",
+    "tensor": 499,
+    "bytes": 1048576,
+    "hash": "2a2d3ee5",
+    "min": -125,
+    "max": 127,
+    "sum": 12963936
+  },
+  {
+    "op": 192,
+    "name": "SOFTMAX",
+    "tensor": 500,
+    "bytes": 1048576,
+    "hash": "5c5125aa",
+    "min": -128,
+    "max": 46,
+    "sum": -133219215
+  },
+  {
+    "op": 193,
+    "name": "RESHAPE",
+    "tensor": 501,
+    "bytes": 1048576,
+    "hash": "5c5125aa",
+    "min": -128,
+    "max": 46,
+    "sum": -133219215
+  },
+  {
+    "op": 194,
+    "name": "RESHAPE",
+    "tensor": 502,
+    "bytes": 65536,
+    "hash": "03fd102f",
+    "min": -117,
+    "max": 127,
+    "sum": 1056242
+  },
+  {
+    "op": 195,
+    "name": "BATCH_MATMUL",
+    "tensor": 503,
+    "bytes": 65536,
+    "hash": "a4692ff9",
+    "min": -128,
+    "max": 127,
+    "sum": -768688
+  },
+  {
+    "op": 196,
+    "name": "RESHAPE",
+    "tensor": 504,
+    "bytes": 65536,
+    "hash": "a4692ff9",
+    "min": -128,
+    "max": 127,
+    "sum": -768688
+  },
+  {
+    "op": 197,
+    "name": "TRANSPOSE",
+    "tensor": 505,
+    "bytes": 65536,
+    "hash": "54f9ac89",
+    "min": -128,
+    "max": 127,
+    "sum": -768688
+  },
+  {
+    "op": 198,
+    "name": "RESHAPE",
+    "tensor": 506,
+    "bytes": 65536,
+    "hash": "54f9ac89",
+    "min": -128,
+    "max": 127,
+    "sum": -768688
+  },
+  {
+    "op": 199,
+    "name": "FULLY_CONNECTED",
+    "tensor": 507,
+    "bytes": 65536,
+    "hash": "0c3096f9",
+    "min": -128,
+    "max": 127,
+    "sum": 571018
+  },
+  {
+    "op": 200,
+    "name": "ADD",
+    "tensor": 508,
+    "bytes": 65536,
+    "hash": "10ffc052",
+    "min": -128,
+    "max": 123,
+    "sum": -1086645
+  },
+  {
+    "op": 201,
+    "name": "RESHAPE",
+    "tensor": 509,
+    "bytes": 65536,
+    "hash": "10ffc052",
+    "min": -128,
+    "max": 123,
+    "sum": -1086645
+  },
+  {
+    "op": 202,
+    "name": "MEAN",
+    "tensor": 510,
+    "bytes": 1024,
+    "hash": "0dd46bb5",
+    "min": -128,
+    "max": 124,
+    "sum": -12036
+  },
+  {
+    "op": 203,
+    "name": "RESHAPE",
+    "tensor": 511,
+    "bytes": 1024,
+    "hash": "0dd46bb5",
+    "min": -128,
+    "max": 124,
+    "sum": -12036
+  },
+  {
+    "op": 204,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 512,
+    "bytes": 65536,
+    "hash": "4faf5326",
+    "min": -128,
+    "max": 113,
+    "sum": -7849617
+  },
+  {
+    "op": 205,
+    "name": "MEAN",
+    "tensor": 513,
+    "bytes": 1024,
+    "hash": "a799df79",
+    "min": -51,
+    "max": 127,
+    "sum": 6298
+  },
+  {
+    "op": 206,
+    "name": "ADD",
+    "tensor": 514,
+    "bytes": 1024,
+    "hash": "a799df79",
+    "min": -51,
+    "max": 127,
+    "sum": 6298
+  },
+  {
+    "op": 207,
+    "name": "RSQRT",
+    "tensor": 515,
+    "bytes": 1024,
+    "hash": "e11e465f",
+    "min": 7,
+    "max": 119,
+    "sum": 62662
+  },
+  {
+    "op": 208,
+    "name": "MUL",
+    "tensor": 516,
+    "bytes": 1024,
+    "hash": "4beea250",
+    "min": -101,
+    "max": 124,
+    "sum": 225
+  },
+  {
+    "op": 209,
+    "name": "SUB",
+    "tensor": 517,
+    "bytes": 1024,
+    "hash": "a24adf1c",
+    "min": -125,
+    "max": 100,
+    "sum": -1249
+  },
+  {
+    "op": 210,
+    "name": "RESHAPE",
+    "tensor": 518,
+    "bytes": 1024,
+    "hash": "e11e465f",
+    "min": 7,
+    "max": 119,
+    "sum": 62662
+  },
+  {
+    "op": 211,
+    "name": "MUL",
+    "tensor": 519,
+    "bytes": 65536,
+    "hash": "c3807ecb",
+    "min": -119,
+    "max": 127,
+    "sum": -1348398
+  },
+  {
+    "op": 212,
+    "name": "RESHAPE",
+    "tensor": 520,
+    "bytes": 1024,
+    "hash": "a24adf1c",
+    "min": -125,
+    "max": 100,
+    "sum": -1249
+  },
+  {
+    "op": 213,
+    "name": "ADD",
+    "tensor": 521,
+    "bytes": 65536,
+    "hash": "43dd8f30",
+    "min": -120,
+    "max": 126,
+    "sum": -1373139
+  },
+  {
+    "op": 214,
+    "name": "FULLY_CONNECTED",
+    "tensor": 522,
+    "bytes": 131072,
+    "hash": "536b3fde",
+    "min": -128,
+    "max": 127,
+    "sum": 3534847
+  },
+  {
+    "op": 215,
+    "name": "RESHAPE",
+    "tensor": 523,
+    "bytes": 131072,
+    "hash": "536b3fde",
+    "min": -128,
+    "max": 127,
+    "sum": 3534847
+  },
+  {
+    "op": 216,
+    "name": "LOGISTIC",
+    "tensor": 524,
+    "bytes": 131072,
+    "hash": "e65bd0b9",
+    "min": -127,
+    "max": 111,
+    "sum": -5323804
+  },
+  {
+    "op": 217,
+    "name": "MUL",
+    "tensor": 525,
+    "bytes": 131072,
+    "hash": "dc47bd92",
+    "min": -128,
+    "max": 127,
+    "sum": -14871769
+  },
+  {
+    "op": 218,
+    "name": "FULLY_CONNECTED",
+    "tensor": 526,
+    "bytes": 65536,
+    "hash": "cc029871",
+    "min": -125,
+    "max": 127,
+    "sum": -81048
+  },
+  {
+    "op": 219,
+    "name": "ADD",
+    "tensor": 527,
+    "bytes": 65536,
+    "hash": "f3f2fb15",
+    "min": -128,
+    "max": 118,
+    "sum": -828102
+  },
+  {
+    "op": 220,
+    "name": "RESHAPE",
+    "tensor": 528,
+    "bytes": 65536,
+    "hash": "f3f2fb15",
+    "min": -128,
+    "max": 118,
+    "sum": -828102
+  },
+  {
+    "op": 221,
+    "name": "MEAN",
+    "tensor": 529,
+    "bytes": 1024,
+    "hash": "2feeb456",
+    "min": -128,
+    "max": 127,
+    "sum": -4771
+  },
+  {
+    "op": 222,
+    "name": "RESHAPE",
+    "tensor": 530,
+    "bytes": 1024,
+    "hash": "2feeb456",
+    "min": -128,
+    "max": 127,
+    "sum": -4771
+  },
+  {
+    "op": 223,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 531,
+    "bytes": 65536,
+    "hash": "ebb100a7",
+    "min": -128,
+    "max": 92,
+    "sum": -7833736
+  },
+  {
+    "op": 224,
+    "name": "MEAN",
+    "tensor": 532,
+    "bytes": 1024,
+    "hash": "4944e63c",
+    "min": -62,
+    "max": 127,
+    "sum": -8601
+  },
+  {
+    "op": 225,
+    "name": "ADD",
+    "tensor": 533,
+    "bytes": 1024,
+    "hash": "4944e63c",
+    "min": -62,
+    "max": 127,
+    "sum": -8601
+  },
+  {
+    "op": 226,
+    "name": "RSQRT",
+    "tensor": 534,
+    "bytes": 1024,
+    "hash": "729f0418",
+    "min": 0,
+    "max": 124,
+    "sum": 63811
+  },
+  {
+    "op": 227,
+    "name": "MUL",
+    "tensor": 535,
+    "bytes": 1024,
+    "hash": "423d3d88",
+    "min": -128,
+    "max": 127,
+    "sum": 2277
+  },
+  {
+    "op": 228,
+    "name": "SUB",
+    "tensor": 536,
+    "bytes": 1024,
+    "hash": "2c635560",
+    "min": -128,
+    "max": 127,
+    "sum": -3301
+  },
+  {
+    "op": 229,
+    "name": "RESHAPE",
+    "tensor": 537,
+    "bytes": 1024,
+    "hash": "729f0418",
+    "min": 0,
+    "max": 124,
+    "sum": 63811
+  },
+  {
+    "op": 230,
+    "name": "MUL",
+    "tensor": 538,
+    "bytes": 65536,
+    "hash": "5b055a63",
+    "min": -126,
+    "max": 127,
+    "sum": -1091502
+  },
+  {
+    "op": 231,
+    "name": "RESHAPE",
+    "tensor": 539,
+    "bytes": 1024,
+    "hash": "2c635560",
+    "min": -128,
+    "max": 127,
+    "sum": -3301
+  },
+  {
+    "op": 232,
+    "name": "ADD",
+    "tensor": 540,
+    "bytes": 65536,
+    "hash": "84209121",
+    "min": -126,
+    "max": 127,
+    "sum": -1047600
+  },
+  {
+    "op": 233,
+    "name": "FULLY_CONNECTED",
+    "tensor": 541,
+    "bytes": 65536,
+    "hash": "d20fddd2",
+    "min": -128,
+    "max": 126,
+    "sum": 104617
+  },
+  {
+    "op": 234,
+    "name": "RESHAPE",
+    "tensor": 542,
+    "bytes": 65536,
+    "hash": "d20fddd2",
+    "min": -128,
+    "max": 126,
+    "sum": 104617
+  },
+  {
+    "op": 235,
+    "name": "TRANSPOSE",
+    "tensor": 543,
+    "bytes": 65536,
+    "hash": "44757c7e",
+    "min": -128,
+    "max": 126,
+    "sum": 104617
+  },
+  {
+    "op": 236,
+    "name": "FULLY_CONNECTED",
+    "tensor": 544,
+    "bytes": 65536,
+    "hash": "ae1876e4",
+    "min": -128,
+    "max": 127,
+    "sum": -358227
+  },
+  {
+    "op": 237,
+    "name": "RESHAPE",
+    "tensor": 545,
+    "bytes": 65536,
+    "hash": "ae1876e4",
+    "min": -128,
+    "max": 127,
+    "sum": -358227
+  },
+  {
+    "op": 238,
+    "name": "FULLY_CONNECTED",
+    "tensor": 546,
+    "bytes": 65536,
+    "hash": "9277d7b0",
+    "min": -128,
+    "max": 127,
+    "sum": -147541
+  },
+  {
+    "op": 239,
+    "name": "RESHAPE",
+    "tensor": 547,
+    "bytes": 65536,
+    "hash": "9277d7b0",
+    "min": -128,
+    "max": 127,
+    "sum": -147541
+  },
+  {
+    "op": 240,
+    "name": "TRANSPOSE",
+    "tensor": 548,
+    "bytes": 65536,
+    "hash": "1aabb4fc",
+    "min": -128,
+    "max": 127,
+    "sum": -147541
+  },
+  {
+    "op": 241,
+    "name": "TRANSPOSE",
+    "tensor": 549,
+    "bytes": 65536,
+    "hash": "329c499c",
+    "min": -128,
+    "max": 127,
+    "sum": -358227
+  },
+  {
+    "op": 242,
+    "name": "RESHAPE",
+    "tensor": 550,
+    "bytes": 65536,
+    "hash": "44757c7e",
+    "min": -128,
+    "max": 126,
+    "sum": 104617
+  },
+  {
+    "op": 243,
+    "name": "RESHAPE",
+    "tensor": 551,
+    "bytes": 65536,
+    "hash": "329c499c",
+    "min": -128,
+    "max": 127,
+    "sum": -358227
+  },
+  {
+    "op": 244,
+    "name": "BATCH_MATMUL",
+    "tensor": 552,
+    "bytes": 1048576,
+    "hash": "1579b767",
+    "min": -128,
+    "max": 127,
+    "sum": -6792728
+  },
+  {
+    "op": 245,
+    "name": "MUL",
+    "tensor": 553,
+    "bytes": 1048576,
+    "hash": "1579b767",
+    "min": -128,
+    "max": 127,
+    "sum": -6792728
+  },
+  {
+    "op": 246,
+    "name": "RESHAPE",
+    "tensor": 554,
+    "bytes": 1048576,
+    "hash": "1579b767",
+    "min": -128,
+    "max": 127,
+    "sum": -6792728
+  },
+  {
+    "op": 247,
+    "name": "SOFTMAX",
+    "tensor": 555,
+    "bytes": 1048576,
+    "hash": "9b67c2fd",
+    "min": -128,
+    "max": 76,
+    "sum": -133230524
+  },
+  {
+    "op": 248,
+    "name": "RESHAPE",
+    "tensor": 556,
+    "bytes": 1048576,
+    "hash": "9b67c2fd",
+    "min": -128,
+    "max": 76,
+    "sum": -133230524
+  },
+  {
+    "op": 249,
+    "name": "RESHAPE",
+    "tensor": 557,
+    "bytes": 65536,
+    "hash": "1aabb4fc",
+    "min": -128,
+    "max": 127,
+    "sum": -147541
+  },
+  {
+    "op": 250,
+    "name": "BATCH_MATMUL",
+    "tensor": 558,
+    "bytes": 65536,
+    "hash": "f1271e6b",
+    "min": -128,
+    "max": 127,
+    "sum": -958668
+  },
+  {
+    "op": 251,
+    "name": "RESHAPE",
+    "tensor": 559,
+    "bytes": 65536,
+    "hash": "f1271e6b",
+    "min": -128,
+    "max": 127,
+    "sum": -958668
+  },
+  {
+    "op": 252,
+    "name": "TRANSPOSE",
+    "tensor": 560,
+    "bytes": 65536,
+    "hash": "7fc1aa07",
+    "min": -128,
+    "max": 127,
+    "sum": -958668
+  },
+  {
+    "op": 253,
+    "name": "RESHAPE",
+    "tensor": 561,
+    "bytes": 65536,
+    "hash": "7fc1aa07",
+    "min": -128,
+    "max": 127,
+    "sum": -958668
+  },
+  {
+    "op": 254,
+    "name": "FULLY_CONNECTED",
+    "tensor": 562,
+    "bytes": 65536,
+    "hash": "a1ac7a44",
+    "min": -128,
+    "max": 127,
+    "sum": -175867
+  },
+  {
+    "op": 255,
+    "name": "ADD",
+    "tensor": 563,
+    "bytes": 65536,
+    "hash": "be8bedb3",
+    "min": -128,
+    "max": 126,
+    "sum": -687616
+  },
+  {
+    "op": 256,
+    "name": "RESHAPE",
+    "tensor": 564,
+    "bytes": 65536,
+    "hash": "be8bedb3",
+    "min": -128,
+    "max": 126,
+    "sum": -687616
+  },
+  {
+    "op": 257,
+    "name": "MEAN",
+    "tensor": 565,
+    "bytes": 1024,
+    "hash": "941e704b",
+    "min": -128,
+    "max": 127,
+    "sum": -3600
+  },
+  {
+    "op": 258,
+    "name": "RESHAPE",
+    "tensor": 566,
+    "bytes": 1024,
+    "hash": "941e704b",
+    "min": -128,
+    "max": 127,
+    "sum": -3600
+  },
+  {
+    "op": 259,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 567,
+    "bytes": 65536,
+    "hash": "5e83156e",
+    "min": -128,
+    "max": 119,
+    "sum": -7850485
+  },
+  {
+    "op": 260,
+    "name": "MEAN",
+    "tensor": 568,
+    "bytes": 1024,
+    "hash": "17c94941",
+    "min": -53,
+    "max": 127,
+    "sum": 1230
+  },
+  {
+    "op": 261,
+    "name": "ADD",
+    "tensor": 569,
+    "bytes": 1024,
+    "hash": "17c94941",
+    "min": -53,
+    "max": 127,
+    "sum": 1230
+  },
+  {
+    "op": 262,
+    "name": "RSQRT",
+    "tensor": 570,
+    "bytes": 1024,
+    "hash": "662676f7",
+    "min": 11,
+    "max": 127,
+    "sum": 71960
+  },
+  {
+    "op": 263,
+    "name": "MUL",
+    "tensor": 571,
+    "bytes": 1024,
+    "hash": "7cea86ab",
+    "min": -128,
+    "max": 127,
+    "sum": 1238
+  },
+  {
+    "op": 264,
+    "name": "SUB",
+    "tensor": 572,
+    "bytes": 1024,
+    "hash": "6fbf6a5b",
+    "min": -128,
+    "max": 127,
+    "sum": -2262
+  },
+  {
+    "op": 265,
+    "name": "RESHAPE",
+    "tensor": 573,
+    "bytes": 1024,
+    "hash": "662676f7",
+    "min": 11,
+    "max": 127,
+    "sum": 71960
+  },
+  {
+    "op": 266,
+    "name": "MUL",
+    "tensor": 574,
+    "bytes": 65536,
+    "hash": "15c121c6",
+    "min": -124,
+    "max": 127,
+    "sum": -1082523
+  },
+  {
+    "op": 267,
+    "name": "RESHAPE",
+    "tensor": 575,
+    "bytes": 1024,
+    "hash": "6fbf6a5b",
+    "min": -128,
+    "max": 127,
+    "sum": -2262
+  },
+  {
+    "op": 268,
+    "name": "ADD",
+    "tensor": 576,
+    "bytes": 65536,
+    "hash": "bbdaff5f",
+    "min": -125,
+    "max": 126,
+    "sum": -1114694
+  },
+  {
+    "op": 269,
+    "name": "FULLY_CONNECTED",
+    "tensor": 577,
+    "bytes": 131072,
+    "hash": "dd24442e",
+    "min": -127,
+    "max": 127,
+    "sum": 1346071
+  },
+  {
+    "op": 270,
+    "name": "RESHAPE",
+    "tensor": 578,
+    "bytes": 131072,
+    "hash": "dd24442e",
+    "min": -127,
+    "max": 127,
+    "sum": 1346071
+  },
+  {
+    "op": 271,
+    "name": "LOGISTIC",
+    "tensor": 579,
+    "bytes": 131072,
+    "hash": "0816e86d",
+    "min": -127,
+    "max": 116,
+    "sum": -7695846
+  },
+  {
+    "op": 272,
+    "name": "MUL",
+    "tensor": 580,
+    "bytes": 131072,
+    "hash": "36ea3964",
+    "min": -128,
+    "max": 127,
+    "sum": -15535559
+  },
+  {
+    "op": 273,
+    "name": "FULLY_CONNECTED",
+    "tensor": 581,
+    "bytes": 65536,
+    "hash": "ce013a06",
+    "min": -123,
+    "max": 127,
+    "sum": -2159567
+  },
+  {
+    "op": 274,
+    "name": "ADD",
+    "tensor": 582,
+    "bytes": 65536,
+    "hash": "30defd76",
+    "min": -123,
+    "max": 127,
+    "sum": -1733249
+  },
+  {
+    "op": 275,
+    "name": "RESHAPE",
+    "tensor": 583,
+    "bytes": 65536,
+    "hash": "30defd76",
+    "min": -123,
+    "max": 127,
+    "sum": -1733249
+  },
+  {
+    "op": 276,
+    "name": "MEAN",
+    "tensor": 584,
+    "bytes": 1024,
+    "hash": "f83e9621",
+    "min": -94,
+    "max": 114,
+    "sum": 7226
+  },
+  {
+    "op": 277,
+    "name": "RESHAPE",
+    "tensor": 585,
+    "bytes": 1024,
+    "hash": "f83e9621",
+    "min": -94,
+    "max": 114,
+    "sum": 7226
+  },
+  {
+    "op": 278,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 586,
+    "bytes": 65536,
+    "hash": "7eb5c4e6",
+    "min": -128,
+    "max": 124,
+    "sum": -8078683
+  },
+  {
+    "op": 279,
+    "name": "MEAN",
+    "tensor": 587,
+    "bytes": 1024,
+    "hash": "92387abf",
+    "min": -93,
+    "max": 76,
+    "sum": -60394
+  },
+  {
+    "op": 280,
+    "name": "ADD",
+    "tensor": 588,
+    "bytes": 1024,
+    "hash": "92387abf",
+    "min": -93,
+    "max": 76,
+    "sum": -60394
+  },
+  {
+    "op": 281,
+    "name": "RSQRT",
+    "tensor": 589,
+    "bytes": 1024,
+    "hash": "f2189bf1",
+    "min": -22,
+    "max": 127,
+    "sum": 62002
+  },
+  {
+    "op": 282,
+    "name": "MUL",
+    "tensor": 590,
+    "bytes": 1024,
+    "hash": "c8f30b30",
+    "min": -109,
+    "max": 127,
+    "sum": 25571
+  },
+  {
+    "op": 283,
+    "name": "SUB",
+    "tensor": 591,
+    "bytes": 1024,
+    "hash": "2aa2fbd8",
+    "min": -128,
+    "max": 108,
+    "sum": -26595
+  },
+  {
+    "op": 284,
+    "name": "RESHAPE",
+    "tensor": 592,
+    "bytes": 1024,
+    "hash": "f2189bf1",
+    "min": -22,
+    "max": 127,
+    "sum": 62002
+  },
+  {
+    "op": 285,
+    "name": "MUL",
+    "tensor": 593,
+    "bytes": 65536,
+    "hash": "b9edb66e",
+    "min": -111,
+    "max": 127,
+    "sum": -1266029
+  },
+  {
+    "op": 286,
+    "name": "RESHAPE",
+    "tensor": 594,
+    "bytes": 1024,
+    "hash": "2aa2fbd8",
+    "min": -128,
+    "max": 108,
+    "sum": -26595
+  },
+  {
+    "op": 287,
+    "name": "ADD",
+    "tensor": 595,
+    "bytes": 65536,
+    "hash": "d12bbc81",
+    "min": -112,
+    "max": 126,
+    "sum": -1310714
+  },
+  {
+    "op": 288,
+    "name": "MUL",
+    "tensor": 596,
+    "bytes": 65536,
+    "hash": "ba55210d",
+    "min": -128,
+    "max": 122,
+    "sum": -63666
+  },
+  {
+    "op": 289,
+    "name": "ADD",
+    "tensor": 597,
+    "bytes": 65536,
+    "hash": "c1a88f0f",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 290,
+    "name": "RESHAPE",
+    "tensor": 598,
+    "bytes": 65536,
+    "hash": "c1a88f0f",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 291,
+    "name": "TRANSPOSE",
+    "tensor": 599,
+    "bytes": 65536,
+    "hash": "95c75329",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 292,
+    "name": "RESHAPE",
+    "tensor": 600,
+    "bytes": 65536,
+    "hash": "95c75329",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 293,
+    "name": "TRANSPOSE",
+    "tensor": 601,
+    "bytes": 65536,
+    "hash": "e6bf3d2d",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 294,
+    "name": "RESHAPE",
+    "tensor": 602,
+    "bytes": 65536,
+    "hash": "e6bf3d2d",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 295,
+    "name": "TRANSPOSE",
+    "tensor": 603,
+    "bytes": 65536,
+    "hash": "9ddea4b7",
+    "min": -128,
+    "max": 123,
+    "sum": 229970
+  },
+  {
+    "op": 296,
+    "name": "CONV_2D",
+    "tensor": 604,
+    "bytes": 49152,
+    "hash": "9375dff0",
+    "min": -128,
+    "max": 126,
+    "sum": 429783
+  },
+  {
+    "op": 297,
+    "name": "LOGISTIC",
+    "tensor": 605,
+    "bytes": 49152,
+    "hash": "04b3e065",
+    "min": -107,
+    "max": 99,
+    "sum": -59042
+  },
+  {
+    "op": 298,
+    "name": "MUL",
+    "tensor": 606,
+    "bytes": 49152,
+    "hash": "2f3c9d38",
+    "min": -59,
+    "max": 126,
+    "sum": -1475867
+  },
+  {
+    "op": 299,
+    "name": "QUANTIZE",
+    "tensor": 1093,
+    "bytes": 49152,
+    "hash": "a135e681",
+    "min": -128,
+    "max": 55,
+    "sum": -1710532
+  },
+  {
+    "op": 300,
+    "name": "CONCATENATION",
+    "tensor": 607,
+    "bytes": 98304,
+    "hash": "ee535f80",
+    "min": -128,
+    "max": 126,
+    "sum": -3186399
+  },
+  {
+    "op": 301,
+    "name": "CONV_2D",
+    "tensor": 608,
+    "bytes": 49152,
+    "hash": "c9aafbfa",
+    "min": -128,
+    "max": 120,
+    "sum": 2227383
+  },
+  {
+    "op": 302,
+    "name": "LOGISTIC",
+    "tensor": 609,
+    "bytes": 49152,
+    "hash": "80d5de7f",
+    "min": -118,
+    "max": 79,
+    "sum": 146880
+  },
+  {
+    "op": 303,
+    "name": "MUL",
+    "tensor": 610,
+    "bytes": 49152,
+    "hash": "7ed88dea",
+    "min": -128,
+    "max": 104,
+    "sum": -3517277
+  },
+  {
+    "op": 304,
+    "name": "CONV_2D",
+    "tensor": 611,
+    "bytes": 98304,
+    "hash": "05b607fe",
+    "min": -124,
+    "max": 124,
+    "sum": -4192651
+  },
+  {
+    "op": 305,
+    "name": "LOGISTIC",
+    "tensor": 612,
+    "bytes": 98304,
+    "hash": "4d3aae0a",
+    "min": -125,
+    "max": 127,
+    "sum": -2213227
+  },
+  {
+    "op": 306,
+    "name": "MUL",
+    "tensor": 613,
+    "bytes": 98304,
+    "hash": "28969b0b",
+    "min": -128,
+    "max": 122,
+    "sum": -11962678
+  },
+  {
+    "op": 307,
+    "name": "PAD",
+    "tensor": 614,
+    "bytes": 110976,
+    "hash": "10da070b",
+    "min": -128,
+    "max": 122,
+    "sum": -13483318
+  },
+  {
+    "op": 308,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 615,
+    "bytes": 24576,
+    "hash": "d578be6f",
+    "min": -85,
+    "max": 127,
+    "sum": 1029466
+  },
+  {
+    "op": 309,
+    "name": "LOGISTIC",
+    "tensor": 616,
+    "bytes": 24576,
+    "hash": "48c29294",
+    "min": -120,
+    "max": 123,
+    "sum": 1161717
+  },
+  {
+    "op": 310,
+    "name": "MUL",
+    "tensor": 617,
+    "bytes": 24576,
+    "hash": "81e28dd7",
+    "min": -128,
+    "max": 126,
+    "sum": -1379440
+  },
+  {
+    "op": 311,
+    "name": "CONV_2D",
+    "tensor": 618,
+    "bytes": 16384,
+    "hash": "a530cf36",
+    "min": -128,
+    "max": 127,
+    "sum": -23907
+  },
+  {
+    "op": 312,
+    "name": "CONV_2D",
+    "tensor": 619,
+    "bytes": 16384,
+    "hash": "7fffb5e0",
+    "min": -128,
+    "max": 127,
+    "sum": 618147
+  },
+  {
+    "op": 313,
+    "name": "LOGISTIC",
+    "tensor": 620,
+    "bytes": 16384,
+    "hash": "8d8d4446",
+    "min": -121,
+    "max": 111,
+    "sum": 446055
+  },
+  {
+    "op": 314,
+    "name": "MUL",
+    "tensor": 621,
+    "bytes": 16384,
+    "hash": "40afa982",
+    "min": -128,
+    "max": 127,
+    "sum": -1127193
+  },
+  {
+    "op": 315,
+    "name": "CONV_2D",
+    "tensor": 622,
+    "bytes": 20480,
+    "hash": "2c9bdb8b",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 316,
+    "name": "TRANSPOSE",
+    "tensor": 623,
+    "bytes": 20480,
+    "hash": "02608aa7",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 317,
+    "name": "RESHAPE",
+    "tensor": 624,
+    "bytes": 20480,
+    "hash": "02608aa7",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 318,
+    "name": "TRANSPOSE",
+    "tensor": 625,
+    "bytes": 20480,
+    "hash": "2f95e8b7",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 319,
+    "name": "RESHAPE",
+    "tensor": 626,
+    "bytes": 20480,
+    "hash": "2f95e8b7",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 320,
+    "name": "TRANSPOSE",
+    "tensor": 627,
+    "bytes": 20480,
+    "hash": "32903b83",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 321,
+    "name": "RESHAPE",
+    "tensor": 628,
+    "bytes": 20480,
+    "hash": "32903b83",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 322,
+    "name": "RESHAPE",
+    "tensor": 629,
+    "bytes": 20480,
+    "hash": "32903b83",
+    "min": -128,
+    "max": 120,
+    "sum": 85324
+  },
+  {
+    "op": 323,
+    "name": "MEAN",
+    "tensor": 630,
+    "bytes": 256,
+    "hash": "64e2ce5d",
+    "min": -128,
+    "max": 127,
+    "sum": -1990
+  },
+  {
+    "op": 324,
+    "name": "RESHAPE",
+    "tensor": 631,
+    "bytes": 256,
+    "hash": "64e2ce5d",
+    "min": -128,
+    "max": 127,
+    "sum": -1990
+  },
+  {
+    "op": 325,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 632,
+    "bytes": 20480,
+    "hash": "8f7013f7",
+    "min": -128,
+    "max": 117,
+    "sum": -2438866
+  },
+  {
+    "op": 326,
+    "name": "MEAN",
+    "tensor": 633,
+    "bytes": 256,
+    "hash": "23760b2c",
+    "min": -86,
+    "max": 127,
+    "sum": -6037
+  },
+  {
+    "op": 327,
+    "name": "ADD",
+    "tensor": 634,
+    "bytes": 256,
+    "hash": "23760b2c",
+    "min": -86,
+    "max": 127,
+    "sum": -6037
+  },
+  {
+    "op": 328,
+    "name": "RSQRT",
+    "tensor": 635,
+    "bytes": 256,
+    "hash": "41523d6f",
+    "min": -24,
+    "max": 127,
+    "sum": 11338
+  },
+  {
+    "op": 329,
+    "name": "MUL",
+    "tensor": 636,
+    "bytes": 256,
+    "hash": "3cd97cae",
+    "min": -128,
+    "max": 127,
+    "sum": -3187
+  },
+  {
+    "op": 330,
+    "name": "SUB",
+    "tensor": 637,
+    "bytes": 256,
+    "hash": "01b3d162",
+    "min": -128,
+    "max": 127,
+    "sum": 2931
+  },
+  {
+    "op": 331,
+    "name": "RESHAPE",
+    "tensor": 638,
+    "bytes": 256,
+    "hash": "41523d6f",
+    "min": -24,
+    "max": 127,
+    "sum": 11338
+  },
+  {
+    "op": 332,
+    "name": "MUL",
+    "tensor": 639,
+    "bytes": 20480,
+    "hash": "0f463785",
+    "min": -128,
+    "max": 127,
+    "sum": 106688
+  },
+  {
+    "op": 333,
+    "name": "RESHAPE",
+    "tensor": 640,
+    "bytes": 256,
+    "hash": "01b3d162",
+    "min": -128,
+    "max": 127,
+    "sum": 2931
+  },
+  {
+    "op": 334,
+    "name": "ADD",
+    "tensor": 641,
+    "bytes": 20480,
+    "hash": "a0be882e",
+    "min": -128,
+    "max": 127,
+    "sum": 102471
+  },
+  {
+    "op": 335,
+    "name": "FULLY_CONNECTED",
+    "tensor": 642,
+    "bytes": 20480,
+    "hash": "4d8e6740",
+    "min": -118,
+    "max": 121,
+    "sum": 102445
+  },
+  {
+    "op": 336,
+    "name": "RESHAPE",
+    "tensor": 643,
+    "bytes": 20480,
+    "hash": "4d8e6740",
+    "min": -118,
+    "max": 121,
+    "sum": 102445
+  },
+  {
+    "op": 337,
+    "name": "TRANSPOSE",
+    "tensor": 644,
+    "bytes": 20480,
+    "hash": "70ee032c",
+    "min": -118,
+    "max": 121,
+    "sum": 102445
+  },
+  {
+    "op": 338,
+    "name": "FULLY_CONNECTED",
+    "tensor": 645,
+    "bytes": 20480,
+    "hash": "48e70242",
+    "min": -122,
+    "max": 124,
+    "sum": -51163
+  },
+  {
+    "op": 339,
+    "name": "RESHAPE",
+    "tensor": 646,
+    "bytes": 20480,
+    "hash": "48e70242",
+    "min": -122,
+    "max": 124,
+    "sum": -51163
+  },
+  {
+    "op": 340,
+    "name": "FULLY_CONNECTED",
+    "tensor": 647,
+    "bytes": 20480,
+    "hash": "0a066dff",
+    "min": -118,
+    "max": 126,
+    "sum": 12304
+  },
+  {
+    "op": 341,
+    "name": "RESHAPE",
+    "tensor": 648,
+    "bytes": 20480,
+    "hash": "0a066dff",
+    "min": -118,
+    "max": 126,
+    "sum": 12304
+  },
+  {
+    "op": 342,
+    "name": "TRANSPOSE",
+    "tensor": 649,
+    "bytes": 20480,
+    "hash": "e1bb3347",
+    "min": -118,
+    "max": 126,
+    "sum": 12304
+  },
+  {
+    "op": 343,
+    "name": "TRANSPOSE",
+    "tensor": 650,
+    "bytes": 20480,
+    "hash": "7da80b5a",
+    "min": -122,
+    "max": 124,
+    "sum": -51163
+  },
+  {
+    "op": 344,
+    "name": "RESHAPE",
+    "tensor": 651,
+    "bytes": 20480,
+    "hash": "70ee032c",
+    "min": -118,
+    "max": 121,
+    "sum": 102445
+  },
+  {
+    "op": 345,
+    "name": "RESHAPE",
+    "tensor": 652,
+    "bytes": 20480,
+    "hash": "7da80b5a",
+    "min": -122,
+    "max": 124,
+    "sum": -51163
+  },
+  {
+    "op": 346,
+    "name": "BATCH_MATMUL",
+    "tensor": 653,
+    "bytes": 65536,
+    "hash": "9fe8c08c",
+    "min": -127,
+    "max": 127,
+    "sum": -583615
+  },
+  {
+    "op": 347,
+    "name": "MUL",
+    "tensor": 654,
+    "bytes": 65536,
+    "hash": "9fe8c08c",
+    "min": -127,
+    "max": 127,
+    "sum": -583615
+  },
+  {
+    "op": 348,
+    "name": "RESHAPE",
+    "tensor": 655,
+    "bytes": 65536,
+    "hash": "9fe8c08c",
+    "min": -127,
+    "max": 127,
+    "sum": -583615
+  },
+  {
+    "op": 349,
+    "name": "SOFTMAX",
+    "tensor": 656,
+    "bytes": 65536,
+    "hash": "ca45ba66",
+    "min": -128,
+    "max": 0,
+    "sum": -8127131
+  },
+  {
+    "op": 350,
+    "name": "RESHAPE",
+    "tensor": 657,
+    "bytes": 65536,
+    "hash": "ca45ba66",
+    "min": -128,
+    "max": 0,
+    "sum": -8127131
+  },
+  {
+    "op": 351,
+    "name": "RESHAPE",
+    "tensor": 658,
+    "bytes": 20480,
+    "hash": "e1bb3347",
+    "min": -118,
+    "max": 126,
+    "sum": 12304
+  },
+  {
+    "op": 352,
+    "name": "BATCH_MATMUL",
+    "tensor": 659,
+    "bytes": 20480,
+    "hash": "f50f07db",
+    "min": -128,
+    "max": 109,
+    "sum": -106660
+  },
+  {
+    "op": 353,
+    "name": "RESHAPE",
+    "tensor": 660,
+    "bytes": 20480,
+    "hash": "f50f07db",
+    "min": -128,
+    "max": 109,
+    "sum": -106660
+  },
+  {
+    "op": 354,
+    "name": "TRANSPOSE",
+    "tensor": 661,
+    "bytes": 20480,
+    "hash": "36d984e3",
+    "min": -128,
+    "max": 109,
+    "sum": -106660
+  },
+  {
+    "op": 355,
+    "name": "RESHAPE",
+    "tensor": 662,
+    "bytes": 20480,
+    "hash": "36d984e3",
+    "min": -128,
+    "max": 109,
+    "sum": -106660
+  },
+  {
+    "op": 356,
+    "name": "FULLY_CONNECTED",
+    "tensor": 663,
+    "bytes": 20480,
+    "hash": "85523114",
+    "min": -128,
+    "max": 127,
+    "sum": 403231
+  },
+  {
+    "op": 357,
+    "name": "ADD",
+    "tensor": 664,
+    "bytes": 20480,
+    "hash": "cc2b00c4",
+    "min": -128,
+    "max": 114,
+    "sum": 83421
+  },
+  {
+    "op": 358,
+    "name": "RESHAPE",
+    "tensor": 665,
+    "bytes": 20480,
+    "hash": "cc2b00c4",
+    "min": -128,
+    "max": 114,
+    "sum": 83421
+  },
+  {
+    "op": 359,
+    "name": "MEAN",
+    "tensor": 666,
+    "bytes": 256,
+    "hash": "e95fe9f9",
+    "min": -128,
+    "max": 127,
+    "sum": -4404
+  },
+  {
+    "op": 360,
+    "name": "RESHAPE",
+    "tensor": 667,
+    "bytes": 256,
+    "hash": "e95fe9f9",
+    "min": -128,
+    "max": 127,
+    "sum": -4404
+  },
+  {
+    "op": 361,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 668,
+    "bytes": 20480,
+    "hash": "4db35f3b",
+    "min": -128,
+    "max": 114,
+    "sum": -2455556
+  },
+  {
+    "op": 362,
+    "name": "MEAN",
+    "tensor": 669,
+    "bytes": 256,
+    "hash": "ad117f9c",
+    "min": -80,
+    "max": 127,
+    "sum": -4627
+  },
+  {
+    "op": 363,
+    "name": "ADD",
+    "tensor": 670,
+    "bytes": 256,
+    "hash": "ad117f9c",
+    "min": -80,
+    "max": 127,
+    "sum": -4627
+  },
+  {
+    "op": 364,
+    "name": "RSQRT",
+    "tensor": 671,
+    "bytes": 256,
+    "hash": "f8625101",
+    "min": -17,
+    "max": 127,
+    "sum": 12644
+  },
+  {
+    "op": 365,
+    "name": "MUL",
+    "tensor": 672,
+    "bytes": 256,
+    "hash": "5f90ac8c",
+    "min": -119,
+    "max": 127,
+    "sum": -5103
+  },
+  {
+    "op": 366,
+    "name": "SUB",
+    "tensor": 673,
+    "bytes": 256,
+    "hash": "c628f13c",
+    "min": -128,
+    "max": 118,
+    "sum": 4847
+  },
+  {
+    "op": 367,
+    "name": "RESHAPE",
+    "tensor": 674,
+    "bytes": 256,
+    "hash": "f8625101",
+    "min": -17,
+    "max": 127,
+    "sum": 12644
+  },
+  {
+    "op": 368,
+    "name": "MUL",
+    "tensor": 675,
+    "bytes": 20480,
+    "hash": "3e0dab31",
+    "min": -128,
+    "max": 122,
+    "sum": 206850
+  },
+  {
+    "op": 369,
+    "name": "RESHAPE",
+    "tensor": 676,
+    "bytes": 256,
+    "hash": "c628f13c",
+    "min": -128,
+    "max": 118,
+    "sum": 4847
+  },
+  {
+    "op": 370,
+    "name": "ADD",
+    "tensor": 677,
+    "bytes": 20480,
+    "hash": "1615cbbc",
+    "min": -128,
+    "max": 122,
+    "sum": 204163
+  },
+  {
+    "op": 371,
+    "name": "FULLY_CONNECTED",
+    "tensor": 678,
+    "bytes": 40960,
+    "hash": "ba213f53",
+    "min": -123,
+    "max": 127,
+    "sum": 1482256
+  },
+  {
+    "op": 372,
+    "name": "RESHAPE",
+    "tensor": 679,
+    "bytes": 40960,
+    "hash": "ba213f53",
+    "min": -123,
+    "max": 127,
+    "sum": 1482256
+  },
+  {
+    "op": 373,
+    "name": "LOGISTIC",
+    "tensor": 680,
+    "bytes": 40960,
+    "hash": "04a2c263",
+    "min": -128,
+    "max": 115,
+    "sum": -1236124
+  },
+  {
+    "op": 374,
+    "name": "MUL",
+    "tensor": 681,
+    "bytes": 40960,
+    "hash": "59cd6779",
+    "min": -128,
+    "max": 127,
+    "sum": -4555036
+  },
+  {
+    "op": 375,
+    "name": "FULLY_CONNECTED",
+    "tensor": 682,
+    "bytes": 20480,
+    "hash": "295e6b68",
+    "min": -128,
+    "max": 127,
+    "sum": 82929
+  },
+  {
+    "op": 376,
+    "name": "ADD",
+    "tensor": 683,
+    "bytes": 20480,
+    "hash": "cce27be1",
+    "min": -128,
+    "max": 112,
+    "sum": 186078
+  },
+  {
+    "op": 377,
+    "name": "RESHAPE",
+    "tensor": 684,
+    "bytes": 20480,
+    "hash": "cce27be1",
+    "min": -128,
+    "max": 112,
+    "sum": 186078
+  },
+  {
+    "op": 378,
+    "name": "MEAN",
+    "tensor": 685,
+    "bytes": 256,
+    "hash": "4232d1f4",
+    "min": -128,
+    "max": 124,
+    "sum": -1449
+  },
+  {
+    "op": 379,
+    "name": "RESHAPE",
+    "tensor": 686,
+    "bytes": 256,
+    "hash": "4232d1f4",
+    "min": -128,
+    "max": 124,
+    "sum": -1449
+  },
+  {
+    "op": 380,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 687,
+    "bytes": 20480,
+    "hash": "04085de0",
+    "min": -128,
+    "max": 121,
+    "sum": -2453267
+  },
+  {
+    "op": 381,
+    "name": "MEAN",
+    "tensor": 688,
+    "bytes": 256,
+    "hash": "d4236b82",
+    "min": -61,
+    "max": 127,
+    "sum": 1145
+  },
+  {
+    "op": 382,
+    "name": "ADD",
+    "tensor": 689,
+    "bytes": 256,
+    "hash": "d4236b82",
+    "min": -61,
+    "max": 127,
+    "sum": 1145
+  },
+  {
+    "op": 383,
+    "name": "RSQRT",
+    "tensor": 690,
+    "bytes": 256,
+    "hash": "e18f27d4",
+    "min": -5,
+    "max": 112,
+    "sum": 12273
+  },
+  {
+    "op": 384,
+    "name": "MUL",
+    "tensor": 691,
+    "bytes": 256,
+    "hash": "e4405a14",
+    "min": -110,
+    "max": 117,
+    "sum": -2385
+  },
+  {
+    "op": 385,
+    "name": "SUB",
+    "tensor": 692,
+    "bytes": 256,
+    "hash": "6e66e378",
+    "min": -118,
+    "max": 109,
+    "sum": 2129
+  },
+  {
+    "op": 386,
+    "name": "RESHAPE",
+    "tensor": 693,
+    "bytes": 256,
+    "hash": "e18f27d4",
+    "min": -5,
+    "max": 112,
+    "sum": 12273
+  },
+  {
+    "op": 387,
+    "name": "MUL",
+    "tensor": 694,
+    "bytes": 20480,
+    "hash": "1c99b11d",
+    "min": -128,
+    "max": 116,
+    "sum": 309462
+  },
+  {
+    "op": 388,
+    "name": "RESHAPE",
+    "tensor": 695,
+    "bytes": 256,
+    "hash": "6e66e378",
+    "min": -118,
+    "max": 109,
+    "sum": 2129
+  },
+  {
+    "op": 389,
+    "name": "ADD",
+    "tensor": 696,
+    "bytes": 20480,
+    "hash": "65e9cb83",
+    "min": -128,
+    "max": 116,
+    "sum": 307942
+  },
+  {
+    "op": 390,
+    "name": "FULLY_CONNECTED",
+    "tensor": 697,
+    "bytes": 20480,
+    "hash": "41f7d9f4",
+    "min": -128,
+    "max": 110,
+    "sum": -94555
+  },
+  {
+    "op": 391,
+    "name": "RESHAPE",
+    "tensor": 698,
+    "bytes": 20480,
+    "hash": "41f7d9f4",
+    "min": -128,
+    "max": 110,
+    "sum": -94555
+  },
+  {
+    "op": 392,
+    "name": "TRANSPOSE",
+    "tensor": 699,
+    "bytes": 20480,
+    "hash": "ccc71870",
+    "min": -128,
+    "max": 110,
+    "sum": -94555
+  },
+  {
+    "op": 393,
+    "name": "FULLY_CONNECTED",
+    "tensor": 700,
+    "bytes": 20480,
+    "hash": "f7e2e202",
+    "min": -124,
+    "max": 122,
+    "sum": -42861
+  },
+  {
+    "op": 394,
+    "name": "RESHAPE",
+    "tensor": 701,
+    "bytes": 20480,
+    "hash": "f7e2e202",
+    "min": -124,
+    "max": 122,
+    "sum": -42861
+  },
+  {
+    "op": 395,
+    "name": "FULLY_CONNECTED",
+    "tensor": 702,
+    "bytes": 20480,
+    "hash": "6d2e4d5a",
+    "min": -119,
+    "max": 127,
+    "sum": 79625
+  },
+  {
+    "op": 396,
+    "name": "RESHAPE",
+    "tensor": 703,
+    "bytes": 20480,
+    "hash": "6d2e4d5a",
+    "min": -119,
+    "max": 127,
+    "sum": 79625
+  },
+  {
+    "op": 397,
+    "name": "TRANSPOSE",
+    "tensor": 704,
+    "bytes": 20480,
+    "hash": "275d8842",
+    "min": -119,
+    "max": 127,
+    "sum": 79625
+  },
+  {
+    "op": 398,
+    "name": "TRANSPOSE",
+    "tensor": 705,
+    "bytes": 20480,
+    "hash": "93aeaca2",
+    "min": -124,
+    "max": 122,
+    "sum": -42861
+  },
+  {
+    "op": 399,
+    "name": "RESHAPE",
+    "tensor": 706,
+    "bytes": 20480,
+    "hash": "ccc71870",
+    "min": -128,
+    "max": 110,
+    "sum": -94555
+  },
+  {
+    "op": 400,
+    "name": "RESHAPE",
+    "tensor": 707,
+    "bytes": 20480,
+    "hash": "93aeaca2",
+    "min": -124,
+    "max": 122,
+    "sum": -42861
+  },
+  {
+    "op": 401,
+    "name": "BATCH_MATMUL",
+    "tensor": 708,
+    "bytes": 65536,
+    "hash": "ec260c87",
+    "min": -113,
+    "max": 127,
+    "sum": -223630
+  },
+  {
+    "op": 402,
+    "name": "MUL",
+    "tensor": 709,
+    "bytes": 65536,
+    "hash": "ec260c87",
+    "min": -113,
+    "max": 127,
+    "sum": -223630
+  },
+  {
+    "op": 403,
+    "name": "RESHAPE",
+    "tensor": 710,
+    "bytes": 65536,
+    "hash": "ec260c87",
+    "min": -113,
+    "max": 127,
+    "sum": -223630
+  },
+  {
+    "op": 404,
+    "name": "SOFTMAX",
+    "tensor": 711,
+    "bytes": 65536,
+    "hash": "fa3fe656",
+    "min": -128,
+    "max": 87,
+    "sum": -8128149
+  },
+  {
+    "op": 405,
+    "name": "RESHAPE",
+    "tensor": 712,
+    "bytes": 65536,
+    "hash": "fa3fe656",
+    "min": -128,
+    "max": 87,
+    "sum": -8128149
+  },
+  {
+    "op": 406,
+    "name": "RESHAPE",
+    "tensor": 713,
+    "bytes": 20480,
+    "hash": "275d8842",
+    "min": -119,
+    "max": 127,
+    "sum": 79625
+  },
+  {
+    "op": 407,
+    "name": "BATCH_MATMUL",
+    "tensor": 714,
+    "bytes": 20480,
+    "hash": "5a78337a",
+    "min": -124,
+    "max": 127,
+    "sum": 204847
+  },
+  {
+    "op": 408,
+    "name": "RESHAPE",
+    "tensor": 715,
+    "bytes": 20480,
+    "hash": "5a78337a",
+    "min": -124,
+    "max": 127,
+    "sum": 204847
+  },
+  {
+    "op": 409,
+    "name": "TRANSPOSE",
+    "tensor": 716,
+    "bytes": 20480,
+    "hash": "a1f2b1d2",
+    "min": -124,
+    "max": 127,
+    "sum": 204847
+  },
+  {
+    "op": 410,
+    "name": "RESHAPE",
+    "tensor": 717,
+    "bytes": 20480,
+    "hash": "a1f2b1d2",
+    "min": -124,
+    "max": 127,
+    "sum": 204847
+  },
+  {
+    "op": 411,
+    "name": "FULLY_CONNECTED",
+    "tensor": 718,
+    "bytes": 20480,
+    "hash": "850a61fa",
+    "min": -128,
+    "max": 127,
+    "sum": 402891
+  },
+  {
+    "op": 412,
+    "name": "ADD",
+    "tensor": 719,
+    "bytes": 20480,
+    "hash": "237e6a62",
+    "min": -128,
+    "max": 125,
+    "sum": 39889
+  },
+  {
+    "op": 413,
+    "name": "RESHAPE",
+    "tensor": 720,
+    "bytes": 20480,
+    "hash": "237e6a62",
+    "min": -128,
+    "max": 125,
+    "sum": 39889
+  },
+  {
+    "op": 414,
+    "name": "MEAN",
+    "tensor": 721,
+    "bytes": 256,
+    "hash": "e0990b71",
+    "min": -128,
+    "max": 99,
+    "sum": -7086
+  },
+  {
+    "op": 415,
+    "name": "RESHAPE",
+    "tensor": 722,
+    "bytes": 256,
+    "hash": "e0990b71",
+    "min": -128,
+    "max": 99,
+    "sum": -7086
+  },
+  {
+    "op": 416,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 723,
+    "bytes": 20480,
+    "hash": "31615134",
+    "min": -128,
+    "max": 108,
+    "sum": -2437509
+  },
+  {
+    "op": 417,
+    "name": "MEAN",
+    "tensor": 724,
+    "bytes": 256,
+    "hash": "c5e07500",
+    "min": -40,
+    "max": 127,
+    "sum": 4365
+  },
+  {
+    "op": 418,
+    "name": "ADD",
+    "tensor": 725,
+    "bytes": 256,
+    "hash": "c5e07500",
+    "min": -40,
+    "max": 127,
+    "sum": 4365
+  },
+  {
+    "op": 419,
+    "name": "RSQRT",
+    "tensor": 726,
+    "bytes": 256,
+    "hash": "a0916d6a",
+    "min": 10,
+    "max": 108,
+    "sum": 15091
+  },
+  {
+    "op": 420,
+    "name": "MUL",
+    "tensor": 727,
+    "bytes": 256,
+    "hash": "24b5894a",
+    "min": -119,
+    "max": 104,
+    "sum": -5963
+  },
+  {
+    "op": 421,
+    "name": "SUB",
+    "tensor": 728,
+    "bytes": 256,
+    "hash": "9a4b5586",
+    "min": -105,
+    "max": 118,
+    "sum": 5707
+  },
+  {
+    "op": 422,
+    "name": "RESHAPE",
+    "tensor": 729,
+    "bytes": 256,
+    "hash": "a0916d6a",
+    "min": 10,
+    "max": 108,
+    "sum": 15091
+  },
+  {
+    "op": 423,
+    "name": "MUL",
+    "tensor": 730,
+    "bytes": 20480,
+    "hash": "4466735b",
+    "min": -128,
+    "max": 117,
+    "sum": 285558
+  },
+  {
+    "op": 424,
+    "name": "RESHAPE",
+    "tensor": 731,
+    "bytes": 256,
+    "hash": "9a4b5586",
+    "min": -105,
+    "max": 118,
+    "sum": 5707
+  },
+  {
+    "op": 425,
+    "name": "ADD",
+    "tensor": 732,
+    "bytes": 20480,
+    "hash": "ff35c0e5",
+    "min": -128,
+    "max": 117,
+    "sum": 285940
+  },
+  {
+    "op": 426,
+    "name": "FULLY_CONNECTED",
+    "tensor": 733,
+    "bytes": 40960,
+    "hash": "e2d7c326",
+    "min": -128,
+    "max": 127,
+    "sum": 1473773
+  },
+  {
+    "op": 427,
+    "name": "RESHAPE",
+    "tensor": 734,
+    "bytes": 40960,
+    "hash": "e2d7c326",
+    "min": -128,
+    "max": 127,
+    "sum": 1473773
+  },
+  {
+    "op": 428,
+    "name": "LOGISTIC",
+    "tensor": 735,
+    "bytes": 40960,
+    "hash": "0ea433e1",
+    "min": -127,
+    "max": 110,
+    "sum": -790698
+  },
+  {
+    "op": 429,
+    "name": "MUL",
+    "tensor": 736,
+    "bytes": 40960,
+    "hash": "bee8f66d",
+    "min": -128,
+    "max": 126,
+    "sum": -4307686
+  },
+  {
+    "op": 430,
+    "name": "FULLY_CONNECTED",
+    "tensor": 737,
+    "bytes": 20480,
+    "hash": "51221f94",
+    "min": -128,
+    "max": 127,
+    "sum": -136915
+  },
+  {
+    "op": 431,
+    "name": "ADD",
+    "tensor": 738,
+    "bytes": 20480,
+    "hash": "656c5da4",
+    "min": -128,
+    "max": 127,
+    "sum": 205811
+  },
+  {
+    "op": 432,
+    "name": "RESHAPE",
+    "tensor": 739,
+    "bytes": 20480,
+    "hash": "656c5da4",
+    "min": -128,
+    "max": 127,
+    "sum": 205811
+  },
+  {
+    "op": 433,
+    "name": "MEAN",
+    "tensor": 740,
+    "bytes": 256,
+    "hash": "a25d915a",
+    "min": -128,
+    "max": 90,
+    "sum": -5433
+  },
+  {
+    "op": 434,
+    "name": "RESHAPE",
+    "tensor": 741,
+    "bytes": 256,
+    "hash": "a25d915a",
+    "min": -128,
+    "max": 90,
+    "sum": -5433
+  },
+  {
+    "op": 435,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 742,
+    "bytes": 20480,
+    "hash": "4c6a940b",
+    "min": -128,
+    "max": 125,
+    "sum": -2439488
+  },
+  {
+    "op": 436,
+    "name": "MEAN",
+    "tensor": 743,
+    "bytes": 256,
+    "hash": "04b5360d",
+    "min": -26,
+    "max": 127,
+    "sum": 6716
+  },
+  {
+    "op": 437,
+    "name": "ADD",
+    "tensor": 744,
+    "bytes": 256,
+    "hash": "04b5360d",
+    "min": -26,
+    "max": 127,
+    "sum": 6716
+  },
+  {
+    "op": 438,
+    "name": "RSQRT",
+    "tensor": 745,
+    "bytes": 256,
+    "hash": "3e8c2063",
+    "min": 15,
+    "max": 98,
+    "sum": 14768
+  },
+  {
+    "op": 439,
+    "name": "MUL",
+    "tensor": 746,
+    "bytes": 256,
+    "hash": "a90731bb",
+    "min": -128,
+    "max": 84,
+    "sum": -4138
+  },
+  {
+    "op": 440,
+    "name": "SUB",
+    "tensor": 747,
+    "bytes": 256,
+    "hash": "a02c5663",
+    "min": -85,
+    "max": 127,
+    "sum": 3882
+  },
+  {
+    "op": 441,
+    "name": "RESHAPE",
+    "tensor": 748,
+    "bytes": 256,
+    "hash": "3e8c2063",
+    "min": 15,
+    "max": 98,
+    "sum": 14768
+  },
+  {
+    "op": 442,
+    "name": "MUL",
+    "tensor": 749,
+    "bytes": 20480,
+    "hash": "df26ba6d",
+    "min": -128,
+    "max": 117,
+    "sum": 369750
+  },
+  {
+    "op": 443,
+    "name": "RESHAPE",
+    "tensor": 750,
+    "bytes": 256,
+    "hash": "a02c5663",
+    "min": -85,
+    "max": 127,
+    "sum": 3882
+  },
+  {
+    "op": 444,
+    "name": "ADD",
+    "tensor": 751,
+    "bytes": 20480,
+    "hash": "ff8e2952",
+    "min": -128,
+    "max": 117,
+    "sum": 369585
+  },
+  {
+    "op": 445,
+    "name": "FULLY_CONNECTED",
+    "tensor": 752,
+    "bytes": 20480,
+    "hash": "6bb53647",
+    "min": -109,
+    "max": 107,
+    "sum": -17982
+  },
+  {
+    "op": 446,
+    "name": "RESHAPE",
+    "tensor": 753,
+    "bytes": 20480,
+    "hash": "6bb53647",
+    "min": -109,
+    "max": 107,
+    "sum": -17982
+  },
+  {
+    "op": 447,
+    "name": "TRANSPOSE",
+    "tensor": 754,
+    "bytes": 20480,
+    "hash": "161f85d7",
+    "min": -109,
+    "max": 107,
+    "sum": -17982
+  },
+  {
+    "op": 448,
+    "name": "FULLY_CONNECTED",
+    "tensor": 755,
+    "bytes": 20480,
+    "hash": "6e1744f7",
+    "min": -128,
+    "max": 119,
+    "sum": 228418
+  },
+  {
+    "op": 449,
+    "name": "RESHAPE",
+    "tensor": 756,
+    "bytes": 20480,
+    "hash": "6e1744f7",
+    "min": -128,
+    "max": 119,
+    "sum": 228418
+  },
+  {
+    "op": 450,
+    "name": "FULLY_CONNECTED",
+    "tensor": 757,
+    "bytes": 20480,
+    "hash": "eaa98b6e",
+    "min": -128,
+    "max": 125,
+    "sum": -251561
+  },
+  {
+    "op": 451,
+    "name": "RESHAPE",
+    "tensor": 758,
+    "bytes": 20480,
+    "hash": "eaa98b6e",
+    "min": -128,
+    "max": 125,
+    "sum": -251561
+  },
+  {
+    "op": 452,
+    "name": "TRANSPOSE",
+    "tensor": 759,
+    "bytes": 20480,
+    "hash": "6b81c932",
+    "min": -128,
+    "max": 125,
+    "sum": -251561
+  },
+  {
+    "op": 453,
+    "name": "TRANSPOSE",
+    "tensor": 760,
+    "bytes": 20480,
+    "hash": "951197f3",
+    "min": -128,
+    "max": 119,
+    "sum": 228418
+  },
+  {
+    "op": 454,
+    "name": "RESHAPE",
+    "tensor": 761,
+    "bytes": 20480,
+    "hash": "161f85d7",
+    "min": -109,
+    "max": 107,
+    "sum": -17982
+  },
+  {
+    "op": 455,
+    "name": "RESHAPE",
+    "tensor": 762,
+    "bytes": 20480,
+    "hash": "951197f3",
+    "min": -128,
+    "max": 119,
+    "sum": 228418
+  },
+  {
+    "op": 456,
+    "name": "BATCH_MATMUL",
+    "tensor": 763,
+    "bytes": 65536,
+    "hash": "b42b09e7",
+    "min": -128,
+    "max": 127,
+    "sum": -806788
+  },
+  {
+    "op": 457,
+    "name": "MUL",
+    "tensor": 764,
+    "bytes": 65536,
+    "hash": "b42b09e7",
+    "min": -128,
+    "max": 127,
+    "sum": -806788
+  },
+  {
+    "op": 458,
+    "name": "RESHAPE",
+    "tensor": 765,
+    "bytes": 65536,
+    "hash": "b42b09e7",
+    "min": -128,
+    "max": 127,
+    "sum": -806788
+  },
+  {
+    "op": 459,
+    "name": "SOFTMAX",
+    "tensor": 766,
+    "bytes": 65536,
+    "hash": "fa28f252",
+    "min": -128,
+    "max": -7,
+    "sum": -8127131
+  },
+  {
+    "op": 460,
+    "name": "RESHAPE",
+    "tensor": 767,
+    "bytes": 65536,
+    "hash": "fa28f252",
+    "min": -128,
+    "max": -7,
+    "sum": -8127131
+  },
+  {
+    "op": 461,
+    "name": "RESHAPE",
+    "tensor": 768,
+    "bytes": 20480,
+    "hash": "6b81c932",
+    "min": -128,
+    "max": 125,
+    "sum": -251561
+  },
+  {
+    "op": 462,
+    "name": "BATCH_MATMUL",
+    "tensor": 769,
+    "bytes": 20480,
+    "hash": "a428fead",
+    "min": -122,
+    "max": 127,
+    "sum": -707072
+  },
+  {
+    "op": 463,
+    "name": "RESHAPE",
+    "tensor": 770,
+    "bytes": 20480,
+    "hash": "a428fead",
+    "min": -122,
+    "max": 127,
+    "sum": -707072
+  },
+  {
+    "op": 464,
+    "name": "TRANSPOSE",
+    "tensor": 771,
+    "bytes": 20480,
+    "hash": "7f7d7371",
+    "min": -122,
+    "max": 127,
+    "sum": -707072
+  },
+  {
+    "op": 465,
+    "name": "RESHAPE",
+    "tensor": 772,
+    "bytes": 20480,
+    "hash": "7f7d7371",
+    "min": -122,
+    "max": 127,
+    "sum": -707072
+  },
+  {
+    "op": 466,
+    "name": "FULLY_CONNECTED",
+    "tensor": 773,
+    "bytes": 20480,
+    "hash": "da21031c",
+    "min": -123,
+    "max": 127,
+    "sum": 75281
+  },
+  {
+    "op": 467,
+    "name": "ADD",
+    "tensor": 774,
+    "bytes": 20480,
+    "hash": "65fa1bb1",
+    "min": -128,
+    "max": 120,
+    "sum": 333152
+  },
+  {
+    "op": 468,
+    "name": "RESHAPE",
+    "tensor": 775,
+    "bytes": 20480,
+    "hash": "65fa1bb1",
+    "min": -128,
+    "max": 120,
+    "sum": 333152
+  },
+  {
+    "op": 469,
+    "name": "MEAN",
+    "tensor": 776,
+    "bytes": 256,
+    "hash": "e6cfca80",
+    "min": -128,
+    "max": 110,
+    "sum": -2717
+  },
+  {
+    "op": 470,
+    "name": "RESHAPE",
+    "tensor": 777,
+    "bytes": 256,
+    "hash": "e6cfca80",
+    "min": -128,
+    "max": 110,
+    "sum": -2717
+  },
+  {
+    "op": 471,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 778,
+    "bytes": 20480,
+    "hash": "af44dfa2",
+    "min": -128,
+    "max": 127,
+    "sum": -2457713
+  },
+  {
+    "op": 472,
+    "name": "MEAN",
+    "tensor": 779,
+    "bytes": 256,
+    "hash": "65a9f48b",
+    "min": -6,
+    "max": 127,
+    "sum": 8704
+  },
+  {
+    "op": 473,
+    "name": "ADD",
+    "tensor": 780,
+    "bytes": 256,
+    "hash": "65a9f48b",
+    "min": -6,
+    "max": 127,
+    "sum": 8704
+  },
+  {
+    "op": 474,
+    "name": "RSQRT",
+    "tensor": 781,
+    "bytes": 256,
+    "hash": "e4fd82db",
+    "min": 29,
+    "max": 99,
+    "sum": 17878
+  },
+  {
+    "op": 475,
+    "name": "MUL",
+    "tensor": 782,
+    "bytes": 256,
+    "hash": "12492f2d",
+    "min": -128,
+    "max": 99,
+    "sum": -3694
+  },
+  {
+    "op": 476,
+    "name": "SUB",
+    "tensor": 783,
+    "bytes": 256,
+    "hash": "12a93b19",
+    "min": -100,
+    "max": 127,
+    "sum": 3438
+  },
+  {
+    "op": 477,
+    "name": "RESHAPE",
+    "tensor": 784,
+    "bytes": 256,
+    "hash": "e4fd82db",
+    "min": 29,
+    "max": 99,
+    "sum": 17878
+  },
+  {
+    "op": 478,
+    "name": "MUL",
+    "tensor": 785,
+    "bytes": 20480,
+    "hash": "48ac86e3",
+    "min": -128,
+    "max": 119,
+    "sum": 415302
+  },
+  {
+    "op": 479,
+    "name": "RESHAPE",
+    "tensor": 786,
+    "bytes": 256,
+    "hash": "12a93b19",
+    "min": -100,
+    "max": 127,
+    "sum": 3438
+  },
+  {
+    "op": 480,
+    "name": "ADD",
+    "tensor": 787,
+    "bytes": 20480,
+    "hash": "a52bc32d",
+    "min": -128,
+    "max": 120,
+    "sum": 429072
+  },
+  {
+    "op": 481,
+    "name": "FULLY_CONNECTED",
+    "tensor": 788,
+    "bytes": 40960,
+    "hash": "a571233f",
+    "min": -119,
+    "max": 103,
+    "sum": 973152
+  },
+  {
+    "op": 482,
+    "name": "RESHAPE",
+    "tensor": 789,
+    "bytes": 40960,
+    "hash": "a571233f",
+    "min": -119,
+    "max": 103,
+    "sum": 973152
+  },
+  {
+    "op": 483,
+    "name": "LOGISTIC",
+    "tensor": 790,
+    "bytes": 40960,
+    "hash": "66a9b159",
+    "min": -128,
+    "max": 109,
+    "sum": -1340860
+  },
+  {
+    "op": 484,
+    "name": "MUL",
+    "tensor": 791,
+    "bytes": 40960,
+    "hash": "4d9e7197",
+    "min": -128,
+    "max": 54,
+    "sum": -4644328
+  },
+  {
+    "op": 485,
+    "name": "FULLY_CONNECTED",
+    "tensor": 792,
+    "bytes": 20480,
+    "hash": "a6ab06b3",
+    "min": -117,
+    "max": 120,
+    "sum": -755670
+  },
+  {
+    "op": 486,
+    "name": "ADD",
+    "tensor": 793,
+    "bytes": 20480,
+    "hash": "4251aa1c",
+    "min": -128,
+    "max": 107,
+    "sum": 46125
+  },
+  {
+    "op": 487,
+    "name": "RESHAPE",
+    "tensor": 794,
+    "bytes": 20480,
+    "hash": "4251aa1c",
+    "min": -128,
+    "max": 107,
+    "sum": 46125
+  },
+  {
+    "op": 488,
+    "name": "MEAN",
+    "tensor": 795,
+    "bytes": 256,
+    "hash": "3f9b1d6d",
+    "min": -128,
+    "max": 111,
+    "sum": -3188
+  },
+  {
+    "op": 489,
+    "name": "RESHAPE",
+    "tensor": 796,
+    "bytes": 256,
+    "hash": "3f9b1d6d",
+    "min": -128,
+    "max": 111,
+    "sum": -3188
+  },
+  {
+    "op": 490,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 797,
+    "bytes": 20480,
+    "hash": "b7262e80",
+    "min": -128,
+    "max": 116,
+    "sum": -2474421
+  },
+  {
+    "op": 491,
+    "name": "MEAN",
+    "tensor": 798,
+    "bytes": 256,
+    "hash": "aecf1be2",
+    "min": -54,
+    "max": 82,
+    "sum": -351
+  },
+  {
+    "op": 492,
+    "name": "ADD",
+    "tensor": 799,
+    "bytes": 256,
+    "hash": "aecf1be2",
+    "min": -54,
+    "max": 82,
+    "sum": -351
+  },
+  {
+    "op": 493,
+    "name": "RSQRT",
+    "tensor": 800,
+    "bytes": 256,
+    "hash": "8350dad7",
+    "min": 22,
+    "max": 125,
+    "sum": 17488
+  },
+  {
+    "op": 494,
+    "name": "MUL",
+    "tensor": 801,
+    "bytes": 256,
+    "hash": "7ccd0f68",
+    "min": -128,
+    "max": 110,
+    "sum": -1629
+  },
+  {
+    "op": 495,
+    "name": "SUB",
+    "tensor": 802,
+    "bytes": 256,
+    "hash": "37abf880",
+    "min": -111,
+    "max": 127,
+    "sum": 1373
+  },
+  {
+    "op": 496,
+    "name": "RESHAPE",
+    "tensor": 803,
+    "bytes": 256,
+    "hash": "8350dad7",
+    "min": 22,
+    "max": 125,
+    "sum": 17488
+  },
+  {
+    "op": 497,
+    "name": "MUL",
+    "tensor": 804,
+    "bytes": 20480,
+    "hash": "b4874c77",
+    "min": -128,
+    "max": 107,
+    "sum": 87394
+  },
+  {
+    "op": 498,
+    "name": "RESHAPE",
+    "tensor": 805,
+    "bytes": 256,
+    "hash": "37abf880",
+    "min": -111,
+    "max": 127,
+    "sum": 1373
+  },
+  {
+    "op": 499,
+    "name": "ADD",
+    "tensor": 806,
+    "bytes": 20480,
+    "hash": "b7a5bf98",
+    "min": -128,
+    "max": 107,
+    "sum": 101481
+  },
+  {
+    "op": 500,
+    "name": "FULLY_CONNECTED",
+    "tensor": 807,
+    "bytes": 20480,
+    "hash": "909d73e6",
+    "min": -128,
+    "max": 122,
+    "sum": -40095
+  },
+  {
+    "op": 501,
+    "name": "RESHAPE",
+    "tensor": 808,
+    "bytes": 20480,
+    "hash": "909d73e6",
+    "min": -128,
+    "max": 122,
+    "sum": -40095
+  },
+  {
+    "op": 502,
+    "name": "TRANSPOSE",
+    "tensor": 809,
+    "bytes": 20480,
+    "hash": "88eb87da",
+    "min": -128,
+    "max": 122,
+    "sum": -40095
+  },
+  {
+    "op": 503,
+    "name": "FULLY_CONNECTED",
+    "tensor": 810,
+    "bytes": 20480,
+    "hash": "71e432e1",
+    "min": -128,
+    "max": 127,
+    "sum": 164332
+  },
+  {
+    "op": 504,
+    "name": "RESHAPE",
+    "tensor": 811,
+    "bytes": 20480,
+    "hash": "71e432e1",
+    "min": -128,
+    "max": 127,
+    "sum": 164332
+  },
+  {
+    "op": 505,
+    "name": "FULLY_CONNECTED",
+    "tensor": 812,
+    "bytes": 20480,
+    "hash": "d0714730",
+    "min": -128,
+    "max": 127,
+    "sum": 91719
+  },
+  {
+    "op": 506,
+    "name": "RESHAPE",
+    "tensor": 813,
+    "bytes": 20480,
+    "hash": "d0714730",
+    "min": -128,
+    "max": 127,
+    "sum": 91719
+  },
+  {
+    "op": 507,
+    "name": "TRANSPOSE",
+    "tensor": 814,
+    "bytes": 20480,
+    "hash": "296c6c58",
+    "min": -128,
+    "max": 127,
+    "sum": 91719
+  },
+  {
+    "op": 508,
+    "name": "TRANSPOSE",
+    "tensor": 815,
+    "bytes": 20480,
+    "hash": "eb0902a3",
+    "min": -128,
+    "max": 127,
+    "sum": 164332
+  },
+  {
+    "op": 509,
+    "name": "RESHAPE",
+    "tensor": 816,
+    "bytes": 20480,
+    "hash": "88eb87da",
+    "min": -128,
+    "max": 122,
+    "sum": -40095
+  },
+  {
+    "op": 510,
+    "name": "RESHAPE",
+    "tensor": 817,
+    "bytes": 20480,
+    "hash": "eb0902a3",
+    "min": -128,
+    "max": 127,
+    "sum": 164332
+  },
+  {
+    "op": 511,
+    "name": "BATCH_MATMUL",
+    "tensor": 818,
+    "bytes": 65536,
+    "hash": "05e70de8",
+    "min": -128,
+    "max": 127,
+    "sum": -1573795
+  },
+  {
+    "op": 512,
+    "name": "MUL",
+    "tensor": 819,
+    "bytes": 65536,
+    "hash": "05e70de8",
+    "min": -128,
+    "max": 127,
+    "sum": -1573795
+  },
+  {
+    "op": 513,
+    "name": "RESHAPE",
+    "tensor": 820,
+    "bytes": 65536,
+    "hash": "05e70de8",
+    "min": -128,
+    "max": 127,
+    "sum": -1573795
+  },
+  {
+    "op": 514,
+    "name": "SOFTMAX",
+    "tensor": 821,
+    "bytes": 65536,
+    "hash": "a78bf172",
+    "min": -128,
+    "max": 52,
+    "sum": -8127257
+  },
+  {
+    "op": 515,
+    "name": "RESHAPE",
+    "tensor": 822,
+    "bytes": 65536,
+    "hash": "a78bf172",
+    "min": -128,
+    "max": 52,
+    "sum": -8127257
+  },
+  {
+    "op": 516,
+    "name": "RESHAPE",
+    "tensor": 823,
+    "bytes": 20480,
+    "hash": "296c6c58",
+    "min": -128,
+    "max": 127,
+    "sum": 91719
+  },
+  {
+    "op": 517,
+    "name": "BATCH_MATMUL",
+    "tensor": 824,
+    "bytes": 20480,
+    "hash": "93f9b087",
+    "min": -127,
+    "max": 127,
+    "sum": 49336
+  },
+  {
+    "op": 518,
+    "name": "RESHAPE",
+    "tensor": 825,
+    "bytes": 20480,
+    "hash": "93f9b087",
+    "min": -127,
+    "max": 127,
+    "sum": 49336
+  },
+  {
+    "op": 519,
+    "name": "TRANSPOSE",
+    "tensor": 826,
+    "bytes": 20480,
+    "hash": "01881c8f",
+    "min": -127,
+    "max": 127,
+    "sum": 49336
+  },
+  {
+    "op": 520,
+    "name": "RESHAPE",
+    "tensor": 827,
+    "bytes": 20480,
+    "hash": "01881c8f",
+    "min": -127,
+    "max": 127,
+    "sum": 49336
+  },
+  {
+    "op": 521,
+    "name": "FULLY_CONNECTED",
+    "tensor": 828,
+    "bytes": 20480,
+    "hash": "1e763eca",
+    "min": -128,
+    "max": 101,
+    "sum": 290023
+  },
+  {
+    "op": 522,
+    "name": "ADD",
+    "tensor": 829,
+    "bytes": 20480,
+    "hash": "807ca263",
+    "min": -128,
+    "max": 87,
+    "sum": -92
+  },
+  {
+    "op": 523,
+    "name": "RESHAPE",
+    "tensor": 830,
+    "bytes": 20480,
+    "hash": "807ca263",
+    "min": -128,
+    "max": 87,
+    "sum": -92
+  },
+  {
+    "op": 524,
+    "name": "MEAN",
+    "tensor": 831,
+    "bytes": 256,
+    "hash": "6f959d1d",
+    "min": -128,
+    "max": 65,
+    "sum": -10318
+  },
+  {
+    "op": 525,
+    "name": "RESHAPE",
+    "tensor": 832,
+    "bytes": 256,
+    "hash": "6f959d1d",
+    "min": -128,
+    "max": 65,
+    "sum": -10318
+  },
+  {
+    "op": 526,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 833,
+    "bytes": 20480,
+    "hash": "cbd354e4",
+    "min": -128,
+    "max": 108,
+    "sum": -2471051
+  },
+  {
+    "op": 527,
+    "name": "MEAN",
+    "tensor": 834,
+    "bytes": 256,
+    "hash": "2b04402d",
+    "min": -31,
+    "max": 67,
+    "sum": 1968
+  },
+  {
+    "op": 528,
+    "name": "ADD",
+    "tensor": 835,
+    "bytes": 256,
+    "hash": "2b04402d",
+    "min": -31,
+    "max": 67,
+    "sum": 1968
+  },
+  {
+    "op": 529,
+    "name": "RSQRT",
+    "tensor": 836,
+    "bytes": 256,
+    "hash": "5948b5de",
+    "min": 49,
+    "max": 123,
+    "sum": 21781
+  },
+  {
+    "op": 530,
+    "name": "MUL",
+    "tensor": 837,
+    "bytes": 256,
+    "hash": "931e2e03",
+    "min": -128,
+    "max": 74,
+    "sum": -8914
+  },
+  {
+    "op": 531,
+    "name": "SUB",
+    "tensor": 838,
+    "bytes": 256,
+    "hash": "f2ed5cb3",
+    "min": -75,
+    "max": 127,
+    "sum": 8658
+  },
+  {
+    "op": 532,
+    "name": "RESHAPE",
+    "tensor": 839,
+    "bytes": 256,
+    "hash": "5948b5de",
+    "min": 49,
+    "max": 123,
+    "sum": 21781
+  },
+  {
+    "op": 533,
+    "name": "MUL",
+    "tensor": 840,
+    "bytes": 20480,
+    "hash": "77a1e01a",
+    "min": -128,
+    "max": 94,
+    "sum": 122909
+  },
+  {
+    "op": 534,
+    "name": "RESHAPE",
+    "tensor": 841,
+    "bytes": 256,
+    "hash": "f2ed5cb3",
+    "min": -75,
+    "max": 127,
+    "sum": 8658
+  },
+  {
+    "op": 535,
+    "name": "ADD",
+    "tensor": 842,
+    "bytes": 20480,
+    "hash": "feaa81a9",
+    "min": -128,
+    "max": 95,
+    "sum": 144016
+  },
+  {
+    "op": 536,
+    "name": "FULLY_CONNECTED",
+    "tensor": 843,
+    "bytes": 40960,
+    "hash": "3eef6164",
+    "min": -96,
+    "max": 127,
+    "sum": -51085
+  },
+  {
+    "op": 537,
+    "name": "RESHAPE",
+    "tensor": 844,
+    "bytes": 40960,
+    "hash": "3eef6164",
+    "min": -96,
+    "max": 127,
+    "sum": -51085
+  },
+  {
+    "op": 538,
+    "name": "LOGISTIC",
+    "tensor": 845,
+    "bytes": 40960,
+    "hash": "d9603e81",
+    "min": -127,
+    "max": 124,
+    "sum": -2506828
+  },
+  {
+    "op": 539,
+    "name": "MUL",
+    "tensor": 846,
+    "bytes": 40960,
+    "hash": "b58b115d",
+    "min": -128,
+    "max": 127,
+    "sum": -4880778
+  },
+  {
+    "op": 540,
+    "name": "FULLY_CONNECTED",
+    "tensor": 847,
+    "bytes": 20480,
+    "hash": "946f22eb",
+    "min": -128,
+    "max": 127,
+    "sum": -1094382
+  },
+  {
+    "op": 541,
+    "name": "ADD",
+    "tensor": 848,
+    "bytes": 20480,
+    "hash": "9d0a84ce",
+    "min": -128,
+    "max": 118,
+    "sum": -606551
+  },
+  {
+    "op": 542,
+    "name": "RESHAPE",
+    "tensor": 849,
+    "bytes": 20480,
+    "hash": "9d0a84ce",
+    "min": -128,
+    "max": 118,
+    "sum": -606551
+  },
+  {
+    "op": 543,
+    "name": "MEAN",
+    "tensor": 850,
+    "bytes": 256,
+    "hash": "b0b977de",
+    "min": -128,
+    "max": 98,
+    "sum": -2793
+  },
+  {
+    "op": 544,
+    "name": "RESHAPE",
+    "tensor": 851,
+    "bytes": 256,
+    "hash": "b0b977de",
+    "min": -128,
+    "max": 98,
+    "sum": -2793
+  },
+  {
+    "op": 545,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 852,
+    "bytes": 20480,
+    "hash": "bc195ad5",
+    "min": -128,
+    "max": 97,
+    "sum": -2533056
+  },
+  {
+    "op": 546,
+    "name": "MEAN",
+    "tensor": 853,
+    "bytes": 256,
+    "hash": "1b66d757",
+    "min": -77,
+    "max": 125,
+    "sum": -4566
+  },
+  {
+    "op": 547,
+    "name": "ADD",
+    "tensor": 854,
+    "bytes": 256,
+    "hash": "1b66d757",
+    "min": -77,
+    "max": 125,
+    "sum": -4566
+  },
+  {
+    "op": 548,
+    "name": "RSQRT",
+    "tensor": 855,
+    "bytes": 256,
+    "hash": "19082ace",
+    "min": -11,
+    "max": 127,
+    "sum": 15195
+  },
+  {
+    "op": 549,
+    "name": "MUL",
+    "tensor": 856,
+    "bytes": 256,
+    "hash": "a0bb0bc7",
+    "min": -128,
+    "max": 96,
+    "sum": -134
+  },
+  {
+    "op": 550,
+    "name": "SUB",
+    "tensor": 857,
+    "bytes": 256,
+    "hash": "99a8312f",
+    "min": -97,
+    "max": 127,
+    "sum": -122
+  },
+  {
+    "op": 551,
+    "name": "RESHAPE",
+    "tensor": 858,
+    "bytes": 256,
+    "hash": "19082ace",
+    "min": -11,
+    "max": 127,
+    "sum": 15195
+  },
+  {
+    "op": 552,
+    "name": "MUL",
+    "tensor": 859,
+    "bytes": 20480,
+    "hash": "f4072ec8",
+    "min": -128,
+    "max": 118,
+    "sum": -258091
+  },
+  {
+    "op": 553,
+    "name": "RESHAPE",
+    "tensor": 860,
+    "bytes": 256,
+    "hash": "99a8312f",
+    "min": -97,
+    "max": 127,
+    "sum": -122
+  },
+  {
+    "op": 554,
+    "name": "ADD",
+    "tensor": 861,
+    "bytes": 20480,
+    "hash": "e63f8e39",
+    "min": -128,
+    "max": 118,
+    "sum": -266326
+  },
+  {
+    "op": 555,
+    "name": "MUL",
+    "tensor": 862,
+    "bytes": 20480,
+    "hash": "c0251d0d",
+    "min": -128,
+    "max": 110,
+    "sum": -104062
+  },
+  {
+    "op": 556,
+    "name": "ADD",
+    "tensor": 863,
+    "bytes": 20480,
+    "hash": "7a42ee79",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 557,
+    "name": "RESHAPE",
+    "tensor": 864,
+    "bytes": 20480,
+    "hash": "7a42ee79",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 558,
+    "name": "TRANSPOSE",
+    "tensor": 865,
+    "bytes": 20480,
+    "hash": "83ae22cd",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 559,
+    "name": "RESHAPE",
+    "tensor": 866,
+    "bytes": 20480,
+    "hash": "83ae22cd",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 560,
+    "name": "TRANSPOSE",
+    "tensor": 867,
+    "bytes": 20480,
+    "hash": "17822d0d",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 561,
+    "name": "RESHAPE",
+    "tensor": 868,
+    "bytes": 20480,
+    "hash": "17822d0d",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 562,
+    "name": "TRANSPOSE",
+    "tensor": 869,
+    "bytes": 20480,
+    "hash": "2ad3ee41",
+    "min": -128,
+    "max": 127,
+    "sum": 125034
+  },
+  {
+    "op": 563,
+    "name": "CONV_2D",
+    "tensor": 870,
+    "bytes": 16384,
+    "hash": "df596894",
+    "min": -128,
+    "max": 127,
+    "sum": 214473
+  },
+  {
+    "op": 564,
+    "name": "LOGISTIC",
+    "tensor": 871,
+    "bytes": 16384,
+    "hash": "80546d2a",
+    "min": -106,
+    "max": 88,
+    "sum": -141655
+  },
+  {
+    "op": 565,
+    "name": "MUL",
+    "tensor": 872,
+    "bytes": 16384,
+    "hash": "bfb1658e",
+    "min": -44,
+    "max": 126,
+    "sum": -296251
+  },
+  {
+    "op": 566,
+    "name": "QUANTIZE",
+    "tensor": 1094,
+    "bytes": 16384,
+    "hash": "388529e8",
+    "min": -128,
+    "max": 95,
+    "sum": -283091
+  },
+  {
+    "op": 567,
+    "name": "CONCATENATION",
+    "tensor": 873,
+    "bytes": 32768,
+    "hash": "8db859eb",
+    "min": -128,
+    "max": 126,
+    "sum": -579342
+  },
+  {
+    "op": 568,
+    "name": "CONV_2D",
+    "tensor": 874,
+    "bytes": 16384,
+    "hash": "30311c79",
+    "min": -128,
+    "max": 127,
+    "sum": 220898
+  },
+  {
+    "op": 569,
+    "name": "LOGISTIC",
+    "tensor": 875,
+    "bytes": 16384,
+    "hash": "f1f3d3d9",
+    "min": -101,
+    "max": 80,
+    "sum": -150326
+  },
+  {
+    "op": 570,
+    "name": "MUL",
+    "tensor": 876,
+    "bytes": 16384,
+    "hash": "8599855e",
+    "min": -128,
+    "max": 126,
+    "sum": -1409163
+  },
+  {
+    "op": 571,
+    "name": "CONV_2D",
+    "tensor": 877,
+    "bytes": 32768,
+    "hash": "37775c8f",
+    "min": -128,
+    "max": 127,
+    "sum": -724936
+  },
+  {
+    "op": 572,
+    "name": "LOGISTIC",
+    "tensor": 878,
+    "bytes": 32768,
+    "hash": "ab6f8498",
+    "min": -127,
+    "max": 127,
+    "sum": -1144181
+  },
+  {
+    "op": 573,
+    "name": "MUL",
+    "tensor": 879,
+    "bytes": 32768,
+    "hash": "6d0bd57a",
+    "min": -128,
+    "max": 127,
+    "sum": -3973107
+  },
+  {
+    "op": 574,
+    "name": "PAD",
+    "tensor": 880,
+    "bytes": 41472,
+    "hash": "e5535d7a",
+    "min": -128,
+    "max": 127,
+    "sum": -4982771
+  },
+  {
+    "op": 575,
+    "name": "DEPTHWISE_CONV_2D",
+    "tensor": 881,
+    "bytes": 8192,
+    "hash": "a9fce774",
+    "min": -123,
+    "max": 127,
+    "sum": 107613
+  },
+  {
+    "op": 576,
+    "name": "LOGISTIC",
+    "tensor": 882,
+    "bytes": 8192,
+    "hash": "6f096962",
+    "min": -107,
+    "max": 122,
+    "sum": 373797
+  },
+  {
+    "op": 577,
+    "name": "MUL",
+    "tensor": 883,
+    "bytes": 8192,
+    "hash": "228334b9",
+    "min": -128,
+    "max": 127,
+    "sum": -470090
+  },
+  {
+    "op": 578,
+    "name": "CONV_2D",
+    "tensor": 884,
+    "bytes": 5120,
+    "hash": "2cfc7171",
+    "min": -128,
+    "max": 127,
+    "sum": 96202
+  },
+  {
+    "op": 579,
+    "name": "CONV_2D",
+    "tensor": 885,
+    "bytes": 5120,
+    "hash": "0c610c27",
+    "min": -128,
+    "max": 127,
+    "sum": 50612
+  },
+  {
+    "op": 580,
+    "name": "LOGISTIC",
+    "tensor": 886,
+    "bytes": 5120,
+    "hash": "6b6e111e",
+    "min": -105,
+    "max": 103,
+    "sum": 43319
+  },
+  {
+    "op": 581,
+    "name": "MUL",
+    "tensor": 887,
+    "bytes": 5120,
+    "hash": "d72fafd6",
+    "min": -128,
+    "max": 126,
+    "sum": -416885
+  },
+  {
+    "op": 582,
+    "name": "CONV_2D",
+    "tensor": 888,
+    "bytes": 6144,
+    "hash": "fbf3112f",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 583,
+    "name": "TRANSPOSE",
+    "tensor": 889,
+    "bytes": 6144,
+    "hash": "6ce748d3",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 584,
+    "name": "RESHAPE",
+    "tensor": 890,
+    "bytes": 6144,
+    "hash": "6ce748d3",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 585,
+    "name": "TRANSPOSE",
+    "tensor": 891,
+    "bytes": 6144,
+    "hash": "6a6cabb7",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 586,
+    "name": "RESHAPE",
+    "tensor": 892,
+    "bytes": 6144,
+    "hash": "6a6cabb7",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 587,
+    "name": "TRANSPOSE",
+    "tensor": 893,
+    "bytes": 6144,
+    "hash": "8c5b03e7",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 588,
+    "name": "RESHAPE",
+    "tensor": 894,
+    "bytes": 6144,
+    "hash": "8c5b03e7",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 589,
+    "name": "RESHAPE",
+    "tensor": 895,
+    "bytes": 6144,
+    "hash": "8c5b03e7",
+    "min": -128,
+    "max": 127,
+    "sum": 61704
+  },
+  {
+    "op": 590,
+    "name": "MEAN",
+    "tensor": 896,
+    "bytes": 64,
+    "hash": "0e6b6a21",
+    "min": -128,
+    "max": 127,
+    "sum": -1050
+  },
+  {
+    "op": 591,
+    "name": "RESHAPE",
+    "tensor": 897,
+    "bytes": 64,
+    "hash": "0e6b6a21",
+    "min": -128,
+    "max": 127,
+    "sum": -1050
+  },
+  {
+    "op": 592,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 898,
+    "bytes": 6144,
+    "hash": "2cce380c",
+    "min": -128,
+    "max": 112,
+    "sum": -731953
+  },
+  {
+    "op": 593,
+    "name": "MEAN",
+    "tensor": 899,
+    "bytes": 64,
+    "hash": "f113dcb8",
+    "min": -100,
+    "max": 127,
+    "sum": -2731
+  },
+  {
+    "op": 594,
+    "name": "ADD",
+    "tensor": 900,
+    "bytes": 64,
+    "hash": "f113dcb8",
+    "min": -100,
+    "max": 127,
+    "sum": -2731
+  },
+  {
+    "op": 595,
+    "name": "RSQRT",
+    "tensor": 901,
+    "bytes": 64,
+    "hash": "1253d7f5",
+    "min": -46,
+    "max": 119,
+    "sum": 2842
+  },
+  {
+    "op": 596,
+    "name": "MUL",
+    "tensor": 902,
+    "bytes": 64,
+    "hash": "3843e800",
+    "min": -128,
+    "max": 127,
+    "sum": -877
+  },
+  {
+    "op": 597,
+    "name": "SUB",
+    "tensor": 903,
+    "bytes": 64,
+    "hash": "7d3f1ad0",
+    "min": -128,
+    "max": 127,
+    "sum": 813
+  },
+  {
+    "op": 598,
+    "name": "RESHAPE",
+    "tensor": 904,
+    "bytes": 64,
+    "hash": "1253d7f5",
+    "min": -46,
+    "max": 119,
+    "sum": 2842
+  },
+  {
+    "op": 599,
+    "name": "MUL",
+    "tensor": 905,
+    "bytes": 6144,
+    "hash": "dd93a524",
+    "min": -128,
+    "max": 121,
+    "sum": -128823
+  },
+  {
+    "op": 600,
+    "name": "RESHAPE",
+    "tensor": 906,
+    "bytes": 64,
+    "hash": "7d3f1ad0",
+    "min": -128,
+    "max": 127,
+    "sum": 813
+  },
+  {
+    "op": 601,
+    "name": "ADD",
+    "tensor": 907,
+    "bytes": 6144,
+    "hash": "16b6f894",
+    "min": -128,
+    "max": 121,
+    "sum": -129431
+  },
+  {
+    "op": 602,
+    "name": "FULLY_CONNECTED",
+    "tensor": 908,
+    "bytes": 6144,
+    "hash": "921d4019",
+    "min": -128,
+    "max": 103,
+    "sum": 2320
+  },
+  {
+    "op": 603,
+    "name": "RESHAPE",
+    "tensor": 909,
+    "bytes": 6144,
+    "hash": "921d4019",
+    "min": -128,
+    "max": 103,
+    "sum": 2320
+  },
+  {
+    "op": 604,
+    "name": "TRANSPOSE",
+    "tensor": 910,
+    "bytes": 6144,
+    "hash": "eceb2785",
+    "min": -128,
+    "max": 103,
+    "sum": 2320
+  },
+  {
+    "op": 605,
+    "name": "FULLY_CONNECTED",
+    "tensor": 911,
+    "bytes": 6144,
+    "hash": "5d19d8a2",
+    "min": -128,
+    "max": 127,
+    "sum": 11797
+  },
+  {
+    "op": 606,
+    "name": "RESHAPE",
+    "tensor": 912,
+    "bytes": 6144,
+    "hash": "5d19d8a2",
+    "min": -128,
+    "max": 127,
+    "sum": 11797
+  },
+  {
+    "op": 607,
+    "name": "FULLY_CONNECTED",
+    "tensor": 913,
+    "bytes": 6144,
+    "hash": "14a2abb1",
+    "min": -128,
+    "max": 127,
+    "sum": 12074
+  },
+  {
+    "op": 608,
+    "name": "RESHAPE",
+    "tensor": 914,
+    "bytes": 6144,
+    "hash": "14a2abb1",
+    "min": -128,
+    "max": 127,
+    "sum": 12074
+  },
+  {
+    "op": 609,
+    "name": "TRANSPOSE",
+    "tensor": 915,
+    "bytes": 6144,
+    "hash": "d53e85fd",
+    "min": -128,
+    "max": 127,
+    "sum": 12074
+  },
+  {
+    "op": 610,
+    "name": "TRANSPOSE",
+    "tensor": 916,
+    "bytes": 6144,
+    "hash": "a2b8d928",
+    "min": -128,
+    "max": 127,
+    "sum": 11797
+  },
+  {
+    "op": 611,
+    "name": "RESHAPE",
+    "tensor": 917,
+    "bytes": 6144,
+    "hash": "eceb2785",
+    "min": -128,
+    "max": 103,
+    "sum": 2320
+  },
+  {
+    "op": 612,
+    "name": "RESHAPE",
+    "tensor": 918,
+    "bytes": 6144,
+    "hash": "a2b8d928",
+    "min": -128,
+    "max": 127,
+    "sum": 11797
+  },
+  {
+    "op": 613,
+    "name": "BATCH_MATMUL",
+    "tensor": 919,
+    "bytes": 4096,
+    "hash": "fee5c41c",
+    "min": -128,
+    "max": 127,
+    "sum": -112159
+  },
+  {
+    "op": 614,
+    "name": "MUL",
+    "tensor": 920,
+    "bytes": 4096,
+    "hash": "fee5c41c",
+    "min": -128,
+    "max": 127,
+    "sum": -112159
+  },
+  {
+    "op": 615,
+    "name": "RESHAPE",
+    "tensor": 921,
+    "bytes": 4096,
+    "hash": "fee5c41c",
+    "min": -128,
+    "max": 127,
+    "sum": -112159
+  },
+  {
+    "op": 616,
+    "name": "SOFTMAX",
+    "tensor": 922,
+    "bytes": 4096,
+    "hash": "9467bff6",
+    "min": -128,
+    "max": 63,
+    "sum": -458785
+  },
+  {
+    "op": 617,
+    "name": "RESHAPE",
+    "tensor": 923,
+    "bytes": 4096,
+    "hash": "9467bff6",
+    "min": -128,
+    "max": 63,
+    "sum": -458785
+  },
+  {
+    "op": 618,
+    "name": "RESHAPE",
+    "tensor": 924,
+    "bytes": 6144,
+    "hash": "d53e85fd",
+    "min": -128,
+    "max": 127,
+    "sum": 12074
+  },
+  {
+    "op": 619,
+    "name": "BATCH_MATMUL",
+    "tensor": 925,
+    "bytes": 6144,
+    "hash": "24cf5a75",
+    "min": -128,
+    "max": 127,
+    "sum": -32724
+  },
+  {
+    "op": 620,
+    "name": "RESHAPE",
+    "tensor": 926,
+    "bytes": 6144,
+    "hash": "24cf5a75",
+    "min": -128,
+    "max": 127,
+    "sum": -32724
+  },
+  {
+    "op": 621,
+    "name": "TRANSPOSE",
+    "tensor": 927,
+    "bytes": 6144,
+    "hash": "dbc82951",
+    "min": -128,
+    "max": 127,
+    "sum": -32724
+  },
+  {
+    "op": 622,
+    "name": "RESHAPE",
+    "tensor": 928,
+    "bytes": 6144,
+    "hash": "dbc82951",
+    "min": -128,
+    "max": 127,
+    "sum": -32724
+  },
+  {
+    "op": 623,
+    "name": "FULLY_CONNECTED",
+    "tensor": 929,
+    "bytes": 6144,
+    "hash": "e1e7cbc5",
+    "min": -128,
+    "max": 127,
+    "sum": 179754
+  },
+  {
+    "op": 624,
+    "name": "ADD",
+    "tensor": 930,
+    "bytes": 6144,
+    "hash": "9a9227be",
+    "min": -128,
+    "max": 127,
+    "sum": 77997
+  },
+  {
+    "op": 625,
+    "name": "RESHAPE",
+    "tensor": 931,
+    "bytes": 6144,
+    "hash": "9a9227be",
+    "min": -128,
+    "max": 127,
+    "sum": 77997
+  },
+  {
+    "op": 626,
+    "name": "MEAN",
+    "tensor": 932,
+    "bytes": 64,
+    "hash": "c78e88c6",
+    "min": -128,
+    "max": 127,
+    "sum": -1893
+  },
+  {
+    "op": 627,
+    "name": "RESHAPE",
+    "tensor": 933,
+    "bytes": 64,
+    "hash": "c78e88c6",
+    "min": -128,
+    "max": 127,
+    "sum": -1893
+  },
+  {
+    "op": 628,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 934,
+    "bytes": 6144,
+    "hash": "b7c08f62",
+    "min": -128,
+    "max": 114,
+    "sum": -724405
+  },
+  {
+    "op": 629,
+    "name": "MEAN",
+    "tensor": 935,
+    "bytes": 64,
+    "hash": "a86105cb",
+    "min": -80,
+    "max": 127,
+    "sum": -1462
+  },
+  {
+    "op": 630,
+    "name": "ADD",
+    "tensor": 936,
+    "bytes": 64,
+    "hash": "a86105cb",
+    "min": -80,
+    "max": 127,
+    "sum": -1462
+  },
+  {
+    "op": 631,
+    "name": "RSQRT",
+    "tensor": 937,
+    "bytes": 64,
+    "hash": "0e69bdcd",
+    "min": -33,
+    "max": 92,
+    "sum": 2406
+  },
+  {
+    "op": 632,
+    "name": "MUL",
+    "tensor": 938,
+    "bytes": 64,
+    "hash": "2c366c21",
+    "min": -113,
+    "max": 108,
+    "sum": -1758
+  },
+  {
+    "op": 633,
+    "name": "SUB",
+    "tensor": 939,
+    "bytes": 64,
+    "hash": "97e2933d",
+    "min": -109,
+    "max": 112,
+    "sum": 1694
+  },
+  {
+    "op": 634,
+    "name": "RESHAPE",
+    "tensor": 940,
+    "bytes": 64,
+    "hash": "0e69bdcd",
+    "min": -33,
+    "max": 92,
+    "sum": 2406
+  },
+  {
+    "op": 635,
+    "name": "MUL",
+    "tensor": 941,
+    "bytes": 6144,
+    "hash": "93322eac",
+    "min": -128,
+    "max": 115,
+    "sum": -26633
+  },
+  {
+    "op": 636,
+    "name": "RESHAPE",
+    "tensor": 942,
+    "bytes": 64,
+    "hash": "97e2933d",
+    "min": -109,
+    "max": 112,
+    "sum": 1694
+  },
+  {
+    "op": 637,
+    "name": "ADD",
+    "tensor": 943,
+    "bytes": 6144,
+    "hash": "e4cf5be9",
+    "min": -128,
+    "max": 115,
+    "sum": -25316
+  },
+  {
+    "op": 638,
+    "name": "FULLY_CONNECTED",
+    "tensor": 944,
+    "bytes": 12288,
+    "hash": "d762c86f",
+    "min": -128,
+    "max": 127,
+    "sum": 84300
+  },
+  {
+    "op": 639,
+    "name": "RESHAPE",
+    "tensor": 945,
+    "bytes": 12288,
+    "hash": "d762c86f",
+    "min": -128,
+    "max": 127,
+    "sum": 84300
+  },
+  {
+    "op": 640,
+    "name": "LOGISTIC",
+    "tensor": 946,
+    "bytes": 12288,
+    "hash": "a8a2f882",
+    "min": -128,
+    "max": 107,
+    "sum": -970843
+  },
+  {
+    "op": 641,
+    "name": "MUL",
+    "tensor": 947,
+    "bytes": 12288,
+    "hash": "12a921aa",
+    "min": -128,
+    "max": 126,
+    "sum": -1433929
+  },
+  {
+    "op": 642,
+    "name": "FULLY_CONNECTED",
+    "tensor": 948,
+    "bytes": 6144,
+    "hash": "07b77a6b",
+    "min": -122,
+    "max": 115,
+    "sum": -414210
+  },
+  {
+    "op": 643,
+    "name": "ADD",
+    "tensor": 949,
+    "bytes": 6144,
+    "hash": "014f5886",
+    "min": -128,
+    "max": 117,
+    "sum": -225923
+  },
+  {
+    "op": 644,
+    "name": "RESHAPE",
+    "tensor": 950,
+    "bytes": 6144,
+    "hash": "014f5886",
+    "min": -128,
+    "max": 117,
+    "sum": -225923
+  },
+  {
+    "op": 645,
+    "name": "MEAN",
+    "tensor": 951,
+    "bytes": 64,
+    "hash": "974eb4ff",
+    "min": -128,
+    "max": 119,
+    "sum": -636
+  },
+  {
+    "op": 646,
+    "name": "RESHAPE",
+    "tensor": 952,
+    "bytes": 64,
+    "hash": "974eb4ff",
+    "min": -128,
+    "max": 119,
+    "sum": -636
+  },
+  {
+    "op": 647,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 953,
+    "bytes": 6144,
+    "hash": "1a789b2a",
+    "min": -128,
+    "max": 93,
+    "sum": -754423
+  },
+  {
+    "op": 648,
+    "name": "MEAN",
+    "tensor": 954,
+    "bytes": 64,
+    "hash": "125a9b4b",
+    "min": -72,
+    "max": 127,
+    "sum": -324
+  },
+  {
+    "op": 649,
+    "name": "ADD",
+    "tensor": 955,
+    "bytes": 64,
+    "hash": "125a9b4b",
+    "min": -72,
+    "max": 127,
+    "sum": -324
+  },
+  {
+    "op": 650,
+    "name": "RSQRT",
+    "tensor": 956,
+    "bytes": 64,
+    "hash": "7ad6857d",
+    "min": -20,
+    "max": 102,
+    "sum": 2278
+  },
+  {
+    "op": 651,
+    "name": "MUL",
+    "tensor": 957,
+    "bytes": 64,
+    "hash": "724f2c79",
+    "min": -128,
+    "max": 127,
+    "sum": -44
+  },
+  {
+    "op": 652,
+    "name": "SUB",
+    "tensor": 958,
+    "bytes": 64,
+    "hash": "4e6144e1",
+    "min": -128,
+    "max": 127,
+    "sum": -20
+  },
+  {
+    "op": 653,
+    "name": "RESHAPE",
+    "tensor": 959,
+    "bytes": 64,
+    "hash": "7ad6857d",
+    "min": -20,
+    "max": 102,
+    "sum": 2278
+  },
+  {
+    "op": 654,
+    "name": "MUL",
+    "tensor": 960,
+    "bytes": 6144,
+    "hash": "b3f8dfa1",
+    "min": -128,
+    "max": 116,
+    "sum": -262268
+  },
+  {
+    "op": 655,
+    "name": "RESHAPE",
+    "tensor": 961,
+    "bytes": 64,
+    "hash": "4e6144e1",
+    "min": -128,
+    "max": 127,
+    "sum": -20
+  },
+  {
+    "op": 656,
+    "name": "ADD",
+    "tensor": 962,
+    "bytes": 6144,
+    "hash": "ed334883",
+    "min": -128,
+    "max": 116,
+    "sum": -258708
+  },
+  {
+    "op": 657,
+    "name": "FULLY_CONNECTED",
+    "tensor": 963,
+    "bytes": 6144,
+    "hash": "f7875be6",
+    "min": -128,
+    "max": 127,
+    "sum": 21079
+  },
+  {
+    "op": 658,
+    "name": "RESHAPE",
+    "tensor": 964,
+    "bytes": 6144,
+    "hash": "f7875be6",
+    "min": -128,
+    "max": 127,
+    "sum": 21079
+  },
+  {
+    "op": 659,
+    "name": "TRANSPOSE",
+    "tensor": 965,
+    "bytes": 6144,
+    "hash": "765313e2",
+    "min": -128,
+    "max": 127,
+    "sum": 21079
+  },
+  {
+    "op": 660,
+    "name": "FULLY_CONNECTED",
+    "tensor": 966,
+    "bytes": 6144,
+    "hash": "52b15a74",
+    "min": -128,
+    "max": 117,
+    "sum": -44225
+  },
+  {
+    "op": 661,
+    "name": "RESHAPE",
+    "tensor": 967,
+    "bytes": 6144,
+    "hash": "52b15a74",
+    "min": -128,
+    "max": 117,
+    "sum": -44225
+  },
+  {
+    "op": 662,
+    "name": "FULLY_CONNECTED",
+    "tensor": 968,
+    "bytes": 6144,
+    "hash": "1473ad14",
+    "min": -128,
+    "max": 124,
+    "sum": -19367
+  },
+  {
+    "op": 663,
+    "name": "RESHAPE",
+    "tensor": 969,
+    "bytes": 6144,
+    "hash": "1473ad14",
+    "min": -128,
+    "max": 124,
+    "sum": -19367
+  },
+  {
+    "op": 664,
+    "name": "TRANSPOSE",
+    "tensor": 970,
+    "bytes": 6144,
+    "hash": "6d4c8130",
+    "min": -128,
+    "max": 124,
+    "sum": -19367
+  },
+  {
+    "op": 665,
+    "name": "TRANSPOSE",
+    "tensor": 971,
+    "bytes": 6144,
+    "hash": "a4dec320",
+    "min": -128,
+    "max": 117,
+    "sum": -44225
+  },
+  {
+    "op": 666,
+    "name": "RESHAPE",
+    "tensor": 972,
+    "bytes": 6144,
+    "hash": "765313e2",
+    "min": -128,
+    "max": 127,
+    "sum": 21079
+  },
+  {
+    "op": 667,
+    "name": "RESHAPE",
+    "tensor": 973,
+    "bytes": 6144,
+    "hash": "a4dec320",
+    "min": -128,
+    "max": 117,
+    "sum": -44225
+  },
+  {
+    "op": 668,
+    "name": "BATCH_MATMUL",
+    "tensor": 974,
+    "bytes": 4096,
+    "hash": "00610086",
+    "min": -103,
+    "max": 127,
+    "sum": -85259
+  },
+  {
+    "op": 669,
+    "name": "MUL",
+    "tensor": 975,
+    "bytes": 4096,
+    "hash": "00610086",
+    "min": -103,
+    "max": 127,
+    "sum": -85259
+  },
+  {
+    "op": 670,
+    "name": "RESHAPE",
+    "tensor": 976,
+    "bytes": 4096,
+    "hash": "00610086",
+    "min": -103,
+    "max": 127,
+    "sum": -85259
+  },
+  {
+    "op": 671,
+    "name": "SOFTMAX",
+    "tensor": 977,
+    "bytes": 4096,
+    "hash": "1e2ad523",
+    "min": -128,
+    "max": 76,
+    "sum": -458766
+  },
+  {
+    "op": 672,
+    "name": "RESHAPE",
+    "tensor": 978,
+    "bytes": 4096,
+    "hash": "1e2ad523",
+    "min": -128,
+    "max": 76,
+    "sum": -458766
+  },
+  {
+    "op": 673,
+    "name": "RESHAPE",
+    "tensor": 979,
+    "bytes": 6144,
+    "hash": "6d4c8130",
+    "min": -128,
+    "max": 124,
+    "sum": -19367
+  },
+  {
+    "op": 674,
+    "name": "BATCH_MATMUL",
+    "tensor": 980,
+    "bytes": 6144,
+    "hash": "e1a07346",
+    "min": -128,
+    "max": 127,
+    "sum": 20927
+  },
+  {
+    "op": 675,
+    "name": "RESHAPE",
+    "tensor": 981,
+    "bytes": 6144,
+    "hash": "e1a07346",
+    "min": -128,
+    "max": 127,
+    "sum": 20927
+  },
+  {
+    "op": 676,
+    "name": "TRANSPOSE",
+    "tensor": 982,
+    "bytes": 6144,
+    "hash": "835239c2",
+    "min": -128,
+    "max": 127,
+    "sum": 20927
+  },
+  {
+    "op": 677,
+    "name": "RESHAPE",
+    "tensor": 983,
+    "bytes": 6144,
+    "hash": "835239c2",
+    "min": -128,
+    "max": 127,
+    "sum": 20927
+  },
+  {
+    "op": 678,
+    "name": "FULLY_CONNECTED",
+    "tensor": 984,
+    "bytes": 6144,
+    "hash": "1f190aec",
+    "min": -128,
+    "max": 127,
+    "sum": 56683
+  },
+  {
+    "op": 679,
+    "name": "ADD",
+    "tensor": 985,
+    "bytes": 6144,
+    "hash": "136b81d1",
+    "min": -128,
+    "max": 120,
+    "sum": -108618
+  },
+  {
+    "op": 680,
+    "name": "RESHAPE",
+    "tensor": 986,
+    "bytes": 6144,
+    "hash": "136b81d1",
+    "min": -128,
+    "max": 120,
+    "sum": -108618
+  },
+  {
+    "op": 681,
+    "name": "MEAN",
+    "tensor": 987,
+    "bytes": 64,
+    "hash": "225bbb8f",
+    "min": -128,
+    "max": 127,
+    "sum": 428
+  },
+  {
+    "op": 682,
+    "name": "RESHAPE",
+    "tensor": 988,
+    "bytes": 64,
+    "hash": "225bbb8f",
+    "min": -128,
+    "max": 127,
+    "sum": 428
+  },
+  {
+    "op": 683,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 989,
+    "bytes": 6144,
+    "hash": "659ff268",
+    "min": -128,
+    "max": 92,
+    "sum": -730507
+  },
+  {
+    "op": 684,
+    "name": "MEAN",
+    "tensor": 990,
+    "bytes": 64,
+    "hash": "661ae0e5",
+    "min": -55,
+    "max": 127,
+    "sum": 436
+  },
+  {
+    "op": 685,
+    "name": "ADD",
+    "tensor": 991,
+    "bytes": 64,
+    "hash": "661ae0e5",
+    "min": -55,
+    "max": 127,
+    "sum": 436
+  },
+  {
+    "op": 686,
+    "name": "RSQRT",
+    "tensor": 992,
+    "bytes": 64,
+    "hash": "506a552b",
+    "min": 8,
+    "max": 125,
+    "sum": 4228
+  },
+  {
+    "op": 687,
+    "name": "MUL",
+    "tensor": 993,
+    "bytes": 64,
+    "hash": "114e46bc",
+    "min": -123,
+    "max": 127,
+    "sum": 1045
+  },
+  {
+    "op": 688,
+    "name": "SUB",
+    "tensor": 994,
+    "bytes": 64,
+    "hash": "f9ed5cbc",
+    "min": -128,
+    "max": 122,
+    "sum": -1109
+  },
+  {
+    "op": 689,
+    "name": "RESHAPE",
+    "tensor": 995,
+    "bytes": 64,
+    "hash": "506a552b",
+    "min": 8,
+    "max": 125,
+    "sum": 4228
+  },
+  {
+    "op": 690,
+    "name": "MUL",
+    "tensor": 996,
+    "bytes": 6144,
+    "hash": "3a53f1d6",
+    "min": -128,
+    "max": 127,
+    "sum": -138631
+  },
+  {
+    "op": 691,
+    "name": "RESHAPE",
+    "tensor": 997,
+    "bytes": 64,
+    "hash": "f9ed5cbc",
+    "min": -128,
+    "max": 122,
+    "sum": -1109
+  },
+  {
+    "op": 692,
+    "name": "ADD",
+    "tensor": 998,
+    "bytes": 6144,
+    "hash": "75968d13",
+    "min": -128,
+    "max": 126,
+    "sum": -141304
+  },
+  {
+    "op": 693,
+    "name": "FULLY_CONNECTED",
+    "tensor": 999,
+    "bytes": 12288,
+    "hash": "65b77328",
+    "min": -128,
+    "max": 107,
+    "sum": -8083
+  },
+  {
+    "op": 694,
+    "name": "RESHAPE",
+    "tensor": 1000,
+    "bytes": 12288,
+    "hash": "65b77328",
+    "min": -128,
+    "max": 107,
+    "sum": -8083
+  },
+  {
+    "op": 695,
+    "name": "LOGISTIC",
+    "tensor": 1001,
+    "bytes": 12288,
+    "hash": "cbc20550",
+    "min": -128,
+    "max": 116,
+    "sum": -945661
+  },
+  {
+    "op": 696,
+    "name": "MUL",
+    "tensor": 1002,
+    "bytes": 12288,
+    "hash": "fda2ca90",
+    "min": -128,
+    "max": 67,
+    "sum": -1474549
+  },
+  {
+    "op": 697,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1003,
+    "bytes": 6144,
+    "hash": "ee2a5022",
+    "min": -100,
+    "max": 126,
+    "sum": -31753
+  },
+  {
+    "op": 698,
+    "name": "ADD",
+    "tensor": 1004,
+    "bytes": 6144,
+    "hash": "bfb553a3",
+    "min": -121,
+    "max": 123,
+    "sum": -155818
+  },
+  {
+    "op": 699,
+    "name": "RESHAPE",
+    "tensor": 1005,
+    "bytes": 6144,
+    "hash": "bfb553a3",
+    "min": -121,
+    "max": 123,
+    "sum": -155818
+  },
+  {
+    "op": 700,
+    "name": "MEAN",
+    "tensor": 1006,
+    "bytes": 64,
+    "hash": "413705d3",
+    "min": -128,
+    "max": 127,
+    "sum": 836
+  },
+  {
+    "op": 701,
+    "name": "RESHAPE",
+    "tensor": 1007,
+    "bytes": 64,
+    "hash": "413705d3",
+    "min": -128,
+    "max": 127,
+    "sum": 836
+  },
+  {
+    "op": 702,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 1008,
+    "bytes": 6144,
+    "hash": "e6b719eb",
+    "min": -128,
+    "max": 110,
+    "sum": -758212
+  },
+  {
+    "op": 703,
+    "name": "MEAN",
+    "tensor": 1009,
+    "bytes": 64,
+    "hash": "d07d859b",
+    "min": -84,
+    "max": 53,
+    "sum": -2924
+  },
+  {
+    "op": 704,
+    "name": "ADD",
+    "tensor": 1010,
+    "bytes": 64,
+    "hash": "d07d859b",
+    "min": -84,
+    "max": 53,
+    "sum": -2924
+  },
+  {
+    "op": 705,
+    "name": "RSQRT",
+    "tensor": 1011,
+    "bytes": 64,
+    "hash": "d46247f2",
+    "min": 6,
+    "max": 127,
+    "sum": 5043
+  },
+  {
+    "op": 706,
+    "name": "MUL",
+    "tensor": 1012,
+    "bytes": 64,
+    "hash": "4e2faedf",
+    "min": -128,
+    "max": 127,
+    "sum": 2528
+  },
+  {
+    "op": 707,
+    "name": "SUB",
+    "tensor": 1013,
+    "bytes": 64,
+    "hash": "bb67afff",
+    "min": -128,
+    "max": 127,
+    "sum": -2592
+  },
+  {
+    "op": 708,
+    "name": "RESHAPE",
+    "tensor": 1014,
+    "bytes": 64,
+    "hash": "d46247f2",
+    "min": 6,
+    "max": 127,
+    "sum": 5043
+  },
+  {
+    "op": 709,
+    "name": "MUL",
+    "tensor": 1015,
+    "bytes": 6144,
+    "hash": "426dd801",
+    "min": -128,
+    "max": 127,
+    "sum": -240226
+  },
+  {
+    "op": 710,
+    "name": "RESHAPE",
+    "tensor": 1016,
+    "bytes": 64,
+    "hash": "bb67afff",
+    "min": -128,
+    "max": 127,
+    "sum": -2592
+  },
+  {
+    "op": 711,
+    "name": "ADD",
+    "tensor": 1017,
+    "bytes": 6144,
+    "hash": "2e85a8bf",
+    "min": -128,
+    "max": 126,
+    "sum": -244790
+  },
+  {
+    "op": 712,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1018,
+    "bytes": 6144,
+    "hash": "29c9cd46",
+    "min": -123,
+    "max": 118,
+    "sum": -28089
+  },
+  {
+    "op": 713,
+    "name": "RESHAPE",
+    "tensor": 1019,
+    "bytes": 6144,
+    "hash": "29c9cd46",
+    "min": -123,
+    "max": 118,
+    "sum": -28089
+  },
+  {
+    "op": 714,
+    "name": "TRANSPOSE",
+    "tensor": 1020,
+    "bytes": 6144,
+    "hash": "6aaf8142",
+    "min": -123,
+    "max": 118,
+    "sum": -28089
+  },
+  {
+    "op": 715,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1021,
+    "bytes": 6144,
+    "hash": "92d1e190",
+    "min": -117,
+    "max": 127,
+    "sum": 3735
+  },
+  {
+    "op": 716,
+    "name": "RESHAPE",
+    "tensor": 1022,
+    "bytes": 6144,
+    "hash": "92d1e190",
+    "min": -117,
+    "max": 127,
+    "sum": 3735
+  },
+  {
+    "op": 717,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1023,
+    "bytes": 6144,
+    "hash": "963a53fd",
+    "min": -102,
+    "max": 123,
+    "sum": 105068
+  },
+  {
+    "op": 718,
+    "name": "RESHAPE",
+    "tensor": 1024,
+    "bytes": 6144,
+    "hash": "963a53fd",
+    "min": -102,
+    "max": 123,
+    "sum": 105068
+  },
+  {
+    "op": 719,
+    "name": "TRANSPOSE",
+    "tensor": 1025,
+    "bytes": 6144,
+    "hash": "4c022839",
+    "min": -102,
+    "max": 123,
+    "sum": 105068
+  },
+  {
+    "op": 720,
+    "name": "TRANSPOSE",
+    "tensor": 1026,
+    "bytes": 6144,
+    "hash": "e0544d72",
+    "min": -117,
+    "max": 127,
+    "sum": 3735
+  },
+  {
+    "op": 721,
+    "name": "RESHAPE",
+    "tensor": 1027,
+    "bytes": 6144,
+    "hash": "6aaf8142",
+    "min": -123,
+    "max": 118,
+    "sum": -28089
+  },
+  {
+    "op": 722,
+    "name": "RESHAPE",
+    "tensor": 1028,
+    "bytes": 6144,
+    "hash": "e0544d72",
+    "min": -117,
+    "max": 127,
+    "sum": 3735
+  },
+  {
+    "op": 723,
+    "name": "BATCH_MATMUL",
+    "tensor": 1029,
+    "bytes": 4096,
+    "hash": "4fbc0e64",
+    "min": -128,
+    "max": 113,
+    "sum": -115185
+  },
+  {
+    "op": 724,
+    "name": "MUL",
+    "tensor": 1030,
+    "bytes": 4096,
+    "hash": "4fbc0e64",
+    "min": -128,
+    "max": 113,
+    "sum": -115185
+  },
+  {
+    "op": 725,
+    "name": "RESHAPE",
+    "tensor": 1031,
+    "bytes": 4096,
+    "hash": "4fbc0e64",
+    "min": -128,
+    "max": 113,
+    "sum": -115185
+  },
+  {
+    "op": 726,
+    "name": "SOFTMAX",
+    "tensor": 1032,
+    "bytes": 4096,
+    "hash": "d47ba031",
+    "min": -128,
+    "max": 52,
+    "sum": -458812
+  },
+  {
+    "op": 727,
+    "name": "RESHAPE",
+    "tensor": 1033,
+    "bytes": 4096,
+    "hash": "d47ba031",
+    "min": -128,
+    "max": 52,
+    "sum": -458812
+  },
+  {
+    "op": 728,
+    "name": "RESHAPE",
+    "tensor": 1034,
+    "bytes": 6144,
+    "hash": "4c022839",
+    "min": -102,
+    "max": 123,
+    "sum": 105068
+  },
+  {
+    "op": 729,
+    "name": "BATCH_MATMUL",
+    "tensor": 1035,
+    "bytes": 6144,
+    "hash": "25a5da28",
+    "min": -109,
+    "max": 127,
+    "sum": 96871
+  },
+  {
+    "op": 730,
+    "name": "RESHAPE",
+    "tensor": 1036,
+    "bytes": 6144,
+    "hash": "25a5da28",
+    "min": -109,
+    "max": 127,
+    "sum": 96871
+  },
+  {
+    "op": 731,
+    "name": "TRANSPOSE",
+    "tensor": 1037,
+    "bytes": 6144,
+    "hash": "33121a18",
+    "min": -109,
+    "max": 127,
+    "sum": 96871
+  },
+  {
+    "op": 732,
+    "name": "RESHAPE",
+    "tensor": 1038,
+    "bytes": 6144,
+    "hash": "33121a18",
+    "min": -109,
+    "max": 127,
+    "sum": 96871
+  },
+  {
+    "op": 733,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1039,
+    "bytes": 6144,
+    "hash": "ce485c0f",
+    "min": -128,
+    "max": 102,
+    "sum": -91580
+  },
+  {
+    "op": 734,
+    "name": "ADD",
+    "tensor": 1040,
+    "bytes": 6144,
+    "hash": "0a4232de",
+    "min": -114,
+    "max": 106,
+    "sum": -174995
+  },
+  {
+    "op": 735,
+    "name": "RESHAPE",
+    "tensor": 1041,
+    "bytes": 6144,
+    "hash": "0a4232de",
+    "min": -114,
+    "max": 106,
+    "sum": -174995
+  },
+  {
+    "op": 736,
+    "name": "MEAN",
+    "tensor": 1042,
+    "bytes": 64,
+    "hash": "aba712aa",
+    "min": -128,
+    "max": 122,
+    "sum": -259
+  },
+  {
+    "op": 737,
+    "name": "RESHAPE",
+    "tensor": 1043,
+    "bytes": 64,
+    "hash": "aba712aa",
+    "min": -128,
+    "max": 122,
+    "sum": -259
+  },
+  {
+    "op": 738,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 1044,
+    "bytes": 6144,
+    "hash": "2012a3f0",
+    "min": -128,
+    "max": 59,
+    "sum": -755559
+  },
+  {
+    "op": 739,
+    "name": "MEAN",
+    "tensor": 1045,
+    "bytes": 64,
+    "hash": "3f0e44df",
+    "min": -44,
+    "max": 64,
+    "sum": -890
+  },
+  {
+    "op": 740,
+    "name": "ADD",
+    "tensor": 1046,
+    "bytes": 64,
+    "hash": "3f0e44df",
+    "min": -44,
+    "max": 64,
+    "sum": -890
+  },
+  {
+    "op": 741,
+    "name": "RSQRT",
+    "tensor": 1047,
+    "bytes": 64,
+    "hash": "6c9901e7",
+    "min": 60,
+    "max": 127,
+    "sum": 7354
+  },
+  {
+    "op": 742,
+    "name": "MUL",
+    "tensor": 1048,
+    "bytes": 64,
+    "hash": "d9a6fcee",
+    "min": -128,
+    "max": 127,
+    "sum": 1295
+  },
+  {
+    "op": 743,
+    "name": "SUB",
+    "tensor": 1049,
+    "bytes": 64,
+    "hash": "468090ce",
+    "min": -128,
+    "max": 127,
+    "sum": -1359
+  },
+  {
+    "op": 744,
+    "name": "RESHAPE",
+    "tensor": 1050,
+    "bytes": 64,
+    "hash": "6c9901e7",
+    "min": 60,
+    "max": 127,
+    "sum": 7354
+  },
+  {
+    "op": 745,
+    "name": "MUL",
+    "tensor": 1051,
+    "bytes": 6144,
+    "hash": "a6f42a89",
+    "min": -128,
+    "max": 124,
+    "sum": -235454
+  },
+  {
+    "op": 746,
+    "name": "RESHAPE",
+    "tensor": 1052,
+    "bytes": 64,
+    "hash": "468090ce",
+    "min": -128,
+    "max": 127,
+    "sum": -1359
+  },
+  {
+    "op": 747,
+    "name": "ADD",
+    "tensor": 1053,
+    "bytes": 6144,
+    "hash": "7b722d18",
+    "min": -127,
+    "max": 124,
+    "sum": -233351
+  },
+  {
+    "op": 748,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1054,
+    "bytes": 12288,
+    "hash": "6cc170b9",
+    "min": -93,
+    "max": 127,
+    "sum": 94968
+  },
+  {
+    "op": 749,
+    "name": "RESHAPE",
+    "tensor": 1055,
+    "bytes": 12288,
+    "hash": "6cc170b9",
+    "min": -93,
+    "max": 127,
+    "sum": 94968
+  },
+  {
+    "op": 750,
+    "name": "LOGISTIC",
+    "tensor": 1056,
+    "bytes": 12288,
+    "hash": "fb8b675b",
+    "min": -128,
+    "max": 122,
+    "sum": -962384
+  },
+  {
+    "op": 751,
+    "name": "MUL",
+    "tensor": 1057,
+    "bytes": 12288,
+    "hash": "94b17173",
+    "min": -128,
+    "max": 127,
+    "sum": -1456992
+  },
+  {
+    "op": 752,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1058,
+    "bytes": 6144,
+    "hash": "82d24d0f",
+    "min": -126,
+    "max": 84,
+    "sum": -340786
+  },
+  {
+    "op": 753,
+    "name": "ADD",
+    "tensor": 1059,
+    "bytes": 6144,
+    "hash": "60753641",
+    "min": -119,
+    "max": 91,
+    "sum": -328174
+  },
+  {
+    "op": 754,
+    "name": "RESHAPE",
+    "tensor": 1060,
+    "bytes": 6144,
+    "hash": "60753641",
+    "min": -119,
+    "max": 91,
+    "sum": -328174
+  },
+  {
+    "op": 755,
+    "name": "MEAN",
+    "tensor": 1061,
+    "bytes": 64,
+    "hash": "ee476512",
+    "min": -128,
+    "max": 127,
+    "sum": -587
+  },
+  {
+    "op": 756,
+    "name": "RESHAPE",
+    "tensor": 1062,
+    "bytes": 64,
+    "hash": "ee476512",
+    "min": -128,
+    "max": 127,
+    "sum": -587
+  },
+  {
+    "op": 757,
+    "name": "SQUARED_DIFFERENCE",
+    "tensor": 1063,
+    "bytes": 6144,
+    "hash": "b84aa4d5",
+    "min": -128,
+    "max": 36,
+    "sum": -766256
+  },
+  {
+    "op": 758,
+    "name": "MEAN",
+    "tensor": 1064,
+    "bytes": 64,
+    "hash": "cd79eb32",
+    "min": -25,
+    "max": 100,
+    "sum": 2371
+  },
+  {
+    "op": 759,
+    "name": "ADD",
+    "tensor": 1065,
+    "bytes": 64,
+    "hash": "cd79eb32",
+    "min": -25,
+    "max": 100,
+    "sum": 2371
+  },
+  {
+    "op": 760,
+    "name": "RSQRT",
+    "tensor": 1066,
+    "bytes": 64,
+    "hash": "4104d7be",
+    "min": 45,
+    "max": 127,
+    "sum": 5037
+  },
+  {
+    "op": 761,
+    "name": "MUL",
+    "tensor": 1067,
+    "bytes": 64,
+    "hash": "8255baec",
+    "min": -128,
+    "max": 127,
+    "sum": 857
+  },
+  {
+    "op": 762,
+    "name": "SUB",
+    "tensor": 1068,
+    "bytes": 64,
+    "hash": "b43ffd3c",
+    "min": -128,
+    "max": 127,
+    "sum": -921
+  },
+  {
+    "op": 763,
+    "name": "RESHAPE",
+    "tensor": 1069,
+    "bytes": 64,
+    "hash": "4104d7be",
+    "min": 45,
+    "max": 127,
+    "sum": 5037
+  },
+  {
+    "op": 764,
+    "name": "MUL",
+    "tensor": 1070,
+    "bytes": 6144,
+    "hash": "48f48a35",
+    "min": -126,
+    "max": 111,
+    "sum": -302864
+  },
+  {
+    "op": 765,
+    "name": "RESHAPE",
+    "tensor": 1071,
+    "bytes": 64,
+    "hash": "b43ffd3c",
+    "min": -128,
+    "max": 127,
+    "sum": -921
+  },
+  {
+    "op": 766,
+    "name": "ADD",
+    "tensor": 1072,
+    "bytes": 6144,
+    "hash": "2af0dc73",
+    "min": -126,
+    "max": 110,
+    "sum": -306522
+  },
+  {
+    "op": 767,
+    "name": "MUL",
+    "tensor": 1073,
+    "bytes": 6144,
+    "hash": "23d32dd6",
+    "min": -128,
+    "max": 111,
+    "sum": -239233
+  },
+  {
+    "op": 768,
+    "name": "ADD",
+    "tensor": 1074,
+    "bytes": 6144,
+    "hash": "fe28d421",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 769,
+    "name": "RESHAPE",
+    "tensor": 1075,
+    "bytes": 6144,
+    "hash": "fe28d421",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 770,
+    "name": "TRANSPOSE",
+    "tensor": 1076,
+    "bytes": 6144,
+    "hash": "33bbcc2b",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 771,
+    "name": "RESHAPE",
+    "tensor": 1077,
+    "bytes": 6144,
+    "hash": "33bbcc2b",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 772,
+    "name": "TRANSPOSE",
+    "tensor": 1078,
+    "bytes": 6144,
+    "hash": "986a86cf",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 773,
+    "name": "RESHAPE",
+    "tensor": 1079,
+    "bytes": 6144,
+    "hash": "986a86cf",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 774,
+    "name": "TRANSPOSE",
+    "tensor": 1080,
+    "bytes": 6144,
+    "hash": "274e495d",
+    "min": -128,
+    "max": 114,
+    "sum": -256098
+  },
+  {
+    "op": 775,
+    "name": "CONV_2D",
+    "tensor": 1081,
+    "bytes": 5120,
+    "hash": "425ee250",
+    "min": -128,
+    "max": 127,
+    "sum": -57593
+  },
+  {
+    "op": 776,
+    "name": "LOGISTIC",
+    "tensor": 1082,
+    "bytes": 5120,
+    "hash": "d143f732",
+    "min": -81,
+    "max": 82,
+    "sum": -37953
+  },
+  {
+    "op": 777,
+    "name": "MUL",
+    "tensor": 1083,
+    "bytes": 5120,
+    "hash": "a4dffa9e",
+    "min": -34,
+    "max": 124,
+    "sum": -27449
+  },
+  {
+    "op": 778,
+    "name": "QUANTIZE",
+    "tensor": 1095,
+    "bytes": 5120,
+    "hash": "dc615970",
+    "min": -128,
+    "max": 87,
+    "sum": -22191
+  },
+  {
+    "op": 779,
+    "name": "CONCATENATION",
+    "tensor": 1084,
+    "bytes": 10240,
+    "hash": "ccf30dd3",
+    "min": -128,
+    "max": 124,
+    "sum": -49640
+  },
+  {
+    "op": 780,
+    "name": "CONV_2D",
+    "tensor": 1085,
+    "bytes": 5120,
+    "hash": "3732e692",
+    "min": -128,
+    "max": 99,
+    "sum": -61991
+  },
+  {
+    "op": 781,
+    "name": "LOGISTIC",
+    "tensor": 1086,
+    "bytes": 5120,
+    "hash": "a80d8d1a",
+    "min": -79,
+    "max": 64,
+    "sum": -45749
+  },
+  {
+    "op": 782,
+    "name": "MUL",
+    "tensor": 1087,
+    "bytes": 5120,
+    "hash": "3bca2c24",
+    "min": -128,
+    "max": 69,
+    "sum": -432575
+  },
+  {
+    "op": 783,
+    "name": "CONV_2D",
+    "tensor": 1088,
+    "bytes": 20480,
+    "hash": "ea0b0fd7",
+    "min": -128,
+    "max": 121,
+    "sum": -390
+  },
+  {
+    "op": 784,
+    "name": "LOGISTIC",
+    "tensor": 1089,
+    "bytes": 20480,
+    "hash": "bc99f4ec",
+    "min": -128,
+    "max": 127,
+    "sum": -993543
+  },
+  {
+    "op": 785,
+    "name": "MUL",
+    "tensor": 1090,
+    "bytes": 20480,
+    "hash": "38debea1",
+    "min": -128,
+    "max": 113,
+    "sum": -2395956
+  },
+  {
+    "op": 786,
+    "name": "AVERAGE_POOL_2D",
+    "tensor": 1091,
+    "bytes": 320,
+    "hash": "c5a8ca0d",
+    "min": -127,
+    "max": -40,
+    "sum": -37434
+  },
+  {
+    "op": 787,
+    "name": "FULLY_CONNECTED",
+    "tensor": 1092,
+    "bytes": 20,
+    "hash": "e16cef54",
+    "min": -128,
+    "max": 127,
+    "sum": -1763
+  }
+]

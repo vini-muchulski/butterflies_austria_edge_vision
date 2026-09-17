@@ -1,0 +1,27 @@
+                        precision    recall  f1-score   support
+
+        Aglais_Urticae     0.9630    0.9630    0.9630        27
+Anthocharis_Cardamines     0.9744    0.8444    0.9048        45
+          Apatura_Iris     0.9459    1.0000    0.9722        35
+       Argynnis_Paphia     0.9500    0.9500    0.9500        40
+      Colias_Myrmidone     0.9643    0.9643    0.9643        28
+     Gonepteryx_Rhamni     0.9524    0.8696    0.9091        23
+            Inachis_Io     0.8000    1.0000    0.8889        28
+ Iphiclides_Podalirius     0.8056    1.0000    0.8923        29
+    Lycaena_Virgaureae     1.0000    0.7059    0.8276        17
+            Lycaenidae     0.8913    1.0000    0.9425        41
+       Maniola_Jurtina     0.9688    0.7561    0.8493        41
+   Melanargia_Galathea     0.9512    0.9512    0.9512        41
+     Nymphalis_Antiopa     1.0000    0.8750    0.9333        16
+       Papilio_Machaon     0.9545    0.8750    0.9130        24
+     Parnassius_Apollo     1.0000    0.8387    0.9123        31
+          Pieris_Rapae     0.7500    0.9730    0.8471        37
+     Polygonia_C-album     1.0000    0.8500    0.9189        40
+      Vanessa_Atalanta     0.9535    0.8723    0.9111        47
+        Vanessa_Cardui     0.7778    0.8485    0.8116        33
+    Zerynthia_Polyxena     0.8065    1.0000    0.8929        25
+
+              accuracy                         0.9090       648
+             macro avg     0.9205    0.9068    0.9078       648
+          weighted avg     0.9200    0.9090    0.9091       648
+
