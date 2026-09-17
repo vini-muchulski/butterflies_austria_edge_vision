@@ -15,7 +15,7 @@ DATASET_ROOT = Path(os.environ.get(
 TEST_DATASET_PATH = DATASET_ROOT / "test"
 
 
-IMAGE_INDEX = 299
+IMAGE_INDEX = 199
 
 
 

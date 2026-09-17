@@ -6,7 +6,7 @@
     224
   ],
   "layout": "NCHW",
-  "scale": 0.017730869352817535,
-  "zero_point": -14,
+  "scale": 0.017977742478251457,
+  "zero_point": -15,
   "dtype": "int8"
 }

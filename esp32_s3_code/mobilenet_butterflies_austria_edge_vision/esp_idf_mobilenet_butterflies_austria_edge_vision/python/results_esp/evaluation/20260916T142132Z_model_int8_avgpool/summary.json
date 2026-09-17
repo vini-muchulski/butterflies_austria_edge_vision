@@ -1,0 +1,288 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-09-16T14:21:32.538729+00:00",
+  "finished_at_utc": "2026-09-16T15:16:58.250813+00:00",
+  "run_wall_time_s": 3325.711780121,
+  "evaluation_wall_time_s": 3307.765118842,
+  "esp32_ip": "192.168.3.22",
+  "predict_url": "http://192.168.3.22/predict_bin",
+  "dataset_path": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/Dataset-butterflies-austria/test",
+  "model": {
+    "path": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobilenet_butterflies_austria_edge_vision/esp_idf_mobilenet_butterflies_austria_edge_vision/data/model_int8_avgpool.tflite",
+    "sha256": "73444df0dcd482f84e5f923b8178ab6450e8dc308c5af7642594ad3214439dfb",
+    "bytes": 2809720,
+    "input": {
+      "shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "layout": "NCHW",
+      "dtype": "int8",
+      "scale": 0.017977742478251457,
+      "zero_point": -15
+    },
+    "output": {
+      "shape": [
+        1,
+        20
+      ],
+      "dtype": "int8",
+      "scale": 0.03021967224776745,
+      "zero_point": -60
+    }
+  },
+  "device_status_before": {
+    "success": true,
+    "model_initialized": true,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "input_layout": "NCHW",
+    "input_dtype": "int8",
+    "input_bytes": 150528,
+    "input_scale": 0.0179777424783,
+    "input_zero_point": -15,
+    "output_classes": 20,
+    "heap_free": 575507
+  },
+  "device_status_after": {
+    "success": true,
+    "model_initialized": true,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "input_layout": "NCHW",
+    "input_dtype": "int8",
+    "input_bytes": 150528,
+    "input_scale": 0.0179777424783,
+    "input_zero_point": -15,
+    "output_classes": 20,
+    "heap_free": 575507
+  },
+  "warmup_runs": 3,
+  "samples": 648,
+  "correct": 630,
+  "incorrect": 18,
+  "accuracy": 0.9722222222222222,
+  "accuracy_ci95_wilson": [
+    0.9565203816272095,
+    0.9823582240804193
+  ],
+  "classes": [
+    "Aglais_Urticae",
+    "Anthocharis_Cardamines",
+    "Apatura_Iris",
+    "Argynnis_Paphia",
+    "Colias_Myrmidone",
+    "Gonepteryx_Rhamni",
+    "Inachis_Io",
+    "Iphiclides_Podalirius",
+    "Lycaena_Virgaureae",
+    "Lycaenidae",
+    "Maniola_Jurtina",
+    "Melanargia_Galathea",
+    "Nymphalis_Antiopa",
+    "Papilio_Machaon",
+    "Parnassius_Apollo",
+    "Pieris_Rapae",
+    "Polygonia_C-album",
+    "Vanessa_Atalanta",
+    "Vanessa_Cardui",
+    "Zerynthia_Polyxena"
+  ],
+  "timing_us": {
+    "preprocess_us": {
+      "count": 648,
+      "min": 1668.0,
+      "max": 115253.0,
+      "mean": 4185.091049382716,
+      "std": 7093.249355972861,
+      "median": 2437.5,
+      "p05": 2108.35,
+      "p25": 2223.0,
+      "p75": 2891.5,
+      "p95": 12769.14999999999,
+      "p99": 27562.17999999997
+    },
+    "host_roundtrip_us": {
+      "count": 648,
+      "min": 3685531.0,
+      "max": 9301375.0,
+      "mean": 5037682.384259259,
+      "std": 1300475.5492830307,
+      "median": 4544238.5,
+      "p05": 3734090.85,
+      "p25": 3947240.75,
+      "p75": 5921153.0,
+      "p95": 7813995.25,
+      "p99": 8530498.55
+    },
+    "receive_us": {
+      "count": 648,
+      "min": 171196.0,
+      "max": 5323385.0,
+      "mean": 1378641.9166666667,
+      "std": 1260078.832253311,
+      "median": 898930.5,
+      "p05": 190758.25,
+      "p25": 236450.75,
+      "p75": 2192104.25,
+      "p95": 4000345.0,
+      "p99": 4713411.69
+    },
+    "input_copy_us": {
+      "count": 648,
+      "min": 15920.0,
+      "max": 16964.0,
+      "mean": 16064.236111111111,
+      "std": 191.26380656491222,
+      "median": 16005.0,
+      "p05": 15923.0,
+      "p25": 15928.0,
+      "p75": 16154.0,
+      "p95": 16544.95,
+      "p99": 16710.55
+    },
+    "inference_us": {
+      "count": 648,
+      "min": 3265131.0,
+      "max": 3283595.0,
+      "mean": 3269903.313271605,
+      "std": 2172.2841052707986,
+      "median": 3269281.5,
+      "p05": 3267686.25,
+      "p25": 3268522.5,
+      "p75": 3270622.0,
+      "p95": 3274133.55,
+      "p99": 3277760.53
+    },
+    "postprocess_us": {
+      "count": 648,
+      "min": 11.0,
+      "max": 17.0,
+      "mean": 11.61574074074074,
+      "std": 0.5466201397624189,
+      "median": 12.0,
+      "p05": 11.0,
+      "p25": 11.0,
+      "p75": 12.0,
+      "p95": 12.0,
+      "p99": 12.0
+    },
+    "total_processing_us": {
+      "count": 648,
+      "min": 3452882.0,
+      "max": 3470506.0,
+      "mean": 3456953.5061728396,
+      "std": 2278.473447704368,
+      "median": 3456316.0,
+      "p05": 3454494.05,
+      "p25": 3455457.25,
+      "p75": 3457762.25,
+      "p95": 3461416.0,
+      "p99": 3465038.08
+    },
+    "device_request_us": {
+      "count": 648,
+      "min": 3624908.0,
+      "max": 8779529.0,
+      "mean": 4835595.4228395065,
+      "std": 1259859.8216065613,
+      "median": 4355003.0,
+      "p05": 3649417.75,
+      "p25": 3694211.5,
+      "p75": 5648902.5,
+      "p95": 7456137.8,
+      "p99": 8172229.8
+    },
+    "host_overhead_us": {
+      "count": 648,
+      "min": 33845.0,
+      "max": 763132.0,
+      "mean": 202086.9614197531,
+      "std": 137090.97868100464,
+      "median": 140368.0,
+      "p05": 59094.05,
+      "p25": 78348.25,
+      "p75": 340245.75,
+      "p95": 423185.8,
+      "p99": 503395.1999999997
+    }
+  },
+  "memory_bytes": {
+    "arena_used": {
+      "count": 648,
+      "min": 2599136.0,
+      "max": 2599136.0,
+      "mean": 2599136.0,
+      "std": 0.0,
+      "median": 2599136.0,
+      "p05": 2599136.0,
+      "p25": 2599136.0,
+      "p75": 2599136.0,
+      "p95": 2599136.0,
+      "p99": 2599136.0
+    },
+    "arena_capacity": {
+      "count": 648,
+      "min": 5242880.0,
+      "max": 5242880.0,
+      "mean": 5242880.0,
+      "std": 0.0,
+      "median": 5242880.0,
+      "p05": 5242880.0,
+      "p25": 5242880.0,
+      "p75": 5242880.0,
+      "p95": 5242880.0,
+      "p99": 5242880.0
+    },
+    "model_bytes": {
+      "count": 648,
+      "min": 2809720.0,
+      "max": 2809720.0,
+      "mean": 2809720.0,
+      "std": 0.0,
+      "median": 2809720.0,
+      "p05": 2809720.0,
+      "p25": 2809720.0,
+      "p75": 2809720.0,
+      "p95": 2809720.0,
+      "p99": 2809720.0
+    },
+    "internal_free": {
+      "count": 648,
+      "min": 250519.0,
+      "max": 250611.0,
+      "mean": 250606.9012345679,
+      "std": 15.570435218015977,
+      "median": 250611.0,
+      "p05": 250575.0,
+      "p25": 250611.0,
+      "p75": 250611.0,
+      "p95": 250611.0,
+      "p99": 250611.0
+    },
+    "psram_free": {
+      "count": 648,
+      "min": 173384.0,
+      "max": 173384.0,
+      "mean": 173384.0,
+      "std": 0.0,
+      "median": 173384.0,
+      "p05": 173384.0,
+      "p25": 173384.0,
+      "p75": 173384.0,
+      "p95": 173384.0,
+      "p99": 173384.0
+    }
+  },
+  "throughput_images_per_second": 0.19590266440286283
+}

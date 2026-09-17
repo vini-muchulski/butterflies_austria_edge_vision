@@ -6,9 +6,9 @@
     "support": 27.0
   },
   "Anthocharis_Cardamines": {
-    "precision": 0.9777777777777777,
+    "precision": 1.0,
     "recall": 0.9777777777777777,
-    "f1-score": 0.9777777777777777,
+    "f1-score": 0.9887640449438202,
     "support": 45.0
   },
   "Apatura_Iris": {
@@ -19,26 +19,26 @@
   },
   "Argynnis_Paphia": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "recall": 0.975,
+    "f1-score": 0.9873417721518988,
     "support": 40.0
   },
   "Colias_Myrmidone": {
     "precision": 1.0,
-    "recall": 0.9285714285714286,
-    "f1-score": 0.9629629629629629,
+    "recall": 0.9642857142857143,
+    "f1-score": 0.9818181818181818,
     "support": 28.0
   },
   "Gonepteryx_Rhamni": {
-    "precision": 0.88,
+    "precision": 0.9166666666666666,
     "recall": 0.9565217391304348,
-    "f1-score": 0.9166666666666666,
+    "f1-score": 0.9361702127659575,
     "support": 23.0
   },
   "Inachis_Io": {
-    "precision": 0.9655172413793104,
-    "recall": 1.0,
-    "f1-score": 0.9824561403508771,
+    "precision": 1.0,
+    "recall": 0.9642857142857143,
+    "f1-score": 0.9818181818181818,
     "support": 28.0
   },
   "Iphiclides_Podalirius": {
@@ -48,27 +48,27 @@
     "support": 29.0
   },
   "Lycaena_Virgaureae": {
-    "precision": 0.9411764705882353,
+    "precision": 1.0,
     "recall": 0.9411764705882353,
-    "f1-score": 0.9411764705882353,
+    "f1-score": 0.9696969696969697,
     "support": 17.0
   },
   "Lycaenidae": {
-    "precision": 0.9761904761904762,
+    "precision": 0.9318181818181818,
     "recall": 1.0,
-    "f1-score": 0.9879518072289156,
+    "f1-score": 0.9647058823529412,
     "support": 41.0
   },
   "Maniola_Jurtina": {
     "precision": 1.0,
-    "recall": 0.9512195121951219,
-    "f1-score": 0.975,
+    "recall": 0.975609756097561,
+    "f1-score": 0.9876543209876543,
     "support": 41.0
   },
   "Melanargia_Galathea": {
-    "precision": 1.0,
+    "precision": 0.9761904761904762,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9879518072289156,
     "support": 41.0
   },
   "Nymphalis_Antiopa": {
@@ -79,8 +79,8 @@
   },
   "Papilio_Machaon": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "recall": 0.9583333333333334,
+    "f1-score": 0.9787234042553191,
     "support": 24.0
   },
   "Parnassius_Apollo": {
@@ -90,27 +90,27 @@
     "support": 31.0
   },
   "Pieris_Rapae": {
-    "precision": 0.925,
+    "precision": 0.9487179487179487,
     "recall": 1.0,
-    "f1-score": 0.961038961038961,
+    "f1-score": 0.9736842105263158,
     "support": 37.0
   },
   "Polygonia_C-album": {
-    "precision": 0.9743589743589743,
+    "precision": 0.95,
     "recall": 0.95,
-    "f1-score": 0.9620253164556962,
+    "f1-score": 0.95,
     "support": 40.0
   },
   "Vanessa_Atalanta": {
-    "precision": 0.9772727272727273,
-    "recall": 0.9148936170212766,
-    "f1-score": 0.945054945054945,
+    "precision": 0.9361702127659575,
+    "recall": 0.9361702127659575,
+    "f1-score": 0.9361702127659575,
     "support": 47.0
   },
   "Vanessa_Cardui": {
-    "precision": 0.9166666666666666,
+    "precision": 0.9428571428571428,
     "recall": 1.0,
-    "f1-score": 0.9565217391304348,
+    "f1-score": 0.9705882352941176,
     "support": 33.0
   },
   "Zerynthia_Polyxena": {
@@ -121,15 +121,15 @@
   },
   "accuracy": 0.9737654320987654,
   "macro avg": {
-    "precision": 0.9733860508997425,
-    "recall": 0.972805368960749,
-    "f1-score": 0.97252405573491,
+    "precision": 0.9768090656388528,
+    "recall": 0.9717553776097716,
+    "f1-score": 0.9738467882024479,
     "support": 648.0
   },
   "weighted avg": {
-    "precision": 0.9749162172142695,
+    "precision": 0.9746832985258912,
     "recall": 0.9737654320987654,
-    "f1-score": 0.9737905805482974,
+    "f1-score": 0.9738309660582143,
     "support": 648.0
   }
 }
