@@ -1,0 +1,374 @@
+vini_muchulski@vini-muchulski:~/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobileVIT_butterflies_austria_edge_vision/esp_idf_mobileVIT_butterflies_austria_edge_vision$ RESUME_DIR=python/results_esp/evaluation/20260917T154102Z_mobilevit_int8 \
+  python python/esp_evaluate_inferencia.py
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Warm-up: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:46<00:00, 46.40s/it]
+Avaliando ESP32-S3: 100%|██████████████████████████████████| 648/648 [8:10:25<00:00, 48.16s/it, accuracy=0.9105, inference_s=45.655]
+                        precision    recall  f1-score   support
+
+        Aglais_Urticae     0.9643    1.0000    0.9818        27
+Anthocharis_Cardamines     0.9744    0.8444    0.9048        45
+          Apatura_Iris     0.8974    1.0000    0.9459        35
+       Argynnis_Paphia     1.0000    0.9750    0.9873        40
+      Colias_Myrmidone     0.9630    0.9286    0.9455        28
+     Gonepteryx_Rhamni     0.9091    0.8696    0.8889        23
+            Inachis_Io     0.8235    1.0000    0.9032        28
+ Iphiclides_Podalirius     0.7838    1.0000    0.8788        29
+    Lycaena_Virgaureae     1.0000    0.7059    0.8276        17
+            Lycaenidae     0.9111    1.0000    0.9535        41
+       Maniola_Jurtina     0.9688    0.7561    0.8493        41
+   Melanargia_Galathea     0.9750    0.9512    0.9630        41
+     Nymphalis_Antiopa     1.0000    0.9375    0.9677        16
+       Papilio_Machaon     0.9545    0.8750    0.9130        24
+     Parnassius_Apollo     1.0000    0.8387    0.9123        31
+          Pieris_Rapae     0.7500    0.9730    0.8471        37
+     Polygonia_C-album     1.0000    0.8250    0.9041        40
+      Vanessa_Atalanta     0.9762    0.8723    0.9213        47
+        Vanessa_Cardui     0.7778    0.8485    0.8116        33
+    Zerynthia_Polyxena     0.7812    1.0000    0.8772        25
+
+              accuracy                         0.9105       648
+             macro avg     0.9205    0.9100    0.9092       648
+          weighted avg     0.9224    0.9105    0.9108       648
+
+{
+  "status": "complete",
+  "started_at_utc": "2026-09-17T16:20:20.490308+00:00",
+  "finished_at_utc": "2026-09-18T00:31:32.781505+00:00",
+  "run_wall_time_s": 29472.290812865,
+  "evaluation_wall_time_s": 29425.144691894,
+  "esp32_ip": "192.168.3.22",
+  "predict_url": "http://192.168.3.22/predict_bin",
+  "dataset_path": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/Dataset-butterflies-austria/test",
+  "model": {
+    "path": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobileVIT_butterflies_austria_edge_vision/esp_idf_mobileVIT_butterflies_austria_edge_vision/data/mobilevit_int8.tflite",
+    "sha256": "1c830eca3f888626e0276d6693270578cc4dbd5d511ee6f5dfd84e87b9c4a149",
+    "bytes": 1843720,
+    "input": {
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "layout": "NCHW",
+      "dtype": "int8",
+      "scale": 0.0038768567610532045,
+      "zero_point": -128
+    },
+    "output": {
+      "shape": [
+        1,
+        20
+      ],
+      "dtype": "int8",
+      "scale": 0.031413737684488297,
+      "zero_point": -78
+    }
+  },
+  "device_status_before": {
+    "success": true,
+    "model_initialized": true,
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "input_layout": "NCHW",
+    "input_dtype": "int8",
+    "input_bytes": 196608,
+    "input_scale": 0.00387685676105,
+    "input_zero_point": -128,
+    "output_classes": 20,
+    "heap_free": 1525291
+  },
+  "device_status_after": {
+    "success": true,
+    "model_initialized": true,
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "input_layout": "NCHW",
+    "input_dtype": "int8",
+    "input_bytes": 196608,
+    "input_scale": 0.00387685676105,
+    "input_zero_point": -128,
+    "output_classes": 20,
+    "heap_free": 1525287
+  },
+  "warmup_runs": 1,
+  "samples": 648,
+  "correct": 590,
+  "incorrect": 58,
+  "accuracy": 0.9104938271604939,
+  "accuracy_ci95_wilson": [
+    0.8860265399489763,
+    0.9301228362543875
+  ],
+  "classes": [
+    "Aglais_Urticae",
+    "Anthocharis_Cardamines",
+    "Apatura_Iris",
+    "Argynnis_Paphia",
+    "Colias_Myrmidone",
+    "Gonepteryx_Rhamni",
+    "Inachis_Io",
+    "Iphiclides_Podalirius",
+    "Lycaena_Virgaureae",
+    "Lycaenidae",
+    "Maniola_Jurtina",
+    "Melanargia_Galathea",
+    "Nymphalis_Antiopa",
+    "Papilio_Machaon",
+    "Parnassius_Apollo",
+    "Pieris_Rapae",
+    "Polygonia_C-album",
+    "Vanessa_Atalanta",
+    "Vanessa_Cardui",
+    "Zerynthia_Polyxena"
+  ],
+  "timing_us": {
+    "preprocess_us": {
+      "count": 648,
+      "min": 1823.0,
+      "max": 121822.0,
+      "mean": 4763.467592592592,
+      "std": 7465.368091035525,
+      "median": 2855.0,
+      "p05": 2428.05,
+      "p25": 2647.0,
+      "p75": 3366.75,
+      "p95": 14012.799999999977,
+      "p99": 29761.349999999995
+    },
+    "host_roundtrip_us": {
+      "count": 648,
+      "min": 46021454.0,
+      "max": 60041679.0,
+      "mean": 48069110.66049383,
+      "std": 1353552.3221740532,
+      "median": 47852917.5,
+      "p05": 46497364.6,
+      "p25": 47337652.25,
+      "p75": 48364313.5,
+      "p95": 50510971.35,
+      "p99": 52489410.949999996
+    },
+    "receive_us": {
+      "count": 648,
+      "min": 202684.0,
+      "max": 13807355.0,
+      "mean": 2040681.1820987654,
+      "std": 1320288.8734446634,
+      "median": 1845328.5,
+      "p05": 385217.9,
+      "p25": 1344704.25,
+      "p75": 2301864.75,
+      "p95": 4361060.6,
+      "p99": 6454438.08
+    },
+    "input_copy_us": {
+      "count": 648,
+      "min": 20876.0,
+      "max": 21508.0,
+      "mean": 20933.831790123455,
+      "std": 94.81750685429392,
+      "median": 20885.0,
+      "p05": 20877.0,
+      "p25": 20879.0,
+      "p75": 20957.0,
+      "p95": 21110.65,
+      "p99": 21351.02
+    },
+    "inference_us": {
+      "count": 648,
+      "min": 45528670.0,
+      "max": 45729196.0,
+      "mean": 45657487.583333336,
+      "std": 33050.84407996248,
+      "median": 45662382.5,
+      "p05": 45596030.25,
+      "p25": 45639546.25,
+      "p75": 45680355.5,
+      "p95": 45704271.95,
+      "p99": 45713296.92
+    },
+    "postprocess_us": {
+      "count": 648,
+      "min": 12.0,
+      "max": 18.0,
+      "mean": 12.171296296296296,
+      "std": 0.468458142296229,
+      "median": 12.0,
+      "p05": 12.0,
+      "p25": 12.0,
+      "p75": 12.0,
+      "p95": 13.0,
+      "p99": 13.0
+    },
+    "total_processing_us": {
+      "count": 648,
+      "min": 45661763.0,
+      "max": 45862207.0,
+      "mean": 45790638.23765432,
+      "std": 33063.63230660914,
+      "median": 45795435.0,
+      "p05": 45729334.3,
+      "p25": 45772665.25,
+      "p75": 45813544.25,
+      "p95": 45837540.1,
+      "p99": 45846499.43
+    },
+    "device_request_us": {
+      "count": 648,
+      "min": 45916176.0,
+      "max": 59598021.0,
+      "mean": 47831319.41975309,
+      "std": 1319080.8774141958,
+      "median": 47642429.0,
+      "p05": 46179950.5,
+      "p25": 47140878.0,
+      "p75": 48094627.25,
+      "p95": 50141409.1,
+      "p99": 52271218.62
+    },
+    "host_overhead_us": {
+      "count": 648,
+      "min": 34244.0,
+      "max": 4570574.0,
+      "mean": 237791.24074074073,
+      "std": 218825.3132684663,
+      "median": 220088.5,
+      "p05": 62987.4,
+      "p25": 97085.5,
+      "p75": 345308.5,
+      "p95": 427240.55,
+      "p99": 534107.6699999996
+    }
+  },
+  "memory_bytes": {
+    "arena_used": {
+      "count": 648,
+      "min": 2881824.0,
+      "max": 2881824.0,
+      "mean": 2881824.0,
+      "std": 0.0,
+      "median": 2881824.0,
+      "p05": 2881824.0,
+      "p25": 2881824.0,
+      "p75": 2881824.0,
+      "p95": 2881824.0,
+      "p99": 2881824.0
+    },
+    "arena_capacity": {
+      "count": 648,
+      "min": 5242880.0,
+      "max": 5242880.0,
+      "mean": 5242880.0,
+      "std": 0.0,
+      "median": 5242880.0,
+      "p05": 5242880.0,
+      "p25": 5242880.0,
+      "p75": 5242880.0,
+      "p95": 5242880.0,
+      "p99": 5242880.0
+    },
+    "model_bytes": {
+      "count": 648,
+      "min": 1843720.0,
+      "max": 1843720.0,
+      "mean": 1843720.0,
+      "std": 0.0,
+      "median": 1843720.0,
+      "p05": 1843720.0,
+      "p25": 1843720.0,
+      "p75": 1843720.0,
+      "p95": 1843720.0,
+      "p99": 1843720.0
+    },
+    "internal_before": {
+      "count": 648,
+      "min": 249295.0,
+      "max": 250087.0,
+      "mean": 249973.9135802469,
+      "std": 164.73880389654414,
+      "median": 250083.0,
+      "p05": 249687.0,
+      "p25": 249883.0,
+      "p75": 250083.0,
+      "p95": 250083.0,
+      "p99": 250087.0
+    },
+    "internal_after": {
+      "count": 648,
+      "min": 249991.0,
+      "max": 250119.0,
+      "mean": 250113.16049382716,
+      "std": 19.708513786569164,
+      "median": 250119.0,
+      "p05": 250083.0,
+      "p25": 250119.0,
+      "p75": 250119.0,
+      "p95": 250119.0,
+      "p99": 250119.0
+    },
+    "internal_min_during": {
+      "count": 648,
+      "min": 239639.0,
+      "max": 248299.0,
+      "mean": 247676.8148148148,
+      "std": 935.9695448236384,
+      "median": 248051.0,
+      "p05": 246490.2,
+      "p25": 247990.0,
+      "p75": 248051.0,
+      "p95": 248299.0,
+      "p99": 248299.0
+    },
+    "psram_before": {
+      "count": 648,
+      "min": 1078572.0,
+      "max": 1078572.0,
+      "mean": 1078572.0,
+      "std": 0.0,
+      "median": 1078572.0,
+      "p05": 1078572.0,
+      "p25": 1078572.0,
+      "p75": 1078572.0,
+      "p95": 1078572.0,
+      "p99": 1078572.0
+    },
+    "psram_after": {
+      "count": 648,
+      "min": 1078572.0,
+      "max": 1078572.0,
+      "mean": 1078572.0,
+      "std": 0.0,
+      "median": 1078572.0,
+      "p05": 1078572.0,
+      "p25": 1078572.0,
+      "p75": 1078572.0,
+      "p95": 1078572.0,
+      "p99": 1078572.0
+    },
+    "psram_min_during": {
+      "count": 648,
+      "min": 1078572.0,
+      "max": 1078572.0,
+      "mean": 1078572.0,
+      "std": 0.0,
+      "median": 1078572.0,
+      "p05": 1078572.0,
+      "p25": 1078572.0,
+      "p75": 1078572.0,
+      "p95": 1078572.0,
+      "p99": 1078572.0
+    }
+  },
+  "throughput_images_per_second": 0.022021981770526698
+}
+Resultados: /home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobileVIT_butterflies_austria_edge_vision/esp_idf_mobileVIT_butterflies_austria_edge_vision/python/results_esp/evaluation/20260917T154102Z_mobilevit_int8
+vini_muchulski@vini-muchulski:~/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobileVIT_butterflies_austria_edge_vision/esp_idf_mobileVIT_butterflies_austria_edge_vision$ 

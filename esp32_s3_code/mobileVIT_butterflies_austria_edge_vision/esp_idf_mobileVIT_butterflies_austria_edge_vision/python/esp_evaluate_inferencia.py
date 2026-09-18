@@ -40,7 +40,10 @@ RESULTS_ROOT = Path(os.environ.get(
 ESP32_IP = os.environ.get("ESP32_IP", "192.168.3.22")
 PREDICT_URL = f"http://{ESP32_IP}/predict_bin"
 STATUS_URL = f"http://{ESP32_IP}/status"
+CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", "30"))
 REQUEST_TIMEOUT = float(os.environ.get("REQUEST_TIMEOUT", "300"))
+REQUEST_RETRIES = int(os.environ.get("REQUEST_RETRIES", "3"))
+RETRY_DELAY = float(os.environ.get("RETRY_DELAY", "2"))
 WARMUP_RUNS = int(os.environ.get("WARMUP_RUNS", "1"))
 
 TIMING_FIELDS = (
@@ -58,8 +61,12 @@ MEMORY_FIELDS = (
     "arena_used",
     "arena_capacity",
     "model_bytes",
-    "internal_free",
-    "psram_free",
+    "internal_before",
+    "internal_after",
+    "internal_min_during",
+    "psram_before",
+    "psram_after",
+    "psram_min_during",
 )
 PREDICTION_FIELDS = (
     "image_index",
@@ -160,26 +167,45 @@ def validate_status(status, model_metadata):
 
 
 def send_inference(session, quantized):
-    started_ns = time.perf_counter_ns()
-    response = session.post(
-        PREDICT_URL,
-        data=quantized.tobytes(),
-        headers={"Content-Type": "application/octet-stream"},
-        timeout=(5, REQUEST_TIMEOUT),
-    )
-    host_roundtrip_us = (time.perf_counter_ns() - started_ns) // 1000
-    response.raise_for_status()
-    result = response.json()
-    if not result.get("success"):
-        raise RuntimeError(result.get("error_message", "Falha na inferência"))
-    result["host_roundtrip_us"] = int(host_roundtrip_us)
-    result["device_request_us"] = int(
-        result["receive_us"] + result["total_processing_us"]
-    )
-    result["host_overhead_us"] = int(
-        host_roundtrip_us - result["device_request_us"]
-    )
-    return result
+    last_error = None
+    for attempt in range(REQUEST_RETRIES + 1):
+        started_ns = time.perf_counter_ns()
+        try:
+            response = session.post(
+                PREDICT_URL,
+                data=quantized.tobytes(),
+                headers={
+                    "Content-Type": "application/octet-stream",
+                    "Connection": "close",
+                },
+                timeout=(CONNECT_TIMEOUT, REQUEST_TIMEOUT),
+            )
+            host_roundtrip_us = (
+                time.perf_counter_ns() - started_ns
+            ) // 1000
+            response.raise_for_status()
+            result = response.json()
+        except requests.RequestException as error:
+            last_error = error
+            if attempt == REQUEST_RETRIES:
+                raise
+            time.sleep(RETRY_DELAY * (attempt + 1))
+            continue
+
+        if not result.get("success"):
+            raise RuntimeError(
+                result.get("error_message", "Falha na inferência")
+            )
+        result["host_roundtrip_us"] = int(host_roundtrip_us)
+        result["device_request_us"] = int(
+            result["receive_us"] + result["total_processing_us"]
+        )
+        result["host_overhead_us"] = int(
+            host_roundtrip_us - result["device_request_us"]
+        )
+        return result
+
+    raise last_error
 
 
 def validate_result(result, quantized, model_metadata):
@@ -269,19 +295,68 @@ def warmup(session, sample, preprocessing, model_metadata):
         validate_result(result, quantized, model_metadata)
 
 
-def evaluate(session, samples, preprocessing, model_metadata, results_dir):
+def load_checkpoint(csv_path, samples):
+    if not csv_path.exists():
+        return [], [], []
+
+    rows = []
     labels = []
     predictions = []
-    rows = []
+    with csv_path.open(newline="") as file:
+        reader = csv.DictReader(file)
+        if reader.fieldnames != list(PREDICTION_FIELDS):
+            raise RuntimeError("Formato do checkpoint incompatível")
+        for expected_index, row in enumerate(reader):
+            if expected_index >= len(samples):
+                raise RuntimeError("Checkpoint possui amostras excedentes")
+            image_path, true_class = samples[expected_index]
+            expected_path = str(image_path.relative_to(TEST_DATASET_PATH))
+            if (
+                int(row["image_index"]) != expected_index
+                or row["image_path"] != expected_path
+                or int(row["true_class"]) != true_class
+            ):
+                raise RuntimeError("Checkpoint não corresponde ao dataset")
+
+            normalized = dict(row)
+            for field in TIMING_FIELDS + MEMORY_FIELDS:
+                normalized[field] = int(row[field])
+            normalized["image_index"] = int(row["image_index"])
+            normalized["true_class"] = int(row["true_class"])
+            normalized["predicted_class"] = int(row["predicted_class"])
+            normalized["correct"] = row["correct"].lower() == "true"
+            normalized["confidence"] = float(row["confidence"])
+            rows.append(normalized)
+            labels.append(int(true_class))
+            predictions.append(normalized["predicted_class"])
+
+    return rows, labels, predictions
+
+
+def evaluate(session, samples, preprocessing, model_metadata, results_dir):
     csv_path = results_dir / "predictions.csv"
     jsonl_path = results_dir / "telemetry.jsonl"
+    rows, labels, predictions = load_checkpoint(csv_path, samples)
+    start_index = len(rows)
+    file_mode = "a" if rows else "w"
 
-    with csv_path.open("w", newline="") as csv_file, jsonl_path.open("w") as jsonl_file:
+    with csv_path.open(file_mode, newline="") as csv_file, jsonl_path.open(
+        file_mode
+    ) as jsonl_file:
         writer = csv.DictWriter(csv_file, fieldnames=PREDICTION_FIELDS)
-        writer.writeheader()
+        if not rows:
+            writer.writeheader()
 
-        progress = tqdm(samples, desc="Avaliando ESP32-S3")
-        for image_index, (image_path, true_class) in enumerate(progress):
+        progress = tqdm(
+            samples[start_index:],
+            desc="Avaliando ESP32-S3",
+            initial=start_index,
+            total=len(samples),
+        )
+        for image_index, (image_path, true_class) in enumerate(
+            progress,
+            start=start_index,
+        ):
             preprocess_started_ns = time.perf_counter_ns()
             image = load_image(image_path)
             quantized = preprocess_image(image, preprocessing)
@@ -410,13 +485,23 @@ def save_classification_results(labels, predictions, results_dir):
 def main():
     if WARMUP_RUNS < 0:
         raise ValueError("WARMUP_RUNS deve ser maior ou igual a zero")
+    if CONNECT_TIMEOUT <= 0 or REQUEST_TIMEOUT <= 0:
+        raise ValueError("Timeouts devem ser maiores que zero")
+    if REQUEST_RETRIES < 0 or RETRY_DELAY < 0:
+        raise ValueError("Configuração de retry inválida")
 
     model_metadata = load_model_metadata(MODEL_PATH)
     preprocessing = model_metadata["input"]
     samples = get_test_samples()
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    results_dir = RESULTS_ROOT / f"{timestamp}_{MODEL_PATH.stem}"
-    results_dir.mkdir(parents=True, exist_ok=False)
+    resume_dir = os.environ.get("RESUME_DIR")
+    if resume_dir:
+        results_dir = Path(resume_dir).resolve()
+        if not results_dir.is_dir():
+            raise ValueError("RESUME_DIR não existe")
+    else:
+        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        results_dir = RESULTS_ROOT / f"{timestamp}_{MODEL_PATH.stem}"
+        results_dir.mkdir(parents=True, exist_ok=False)
 
     started_at = datetime.now(timezone.utc).isoformat()
     run_metadata = {

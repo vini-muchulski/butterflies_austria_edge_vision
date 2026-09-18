@@ -24,11 +24,11 @@
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/schema/schema_generated.h"
 
-//const char *ssid = "Starlink";
-//const char *password = "diversao";
+const char *ssid = "Starlink";
+const char *password = "diversao";
 
-const char *ssid = "Ejec";
-const char *password = "ejec1234";
+//const char *ssid = "Ejec";
+//const char *password = "ejec1234";
 
 const int serverPort = 80;
 
@@ -471,12 +471,29 @@ void load_input_quantized(const int8_t *src)
   memcpy(model_ctx.input_tensor->data.int8, src, model_ctx.input_tensor->bytes);
 }
 
+void finish_memory_monitoring(InferenceResult &result)
+{
+  result.internal_after = heap_caps_get_free_size(MALLOC_CAP_INTERNAL);
+  result.psram_after = heap_caps_get_free_size(MALLOC_CAP_SPIRAM);
+  result.min_free_internal =
+      heap_caps_get_minimum_free_size(MALLOC_CAP_INTERNAL);
+  result.min_free_psram =
+      heap_caps_get_minimum_free_size(MALLOC_CAP_SPIRAM);
+  heap_caps_monitor_local_minimum_free_size_stop();
+}
+
 InferenceResult run_inference(const int8_t *image_data)
 {
   InferenceResult result{};
   if (!model_ctx.initialized)
   {
     set_error(result, "Modelo não inicializado");
+    return result;
+  }
+
+  if (heap_caps_monitor_local_minimum_free_size_start() != ESP_OK)
+  {
+    set_error(result, "Falha ao iniciar monitor de memória");
     return result;
   }
 
@@ -501,8 +518,7 @@ InferenceResult run_inference(const int8_t *image_data)
   if (invoke_status != kTfLiteOk)
   {
     set_error(result, "Falha na inferência");
-    result.internal_after = heap_caps_get_free_size(MALLOC_CAP_INTERNAL);
-    result.psram_after = heap_caps_get_free_size(MALLOC_CAP_SPIRAM);
+    finish_memory_monitoring(result);
     return result;
   }
 
@@ -522,11 +538,7 @@ InferenceResult run_inference(const int8_t *image_data)
   result.success = true;
   result.postprocess_us = esp_timer_get_time() - postprocess_start;
   result.total_processing_us = esp_timer_get_time() - total_start;
-  result.internal_after = heap_caps_get_free_size(MALLOC_CAP_INTERNAL);
-  result.psram_after = heap_caps_get_free_size(MALLOC_CAP_SPIRAM);
-  result.min_free_internal =
-      heap_caps_get_minimum_free_size(MALLOC_CAP_INTERNAL);
-  result.min_free_psram = heap_caps_get_minimum_free_size(MALLOC_CAP_SPIRAM);
+  finish_memory_monitoring(result);
   return result;
 }
 
@@ -674,14 +686,16 @@ static esp_err_t predict_bin_handler(httpd_req_t *req)
     used += snprintf(scores + used, sizeof(scores) - used,
                      "%s%.6f", c ? "," : "", res.scores[c]);
   }
-  char body[1024];
+  char body[1536];
   snprintf(body, sizeof(body),
            "{\"success\":true,\"predicted_class\":%d,\"confidence\":%.6f,"
            "\"scores\":[%s],\"input_fnv1a\":\"%08x\",\"output_fnv1a\":\"%08x\","
            "\"receive_us\":%lld,\"input_copy_us\":%lld,\"inference_us\":%lld,"
            "\"postprocess_us\":%lld,\"total_processing_us\":%lld,"
            "\"arena_used\":%u,\"arena_capacity\":%u,\"model_bytes\":%u,"
-           "\"internal_free\":%u,\"psram_free\":%u}",
+           "\"internal_before\":%u,\"internal_after\":%u,"
+           "\"internal_min_during\":%u,\"psram_before\":%u,"
+           "\"psram_after\":%u,\"psram_min_during\":%u}",
            res.predicted_class, res.confidence, scores,
            (unsigned)res.input_hash, (unsigned)res.logits_hash,
            (long long)rx_us, (long long)res.input_copy_us,
@@ -689,7 +703,9 @@ static esp_err_t predict_bin_handler(httpd_req_t *req)
            (long long)res.total_processing_us,
            (unsigned)model_ctx.interpreter->arena_used_bytes(),
            (unsigned)ModelContext::kTensorArenaSize, (unsigned)model_ctx.model_bytes,
-           (unsigned)res.internal_after, (unsigned)res.psram_after);
+           (unsigned)res.internal_before, (unsigned)res.internal_after,
+           (unsigned)res.min_free_internal, (unsigned)res.psram_before,
+           (unsigned)res.psram_after, (unsigned)res.min_free_psram);
   httpd_resp_set_type(req, "application/json");
   return httpd_resp_sendstr(req, body);
 }

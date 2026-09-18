@@ -15,10 +15,10 @@ DATASET_ROOT = Path(os.environ.get(
 TEST_DATASET_PATH = DATASET_ROOT / "test"
 
 
-#IMAGE_INDEX = 299
+IMAGE_INDEX = 299
 #IMAGE_INDEX = 199
 #IMAGE_INDEX = 19
-IMAGE_INDEX = 640
+#IMAGE_INDEX = 640
 #IMAGE_INDEX = 480
 
 
@@ -29,9 +29,9 @@ IMAGE_INDEX = 640
 OUTPUT_PLOT_PATH = Path(os.environ.get(
     "OUTPUT_PLOT_PATH", BASE_DIR / "results" / f"butterflies_austria_plot_{IMAGE_INDEX}.png"
 ))
-#ESP32_IP = os.environ.get("ESP32_IP", "192.168.3.22")
+ESP32_IP = os.environ.get("ESP32_IP", "192.168.3.22")
 
-ESP32_IP =  "10.152.53.53"
+#ESP32_IP =  "10.152.53.53"
 
 PREDICT_URL = f"http://{ESP32_IP}/predict_bin"
 REQUEST_TIMEOUT = 300
