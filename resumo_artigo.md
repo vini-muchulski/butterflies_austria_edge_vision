@@ -183,6 +183,35 @@ A versão de ponto flutuante preservou o desempenho geral, com diferença de ape
 
 Em contraste, a configuração integral de 8 bits apresentou colapso de acurácia para 9,57%. O relatório por classe mostra concentração das predições em poucas categorias e F1 ponderado de apenas 5,11%. Esse comportamento evidencia sensibilidade da arquitetura MobileViT-XXS à configuração de quantização integral utilizada e exige investigação específica antes de sua adoção nessa representação.
 
+### Mitigação do colapso INT8 por agrupamento estrutural
+
+Para investigar o colapso, foram medidas as ativações por canal na saída da convolução de expansão `1 × 1` dos sete módulos `MobileViTInvertedResidual`. Cada um desses módulos, denominado bloco neste estudo, contém uma convolução de expansão `1 × 1`, uma convolução depthwise `3 × 3`, uma convolução de redução `1 × 1` e, quando as dimensões permitem, uma conexão residual. Para cada canal, a escala foi estimada pela diferença entre seus valores máximo e mínimo observados durante a calibração, dividida pelos 255 intervalos representáveis em 8 bits.
+
+A análise revelou forte heterogeneidade entre canais de um mesmo tensor. As razões entre a maior e a menor escala chegaram a 327,61 no bloco 1, 874,36 no bloco 2, 318,00 no bloco 5 e 487,58 no bloco 7. Na quantização por tensor, todos os canais compartilham a mesma escala. Dessa forma, canais de grande amplitude determinam o intervalo quantizado, enquanto canais de menor amplitude passam a ocupar poucos códigos inteiros e perdem resolução numérica.
+
+Para reduzir esse efeito, foi aplicada a configuração estrutural `g8_4_4`. Essa notação indica que os canais internos do bloco 1 foram divididos em oito grupos, enquanto os blocos 2 e 5 foram divididos em quatro grupos cada. O bloco 1 possui 32 canais de expansão, resultando em oito grupos de quatro canais. O bloco 2 também possui 32 canais, divididos em quatro grupos de oito canais, e o bloco 5 possui 48 canais, divididos em quatro grupos de 12 canais.
+
+Os canais de cada bloco foram ordenados por suas escalas observadas e particionados em grupos de tamanhos aproximadamente iguais. Consequentemente, cada grupo reuniu canais com faixas numéricas semelhantes, independentemente de suas posições originais no tensor. O termo grupo, nesse contexto, representa um subconjunto de canais internos e não uma divisão das imagens ou dos lotes de entrada.
+
+Cada bloco selecionado foi então substituído por ramificações paralelas, uma para cada grupo. Em cada ramificação, foram preservados somente os filtros correspondentes na convolução de expansão, os mesmos canais na convolução depthwise e as colunas correspondentes dos pesos da convolução de redução. Cada ramificação continuou produzindo todos os canais de saída do bloco, e suas saídas foram somadas antes da aplicação única da conexão residual.
+
+Como a convolução de redução era seguida por normalização em lote, seus parâmetros foram inicialmente incorporados aos pesos e ao bias da convolução. O bias resultante foi dividido pelo número de grupos e atribuído a cada ramificação. Assim, a soma das ramificações reconstrói um único bias completo, evitando que esse termo seja multiplicado pelo número de grupos.
+
+Essa transformação procura preservar a função original do bloco, pois a convolução de redução é linear em relação aos canais de entrada. Ao mesmo tempo, as ramificações passam a gerar tensores independentes durante a quantização. Cada grupo pode, portanto, receber uma escala INT8 mais apropriada à amplitude de seus canais, reduzindo a influência de valores extremos sobre canais de menor magnitude.
+
+O experimento reutilizou o checkpoint treinado do MobileViT-XXS, sem novo treinamento ou QAT. A calibração foi estratificada, com 50 imagens por classe e 1.000 imagens no total. Foram exportados os modelos original e agrupado em FP32 e posteriormente quantizados com pesos e ativações de 8 bits. Ambos os modelos quantizados apresentaram entrada e saída `int8`, sem operadores incompatíveis ou operações explícitas de desquantização.
+
+| Modelo | Acurácia de validação | Acurácia de teste | F1 macro no teste | Tamanho |
+|---|---:|---:|---:|---:|
+| MobileViT-XXS original FP32 | 97,38% | 97,38% | 97,39% | 4,33 MB |
+| MobileViT-XXS original INT8, calibração estratificada | 10,96% | 10,80% | 6,05% | 1,83 MB |
+| MobileViT-XXS `g8_4_4` FP32 | 97,38% | 97,38% | 97,39% | 4,47 MB |
+| MobileViT-XXS `g8_4_4` INT8 | 89,20% | 90,43% | 90,23% | 1,98 MB |
+
+O agrupamento elevou a acurácia INT8 de 10,80% para 90,43% no teste, um ganho de 79,63 pontos percentuais, e recuperou aproximadamente 92% da acurácia perdida pela quantização do modelo original. A calibração estratificada isoladamente não impediu o colapso, como demonstra o resultado do modelo original quantizado sob a mesma calibração. Portanto, o ganho é atribuído principalmente à separação estrutural dos canais em faixas de magnitude mais homogêneas.
+
+A transformação, entretanto, não atingiu equivalência FP32 estrita no PyTorch. A concordância top-1 entre o modelo original e o agrupado foi 99,85%, uma das 648 imagens de validação mudou de classificação e o erro absoluto máximo entre logits foi 0,0371. Os modelos TFLite FP32 apresentaram a mesma acurácia, mas a diferença numérica impede caracterizar a transformação atual como matematicamente exata. A alteração da ordem das somas em ponto flutuante é uma possível fonte dessa diferença e deverá ser investigada em experimentos posteriores.
+
 ## Comparação consolidada
 
 | Arquitetura e representação | Parâmetros | Tamanho | Acurácia de teste |
@@ -195,8 +224,9 @@ Em contraste, a configuração integral de 8 bits apresentou colapso de acuráci
 | MobileViT-XXS TFLite FP32 | 957.444 | 4,33 MB | 97,38% |
 | MobileViT-XXS TFLite 8/16 bits | 957.444 | 1,89 MB | 96,76% |
 | MobileViT-XXS TFLite 8/8 bits | 957.444 | 1,83 MB | 9,57% |
+| MobileViT-XXS TFLite 8/8 bits `g8_4_4` | 957.444 | 1,98 MB | 90,43% |
 
-Os modelos em ponto flutuante apresentaram desempenho praticamente equivalente. O MobileViT-XXS oferece menor número de parâmetros e menor arquivo TFLite, enquanto o MobileNetV2 apresenta menor estimativa de operações e comportamento substancialmente mais estável sob quantização integral. Considerando simultaneamente acurácia, tamanho e robustez da conversão, o MobileNetV2 integral de 8 bits constitui, até esta etapa, o baseline mais consistente para implantação em borda.
+Os modelos em ponto flutuante apresentaram desempenho praticamente equivalente. O MobileViT-XXS oferece menor número de parâmetros e menor arquivo TFLite, enquanto o MobileNetV2 apresenta menor estimativa de operações e comportamento substancialmente mais estável sob quantização integral. O agrupamento `g8_4_4` restaurou grande parte do desempenho INT8 do MobileViT-XXS, mas sua acurácia permaneceu 6,94 pontos percentuais abaixo da respectiva versão FP32. Considerando simultaneamente acurácia, tamanho e robustez da conversão, o MobileNetV2 integral de 8 bits permanece, até esta etapa, o baseline mais consistente para implantação em borda.
 
 ## Limitações da etapa atual
 
@@ -204,10 +234,12 @@ Os resultados correspondem a uma única divisão estratificada e uma única exec
 
 O conjunto apresenta desbalanceamento moderado, tratado por ponderação da função de perda, mas ainda não foi realizada uma análise sistemática do efeito isolado dessa estratégia. Também não foram medidos tempo de inferência, consumo de memória ou energia em hardware de borda real. O tamanho do arquivo e a contagem estimada de operações são indicadores de eficiência, mas não substituem medições de latência no dispositivo-alvo.
 
-A calibração da quantização foi realizada com 100 imagens selecionadas aleatoriamente do treinamento. Estudos posteriores devem avaliar o impacto do tamanho e da representatividade desse subconjunto, principalmente para o MobileViT-XXS integral de 8 bits.
+A calibração dos experimentos iniciais foi realizada com 100 imagens selecionadas aleatoriamente do treinamento. No experimento de agrupamento estrutural foram utilizadas 1.000 imagens, com 50 exemplos por classe. Embora a calibração estratificada isoladamente não tenha evitado o colapso, estudos posteriores devem separar sistematicamente os efeitos do tamanho, da representatividade e da estratégia de agrupamento.
+
+O agrupamento `g8_4_4` foi avaliado em uma única configuração estrutural. Além disso, a transformação não satisfez o critério de equivalência FP32 estrita. Ainda devem ser investigadas outras combinações de blocos e números de grupos, a estabilidade entre diferentes subconjuntos de calibração e a origem da divergência numérica introduzida pela soma das ramificações.
 
 ## Conclusões parciais
 
 A pipeline construída permite comparação controlada entre arquiteturas compactas usando as mesmas divisões de dados, critérios de treinamento e métricas. MobileNetV2 e MobileViT-XXS alcançaram aproximadamente 97% de acurácia no conjunto de teste, confirmando que ambas as arquiteturas conseguem representar adequadamente as 20 classes avaliadas.
 
-O MobileNetV2 apresentou o resultado mais equilibrado para o objetivo de visão computacional em borda: 97,22% de acurácia após quantização integral de 8 bits, arquivo de 2,68 MB e redução de 3,2 vezes em relação ao TFLite FP32. O MobileViT-XXS apresentou maior compactação absoluta, chegando a 1,83 MB, mas sua versão integral de 8 bits não preservou a qualidade preditiva. Até o momento, os experimentos indicam que a escolha da arquitetura deve considerar não apenas a acurácia em ponto flutuante e o número de parâmetros, mas também a estabilidade do modelo durante a conversão e a quantização destinadas ao ambiente de implantação.
+O MobileNetV2 apresentou o resultado mais equilibrado para o objetivo de visão computacional em borda: 97,22% de acurácia após quantização integral de 8 bits, arquivo de 2,68 MB e redução de 3,2 vezes em relação ao TFLite FP32. A quantização INT8 convencional do MobileViT-XXS sofreu colapso, mas o agrupamento estrutural `g8_4_4` elevou sua acurácia para 90,43%, demonstrando que a heterogeneidade das ativações por canal era uma causa relevante da degradação. Esse resultado amplia a viabilidade do MobileViT-XXS em INT8, embora permaneçam uma diferença de 6,94 pontos percentuais em relação ao FP32 e a necessidade de obter equivalência numérica mais rigorosa. Até o momento, os experimentos indicam que a escolha da arquitetura deve considerar não apenas a acurácia em ponto flutuante e o número de parâmetros, mas também a distribuição interna das ativações e a estabilidade do modelo durante a conversão e a quantização destinadas ao ambiente de implantação.
