@@ -1,0 +1,10 @@
+{
+  "reference_accuracy": 0.9753086566925049,
+  "grouped_accuracy": 0.9737654328346252,
+  "accuracy_delta": 0.0015432238578796387,
+  "top1_agreement": 0.9984567761421204,
+  "maximum_logit_error": 0.039525747299194336,
+  "mean_logit_error": 0.0020652019884437323,
+  "logits_cosine": 0.9999983310699463,
+  "passed": true
+}

@@ -1,0 +1,83 @@
+{
+  "checkpoint": "/home/jovyan/work/UFSC/butterflies_austria/butterflies_austria_edge_vision/artigo_experimentos/artigo_experimentos_MobileVIT_v3_block7/best_mobilevit_xx_small_v0.pt",
+  "experiments": {
+    "b1_g8": {
+      "1": 8
+    },
+    "b2_g4": {
+      "2": 4
+    },
+    "b3_g4": {
+      "3": 4
+    },
+    "b5_g4": {
+      "5": 4
+    },
+    "b7_g8": {
+      "7": 8
+    },
+    "b1_g8_b2_g4": {
+      "1": 8,
+      "2": 4
+    },
+    "b1_g8_b5_g4": {
+      "1": 8,
+      "5": 4
+    },
+    "b2_g4_b5_g4": {
+      "2": 4,
+      "5": 4
+    },
+    "g4_4_4": {
+      "1": 4,
+      "2": 4,
+      "5": 4
+    },
+    "g8_2_4": {
+      "1": 8,
+      "2": 2,
+      "5": 4
+    },
+    "g8_4_4": {
+      "1": 8,
+      "2": 4,
+      "5": 4
+    },
+    "g8_8_4": {
+      "1": 8,
+      "2": 8,
+      "5": 4
+    },
+    "g8_4_2": {
+      "1": 8,
+      "2": 4,
+      "5": 2
+    },
+    "g8_4_8": {
+      "1": 8,
+      "2": 4,
+      "5": 8
+    },
+    "g8_8_8": {
+      "1": 8,
+      "2": 8,
+      "5": 8
+    },
+    "g8_4_4_b3_g4": {
+      "1": 8,
+      "2": 4,
+      "3": 4,
+      "5": 4
+    },
+    "g8_4_4_b7_g8": {
+      "1": 8,
+      "2": 4,
+      "5": 4,
+      "7": 8
+    }
+  },
+  "target_experiment": "g8_4_4",
+  "seed": 42,
+  "calibration_samples_per_class": 50,
+  "selection_split": "validation"
+}

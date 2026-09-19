@@ -1,0 +1,12 @@
+{
+  "experiment": "g8_4_4_block7_g8",
+  "group_counts": {
+    "1": 8,
+    "2": 4,
+    "5": 4,
+    "7": 8
+  },
+  "checkpoint": "/home/jovyan/work/UFSC/butterflies_austria/butterflies_austria_edge_vision/artigo_experimentos/artigo_experimentos_MobileVIT_v3_block7/best_mobilevit_xx_small_v0.pt",
+  "seed": 42,
+  "calibration_samples_per_class": 50
+}

@@ -1,0 +1,8 @@
+block,block_name,channel_count,minimum_channel_scale,maximum_channel_scale,median_channel_scale,minimum_approximate_codes,median_approximate_codes,channels_with_at_most_16_codes,channels_with_at_most_32_codes,scale_ratio,selected_for_grouping
+1,model.mobilevit.encoder.layer.0.layer.0,32,0.0006616652244701,0.2167669087648391,0.006453898968175,1,8.0,19,22,327.6081328566703,True
+2,model.mobilevit.encoder.layer.1.layer.0,32,0.0005869970773346,0.5132473707199097,0.01883124327287075,1,10.0,18,22,874.3610326825332,True
+3,model.mobilevit.encoder.layer.1.layer.1,48,0.0007777655846439,0.121547095477581,0.0024217742029577,2,6.0,41,42,156.27728698388134,False
+4,model.mobilevit.encoder.layer.1.layer.2,48,0.0007166287396103,0.0676173120737075,0.0097389868460595,3,37.5,13,22,94.3547311687186,False
+5,model.mobilevit.encoder.layer.2.downsampling_layer,48,0.000613390118815,0.1950584203004837,0.0060901234392076505,1,8.5,32,40,318.0005910061193,True
+6,model.mobilevit.encoder.layer.3.downsampling_layer,96,0.0005093969521112,0.0547528713941574,0.01047601504251355,3,49.5,19,29,107.48566744899762,False
+7,model.mobilevit.encoder.layer.4.downsampling_layer,128,0.0001309725921601,0.0638592615723609,0.0116362846456468,1,47.0,27,30,487.5772901730445,False

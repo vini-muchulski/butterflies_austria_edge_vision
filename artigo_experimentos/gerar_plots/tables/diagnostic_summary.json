@@ -1,0 +1,11 @@
+{
+  "original_fp32_test_accuracy": 0.9737654320987654,
+  "original_int8_test_accuracy": 0.1064814814814814,
+  "grouped_fp32_test_accuracy": 0.9737654320987654,
+  "grouped_int8_test_accuracy": 0.9074074074074074,
+  "int8_collapse_percentage_points": 86.7283950617284,
+  "grouping_gain_percentage_points": 80.09259259259261,
+  "fraction_of_lost_accuracy_recovered": 0.9234875444839858,
+  "weight_activation_log_pearson": -0.1676633093868006,
+  "weight_activation_spearman": -0.14559641035075466
+}
