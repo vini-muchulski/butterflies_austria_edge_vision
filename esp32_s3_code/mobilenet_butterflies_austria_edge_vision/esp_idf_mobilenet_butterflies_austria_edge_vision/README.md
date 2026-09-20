@@ -13,9 +13,9 @@ LittleFS e recebe pela rede o tensor de entrada já pré-processado e quantizado
 | Arquivo de origem | training_code/MobileNetV2/butterflies_austria_MobileNetv2/tflite_models_avgpool/model_int8_avgpool.tflite |
 | Formato dos pesos | Buffers incorporados em Buffer.data para compatibilidade com o schema do TFLite Micro embarcado |
 | Entrada | int8 [1,3,224,224], NCHW |
-| Quantização da entrada | scale 0.017730869352817535, zero-point -14 |
+| Quantização da entrada | scale 0.017977742478251457, zero-point -15 |
 | Saída | int8 [1,20] |
-| Quantização da saída | scale 0.03047865629196167, zero-point -64 |
+| Quantização da saída | scale 0.03021967224776745, zero-point -60 |
 | Pós-processamento | logits desquantizados e argmax |
 | Operadores | TRANSPOSE, PAD, CONV_2D, DEPTHWISE_CONV_2D, ADD, AVERAGE_POOL_2D, FULLY_CONNECTED |
 
@@ -169,8 +169,8 @@ Modelo convertido validado:
 | Item | Valor |
 |---|---|
 | Tamanho | 2809720 bytes |
-| FNV-1a | f31c54b7 |
-| SHA-256 | 1356f505a01fb64281ac0d4a30fc61909096b7154a1af6bbefae7a493ff8fc4f |
+| FNV-1a | 30a0d47d |
+| SHA-256 | 73444df0dcd482f84e5f923b8178ab6450e8dc308c5af7642594ad3214439dfb |
 
 ## Organização
 
@@ -316,6 +316,69 @@ O backend otimizado é 5,83x mais rápido que o backend ESP-NN ANSI C. Esses
 tempos incluem a instrumentação de diagnóstico e não representam o desempenho
 final sem tracing.
 
+### Avaliação completa no ESP32-S3
+
+A avaliação concluída em 16 de setembro de 2026 executou as 648 imagens do
+conjunto de teste no ESP32-S3, após três inferências de aquecimento:
+
+| Métrica | Resultado |
+|---|---:|
+| Amostras | 648 |
+| Acertos | 630 |
+| Erros | 18 |
+| Acurácia | 97,2222% |
+| IC 95% de Wilson | 95,6520%–98,2358% |
+| Macro precision | 0,9731 |
+| Macro recall | 0,9705 |
+| Macro F1 | 0,9714 |
+| Precision ponderada | 0,9732 |
+| Recall ponderado | 0,9722 |
+| F1 ponderado | 0,9723 |
+
+Tempos agregados:
+
+| Métrica | Média | Mediana | p95 | Mínimo–máximo |
+|---|---:|---:|---:|---:|
+| Inferência no ESP32-S3 | 3,269903 s | 3,269282 s | 3,274134 s | 3,265131–3,283595 s |
+| Processamento total no dispositivo | 3,456954 s | 3,456316 s | 3,461416 s | 3,452882–3,470506 s |
+| Round-trip HTTP | 5,037682 s | 4,544239 s | 7,813995 s | 3,685531–9,301375 s |
+| Recepção no dispositivo | 1,378642 s | 0,898931 s | 4,000345 s | 0,171196–5,323385 s |
+| Cópia da entrada | 16,064 ms | 16,005 ms | 16,545 ms | 15,920–16,964 ms |
+
+| Métrica operacional | Resultado |
+|---|---:|
+| Duração da avaliação | 55 min 7,765 s |
+| Duração total do run | 55 min 25,712 s |
+| Throughput | 0,195903 imagem/s |
+| Modelo | 2.809.720 bytes |
+| Arena usada | 2.599.136 bytes |
+| Arena alocada | 5.242.880 bytes |
+| Uso da arena | 49,57% |
+| Margem da arena | 2.643.744 bytes |
+| Memória interna livre média após inferência | 250.607 bytes |
+| Memória interna livre mínima após inferência | 250.519 bytes |
+| PSRAM livre após inferência | 173.384 bytes |
+
+O round-trip inclui envio do tensor por Wi-Fi, espera pelo dispositivo e
+recepção da resposta. A métrica de inferência é a medida interna do
+`MicroInterpreter::Invoke()`. Essa versão do avaliador registrou memória
+somente após cada inferência; não há valores anteriores à chamada nem mínimos
+históricos durante a execução.
+
+O artefato avaliado foi:
+
+~~~text
+data/model_int8_avgpool.tflite
+Tamanho: 2.809.720 bytes
+FNV-1a: 30a0d47d
+SHA-256: 73444df0dcd482f84e5f923b8178ab6450e8dc308c5af7642594ad3214439dfb
+~~~
+
+Os resultados completos estão em
+`python/results_esp/evaluation/20260916T142132Z_model_int8_avgpool/`, incluindo
+`predictions.csv`, `summary.json`, relatório de classificação, matriz de
+confusão, telemetria e log do terminal.
+
 ## Memória e concorrência
 
 A configuração foi preparada para ESP32-S3 N16R8:
@@ -358,8 +421,9 @@ somente no C++ exige apenas gravar o firmware.
 
 - O modelo e os scripts estão configurados para Butterflies Austria e
   MobileNetV2 int8.
-- O modelo em data/ usa buffers incorporados e possui FNV-1a f31c54b7.
+- O modelo em data/ usa buffers incorporados e possui FNV-1a 30a0d47d.
 - O modelo INT8 com AVERAGE_POOL_2D foi validado com BUILTIN_WITHOUT_DEFAULT_DELEGATES e BUILTIN_REF.
+- A avaliação completa no ESP32-S3 obteve 97,2222% de acurácia em 648 imagens.
 - A imagem 299 foi validada no ESP32 como Lycaenidae, classe 9.
 - A configuração atual usa ESP-NN otimizado e FULLY_CONNECTED per-channel de
   referência.

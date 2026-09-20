@@ -1,0 +1,36 @@
+{
+  "model": "mobilevit_b5_g4_int8.tflite",
+  "schema": 3,
+  "external_buffers": [],
+  "input_dtype": "int8",
+  "output_dtype": "int8",
+  "input_shape": [
+    1,
+    3,
+    256,
+    256
+  ],
+  "output_shape": [
+    1,
+    20
+  ],
+  "input_quantization": [
+    0.0038768567610532045,
+    -128
+  ],
+  "output_quantization": [
+    0.031413733959198,
+    -78
+  ],
+  "size_bytes": 1757776,
+  "strict_full_int8": true,
+  "unsupported_operators": [
+    "BATCH_MATMUL"
+  ],
+  "unsupported_operator_versions": [
+    [
+      "BATCH_MATMUL",
+      1
+    ]
+  ]
+}

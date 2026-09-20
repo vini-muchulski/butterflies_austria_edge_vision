@@ -4,7 +4,7 @@
 
 Este diretório contém o estudo de uma MobileViT XX-Small para classificar 20 espécies de borboletas do dataset Butterflies Austria e, posteriormente, executar o modelo quantizado em um ESP32-S3.
 
-O estado atual é experimental, mas a inferência embarcada completa já foi obtida. A exportação foi adaptada ao pipeline do ESP32-S3, `BATCH_MATMUL` foi incorporado ao TFLM e a `FULLY_CONNECTED` per-channel foi corrigida para saídas com rank maior que 2. O trace do PC em modo de referência coincide com o ESP32-S3 até o operador 177. A primeira divergência comprovada aparece na saída da `FULLY_CONNECTED` per-channel do operador 178 e é numericamente pequena. Ainda falta avaliar todo o dataset e remover a instrumentação antes de medir o desempenho final.
+O estado atual é experimental, mas a inferência embarcada completa e a avaliação das 648 imagens de teste já foram obtidas. A exportação foi adaptada ao pipeline do ESP32-S3, `BATCH_MATMUL` foi incorporado ao TFLM e a `FULLY_CONNECTED` per-channel foi corrigida para saídas com rank maior que 2. O trace do PC em modo de referência coincide com o ESP32-S3 até o operador 177. A primeira divergência comprovada aparece na saída da `FULLY_CONNECTED` per-channel do operador 178 e é numericamente pequena. Ainda falta remover a instrumentação antes de medir o desempenho final.
 
 ## Estrutura atual
 
@@ -260,9 +260,100 @@ Foi usada a amostra de teste de índice 299, `Lycaenidae/bl-377.jpg`:
 
 O hash da entrada foi igual no PC e no ESP32-S3: `1b15e6e0`. O hash final foi internamente consistente no dispositivo: `af492174` tanto no último `OPTRACE` quanto na resposta HTTP.
 
-O resultado não foi bit a bit idêntico ao PC. O PC produziu hash `3b61745e`, embora ambos tenham previsto a classe 9. Dezoito dos vinte logits diferiram, com diferença máxima aproximada de `0,25131`, equivalente a oito níveis da saída quantizada. Isso não alterou a classe vencedora, mas exige avaliação no dataset completo.
+O resultado não foi bit a bit idêntico ao PC. O PC produziu hash `3b61745e`, embora ambos tenham previsto a classe 9. Dezoito dos vinte logits diferiram, com diferença máxima aproximada de `0,25131`, equivalente a oito níveis da saída quantizada. Isso não alterou a classe vencedora nessa amostra; o comportamento agregado foi verificado nas avaliações completas abaixo.
 
 O tempo de 45,675937 s não é um benchmark final. Ele inclui `OPTRACE`, `MODEL_DIAG`, `NODE_DIAG`, `FC_DIAG`, `FC_TENSOR_DIAG` e `FC_QUANT_DIAG`, além de kernels de referência para `BATCH_MATMUL` e `FULLY_CONNECTED` per-channel.
+
+### Avaliação completa no ESP32-S3
+
+Foram concluídas duas avaliações sobre as mesmas 648 imagens do conjunto de teste. `g8_4_4` corresponde ao modelo inicialmente embarcado; `g8_4_4_b3_g4` corresponde à variante posterior avaliada no diretório dedicado.
+
+| Métrica | `g8_4_4` | `g8_4_4_b3_g4` |
+|---|---:|---:|
+| Acertos | 590/648 | 624/648 |
+| Acurácia | 91,0494% | 96,2963% |
+| IC 95% de Wilson | 88,6027%–93,0123% | 94,5482%–97,4987% |
+| Macro precision | 0,9205 | 0,9652 |
+| Macro recall | 0,9100 | 0,9632 |
+| Macro F1 | 0,9092 | 0,9634 |
+| F1 ponderado | 0,9108 | 0,9630 |
+| Erros | 58 | 24 |
+
+A variante `g8_4_4_b3_g4` aumentou a acurácia em 5,2469 pontos percentuais e reduziu os erros em 58,62%.
+
+#### Tempos
+
+| Métrica | `g8_4_4` | `g8_4_4_b3_g4` |
+|---|---:|---:|
+| Inferência média | 45,657488 s | 46,284222 s |
+| Inferência mediana | 45,662383 s | 46,288290 s |
+| Inferência p95 | 45,704272 s | 46,332782 s |
+| Inferência mínima–máxima | 45,528670–45,729196 s | 46,161181–46,402217 s |
+| Processamento total médio no dispositivo | 45,790638 s | 46,419997 s |
+| Round-trip HTTP médio | 48,069111 s | 49,242363 s |
+| Recepção média no dispositivo | 2,040681 s | 2,579183 s |
+| Cópia média da entrada | 20,934 ms | 21,039 ms |
+| Tempo total da avaliação | 8 h 10 min 25 s | 8 h 52 min 36 s |
+| Throughput | 0,02202 imagem/s | 0,02028 imagem/s |
+
+O tempo médio de inferência de `g8_4_4_b3_g4` foi 0,626734 s, ou 1,37%, maior. O round-trip inclui transmissão Wi-Fi e não representa o tempo puro de inferência. Ambas as execuções mantinham os diagnósticos por operador e kernels de referência; portanto, esses tempos servem para comparar os dois runs instrumentados, não como benchmark final de produção.
+
+#### Modelo e memória
+
+| Métrica | `g8_4_4` | `g8_4_4_b3_g4` |
+|---|---:|---:|
+| Modelo | 1.843.720 bytes (1,758 MiB) | 1.868.496 bytes (1,782 MiB) |
+| SHA-256 | `1c830eca3f888626e0276d6693270578cc4dbd5d511ee6f5dfd84e87b9c4a149` | `559b6c236bb3ab9b06301f4984faad18ae6aa6fcd2a154628583638999553d5b` |
+| Arena usada | 2.881.824 bytes | 2.885.136 bytes |
+| Arena alocada | 5.242.880 bytes | 5.242.880 bytes |
+| Uso da arena | 54,97% | 55,03% |
+| Margem da arena | 2.361.056 bytes | 2.357.744 bytes |
+| Memória interna livre antes, mediana | 250.083 bytes | 249.959 bytes |
+| Memória interna livre após, mediana | 250.119 bytes | 250.003 bytes |
+| Mínimo interno durante inferência, mediana | 248.051 bytes | 247.915 bytes |
+| Uso interno adicional durante inferência, média | 2.297 bytes | 2.118 bytes |
+| Uso interno adicional durante inferência, máximo | 10.244 bytes | 7.024 bytes |
+| PSRAM livre antes/durante/após | 1.078.572 bytes | 1.045.804 bytes |
+
+A arena da variante `g8_4_4_b3_g4` cresceu 3.312 bytes e o modelo cresceu 24.776 bytes. A PSRAM livre permaneceu constante durante cada inferência; modelo e arena já estavam alocados. Os pequenos valores negativos de `internal_before - internal_after` observados não indicam vazamento, pois a memória após a chamada ficou ligeiramente maior e a métrica relevante para pico é `internal_before - internal_min_during`.
+
+Resultados completos:
+
+- `esp_idf_mobileVIT_butterflies_austria_edge_vision/python/results_esp/evaluation/20260917T154102Z_mobilevit_int8/`;
+- `mobilevit_g8_4_4_b3_g4/python/results_esp/evaluation/20260919T230022Z_mobilevit_int8/`.
+
+### Por que a MobileNetV2 foi mais rápida
+
+A MobileNetV2 apresentou inferência média de 3,269903 s, enquanto as duas
+variantes MobileViT apresentaram 45,657488 s e 46,284222 s. Nas configurações
+avaliadas, a MobileNetV2 foi aproximadamente 14 vezes mais rápida.
+
+Os principais fatores são:
+
+1. A MobileNetV2 é formada principalmente por `CONV_2D` e
+   `DEPTHWISE_CONV_2D`, operadores com kernels otimizados pelo ESP-NN.
+2. A MobileViT possui 18 operações `BATCH_MATMUL` na atenção, executadas pela
+   implementação de referência porque não existe um caminho ESP-NN equivalente
+   neste projeto.
+3. Várias projeções da atenção usam `FULLY_CONNECTED` com quantização
+   per-channel. Essas operações usam o kernel inteiro de referência, enquanto o
+   caminho ESP-NN permanece disponível somente para os casos per-tensor.
+4. O grafo da MobileViT possui 788 operações, contra aproximadamente 70 na
+   MobileNetV2. A MobileViT inclui ainda 201 `RESHAPE`, 114 `MUL`, 79
+   `ADD`, 56 `TRANSPOSE`, 55 `FULLY_CONNECTED`, 42 `MEAN`, 21
+   `SQUARED_DIFFERENCE` e 21 `RSQRT`.
+5. A normalização dos blocos transformer é decomposta em `MEAN`,
+   `SQUARED_DIFFERENCE`, `RSQRT`, `MUL`, `SUB` e `ADD`. Esses
+   operadores percorrem tensores completos e não recebem aceleração do ESP-NN.
+6. A entrada da MobileViT é `256 × 256`, enquanto a MobileNetV2 usa
+   `224 × 224`. A MobileViT processa 30,61% mais pixels.
+7. A atenção, as transposições e as projeções provocam maior movimentação de
+   tensores intermediários. O custo de acesso e reorganização de dados em PSRAM
+   é relevante no ESP32-S3.
+
+O tamanho do arquivo não determina diretamente a latência. Embora o artefato
+MobileViT seja menor, seu grafo possui mais operações, mais transformações de
+layout e menor cobertura de kernels otimizados.
 
 ### Comparação de traces e `IMAGE_INDEX`
 
@@ -406,8 +497,8 @@ sum=-1625
 1. localizar os primeiros elementos divergentes no operador 178 e comparar acumulador, multiplicador, shift e resultado requantizado;
 2. remover `OPTRACE`, `CONV_DIAG`, `MODEL_DIAG`, `NODE_DIAG`, `FC_DIAG`, `FC_TENSOR_DIAG` e `FC_QUANT_DIAG` após concluir o diagnóstico;
 3. medir novamente a latência sem instrumentação;
-4. avaliar todo o dataset de teste no dispositivo;
-5. registrar acurácia, matriz de confusão, latência, arena, heap interno, PSRAM e hashes para o artigo científico;
+4. repetir a avaliação sem instrumentação para obter a latência final;
+5. comparar as matrizes de confusão e as amostras divergentes entre ESP32-S3 e PC;
 6. comparar as métricas completas do ESP32-S3 com `BUILTIN_REF` no PC.
 
 ## Artefatos de resultados
