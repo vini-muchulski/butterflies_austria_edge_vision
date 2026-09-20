@@ -1,0 +1,8 @@
+split,configuration,accuracy,recovered_fraction
+validation,Original FP32,0.9737654320987654,
+validation,Original full INT8,0.10802469135802469,0.0
+validation,g8_4_4 full INT8,0.8966049382716049,0.910873440285205
+validation,g8_4_4 + b3_g4 full INT8,0.9552469135802469,0.9786096256684492
+test,Original FP32,0.9737654320987654,
+test,Original full INT8,0.1064814814814814,0.0
+test,g8_4_4 + b3_g4 full INT8,0.9629629629629628,0.9875444839857649

@@ -1,0 +1,16 @@
+{
+  "test_samples": 648,
+  "classes": 20,
+  "mcnemar_variant": "two-sided exact binomial",
+  "multiple_testing_correction": "Holm",
+  "familywise_alpha": 0.05,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 42,
+  "significant_comparisons_after_holm": [
+    "MobileViT-XXS FP32 vs. MobileViT-XXS original INT8",
+    "MobileViT-XXS FP32 vs. MobileViT-XXS g8_4_4 INT8",
+    "MobileViT-XXS original INT8 vs. MobileViT-XXS g8_4_4 INT8",
+    "MobileViT-XXS original INT8 vs. MobileViT-XXS g8_4_4 + b3_g4 INT8",
+    "MobileViT-XXS g8_4_4 INT8 vs. MobileViT-XXS g8_4_4 + b3_g4 INT8"
+  ]
+}
