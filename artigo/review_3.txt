@@ -1,0 +1,10 @@
+
+Lack of references in the beginning.
+
+It is more common to focus on related work in depth, explain how this work differs from existing work, and only present references for the models and architectures. It is fine to understand what the work proposes, but it is quite hard to understand the difference, and mainly the novelty of this analysis.
+
+On page four, "Figures ??". Things in Portuguese on the table 6 'Borboletas'
+
+It would be important to expand the evaluation to cover more datasets, metrics, and models.
+
+The work is well explained, with examples and results for every architecture. However, it is very limited, mainly by the number of datasets and the small explanation of related works. It would be better if the authors focused on explaining why this analysis is important and how it differs from analyses in the literature. 

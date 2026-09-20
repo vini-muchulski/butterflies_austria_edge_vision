@@ -1,0 +1,6 @@
+
+This work describes the comparison of two image processing models, namely MobileNetV2 and MobileViT, for the task of image classification on two public databases.  The paper describes very seriously the training and execution of the models, and thus the results and the conclusions seem quite reliable.
+
+However, the paper is very specific and thus of low interest.  It looks like a rehearsal to doing the real research job of proposing new algorithms and seriously testing it.  The paper also misses the opportunity of investigating the weaknesses and strengths of each model.  It is not clear why those two models were the chosen ones, as they are both extensions/modifications of the CNN paradigm.  Nor is it clear why those two datasets were chosen, except for the fact that they are public and thus the results can be, in theory, reproducible.
+
+After reading the work, one  is confronted with  the question of why those modifications of CNN were made, what compromises were involved in each modification, and where the data shows such compromises.  As it is, the paper demonstrate the authors are quite capable of competently performing the  task of training given models,  but are not curious enough to explore their features. 

@@ -1,0 +1,33 @@
+justificar por que escolhi mobilenetv2 e mobilevit1
+diga que descobrimos esse colapso da mobilevit e como a mobilenet aguentava a quantizacao e a mobilvit nao
+era necessario converter para tflite int8 para embarcar no esp32s3
+dai com isso buscamos investigar isso
+trabalho futuros
+aplicar qat
+usar versoes mais recentes da mobilenet e mobilevit
+treinar em outros datasets para comparacao
+
+
+
+
+9. Reprodutibilidade ainda está incompleta
+O artigo informa otimizador, taxas de aprendizado e semente, mas ainda deveria registrar:
+- tamanho do lote;
+- hardware de treinamento;
+- versão do Python;
+- versões de PyTorch, timm, LiteRT-Torch e quantizador;
+- sistema operacional ou imagem Docker;
+- versão do checkpoint;
+- disponibilidade do código, pesos e scripts;
+- tempo aproximado de treinamento e conversão.
+10. Justificativa do conjunto de dados
+A escolha das arquiteturas está razoavelmente explicada. A escolha do Butterflies-Austria-20 ainda precisa ser justificada além de sua disponibilidade pública.
+Uma justificativa adequada seria seu caráter de classificação fina, desbalanceamento moderado e semelhança visual entre classes, que tornam o conjunto útil para observar perdas discretas introduzidas pela quantização.
+11. Trabalhos relacionados ainda podem ser ampliados
+Foram incluídos MobileNetV3, MobileViTv2, PTQ4ViT, RepQ-ViT, MCUNet e MLPerf Tiny. Ainda faltam alguns trabalhos pedidos:
+- MobileViTv3;
+- EfficientNet-Lite;
+- EdgeNeXt;
+- MobileOne;
+- GWQ e técnicas relacionadas de quantização em grupos.
+Não é obrigatório executar todos esses modelos, mas é necessário explicar por que não constituem comparações diretamente equivalentes.
