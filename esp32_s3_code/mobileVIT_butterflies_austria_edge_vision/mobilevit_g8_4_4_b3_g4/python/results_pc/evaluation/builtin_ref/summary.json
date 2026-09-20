@@ -1,0 +1,31 @@
+{
+  "model_path": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/esp32_s3_code/mobileVIT_butterflies_austria_edge_vision/mobilevit_g8_4_4_b3_g4/data/mobilevit_int8.tflite",
+  "dataset_path": "/home/vini_muchulski/dados/experimentos_esp32/butterflies_austria_github/butterflies_austria_edge_vision/Dataset-butterflies-austria/test",
+  "resolver": "builtin_ref",
+  "samples": 648,
+  "correct": 625,
+  "incorrect": 23,
+  "accuracy": 0.9645061728395061,
+  "classes": [
+    "Aglais_Urticae",
+    "Anthocharis_Cardamines",
+    "Apatura_Iris",
+    "Argynnis_Paphia",
+    "Colias_Myrmidone",
+    "Gonepteryx_Rhamni",
+    "Inachis_Io",
+    "Iphiclides_Podalirius",
+    "Lycaena_Virgaureae",
+    "Lycaenidae",
+    "Maniola_Jurtina",
+    "Melanargia_Galathea",
+    "Nymphalis_Antiopa",
+    "Papilio_Machaon",
+    "Parnassius_Apollo",
+    "Pieris_Rapae",
+    "Polygonia_C-album",
+    "Vanessa_Atalanta",
+    "Vanessa_Cardui",
+    "Zerynthia_Polyxena"
+  ]
+}

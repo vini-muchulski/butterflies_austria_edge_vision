@@ -1,0 +1,11 @@
+{
+  "selected_experiment": "g8_4_4_b3_g4",
+  "target_experiment": "g8_4_4",
+  "best_validation_accuracy": 0.9552469135802469,
+  "validation_tolerance": 0.0015432098765432098,
+  "selection_rule": "Within one validation sample of best accuracy, then minimum extra branches, size, and operators",
+  "target_validation_accuracy": 0.8966049382716049,
+  "target_validation_rank": 5,
+  "target_delta_from_best": -0.058641975308642014,
+  "target_pareto_efficient": false
+}

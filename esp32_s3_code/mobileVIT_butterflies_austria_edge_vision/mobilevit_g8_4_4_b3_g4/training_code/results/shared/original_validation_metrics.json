@@ -1,0 +1,52 @@
+{
+  "fp32": {
+    "accuracy": 0.9737654320987654,
+    "macro_precision": 0.9743417083564928,
+    "macro_recall": 0.975994238448829,
+    "macro_f1": 0.9749373924825349,
+    "weighted_f1": 0.9737863273004841
+  },
+  "int8": {
+    "accuracy": 0.10802469135802469,
+    "macro_precision": 0.09898845687602215,
+    "macro_recall": 0.10698479984770307,
+    "macro_f1": 0.04883793092437172,
+    "weighted_f1": 0.051831625918208744
+  },
+  "inspection": {
+    "model": "mobilevit_original_stratified_int8.tflite",
+    "schema": 3,
+    "external_buffers": [],
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "output_shape": [
+      1,
+      20
+    ],
+    "input_quantization": [
+      0.0038768567610532045,
+      -128
+    ],
+    "output_quantization": [
+      0.031413733959198,
+      -78
+    ],
+    "size_bytes": 1730472,
+    "strict_full_int8": true,
+    "unsupported_operators": [
+      "BATCH_MATMUL"
+    ],
+    "unsupported_operator_versions": [
+      [
+        "BATCH_MATMUL",
+        1
+      ]
+    ]
+  }
+}

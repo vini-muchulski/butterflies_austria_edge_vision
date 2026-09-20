@@ -1,0 +1,17 @@
+{
+  "grouped_fp32": {
+    "accuracy": 0.9737654320987654,
+    "macro_precision": 0.9743417083564928,
+    "macro_recall": 0.975994238448829,
+    "macro_f1": 0.9749373924825349,
+    "weighted_f1": 0.9737863273004841
+  },
+  "grouped_int8": {
+    "accuracy": 0.125,
+    "macro_precision": 0.2117096881115307,
+    "macro_recall": 0.11814034644852986,
+    "macro_f1": 0.08276711714103208,
+    "weighted_f1": 0.0834092739300202
+  },
+  "validation_gain": 0.016975308641975315
+}
