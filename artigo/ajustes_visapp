@@ -1,0 +1,54 @@
+na parte "O conjunto Butterflies-Austria-20 contém 6.479 imagens em 20 classes,
+divididas de forma estratificada em treinamento, validação e teste." valar que esse é o dataset escolhido pois .... e nao apenas jogar essa informacao
+
+buscar citacoes para o primeiro paragrafo da introducao
+
+acho que essa parte podemos refazer:
+"portanto, a unidade de comparação é
+a pipeline pré-treinada completa, não a arquite-
+tura isolada"
+
+aqui podemos trocar arena por memoria : 
+"(i) se as pipelines
+TFLite INT8 podem ser executadas no ESP32-
+S3 e quais são seus custos de latência e arena;"
+
+
+nessa parte "a avaliação das
+648 imagens de teste no ESP32-S3;" da para tirar o numero 648 e deixa apenas imagens de teste
+
+
+"Menos parâmetros, entretanto, não
+implicam implantação mais eficiente." isso aqui da para tirar
+
+
+na parte "2.3
+Quantização para Inferência
+Inteira" verificar se os trabalhos citados estao coerentes com os pdfs dos artigos baixados
+
+
+tirar isso "Uma auditoria confirmou que a classe com 349
+imagens é Apatura Iris, não uma duplicação de
+Iphiclides Podalirius."
+
+tirar essa parte "não um erro metodológico", podemos falar que as resolucoes usadas seguem a arquitetura ja existente ou algo assim
+
+
+verificar essa afirmacao, da para retirar? "Pesos de expansão também
+foram analisados por correlação de Pearson em
+escala logarı́tmica e Spearman." ?
+
+
+"Foi usada uma ESP32-S3" foi usado UM
+
+
+citar as tabelas e figuras ao longo do texto
+
+
+"BATCH MATMUL
+versão 1 foi registrado no resolver e executado no
+ESP32-S3."  arrumar isso. o que é essa versao 1?
+
+
+"Os arquivos do dispositivo e do host
+possuı́am os mesmos hashes." aqui podemos citar que o uso desses hashs foi usado com o objetivo de verificar possiveis corrupcoes de integridade.
