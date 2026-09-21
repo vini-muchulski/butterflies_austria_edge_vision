@@ -48,7 +48,7 @@ citar as tabelas e figuras ao longo do texto
 "BATCH MATMUL
 versão 1 foi registrado no resolver e executado no
 ESP32-S3."  arrumar isso. o que é essa versao 1?
-
+https://raw.githubusercontent.com/tensorflow/tflite-micro/main/tensorflow/lite/micro/kernels/batch_matmul.cc
 
 "Os arquivos do dispositivo e do host
 possuı́am os mesmos hashes." aqui podemos citar que o uso desses hashs foi usado com o objetivo de verificar possiveis corrupcoes de integridade.
@@ -59,3 +59,14 @@ possuı́am os mesmos hashes." aqui podemos citar que o uso desses hashs foi usa
 citar mais trabalhos relacionados 
 
 https://www.sciencedirect.com/science/article/pii/S2772375523000138
+https://link.springer.com/article/10.1007/s10462-025-11234-6
+https://ieeexplore.ieee.org/abstract/document/9538686
+
+@misc{christian_menard_2024,
+	title={Butterflies-Austria-20},
+	url={https://www.kaggle.com/dsv/8702901},
+	DOI={10.34740/KAGGLE/DSV/8702901},
+	publisher={Kaggle},
+	author={Christian Menard},
+	year={2024}
+}
