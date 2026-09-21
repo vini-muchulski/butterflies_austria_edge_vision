@@ -12,7 +12,7 @@ keywords:
 
 # Resumo
 
-O objetivo primário deste trabalho é avaliar a execução de classificação de imagens em um ESP32-S3 e comparar uma CNN móvel consolidada, a MobileNetV2, com a MobileViT-XXS, arquitetura híbrida que combina convoluções e componentes do tipo *Vision Transformer*. O estudo utiliza o conjunto *Butterflies-Austria-20*, composto por 6.479 imagens distribuídas em 20 classes, com divisão estratificada fixa de 80% para treinamento, 10% para validação e 10% para teste. As arquiteturas foram inicializadas com pesos da ImageNet, ajustadas sob o mesmo protocolo e convertidas por uma pipeline PyTorch–LiteRT para TFLite com pesos e ativações INT8, representação definida como alvo de implantação. Os modelos foram executados com TensorFlow Lite Micro e núcleos ESP-NN compatíveis, medindo-se acurácia, latência e uso da arena de tensores. Em PyTorch, MobileNetV2 e MobileViT-XXS atingiram 97,07% e 97,22% de acurácia. A MobileNetV2 TFLite INT8 preservou 97,22% e apresentou tempo médio de inferência de 3,27 s no ESP32-S3. Durante a preparação da MobileViT-XXS para a mesma implantação, sua versão INT8 original caiu para 10,65% em uma avaliação controlada, revelando um colapso que não ocorreu com ativações INT16. Como investigação adicional, o diagnóstico por canal relacionou a degradação à heterogeneidade das amplitudes de ativação, e uma transformação estrutural sem novo treinamento recuperou 96,30% no teste. Essa versão executou as 648 imagens no ESP32-S3 com média de 46,28 s por inferência. Os resultados mostram que acurácia em ponto flutuante e número de parâmetros não antecipam a robustez à quantização nem a latência embarcada, e que modelos híbridos podem exigir adaptações específicas para inferência inteira em microcontroladores.
+O objetivo primário deste trabalho é avaliar a execução de classificação de imagens em um ESP32-S3 e comparar uma CNN móvel consolidada, a MobileNetV2, com a MobileViT-XXS, arquitetura híbrida que combina convoluções e componentes do tipo *Vision Transformer*. O dataset *Butterflies-Austria-20* foi escolhido por representar uma tarefa multiclasse de reconhecimento de espécies, relevante para aplicações de monitoramento ambiental, e por possuir volume compatível com o treinamento dos modelos e a avaliação integral da partição de teste no dispositivo. O conjunto contém 6.479 imagens distribuídas em 20 classes, com divisão estratificada fixa de 80% para treinamento, 10% para validação e 10% para teste. As arquiteturas foram inicializadas com pesos da ImageNet, ajustadas sob o mesmo protocolo e convertidas por uma pipeline PyTorch–LiteRT para TFLite com pesos e ativações INT8, representação definida como alvo de implantação. Os modelos foram executados com TensorFlow Lite Micro e núcleos ESP-NN compatíveis, medindo-se acurácia, latência e uso da arena de tensores. Em PyTorch, MobileNetV2 e MobileViT-XXS atingiram 97,07% e 97,22% de acurácia. A MobileNetV2 TFLite INT8 preservou 97,22% e apresentou tempo médio de inferência de 3,27 s no ESP32-S3. Durante a preparação da MobileViT-XXS para a mesma implantação, sua versão INT8 original caiu para 10,65% em uma avaliação controlada, revelando um colapso que não ocorreu com ativações INT16. Como investigação adicional, o diagnóstico por canal relacionou a degradação à heterogeneidade das amplitudes de ativação, e uma transformação estrutural sem novo treinamento recuperou 96,30% no teste. Essa versão executou as 648 imagens no ESP32-S3 com média de 46,28 s por inferência. Os resultados mostram que acurácia em ponto flutuante e número de parâmetros não antecipam a robustez à quantização nem a latência embarcada, e que modelos híbridos podem exigir adaptações específicas para inferência inteira em microcontroladores.
 
 **Palavras-chave:** IA na borda; ESP32-S3; ESP-NN; MobileNetV2; MobileViT-XXS; quantização INT8.
 
@@ -24,11 +24,11 @@ A MobileNetV2 foi projetada para reduzir o custo de redes convolucionais por mei
 
 O objetivo primário foi levar as duas pipelines até a execução embarcada, utilizando TensorFlow Lite Micro e as otimizações ESP-NN disponíveis, e medir acurácia, latência de inferência e uso da arena de tensores. A representação *full INT8* foi definida como alvo de implantação desde o início do estudo. As versões FP32 e com pesos INT8 e ativações INT16 foram mantidas como controles para caracterizar os efeitos da conversão, e não como artefatos finais de implantação. Foi nesse processo que se identificou o colapso da MobileViT-XXS com ativações INT8. O diagnóstico e a tentativa de recuperação desse modelo constituem uma investigação adicional derivada do objetivo embarcado.
 
-Para reduzir fatores de confusão, o estudo restringe o escopo a um conjunto de dados e a duas arquiteturas. MobileNetV2 e MobileViT-XXS utilizam pesos pré-treinados e o mesmo protocolo de ajuste fino. Não são incluídas outras variantes da MobileViT nem comparações de hardware realizadas sob runtimes distintos. O pré-processamento nativo de cada checkpoint é preservado; por isso, a unidade de comparação é a pipeline pré-treinada completa, e não a arquitetura isolada.
+Para reduzir fatores de confusão, o estudo restringe o escopo a um conjunto de dados e a duas arquiteturas. MobileNetV2 e MobileViT-XXS utilizam pesos pré-treinados e o mesmo protocolo de ajuste fino. Não são incluídas outras variantes da MobileViT nem comparações de hardware realizadas sob runtimes distintos. O pré-processamento nativo de cada checkpoint foi preservado para não descaracterizar os modelos pré-treinados. Assim, os resultados comparam as configurações efetivamente implantadas de MobileNetV2 e MobileViT-XXS sob o mesmo protocolo experimental, reconhecendo que o pré-processamento específico de cada modelo integra sua configuração.
 
 O estudo responde às seguintes questões:
 
-1. As pipelines TFLite INT8 podem ser executadas no ESP32-S3 com TensorFlow Lite Micro e os núcleos ESP-NN compatíveis, e quais são seus custos de latência e arena de tensores?
+1. As pipelines TFLite INT8 podem ser executadas no ESP32-S3 com TensorFlow Lite Micro e os núcleos ESP-NN compatíveis, e quais são a latência e o uso de memória associados?
 2. Como uma CNN móvel consolidada e uma arquitetura híbrida com componentes *transformer* se comparam em qualidade preditiva, robustez à quantização e desempenho embarcado?
 3. Que propriedade interna está associada ao colapso INT8 observado na MobileViT-XXS durante a preparação para implantação?
 4. O agrupamento estrutural de canais recupera o desempenho sem novo treinamento e preserva a execução no dispositivo?
@@ -37,7 +37,7 @@ As contribuições são:
 
 - uma comparação embarcada entre uma CNN móvel consolidada e uma arquitetura híbrida sob a mesma divisão de dados e o mesmo protocolo de otimização;
 - uma pipeline de PyTorch para TFLite INT8 por meio do LiteRT, seguida de implantação com TensorFlow Lite Micro e núcleos ESP-NN compatíveis;
-- a execução dos modelos INT8 sobre as 648 imagens de teste em um ESP32-S3, com medição interna de latência e uso da arena de tensores;
+- a execução dos modelos INT8 sobre as imagens de teste em um ESP32-S3, com medição interna de latência e uso da arena de tensores;
 - a identificação e a análise por canal do colapso da MobileViT-XXS após a quantização das ativações para INT8;
 - a avaliação controlada de uma transformação estrutural que mantém o checkpoint treinado e altera a granularidade efetiva da quantização;
 - uma comparação de blocos e quantidades de grupos, com seleção pela validação e avaliação final da configuração escolhida.
@@ -54,7 +54,7 @@ Arquiteturas posteriores, como a MobileNetV3, ampliaram esse projeto com busca d
 
 A MobileViT intercala blocos residuais convolucionais e blocos MobileViT. Neles, características locais são extraídas por convoluções, reorganizadas em sequências de fragmentos e processadas por autoatenção. A variante XXS é a menor configuração da família original e procura combinar contexto global com baixo número de parâmetros [2].
 
-Menos parâmetros não implica automaticamente melhor implantação. A própria evolução MobileViTv2 substituiu a autoatenção multi-cabeças por atenção separável de complexidade linear para reduzir latência em dispositivos móveis [4]. Essa distinção é relevante aqui: a MobileViT-XXS possui menos parâmetros que a MobileNetV2, mas apresentou maior sensibilidade à quantização das ativações.
+A própria evolução MobileViTv2 substituiu a autoatenção multi-cabeças por atenção separável de complexidade linear para reduzir latência em dispositivos móveis [4]. Essa distinção é relevante aqui: a MobileViT-XXS possui menos parâmetros que a MobileNetV2, mas apresentou maior sensibilidade à quantização das ativações.
 
 ## Quantização para inferência inteira
 
@@ -68,17 +68,17 @@ em que $s$ é a escala e $z$ é o ponto zero. A quantização de pesos e ativaç
 
 Neste trabalho, **resolução numérica** designa a capacidade da representação quantizada de distinguir valores próximos de uma ativação; ela não deve ser confundida com a resolução espacial da imagem. Em INT8 existem 256 valores inteiros possíveis, mas isso não significa que cada canal utilize todos eles. Quando uma ativação emprega uma única escala por tensor, canais com amplitudes muito diferentes competem pela mesma grade de quantização. Um canal extremo pode ampliar $s$, aumentar a distância entre valores reais representáveis e reduzir a resolução numérica efetivamente disponível para os canais menores. Este trabalho investiga esse mecanismo em vez de tratar a perda de acurácia somente como um resultado agregado.
 
-Trabalhos específicos sobre quantização de *vision transformers* também relacionam a degradação a distribuições difíceis de representar. O PTQ4ViT trata distribuições atípicas após Softmax e GELU por quantização uniforme dupla e calibração orientada pela Hessiana [7]. O RepQ-ViT identifica variação severa entre canais após LayerNorm e utiliza reparametrização de escalas para compatibilizar quantização por canal e inferência eficiente [8]. A análise proposta neste artigo difere por localizar o problema nas expansões convolucionais de uma arquitetura híbrida MobileViT e por separar estruturalmente seus canais antes de aplicar uma receita INT8 convencional do LiteRT.
+Trabalhos específicos sobre quantização de *vision transformers* também relacionam a degradação a distribuições difíceis de representar. O PTQ4ViT identifica distribuições desequilibradas após Softmax e assimétricas após GELU, propondo quantização uniforme dupla e uma métrica orientada pela Hessiana para selecionar as escalas [7]. O RepQ-ViT identifica variação severa entre canais após LayerNorm e distribuições em lei de potência após Softmax; o método aplica quantizadores específicos durante a quantização e reparametriza suas escalas para formas mais adequadas à inferência em hardware [8]. A análise proposta neste artigo difere por localizar o problema nas expansões convolucionais de uma arquitetura híbrida MobileViT e por separar estruturalmente seus canais antes de aplicar uma receita INT8 convencional do LiteRT.
 
-Pesquisas como MCUNet mostram que implantação em microcontroladores depende do projeto conjunto da rede e do runtime [9]. O MLPerf Tiny, por sua vez, recomenda avaliar acurácia, latência e energia sob procedimentos reproduzíveis [10]. Este trabalho avalia qualidade preditiva, tamanho dos arquivos, latência de inferência e arena de tensores no ESP32-S3; consumo de energia permanece fora do escopo.
+O MCUNet adota o coprojeto da arquitetura neural TinyNAS e do mecanismo de inferência TinyEngine para atender às restrições de memória, latência e energia de microcontroladores [9]. O MLPerf Tiny define uma suíte reproduzível de benchmarks que mede acurácia, latência e energia da inferência em sistemas TinyML [10]. Este trabalho avalia qualidade preditiva, tamanho dos arquivos, latência de inferência e arena de tensores no ESP32-S3; consumo de energia permanece fora do escopo.
 
 # Metodologia
 
 ## Conjunto de dados
 
-O *Butterflies-Austria-20* reúne imagens RGB de borboletas em 20 categorias [11]. O conjunto processado contém 6.479 imagens. A menor classe possui 160 imagens e a maior, 474, razão de 2,96 entre os extremos.
+O *Butterflies-Austria-20* reúne imagens RGB de borboletas em 20 categorias [11]. Sua escolha se deve à combinação de uma tarefa multiclasse de reconhecimento de espécies, relevante para monitoramento ambiental, com um volume de dados que permite ajustar os modelos e executar integralmente a partição de teste no ESP32-S3. O conjunto processado contém 6.479 imagens. A menor classe possui 160 imagens e a maior, 474, razão de 2,96 entre os extremos. A divisão estratificada é apresentada na Tabela 1.
 
-Uma auditoria da estrutura de diretórios confirmou que a classe com 349 imagens é `Apatura_Iris`; ela não constitui uma segunda ocorrência de `Iphiclides_Podalirius`. As 20 pastas efetivamente utilizadas são distintas.
+*Tabela 1 — Divisão estratificada do conjunto de dados.*
 
 | Partição | Imagens | Proporção |
 |---|---:|---:|
@@ -87,7 +87,9 @@ Uma auditoria da estrutura de diretórios confirmou que a classe com 349 imagens
 | Teste | 648 | 10% |
 | Total | 6.479 | 100% |
 
-A separação foi materializada em disco no formato `partição/classe/imagem`, com estratificação por classe e semente 42. O mapeamento entre nomes e índices foi verificado nas três partições.
+A separação foi materializada em disco no formato `partição/classe/imagem`, com estratificação por classe e semente 42. O mapeamento entre nomes e índices foi verificado nas três partições. A Tabela 2 detalha as contagens por classe.
+
+*Tabela 2 — Distribuição das imagens por classe e partição.*
 
 | Classe | Total | Treino | Validação | Teste |
 |---|---:|---:|---:|---:|
@@ -112,6 +114,8 @@ A separação foi materializada em disco no formato `partição/classe/imagem`, 
 | `Vanessa_Cardui` | 332 | 266 | 33 | 33 |
 | `Zerynthia_Polyxena` | 244 | 195 | 24 | 25 |
 
+A Figura 1 mostra a distribuição das classes no treinamento, enquanto as Figuras 2, 3 e 4 apresentam exemplos das partições de treinamento, teste e validação, respectivamente.
+
 ![Distribuição das classes na partição de treinamento](plots/mobilenetv2_01_class_distribution.png)
 
 *Figura 1 — Distribuição das 20 classes na partição de treinamento.*
@@ -134,7 +138,9 @@ A distribuição e as amostras acima foram extraídas da pipeline da MobileNetV2
 
 A MobileNetV2 foi instanciada pela biblioteca `timm` como `mobilenetv2_100`, com pesos da ImageNet. A MobileViT-XXS utilizou o checkpoint `apple/mobilevit-xx-small`, também pré-treinado na ImageNet. Em ambos os casos, a camada classificadora foi substituída por uma saída de 20 logits e todo o modelo foi ajustado.
 
-A seleção da MobileViT-XXS original também considerou a reprodutibilidade da pipeline de implantação. Essa variante dispunha de checkpoint pré-treinado, pré-processamento documentado e conversão funcional para TFLite no ambiente adotado. A MobileViTv2 foi avaliada preliminarmente, mas sua conversão direta apresentou incompatibilidades no LiteRT, incluindo falhas de *broadcasting* na atenção separável e geração de `STABLEHLO_SCATTER` durante a reconstrução dos fragmentos. Contornar essas limitações exigiria alterações específicas na implementação da arquitetura, introduzindo um fator adicional na comparação. A MobileViTv3 não foi incluída porque a versão do `timm` utilizada não oferecia uma implementação pré-treinada e mantida dessa família, nem havia uma pipeline equivalente validada para exportação direta ao LiteRT. Assim, a escolha da MobileViT-XXS priorizou disponibilidade de pesos, pré-processamento reproduzível e compatibilidade com o fluxo de implantação empregado.
+A seleção da MobileViT-XXS original também considerou a reprodutibilidade da pipeline de implantação. Essa variante dispunha de checkpoint pré-treinado, pré-processamento documentado e conversão funcional para TFLite no ambiente adotado. A MobileViTv2 foi avaliada preliminarmente, mas sua conversão direta apresentou incompatibilidades no LiteRT, incluindo falhas de *broadcasting* na atenção separável e geração de `STABLEHLO_SCATTER` durante a reconstrução dos fragmentos. Contornar essas limitações exigiria alterações específicas na implementação da arquitetura, introduzindo um fator adicional na comparação. A MobileViTv3 não foi incluída porque a versão do `timm` utilizada não oferecia uma implementação pré-treinada e mantida dessa família, nem havia uma pipeline equivalente validada para exportação direta ao LiteRT. Assim, a escolha da MobileViT-XXS priorizou disponibilidade de pesos, pré-processamento reproduzível e compatibilidade com o fluxo de implantação empregado. A Tabela 3 resume as características das duas pipelines.
+
+*Tabela 3 — Características das pipelines comparadas.*
 
 | Característica | MobileNetV2 | MobileViT-XXS |
 |---|---:|---:|
@@ -146,7 +152,7 @@ A seleção da MobileViT-XXS original também considerou a reprodutibilidade da 
 
 A resolução e a normalização não foram igualadas porque cada checkpoint foi mantido com seu pré-processamento esperado. Essa decisão preserva a validade de cada pipeline pré-treinada, mas limita qualquer atribuição de diferenças exclusivamente à arquitetura.
 
-A ordem BGR não foi uma escolha empírica nem uma inversão acidental dos canais. A documentação oficial da família MobileViT, que inclui a variante XXS, especifica: “Pixels are normalized to the range [0, 1]. Images are expected to be in BGR pixel order, not RGB” [12]. A configuração do processador associada ao checkpoint `apple/mobilevit-xx-small` também define `do_flip_channels=true`, redimensionamento para 288 pixels e recorte central de $256 \times 256$ [13]. Na implementação, `ToTensor()` converte os pixels de 8 bits para ponto flutuante e os reescala de $[0,255]$ para $[0,1]$; em seguida, a indexação `image[[2, 1, 0]]` transforma a ordem RGB fornecida pelo carregador em BGR. Não foi aplicada normalização pela média e pelo desvio-padrão da ImageNet à MobileViT-XXS, pois ela não pertence ao pré-processamento esperado por esse checkpoint. Portanto, a diferença em relação à MobileNetV2 é deliberada e reproduz os protocolos específicos dos modelos pré-treinados, em vez de constituir erro metodológico.
+A ordem BGR não foi uma escolha empírica nem uma inversão acidental dos canais. A documentação oficial da família MobileViT, que inclui a variante XXS, especifica: “Pixels are normalized to the range [0, 1]. Images are expected to be in BGR pixel order, not RGB” [12]. A configuração do processador associada ao checkpoint `apple/mobilevit-xx-small` também define `do_flip_channels=true`, redimensionamento para 288 pixels e recorte central de $256 \times 256$ [13]. Na implementação, `ToTensor()` converte os pixels de 8 bits para ponto flutuante e os reescala de $[0,255]$ para $[0,1]$; em seguida, a indexação `image[[2, 1, 0]]` transforma a ordem RGB fornecida pelo carregador em BGR. Não foi aplicada normalização pela média e pelo desvio-padrão da ImageNet à MobileViT-XXS, pois ela não pertence ao pré-processamento esperado por esse checkpoint. Portanto, as resoluções de entrada, a ordem dos canais e a normalização adotadas seguem as configurações estabelecidas para cada modelo pré-treinado.
 
 No treinamento, ambas receberam inversões horizontal e vertical com probabilidade 0,1 e transformação afim com rotação de até 10 graus, translação de até 10% e escala entre 0,9 e 1,1. A MobileViT-XXS redimensionou a imagem para 288 pixels antes de um recorte aleatório de $256 \times 256$; validação e teste utilizaram recorte central. Validação, teste e calibração não receberam aumento aleatório.
 
@@ -220,7 +226,7 @@ Para resumir cada bloco, foram calculadas a mediana de $L_c$ e as quantidades de
 
 A razão entre a maior e a menor escala de canal e a distribuição de $L_c$ fornecem informações complementares. A razão detecta heterogeneidade extrema e pode ser dominada por poucos valores atípicos. A distribuição dos níveis efetivos indica a extensão do problema, isto é, quantos canais perdem resolução numérica sob a escala compartilhada. Uma mediana de seis níveis, como a observada no bloco 3, significa que pelo menos metade de seus canais dispõe de aproximadamente seis níveis de quantização ou menos.
 
-Como diagnóstico complementar, também foram analisados os pesos da convolução de expansão de cada bloco. Para cada canal de saída, calculou-se a maior magnitude absoluta de seus pesos e comparou-se esse valor com a escala de ativação do mesmo canal. A associação foi medida pela correlação de Pearson após transformação logarítmica das duas variáveis e pela correlação de postos de Spearman. Essa análise foi descritiva e não foi usada isoladamente para selecionar os blocos.
+Como diagnóstico complementar, relacionou-se, para cada canal de saída, a maior magnitude absoluta dos pesos da convolução de expansão à escala da ativação correspondente. A associação foi quantificada pela correlação de Pearson entre os logaritmos das duas grandezas e pela correlação de postos de Spearman sobre seus valores originais. Essa análise foi descritiva e não foi usada isoladamente para selecionar os blocos.
 
 ## Agrupamento estrutural de canais
 
@@ -244,7 +250,7 @@ Foram identificados sete módulos desse tipo, numerados de 1 a 7 conforme sua or
 
 ### Notação e configurações de referência
 
-As configurações estruturais foram identificadas pelos blocos transformados e por suas respectivas quantidades de grupos. A configuração `g8_4_4` foi a primeira a demonstrar recuperação ampla e aplicou 8, 4 e 4 grupos aos blocos 1, 2 e 5, respectivamente. Ela foi utilizada como referência inicial para construir e comparar novas variantes. A configuração `g8_4_4 + b3_g4` preservou esses agrupamentos e acrescentou o bloco 3 dividido em quatro grupos; ao final da avaliação comparativa, ela foi selecionada pela acurácia de validação.
+As configurações estruturais foram identificadas pelos blocos transformados e por suas respectivas quantidades de grupos. A configuração `g8_4_4` foi a primeira a demonstrar recuperação ampla e aplicou 8, 4 e 4 grupos aos blocos 1, 2 e 5, respectivamente. Ela foi utilizada como referência inicial para construir e comparar novas variantes. A configuração `g8_4_4 + b3_g4` preservou esses agrupamentos e acrescentou o bloco 3 dividido em quatro grupos; ao final da avaliação comparativa, ela foi selecionada pela acurácia de validação. A Tabela 4 resume os agrupamentos das duas configurações de referência.
 
 ```python
 INITIAL_GROUP_COUNTS = {
@@ -260,6 +266,8 @@ SELECTED_GROUP_COUNTS = {
     5: 4,
 }
 ```
+
+*Tabela 4 — Agrupamentos das configurações de referência.*
 
 | Papel na avaliação | Bloco | Canais internos | Grupos | Canais por grupo |
 |---|---:|---:|---:|---:|
@@ -380,7 +388,7 @@ Foram planejadas sete comparações. Seus valores de $p$ foram ajustados pelo pr
 
 ## Protocolo de execução no ESP32-S3
 
-A execução embarcada constituiu o objetivo central da comparação. Foi utilizada uma placa ESP32-S3 DevKitC-1 com módulo N16R8, CPU configurada a 240 MHz, 16 MB de memória flash e 8 MB de PSRAM octal a 80 MHz. Os três firmwares foram construídos com ESP-IDF 5.5.0 e o mesmo componente TensorFlow Lite Micro, compilado com os núcleos otimizados do ESP-NN para operações como convolução, convolução *depthwise*, soma, multiplicação, *pooling*, camada totalmente conectada e Softmax. A arena de tensores foi limitada a 5 MB e alocada na PSRAM. Os modelos foram armazenados em LittleFS, copiados para a PSRAM durante a inicialização e executados por um `MicroInterpreter` com apenas os operadores necessários a cada grafo.
+A execução embarcada constituiu o objetivo central da comparação. Foi usado um ESP32-S3 DevKitC-1 com módulo N16R8, CPU configurada a 240 MHz, 16 MB de memória flash e 8 MB de PSRAM octal a 80 MHz. Os três firmwares foram construídos com ESP-IDF 5.5.0 e o mesmo componente TensorFlow Lite Micro, compilado com os núcleos otimizados do ESP-NN para operações como convolução, convolução *depthwise*, soma, multiplicação, *pooling*, camada totalmente conectada e Softmax. A arena de tensores foi limitada a 5 MB e alocada na PSRAM. Os modelos foram armazenados em LittleFS, copiados para a PSRAM durante a inicialização e executados por um `MicroInterpreter` com apenas os operadores necessários a cada grafo.
 
 Foram embarcados três modelos *full INT8*: MobileNetV2, MobileViT-XXS `g8_4_4` e MobileViT-XXS `g8_4_4 + b3_g4`. Para compatibilidade do grafo da MobileNetV2 com o runtime embarcado, o *pooling* global da cópia destinada à exportação foi expresso como `AVERAGE_POOL_2D` com janela $7\times7$. Essa substituição apresentou erro absoluto máximo de $2,384\times10^{-7}$ em relação ao modelo PyTorch original e não alterou o checkpoint treinado. A identidade dos três arquivos executados no dispositivo foi conferida por SHA-256 contra os artefatos avaliados no host.
 
@@ -390,14 +398,16 @@ O conjunto completo de 648 imagens de teste foi percorrido na mesma ordem. O hos
 
 ## Desempenho em PyTorch
 
-Os dois modelos atingiram sua melhor acurácia de validação na época 26 e foram interrompidos na época 34. A diferença de acurácia no teste foi 0,15 ponto percentual, correspondente a uma única imagem.
+Os dois modelos atingiram sua melhor acurácia de validação na época 26 e foram interrompidos na época 34. A diferença de acurácia no teste foi 0,15 ponto percentual, correspondente a uma única imagem. As métricas são apresentadas na Tabela 5.
+
+*Tabela 5 — Desempenho dos modelos PyTorch na partição de teste.*
 
 | Modelo | Parâmetros totais | Acurácia | Precisão macro | Recall macro | F1 macro | F1 ponderado |
 |---|---:|---:|---:|---:|---:|---:|
 | MobileNetV2 | 2.249.492 | 97,07% | 97,13% | 96,98% | 97,00% | 97,08% |
 | MobileViT-XXS | 957.444 | 97,22% | 97,27% | 97,31% | 97,21% | 97,22% |
 
-A MobileViT-XXS alcançou desempenho semelhante com 57,4% menos parâmetros.
+A MobileViT-XXS alcançou desempenho semelhante com 57,4% menos parâmetros. As curvas de treinamento são apresentadas nas Figuras 5 e 8; as Figuras 6 e 9 mostram exemplos de predições; e as Figuras 7 e 10 apresentam as matrizes de confusão.
 
 ### MobileNetV2
 
@@ -429,6 +439,10 @@ A MobileViT-XXS alcançou desempenho semelhante com 57,4% menos parâmetros.
 
 ## Conversão e quantização
 
+Os resultados das três representações de cada arquitetura são apresentados na Tabela 6.
+
+*Tabela 6 — Resultados da conversão para TFLite.*
+
 | Pipeline e representação | Tamanho | Acurácia de teste | Diferença para FP32 |
 |---|---:|---:|---:|
 | MobileNetV2 TFLite FP32 | 8,63 MB | 97,07% | — |
@@ -446,6 +460,10 @@ Essa conversão inicial utilizou até 100 imagens de calibração. Na etapa cont
 
 ## Evidências do colapso INT8
 
+A Tabela 7 resume a heterogeneidade das ativações observada nos sete blocos.
+
+*Tabela 7 — Heterogeneidade das ativações por bloco.*
+
 | Bloco | Canais | Razão entre escalas | Mediana de níveis efetivos | Canais com até 16 níveis efetivos | Fração do bloco |
 |---|---:|---:|---:|---:|---:|
 | 1 | 32 | 327,61× | 8,0 | 19 | 59,4% |
@@ -456,7 +474,7 @@ Essa conversão inicial utilizou até 100 imagens de calibração. Na etapa cont
 | 6 | 96 | 107,49× | 49,5 | 19 | 19,8% |
 | 7 | 128 | 487,58× | 47,0 | 27 | 21,1% |
 
-Os blocos 1, 2 e 5 combinam razões elevadas com uma parcela relevante de canais usando poucos níveis de quantização efetivos e fundamentaram a configuração inicial. O bloco 3 apresenta o comprometimento mais disseminado: 85,4% de seus canais dispõem de até 16 níveis efetivos e a mediana é de seis. O bloco 7 apresenta a segunda maior razão entre escalas, mas somente 21,1% de seus canais estão abaixo desse limite e sua mediana é de 47 níveis. Portanto, a razão extrema isolada não foi suficiente para definir a transformação; a escolha final também considerou a prevalência da compressão e os resultados das variantes combinadas.
+Os blocos 1, 2 e 5 combinam razões elevadas com uma parcela relevante de canais usando poucos níveis de quantização efetivos e fundamentaram a configuração inicial. O bloco 3 apresenta o comprometimento mais disseminado: 85,4% de seus canais dispõem de até 16 níveis efetivos e a mediana é de seis. O bloco 7 apresenta a segunda maior razão entre escalas, mas somente 21,1% de seus canais estão abaixo desse limite e sua mediana é de 47 níveis. Portanto, a razão extrema isolada não foi suficiente para definir a transformação; a escolha final também considerou a prevalência da compressão e os resultados das variantes combinadas. A Figura 11 compara as escalas e a resolução numérica efetiva antes e depois do agrupamento.
 
 ![Diagnóstico das escalas de ativação e da resolução efetiva da quantização](plots/figure_11_activation_scale_diagnosis.png)
 
@@ -474,7 +492,9 @@ A distribuição dos pesos de expansão dos blocos 1, 2 e 5, destacados pelo dia
 
 ## Avaliação comparativa das variantes estruturais
 
-Para evitar selecionar antecipadamente uma configuração específica, as 17 variantes foram comparadas primeiro na partição de validação, sob o mesmo checkpoint, o mesmo conjunto estratificado de calibração e o mesmo quantizador. A tabela inclui transformações de blocos isolados, combinações parciais, diferentes quantidades de grupos e extensões com os blocos 3 e 7.
+Para evitar selecionar antecipadamente uma configuração específica, as 17 variantes foram comparadas primeiro na partição de validação, sob o mesmo checkpoint, o mesmo conjunto estratificado de calibração e o mesmo quantizador. A Tabela 8 inclui transformações de blocos isolados, combinações parciais, diferentes quantidades de grupos e extensões com os blocos 3 e 7.
+
+*Tabela 8 — Comparação das 17 configurações estruturais INT8 na validação.*
 
 | Configuração INT8 | Blocos e grupos | Acurácia de validação | F1 macro |
 |---|---|---:|---:|
@@ -504,7 +524,9 @@ O resultado mais relevante foi a interação com o bloco 3. Isoladamente, `b3_g4
 
 ## Seleção da configuração e recuperação do desempenho
 
-Após a comparação das 17 alternativas na validação, a configuração `g8_4_4 + b3_g4` foi selecionada por apresentar a maior acurácia. Na etapa original de seleção, somente essa configuração foi levada ao teste. O resultado de teste de `g8_4_4` foi obtido posteriormente para a análise estatística pareada.
+Após a comparação das 17 alternativas na validação, a configuração `g8_4_4 + b3_g4` foi selecionada por apresentar a maior acurácia. Na etapa original de seleção, somente essa configuração foi levada ao teste. O resultado de teste de `g8_4_4` foi obtido posteriormente para a análise estatística pareada. A progressão da recuperação é resumida na Tabela 9 e ilustrada na Figura 14.
+
+*Tabela 9 — Progressão da recuperação da MobileViT-XXS.*
 
 | Modelo | Validação | Teste | F1 macro no teste | Tamanho INT8 |
 |---|---:|---:|---:|---:|
@@ -523,7 +545,9 @@ A configuração `g8_4_4` elevou a acurácia de validação em 78,86 pontos perc
 
 Após a caracterização do colapso e a seleção da configuração estrutural, a análise pareada considerou cinco modelos TFLite: MobileNetV2 FP32, MobileViT-XXS FP32, MobileViT-XXS INT8 original, MobileViT-XXS INT8 com `g8_4_4` e MobileViT-XXS INT8 com `g8_4_4 + b3_g4`. Todos foram avaliados sobre as mesmas 648 imagens de teste, na mesma ordem. A execução de `g8_4_4` no teste foi realizada posteriormente para permitir essa comparação; como a partição já havia sido consultada, o resultado permanece exploratório.
 
-A tabela resume o teste exato de McNemar. As colunas “A apenas” e “B apenas” indicam quantas imagens foram classificadas corretamente somente pelo primeiro ou pelo segundo modelo, respectivamente. A diferença de acurácia é calculada como B menos A, e os valores de $p$ apresentados já incluem a correção de Holm.
+A Tabela 10 resume o teste exato de McNemar. As colunas “A apenas” e “B apenas” indicam quantas imagens foram classificadas corretamente somente pelo primeiro ou pelo segundo modelo, respectivamente. A diferença de acurácia é calculada como B menos A, e os valores de $p$ apresentados já incluem a correção de Holm.
+
+*Tabela 10 — Teste exato de McNemar com correção de Holm.*
 
 | Modelo A | Modelo B | Diferença B−A | A apenas | B apenas | $p$ de Holm | Resultado |
 |---|---|---:|---:|---:|---:|---|
@@ -535,13 +559,17 @@ A tabela resume o teste exato de McNemar. As colunas “A apenas” e “B apena
 | MobileViT-XXS original INT8 | `g8_4_4 + b3_g4` INT8 | +85,65 p.p. | 0 | 555 | $1,02\times10^{-166}$ | diferença significativa |
 | `g8_4_4` INT8 | `g8_4_4 + b3_g4` INT8 | +5,56 p.p. | 6 | 42 | $3,03\times10^{-7}$ | diferença significativa |
 
-O modelo INT8 original apresentou perda sistemática em relação ao FP32. O agrupamento `g8_4_4` recuperou 92,35% dessa perda, mas permaneceu significativamente abaixo do FP32. A configuração selecionada recuperou 98,75% da perda e superou significativamente `g8_4_4`. Sua diferença de 1,08 ponto percentual para o FP32 não foi significativa após Holm ($p=0,131$), resultado que não prova equivalência. O intervalo *bootstrap* ficou entre −2,16 e −0,15 pontos percentuais; a diferença em relação ao McNemar decorre do comportamento discreto e conservador do teste exato com apenas 11 pares discordantes.
+O modelo INT8 original apresentou perda sistemática em relação ao FP32. O agrupamento `g8_4_4` recuperou 92,35% dessa perda, mas permaneceu significativamente abaixo do FP32. A configuração selecionada recuperou 98,75% da perda e superou significativamente `g8_4_4`. Sua diferença de 1,08 ponto percentual para o FP32 não foi significativa após Holm ($p=0,131$), resultado que não prova equivalência. O intervalo *bootstrap* ficou entre −2,16 e −0,15 pontos percentuais; a diferença em relação ao McNemar decorre do comportamento discreto e conservador do teste exato com apenas 11 pares discordantes. A Figura 15 apresenta as diferenças pareadas, os intervalos e os valores de $p$ ajustados.
 
 ![Diferenças pareadas de acurácia no teste](plots/figure_15_mcnemar_paired_accuracy_differences.png)
 
 *Figura 15 — Diferenças pareadas de acurácia entre os modelos TFLite. Os pontos representam B menos A, as barras mostram intervalos de 95% por bootstrap pareado e os rótulos apresentam os valores de p do teste exato de McNemar após correção de Holm.*
 
 ## Custo estrutural e validade da conversão
+
+A Tabela 11 compara o tamanho e o número de operadores das principais configurações.
+
+*Tabela 11 — Custo das principais configurações INT8.*
 
 | Configuração | Tamanho INT8 | Operadores | Ramificações adicionais |
 |---|---:|---:|---:|
@@ -552,7 +580,7 @@ O modelo INT8 original apresentou perda sistemática em relação ao FP32. O agr
 
 Da configuração inicial para a configuração selecionada, a inclusão do bloco 3 aumentou o arquivo em 24.776 bytes, ou 1,34%, adicionou 24 operadores e três somas. Frente ao INT8 original, o aumento de tamanho foi 7,98%. O ganho de 5,86 pontos percentuais na validação ocorreu, portanto, com acréscimo estrutural limitado. A latência e a arena de tensores desse acréscimo foram posteriormente medidas no ESP32-S3.
 
-Todas as variantes foram exportadas como modelos com entrada, saída e tensores internos inteiros, sem operações de desquantização. Os grafos MobileViT contêm `BATCH_MATMUL` versão 1. O operador foi registrado no resolver do TensorFlow Lite Micro e executado com sucesso no ESP32-S3 durante toda a avaliação, eliminando a incerteza anterior sobre a compatibilidade funcional desse operador no firmware utilizado.
+Todas as variantes foram exportadas como modelos com entrada, saída e tensores internos inteiros, sem operações de desquantização. Os grafos MobileViT contêm 18 instâncias de `BATCH_MATMUL`, empregadas nas operações de atenção. Para suportá-las no ESP32-S3, a implementação de referência oficial do TensorFlow Lite Micro [14] foi incorporada à biblioteca embarcada e registrada no resolver de operadores. As 18 instâncias foram executadas durante toda a avaliação no dispositivo.
 
 Para `g8_4_4 + b3_g4`, a transformação PyTorch apresentou concordância top-1 de 99,85%, diferença de uma imagem e erro absoluto máximo de 0,0395 entre logits. Os modelos TFLite FP32 original e agrupado obtiveram a mesma acurácia. Trata-se de preservação empírica do desempenho, não de equivalência matemática estrita. Entre os resolvers *builtin* e de referência do LiteRT, a diferença de acurácia foi 0,31 ponto percentual e a concordância das predições foi 98,46%.
 
@@ -560,7 +588,9 @@ No teste, o modelo selecionado apresentou F1 macro de 96,28% e F1 ponderado de 9
 
 ## Execução embarcada no ESP32-S3
 
-Os três modelos concluíram as 648 inferências no ESP32-S3. A tabela apresenta a latência de `Invoke()` medida no dispositivo; comunicação HTTP e pré-processamento no host não estão incluídos. O intervalo da acurácia é o IC de 95% de Wilson, e a arena corresponde à parcela efetivamente usada dos 5 MB reservados na PSRAM.
+Os três modelos concluíram as 648 inferências no ESP32-S3. A Tabela 12 apresenta a latência de `Invoke()` medida no dispositivo; comunicação HTTP e pré-processamento no host não estão incluídos. O intervalo da acurácia é o IC de 95% de Wilson, e a arena corresponde à parcela efetivamente usada dos 5 MB reservados na PSRAM.
+
+*Tabela 12 — Resultados embarcados nas 648 imagens de teste.*
 
 | Modelo embarcado INT8 | Tamanho | Acurácia no ESP32-S3 (IC 95%) | F1 macro | Inferência média ± desvio-padrão | Mediana | P95 | Arena usada |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -572,7 +602,7 @@ A MobileNetV2 foi aproximadamente 14 vezes mais rápida que as duas configuraç�
 
 A inclusão do bloco 3 elevou a acurácia embarcada de 91,05% para 96,30%, ao custo de apenas 1,37% na latência média de inferência, 1,34% no tamanho do arquivo e 3.312 bytes, ou 0,11%, na arena usada. Portanto, a principal penalidade temporal está associada à pipeline MobileViT no microcontrolador, e não à extensão de `g8_4_4` para `g8_4_4 + b3_g4`.
 
-Os arquivos executados no ESP32-S3 eram idênticos aos avaliados no host segundo seus hashes SHA-256. Para `g8_4_4`, o dispositivo atingiu 91,05%, ante 90,74% no LiteRT, e apresentou concordância de 96,14% entre as predições dos dois runtimes. Para `g8_4_4 + b3_g4`, ambos atingiram 96,30%, com concordância de 99,69%. Essas diferenças residuais mostram que o backend numérico também deve ser considerado na validação de implantação, ainda que a recuperação da configuração selecionada tenha sido preservada no dispositivo.
+A igualdade dos hashes SHA-256 dos arquivos no host e no ESP32-S3 foi usada para verificar a integridade dos artefatos e detectar possíveis corrupções ou alterações durante sua transferência e seu armazenamento no dispositivo. Para `g8_4_4`, o dispositivo atingiu 91,05%, ante 90,74% no LiteRT, e apresentou concordância de 96,14% entre as predições dos dois runtimes. Para `g8_4_4 + b3_g4`, ambos atingiram 96,30%, com concordância de 99,69%. Essas diferenças residuais mostram que o backend numérico também deve ser considerado na validação de implantação, ainda que a recuperação da configuração selecionada tenha sido preservada no dispositivo.
 
 # Discussão
 
@@ -622,6 +652,7 @@ The authors acknowledge the use of generative artificial intelligence tools duri
 8. Z. Li, J. Xiao, L. Yang e Q. Gu. “RepQ-ViT: Scale Reparameterization for Post-Training Quantization of Vision Transformers”. *Proceedings of the IEEE/CVF International Conference on Computer Vision*, p. 17227–17236, 2023. https://doi.org/10.1109/ICCV51070.2023.01580.
 9. J. Lin, W.-M. Chen, Y. Lin, J. Cohn, C. Gan e S. Han. “MCUNet: Tiny Deep Learning on IoT Devices”. *Advances in Neural Information Processing Systems*, v. 33, 2020. https://arxiv.org/abs/2007.10319.
 10. C. Banbury et al. “MLPerf Tiny Benchmark”. *Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks*, 2021. https://arxiv.org/abs/2106.07597.
-11. Chris565. “Butterflies Austria 20 Species”. *Kaggle*. https://www.kaggle.com/datasets/chris565/butterflies-austria-20-species.
+11. C. Menard. “Butterflies-Austria-20”. *Kaggle*, 2024. DOI: [10.34740/KAGGLE/DSV/8702901](https://doi.org/10.34740/KAGGLE/DSV/8702901).
 12. Apple. “MobileViT (small-sized model): Preprocessing”. *Hugging Face*. https://huggingface.co/apple/mobilevit-x-small.
 13. Apple. “MobileViT XXS: Preprocessor configuration”. *Hugging Face*. https://huggingface.co/apple/mobilevit-xx-small/blob/main/preprocessor_config.json.
+14. TensorFlow Authors. “TensorFlow Lite Micro: `BATCH_MATMUL` kernel”. *TensorFlow Lite Micro source code*, 2024. https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/kernels/batch_matmul.cc.
