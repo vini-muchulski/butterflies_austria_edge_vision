@@ -394,6 +394,39 @@ A configuração foi preparada para ESP32-S3 N16R8:
 A requisição HTTP executa de forma síncrona e existe uma única instância do
 interpretador. O firmware pressupõe uma inferência por vez.
 
+## Versões das dependências do ESP32-S3
+
+As versões abaixo foram verificadas no `dependencies.lock`, nos manifestos
+locais e no ambiente que gerou a build existente:
+
+| Componente | Versão |
+|---|---|
+| Alvo | ESP32-S3 |
+| Placa PlatformIO | `esp32-s3-devkitc-1` |
+| PlatformIO Core | 6.2.0 |
+| Plataforma PlatformIO `espressif32` | 6.12.0 |
+| ESP-IDF | 5.5.0 |
+| Pacote PlatformIO `framework-espidf` | 3.50500.0 |
+| `joltwallet/littlefs` | 1.14.8 |
+| ESP-NN | v1.1.2, com modificações locais |
+| Toolchain `xtensa-esp-elf` | 14.2.0, crosstool-NG `esp-14.2.0_20241119` |
+| Pacote PlatformIO `tool-mklittlefs` | 1.203.210628 |
+| CMake | 3.30.2 |
+| Ninja | 1.7.1 |
+
+O lock do componente LittleFS registra o hash
+`362f1f5beb5087b0c60169aff82676d2d0ffc991ead975212b0cba95959181c5`.
+
+O TensorFlow Lite Micro usado pelo firmware é a cópia local modificada em
+`common_components_butterflies_austria/tflite-lib`. Esse componente não
+declara versão upstream. O ESP-NN usa a versão base v1.1.2 com modificações
+locais em `common_components_butterflies_austria/esp-nn`. As alterações locais
+de `FULLY_CONNECTED` fazem parte da implementação efetivamente avaliada.
+
+O `dependencies.lock` fixa ESP-IDF e LittleFS. A linha
+`platform = espressif32` do `platformio.ini` não fixa a versão da plataforma;
+`6.12.0` é a versão instalada no ambiente usado para estas builds.
+
 ## Compilação e gravação
 
 O tflite-lib está compilado com -DESP_NN. O sdkconfig.esp32s3 seleciona
