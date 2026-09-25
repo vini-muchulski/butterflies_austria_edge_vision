@@ -166,7 +166,7 @@ A semente 42 foi aplicada a Python, NumPy e PyTorch.
 
 ## Conversão e avaliação
 
-O treinamento e o ajuste fino foram realizados em PyTorch. Para a implantação, foi desenvolvida uma pipeline que carrega os checkpoints PyTorch, adapta os modelos para exportação e os converte diretamente para o formato TFLite com `litert_torch.convert`, fornecido pelo LiteRT-Torch. Os arquivos TFLite FP32 resultantes foram calibrados e quantizados com `ai_edge_quantizer`, e os artefatos finais foram executados com `ai_edge_litert.Interpreter`. Assim, o fluxo experimental permaneceu no ecossistema PyTorch–LiteRT, sem uso direto das APIs Python do TensorFlow para treinamento, conversão ou inferência.
+O treinamento e o ajuste fino foram realizados com PyTorch 2.10.0+cu128. Para a implantação, foi desenvolvida uma pipeline que carrega os checkpoints PyTorch, adapta os modelos para exportação e os converte diretamente para o formato TFLite com `litert_torch.convert`, fornecido pelo LiteRT-Torch 0.9.4. Os arquivos TFLite FP32 resultantes foram calibrados e quantizados com AI Edge Quantizer 0.9.0, e os artefatos finais foram executados com `ai_edge_litert.Interpreter`, do AI Edge LiteRT 2.2.0. Assim, o fluxo experimental permaneceu no ecossistema PyTorch–LiteRT, sem uso direto das APIs Python do TensorFlow para treinamento, conversão ou inferência.
 
 A versão *full INT8* foi o alvo da implantação no ESP32-S3, de acordo com o objetivo de avaliar inferência inteira no TensorFlow Lite Micro e aproveitar os núcleos ESP-NN compatíveis. As representações FP32 e INT8A16 foram utilizadas como controles experimentais para separar perdas causadas pela conversão das associadas especificamente à quantização das ativações para 8 bits.
 
@@ -391,13 +391,13 @@ Para as comparações pareadas posteriores, as predições dos modelos incluído
 
 O teste exato bilateral de McNemar foi adotado como análise inferencial principal porque compara dois classificadores avaliados sobre as mesmas amostras. Para cada par, as predições foram reduzidas a acerto ou erro e organizadas em uma tabela $2\times2$. O teste considera somente os casos discordantes: imagens acertadas apenas pelo modelo A e imagens acertadas apenas pelo modelo B. A hipótese nula estabelece que essas duas frequências são iguais. A versão exata binomial foi usada por permanecer válida quando há poucos pares discordantes.
 
-Foram planejadas sete comparações. Seus valores de $p$ foram ajustados pelo procedimento de Holm para controlar em 5% a probabilidade de ao menos um falso positivo no conjunto de comparações. A implementação baseada no teste binomial exato do SciPy foi reproduzida com `statsmodels.stats.contingency_tables.mcnemar`; ambas produziram os mesmos valores de $p$. Ausência de significância foi interpretada como falta de evidência de diferença, e não como demonstração de equivalência.
+Foram planejadas sete comparações. Seus valores de $p$ foram ajustados pelo procedimento de Holm para controlar em 5% a probabilidade de ao menos um falso positivo no conjunto de comparações. O teste foi calculado inicialmente com `scipy.stats.binomtest` e verificado de forma independente com `statsmodels.stats.contingency_tables.mcnemar`; as duas implementações produziram os mesmos valores de $p$. Ausência de significância foi interpretada como falta de evidência de diferença, e não como demonstração de equivalência.
 
 ## Protocolo de execução no ESP32-S3
 
-A execução embarcada constituiu o objetivo central da comparação. Foi usado um ESP32-S3 DevKitC-1 com módulo N16R8, CPU configurada a 240 MHz, 16.777.216 bytes de memória flash (16,78 MB) e 8.388.608 bytes de PSRAM octal (8,39 MB) a 80 MHz. Os três firmwares foram construídos com ESP-IDF 5.5.0 e o mesmo componente TensorFlow Lite Micro, compilado com os núcleos otimizados do ESP-NN para operações como convolução, convolução *depthwise*, soma, multiplicação, *pooling*, camada totalmente conectada e Softmax. A partição LittleFS possuía 10.354.688 bytes (10,35 MB). A arena de tensores foi limitada a 5.242.880 bytes (5,24 MB) e alocada na PSRAM. Os modelos foram copiados do LittleFS para a PSRAM durante a inicialização e executados por um `MicroInterpreter` com apenas os operadores necessários a cada grafo. O valor retornado por `arena_used_bytes()` representa somente a ocupação da arena de tensores; não corresponde ao pico total de RAM e não inclui pilha, heap externo à arena, buffers de comunicação, estruturas externas do interpretador nem outros custos do firmware.
+A execução embarcada constituiu o objetivo central da comparação. Foi usado um ESP32-S3 DevKitC-1 com módulo N16R8, CPU configurada a 240 MHz, 16.777.216 bytes de memória flash (16,78 MB) e 8.388.608 bytes de PSRAM octal (8,39 MB) a 80 MHz. Os três firmwares foram construídos com ESP-IDF 5.5.0 e o mesmo componente TensorFlow Lite Micro, compilado com os núcleos otimizados do ESP-NN v1.1.2 para operações como convolução, convolução *depthwise*, soma, multiplicação, *pooling*, camada totalmente conectada e Softmax. A partição LittleFS possuía 10.354.688 bytes (10,35 MB). A arena de tensores foi limitada a 5.242.880 bytes (5,24 MB) e alocada na PSRAM. Os modelos foram copiados do LittleFS para a PSRAM durante a inicialização e executados por um `MicroInterpreter` com apenas os operadores necessários a cada grafo. O valor retornado por `arena_used_bytes()` representa somente a ocupação da arena de tensores; não corresponde ao pico total de RAM e não inclui pilha, heap externo à arena, buffers de comunicação, estruturas externas do interpretador nem outros custos do firmware.
 
-Foram embarcados três modelos *full INT8*: MobileNetV2, MobileViT-XXS `g8_4_4` e MobileViT-XXS `g8_4_4 + b3_g4`. Para compatibilidade do grafo da MobileNetV2 com o runtime embarcado, o *pooling* global da cópia destinada à exportação foi expresso como `AVERAGE_POOL_2D` com janela $7\times7$. Essa substituição apresentou erro absoluto máximo de $2,384\times10^{-7}$ em relação ao modelo PyTorch original e não alterou o checkpoint treinado. A identidade dos três arquivos executados no dispositivo foi conferida por SHA-256 contra os artefatos avaliados no host.
+Foram embarcados três modelos *full INT8*: MobileNetV2, MobileViT-XXS `g8_4_4` e MobileViT-XXS `g8_4_4 + b3_g4`. Para resolver a incompatibilidade entre o grafo produzido pelo *pooling* global da MobileNetV2 e os operadores aceitos pelo runtime embarcado, a cópia destinada à exportação expressou essa operação como `AVERAGE_POOL_2D` com janela $7\times7$. Essa substituição apresentou erro absoluto máximo de $2,384\times10^{-7}$ em relação ao modelo PyTorch original e não alterou o checkpoint treinado. Após a adaptação e a incorporação dos buffers ao FlatBuffer, o artefato embarcado possuía 2.809.720 bytes, enquanto a conversão inicial possuía 2.813.232 bytes. A identidade dos três arquivos executados no dispositivo foi conferida por SHA-256 contra os artefatos avaliados no host.
 
 O conjunto completo de 648 imagens de teste foi percorrido na mesma ordem. O host realizou o pré-processamento específico de cada modelo, quantizou a entrada e enviou o tensor INT8 NCHW por HTTP. O firmware conferiu o tamanho e o hash FNV-1a da entrada, copiou os dados para o tensor, executou `MicroInterpreter::Invoke()`, desquantizou os 20 logits e aplicou `argmax`. Portanto, o tempo reportado como inferência foi medido por `esp_timer_get_time()` ao redor de `Invoke()` no próprio dispositivo e não inclui redimensionamento, normalização, quantização no host, transmissão pela rede, cópia da entrada ou pós-processamento. Foram realizadas três inferências de aquecimento para a MobileNetV2 e uma para cada MobileViT; em seguida, as 648 invocações foram usadas no cálculo de média, desvio-padrão, mediana e percentil 95. A arena efetivamente usada foi obtida de `arena_used_bytes()`.
 
@@ -448,22 +448,22 @@ A MobileViT-XXS alcançou desempenho semelhante com 57,4% menos parâmetros. As 
 
 Os resultados das três representações de cada arquitetura são apresentados na Tabela 6.
 
-*Tabela 6 — Resultados da conversão para TFLite.*
+*Tabela 6 — Resultados da conversão inicial para TFLite, calibrada com 100 imagens.*
 
 | Pipeline e representação | Tamanho decimal (bytes exatos) | Acurácia de teste | Diferença para FP32 |
 |---|---:|---:|---:|
 | MobileNetV2 TFLite FP32 | 9,04 MB (9.044.328 B) | 97,07% | — |
 | MobileNetV2 pesos INT8/ativações INT16 | 2,88 MB (2.881.680 B) | 97,22% | +0,15 p.p. |
-| MobileNetV2 pesos INT8/ativações INT8 | 2,81 MB (2.813.232 B) | 97,22% | +0,15 p.p. |
+| MobileNetV2 pesos INT8/ativações INT8 — conversão inicial | 2,81 MB (2.813.232 B) | 97,22% | +0,15 p.p. |
 | MobileViT-XXS TFLite FP32 | 4,54 MB (4.543.596 B) | 97,38% | — |
 | MobileViT-XXS pesos INT8/ativações INT16 | 1,98 MB (1.982.912 B) | 96,76% | −0,62 p.p. |
-| MobileViT-XXS pesos INT8/ativações INT8 | 1,91 MB (1.914.080 B) | 9,57% | −87,81 p.p. |
+| MobileViT-XXS pesos INT8/ativações INT8 — conversão inicial | 1,91 MB (1.914.080 B) | 9,57% | −87,81 p.p. |
 
 Na MobileNetV2, tanto a versão INT8A16 quanto a versão *full INT8* alcançaram 97,22% de acurácia, ante 97,07% do modelo TFLite FP32. Essa variação de +0,15 ponto percentual equivale a uma imagem e não demonstra melhoria de generalização; o resultado relevante é a ausência de degradação mensurável após a redução de 9,04 MB para 2,81 MB.
 
 Na MobileViT-XXS, a versão INT8A16 preservou 96,76% de acurácia, uma redução de 0,62 ponto percentual em relação aos 97,38% do TFLite FP32. Em contraste, a versão *full INT8* atingiu apenas 9,57% de acurácia, queda de 87,81 pontos percentuais, e obteve F1 ponderado de 5,11%. Como os pesos permanecem INT8 nas duas versões, a diferença entre INT8A16 e *full INT8* indica que o colapso está associado à redução das ativações de 16 para 8 bits.
 
-Essa conversão inicial utilizou até 100 imagens de calibração. Na etapa controlada posterior, com 1.000 imagens estratificadas, o original INT8 atingiu 10,80% na validação e 10,65% no teste. A mudança no conjunto de calibração não eliminou o colapso.
+Essa conversão inicial utilizou 100 imagens de calibração. Na etapa controlada posterior, a MobileViT-XXS sem agrupamento foi reexportada com *average pooling* fixo de $8\times8$, buffers incorporados ao FlatBuffer e 1.000 imagens estratificadas de calibração. Esse artefato distinto possuía 1.730.472 bytes e atingiu 10,80% na validação e 10,65% no teste. A mudança da pipeline de exportação e do conjunto de calibração não eliminou o colapso.
 
 ## Evidências do colapso INT8
 
@@ -538,7 +538,7 @@ Após a comparação das 17 alternativas na validação, a configuração `g8_4_
 | Modelo | Validação | Teste | F1 macro no teste | Tamanho INT8 decimal (bytes exatos) |
 |---|---:|---:|---:|---:|
 | MobileViT-XXS original FP32 | 97,38% | 97,38% | 97,39% | — |
-| MobileViT-XXS original INT8 | 10,80% | 10,65% | 5,98% | 1,73 MB (1.730.472 B) |
+| MobileViT-XXS reexportada sem agrupamento, INT8 | 10,80% | 10,65% | 5,98% | 1,73 MB (1.730.472 B) |
 | MobileViT-XXS `g8_4_4` INT8 | 89,66% | 90,74% | — | 1,84 MB (1.843.720 B) |
 | MobileViT-XXS selecionada (`g8_4_4 + b3_g4`) INT8 | **95,52%** | **96,30%** | **96,28%** | 1,87 MB (1.868.496 B) |
 
@@ -601,7 +601,7 @@ Os três modelos processaram no ESP32-S3 os 648 tensores de teste preparados pel
 
 | Modelo embarcado INT8 | Tamanho | Acurácia no ESP32-S3 (IC 95%) | F1 macro | `Invoke()` médio ± desvio-padrão | Mediana | P95 | Arena ocupada/reservada |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| MobileNetV2 | 2,81 MB (2.809.720 B) | 97,22% (95,65%–98,24%) | 97,14% | 3,270 ± 0,002 s | 3,269 s | 3,274 s | 2.599.136/5.242.880 B |
+| MobileNetV2 embarcada (`AVERAGE_POOL_2D` $7\times7$) | 2,81 MB (2.809.720 B) | 97,22% (95,65%–98,24%) | 97,14% | 3,270 ± 0,002 s | 3,269 s | 3,274 s | 2.599.136/5.242.880 B |
 | MobileViT-XXS `g8_4_4` | 1,84 MB (1.843.720 B) | 91,05% (88,60%–93,01%) | 90,92% | 45,657 ± 0,033 s | 45,662 s | 45,704 s | 2.881.824/5.242.880 B |
 | MobileViT-XXS `g8_4_4 + b3_g4` | 1,87 MB (1.868.496 B) | 96,30% (94,55%–97,50%) | 96,34% | 46,284 ± 0,034 s | 46,288 s | 46,333 s | 2.885.136/5.242.880 B |
 
